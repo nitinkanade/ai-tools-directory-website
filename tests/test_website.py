@@ -142,6 +142,41 @@ class TestWebsiteBuild(unittest.TestCase):
                 self.assertTrue(os.path.exists(app_f), f"Missing in app assets/data: {kf}")
                 self.assertEqual(sha256(app_f), sha256(dist_f), f"App and website data not synced for {kf}")
 
+    def test_relative_asset_paths_on_nested_pages(self):
+        tool_page = os.path.join(DIST_DIR, "tool", "chatgpt", "index.html")
+        self.assertTrue(os.path.exists(tool_page))
+        with open(tool_page, "r", encoding="utf-8") as f:
+            content = f.read()
+            self.assertIn('href="../../static/css/styles.css"', content, "CSS must use relative path ../../ on tool detail pages")
+            self.assertIn('src="../../static/js/app.js"', content, "JS must use relative path ../../ on tool detail pages")
+            self.assertIn('href="../../static/img/favicon.ico"', content, "Favicon must use relative path ../../ on tool detail pages")
+            self.assertNotIn('href="/static/css/styles.css"', content, "Must not contain domain-root relative path that breaks on GitHub Pages")
+
+    def test_markdown_table_and_guides_rendered(self):
+        guide_files = [
+            "top-ai-coding-assistants-2026",
+            "how-to-choose-the-right-ai-tool-for-your-business",
+            "top-open-source-ai-agents-frameworks-2026"
+        ]
+        for g in guide_files:
+            fp = os.path.join(DIST_DIR, "blog", g, "index.html")
+            self.assertTrue(os.path.exists(fp), f"Blog guide {g} missing in dist")
+            with open(fp, "r", encoding="utf-8") as f:
+                content = f.read()
+                self.assertIn("data-table", content, f"Guide {g} should render data-table")
+                self.assertIn("table-responsive", content, f"Guide {g} should have table-responsive wrapper")
+
+    def test_tool_faq_and_schema_markup(self):
+        tool_page = os.path.join(DIST_DIR, "tool", "cursor", "index.html")
+        self.assertTrue(os.path.exists(tool_page))
+        with open(tool_page, "r", encoding="utf-8") as f:
+            content = f.read()
+            self.assertIn("Frequently Asked Questions", content)
+            self.assertIn("faq-item", content)
+            self.assertIn("FAQPage", content)
+            self.assertIn("BreadcrumbList", content)
+            self.assertIn("SoftwareApplication", content)
+
 if __name__ == "__main__":
     unittest.main()
 

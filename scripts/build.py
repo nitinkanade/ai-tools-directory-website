@@ -1,6 +1,11 @@
 """
 Zero-dependency static site generator for AI Tools Directory.
-Generates fully-static, SEO-optimized HTML for GitHub Pages.
+Generates fully-static, SEO-optimized HTML for GitHub Pages and custom domains.
+Features:
+- Dynamic relative path resolution (zero 404s on GitHub Pages project subpaths or root domains)
+- Rich Markdown engine (tables, code copy, callouts, anchor headings)
+- Schema.org Structured Data (WebSite, SoftwareApplication, CollectionPage, BlogPosting, BreadcrumbList, FAQPage)
+- Dynamic synchronization with master database folder and mobile app
 """
 
 import datetime
@@ -9,6 +14,7 @@ import json
 import os
 import re
 import shutil
+import subprocess
 import sys
 
 WEBSITE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -21,8 +27,8 @@ CONTENT_DIR = os.path.join(WEBSITE_DIR, "content")
 
 SITE_TITLE = "AI Tools Directory"
 SITE_TAGLINE = "Discover, Compare & Master the Best AI Tools"
-SITE_DESCRIPTION = "The premier independent directory of verified AI tools, open-source models, and developer assistants. Zero bias, 100% verified facts."
-BASE_URL = ""  # For custom domain or root path; relative paths supported
+SITE_DESCRIPTION = "The premier independent directory of verified artificial intelligence software, open-source models, and developer companions. 100% verified facts, zero sponsored bias."
+CANONICAL_HOST = os.environ.get("CANONICAL_HOST", "https://nitinkanade.github.io/ai-tools-directory-website")
 
 def _copy_directory_tree(src, dst):
     os.makedirs(dst, exist_ok=True)
@@ -47,7 +53,6 @@ def resolve_and_sync_data():
     # 1. If local database exists, rebuild indexes from master data/ and sync to website & app
     if os.path.exists(DB_DIR) and os.path.exists(db_build_script):
         print(f"--> [DATA SYNC] Rebuilding database indexes from {DB_DIR}/data...")
-        import subprocess
         res = subprocess.run([sys.executable, db_build_script], cwd=DB_DIR, capture_output=True, text=True)
         if res.returncode != 0:
             print(f"[WARN] Failed to rebuild database indexes:\n{res.stderr}")
@@ -74,7 +79,6 @@ def resolve_and_sync_data():
     # 3. Fallback: Run sync_data.py to pull from remote host
     sync_script = os.path.join(WEBSITE_DIR, "scripts", "sync_data.py")
     if os.path.exists(sync_script):
-        import subprocess
         print("--> [DATA SYNC] No local data found, running website sync_data.py...")
         subprocess.run([sys.executable, sync_script], cwd=WEBSITE_DIR, check=True)
         return LOCAL_DATA_DIR
@@ -90,77 +94,169 @@ def escape(text):
         return ""
     return html.escape(str(text))
 
-# Simple Markdown to HTML parser (supports headings, lists, bold, italics, links, blockquotes, code)
-def parse_markdown(md_text):
+# Advanced Markdown to HTML parser (Headings, Tables, Lists, Code with copy, Callouts, Blockquotes, Links, Bold)
+def parse_markdown(md_text, rel_base="."):
     lines = md_text.strip().split("\n")
     html_lines = []
     in_list = False
+    in_ordered_list = False
     in_code_block = False
+    code_lang = ""
+    code_content = []
+    in_table = False
+    table_rows = []
 
     for line in lines:
         stripped = line.strip()
 
-        # Code blocks
+        # Code block handling
         if stripped.startswith("```"):
             if in_code_block:
-                html_lines.append("</code></pre>")
+                escaped_code = escape("\n".join(code_content))
+                html_lines.append(f"""
+                <div class="code-block-container">
+                  <div class="code-block-header">
+                    <span class="code-lang">{escape(code_lang or 'text')}</span>
+                    <button class="copy-btn" onclick="copyCode(this)" aria-label="Copy code">Copy</button>
+                  </div>
+                  <pre><code class="language-{escape(code_lang)}">{escaped_code}</code></pre>
+                </div>
+                """)
                 in_code_block = False
+                code_lang = ""
+                code_content = []
             else:
-                html_lines.append("<pre><code>")
                 in_code_block = True
+                code_lang = stripped[3:].strip()
+                code_content = []
             continue
 
         if in_code_block:
-            html_lines.append(escape(line))
+            code_content.append(line)
             continue
 
-        # Close list if not in a list line
-        if in_list and not (stripped.startswith("- ") or stripped.startswith("* ") or re.match(r"^\d+\.\s", stripped)):
+        # Table handling
+        if stripped.startswith("|") and stripped.endswith("|"):
+            in_table = True
+            table_rows.append(stripped)
+            continue
+        elif in_table:
+            # End of table, render table
+            html_lines.append(render_table(table_rows, rel_base))
+            in_table = False
+            table_rows = []
+
+        # Close lists if leaving list line
+        if in_list and not (stripped.startswith("- ") or stripped.startswith("* ")):
             html_lines.append("</ul>")
             in_list = False
+
+        if in_ordered_list and not re.match(r"^\d+\.\s", stripped):
+            html_lines.append("</ol>")
+            in_ordered_list = False
 
         if not stripped:
             continue
 
         # Headings
-        if stripped.startswith("### "):
-            html_lines.append(f"<h3>{format_inline(stripped[4:])}</h3>")
+        if stripped.startswith("#### "):
+            h_text = stripped[5:]
+            h_id = re.sub(r'[^a-zA-Z0-9]+', '-', h_text.lower()).strip('-')
+            html_lines.append(f'<h4 id="{h_id}">{format_inline(h_text, rel_base)}</h4>')
+        elif stripped.startswith("### "):
+            h_text = stripped[4:]
+            h_id = re.sub(r'[^a-zA-Z0-9]+', '-', h_text.lower()).strip('-')
+            html_lines.append(f'<h3 id="{h_id}">{format_inline(h_text, rel_base)}</h3>')
         elif stripped.startswith("## "):
-            html_lines.append(f"<h2>{format_inline(stripped[3:])}</h2>")
+            h_text = stripped[3:]
+            h_id = re.sub(r'[^a-zA-Z0-9]+', '-', h_text.lower()).strip('-')
+            html_lines.append(f'<h2 id="{h_id}">{format_inline(h_text, rel_base)}</h2>')
         elif stripped.startswith("# "):
-            html_lines.append(f"<h1>{format_inline(stripped[2:])}</h1>")
-        # Blockquote
+            h_text = stripped[2:]
+            h_id = re.sub(r'[^a-zA-Z0-9]+', '-', h_text.lower()).strip('-')
+            html_lines.append(f'<h1 id="{h_id}">{format_inline(h_text, rel_base)}</h1>')
+        # Callouts & Blockquotes
+        elif stripped.startswith("> [!NOTE]"):
+            html_lines.append('<div class="callout callout-note"><strong>Note:</strong> ')
+        elif stripped.startswith("> [!TIP]"):
+            html_lines.append('<div class="callout callout-tip"><strong>Tip:</strong> ')
+        elif stripped.startswith("> [!WARNING]"):
+            html_lines.append('<div class="callout callout-warning"><strong>Warning:</strong> ')
         elif stripped.startswith("> "):
-            html_lines.append(f"<blockquote><p>{format_inline(stripped[2:])}</p></blockquote>")
+            html_lines.append(f'<blockquote><p>{format_inline(stripped[2:], rel_base)}</p></blockquote>')
         # Horizontal Rule
         elif stripped in ("---", "***", "___"):
-            html_lines.append("<hr style='margin: 2rem 0; border: none; border-top: 1px solid var(--border-color);'>")
+            html_lines.append("<hr style='margin: 2.5rem 0; border: none; border-top: 1px solid var(--border-color);'>")
         # Unordered list
         elif stripped.startswith("- ") or stripped.startswith("* "):
             if not in_list:
                 html_lines.append("<ul>")
                 in_list = True
-            html_lines.append(f"<li>{format_inline(stripped[2:])}</li>")
+            html_lines.append(f"<li>{format_inline(stripped[2:], rel_base)}</li>")
         # Ordered list
         elif re.match(r"^\d+\.\s", stripped):
-            if not in_list:
+            if not in_ordered_list:
                 html_lines.append("<ol>")
-                in_list = True
+                in_ordered_list = True
             content = re.sub(r"^\d+\.\s", "", stripped)
-            html_lines.append(f"<li>{format_inline(content)}</li>")
+            html_lines.append(f"<li>{format_inline(content, rel_base)}</li>")
         else:
-            html_lines.append(f"<p>{format_inline(stripped)}</p>")
+            html_lines.append(f"<p>{format_inline(stripped, rel_base)}</p>")
 
+    if in_table and table_rows:
+        html_lines.append(render_table(table_rows, rel_base))
     if in_list:
         html_lines.append("</ul>")
-    if in_code_block:
-        html_lines.append("</code></pre>")
+    if in_ordered_list:
+        html_lines.append("</ol>")
 
     return "\n".join(html_lines)
 
-def format_inline(text):
+def render_table(rows, rel_base):
+    if len(rows) < 2:
+        return ""
+    
+    header_cells = [c.strip() for c in rows[0].strip("|").split("|")]
+    header_html = "".join([f"<th>{format_inline(c, rel_base)}</th>" for c in header_cells])
+
+    body_html = []
+    # Skip row 1 if it's separator |---|---|
+    data_rows = rows[2:] if re.match(r"^\|?[\s\-:|]+\|?$", rows[1]) else rows[1:]
+
+    for r in data_rows:
+        cells = [c.strip() for c in r.strip("|").split("|")]
+        # Pad cells if row length differs
+        while len(cells) < len(header_cells):
+            cells.append("")
+        row_tds = "".join([f"<td>{format_inline(cells[i], rel_base)}</td>" for i in range(len(header_cells))])
+        body_html.append(f"<tr>{row_tds}</tr>")
+
+    return f"""
+    <div class="table-responsive">
+      <table class="data-table">
+        <thead>
+          <tr>{header_html}</tr>
+        </thead>
+        <tbody>
+          {"".join(body_html)}
+        </tbody>
+      </table>
+    </div>
+    """
+
+def format_inline(text, rel_base="."):
+    # Rewriting internal root links [text](/tool/xyz/) to [text]({rel_base}/tool/xyz/)
+    def link_repl(match):
+        label = match.group(1)
+        url = match.group(2)
+        if url.startswith("/") and not url.startswith("//"):
+            url = f"{rel_base}{url}"
+        return f'<a href="{escape(url)}">{label}</a>'
+
+    # Images: ![alt](url)
+    text = re.sub(r'!\[([^\]]*)\]\(([^)]+)\)', r'<img src="\2" alt="\1" class="article-embedded-img" loading="lazy">', text)
     # Links: [text](url)
-    text = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', text)
+    text = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', link_repl, text)
     # Bold: **text**
     text = re.sub(r'\*\*([^*]+)\*\*', r'<strong>\1</strong>', text)
     # Italic: *text*
@@ -182,7 +278,6 @@ def parse_frontmatter(md_content):
             key = key.strip()
             val = val.strip()
             if val.startswith("[") and val.endswith("]"):
-                # parse array
                 items = [x.strip().strip('"').strip("'") for x in val[1:-1].split(",") if x.strip()]
                 meta[key] = items
             elif val.lower() == "true":
@@ -193,9 +288,9 @@ def parse_frontmatter(md_content):
                 meta[key] = val.strip('"').strip("'")
     return meta, parts[2].strip()
 
-# Layout shell generator
-def render_page(title, meta_desc, content, canonical_path="", structured_data=None, current_nav=""):
-    canonical_url = f"{BASE_URL}{canonical_path}"
+# Base layout shell generator with dynamic relative base resolution
+def render_page(title, meta_desc, content, canonical_path="", structured_data=None, current_nav="", rel_base="."):
+    canonical_url = f"{CANONICAL_HOST}{canonical_path}"
     og_title = f"{title} | {SITE_TITLE}" if title != SITE_TITLE else f"{SITE_TITLE} — {SITE_TAGLINE}"
 
     sd_tag = ""
@@ -203,13 +298,14 @@ def render_page(title, meta_desc, content, canonical_path="", structured_data=No
         sd_tag = f'<script type="application/ld+json">{json.dumps(structured_data, ensure_ascii=False)}</script>'
 
     return f"""<!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{escape(og_title)}</title>
   <meta name="description" content="{escape(meta_desc)}">
   <link rel="canonical" href="{escape(canonical_url)}">
+  <meta name="robots" content="index, follow">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -217,55 +313,93 @@ def render_page(title, meta_desc, content, canonical_path="", structured_data=No
   <meta property="og:title" content="{escape(og_title)}">
   <meta property="og:description" content="{escape(meta_desc)}">
   <meta property="og:site_name" content="{escape(SITE_TITLE)}">
+  <meta property="og:image" content="{CANONICAL_HOST}/static/img/playstore-icon.png">
   
-  <!-- Twitter -->
+  <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="{escape(canonical_url)}">
   <meta name="twitter:title" content="{escape(og_title)}">
   <meta name="twitter:description" content="{escape(meta_desc)}">
+  <meta name="twitter:image" content="{CANONICAL_HOST}/static/img/playstore-icon.png">
 
   <!-- Favicons & Brand Icons -->
-  <link rel="icon" type="image/x-icon" href="{BASE_URL}/static/img/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="{BASE_URL}/static/img/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="{BASE_URL}/static/img/apple-touch-icon.png">
-  <meta property="og:image" content="{BASE_URL}/static/img/playstore-icon.png">
-  <meta name="twitter:image" content="{BASE_URL}/static/img/playstore-icon.png">
+  <link rel="icon" type="image/x-icon" href="{rel_base}/static/img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="{rel_base}/static/img/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{rel_base}/static/img/apple-touch-icon.png">
 
   <!-- Fonts & Styling -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{BASE_URL}/static/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{rel_base}/static/css/styles.css">
   
+  <!-- Schema.org Structured Data -->
   {sd_tag}
+
+  <script>
+    // Zero-flicker theme initialization
+    (function() {{
+      const saved = localStorage.getItem('ai_tools_dir_theme');
+      if (saved) {{
+        document.documentElement.setAttribute('data-theme', saved);
+      }}
+    }})();
+  </script>
 </head>
 <body>
   <!-- Global Navigation Header -->
   <header class="site-header">
     <div class="container nav-container">
-      <a href="{BASE_URL}/" class="brand-logo" aria-label="AI Tools Directory Homepage">
-        <img src="{BASE_URL}/static/img/logo.png" alt="AI Tools Directory Logo" class="brand-icon-img" width="36" height="36">
+      <a href="{rel_base}/" class="brand-logo" aria-label="AI Tools Directory Homepage">
+        <img src="{rel_base}/static/img/logo.png" alt="AI Tools Directory Logo" class="brand-icon-img" width="40" height="40">
         <span>AI Tools Directory</span>
+        <span class="brand-badge">v1.0 Verified</span>
       </a>
 
       <nav aria-label="Main navigation">
         <ul class="nav-links">
-          <li><a href="{BASE_URL}/" class="nav-link {'active' if current_nav == 'home' else ''}">Home</a></li>
-          <li><a href="{BASE_URL}/tools/" class="nav-link {'active' if current_nav == 'tools' else ''}">All Tools</a></li>
-          <li><a href="{BASE_URL}/collections/" class="nav-link {'active' if current_nav == 'collections' else ''}">Collections</a></li>
-          <li><a href="{BASE_URL}/blog/" class="nav-link {'active' if current_nav == 'blog' else ''}">Guides & Blog</a></li>
-          <li><a href="{BASE_URL}/about/" class="nav-link {'active' if current_nav == 'about' else ''}">About</a></li>
+          <li><a href="{rel_base}/" class="nav-link {'active' if current_nav == 'home' else ''}">Home</a></li>
+          <li><a href="{rel_base}/tools/" class="nav-link {'active' if current_nav == 'tools' else ''}">Directory</a></li>
+          <li><a href="{rel_base}/collections/" class="nav-link {'active' if current_nav == 'collections' else ''}">Collections</a></li>
+          <li><a href="{rel_base}/blog/" class="nav-link {'active' if current_nav == 'blog' else ''}">Guides & Blog</a></li>
+          <li><a href="{rel_base}/about/" class="nav-link {'active' if current_nav == 'about' else ''}">About</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+        <button id="quick-search-trigger" class="quick-search-trigger" aria-label="Quick Search">
+          <span>Search...</span>
+          <span class="kbd-shortcut">Ctrl+K</span>
+        </button>
+
+        <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
           </svg>
         </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <ul class="mobile-nav-links">
+      <li><a href="{rel_base}/" class="mobile-nav-link {'active' if current_nav == 'home' else ''}" onclick="toggleMobileMenu()">Home</a></li>
+      <li><a href="{rel_base}/tools/" class="mobile-nav-link {'active' if current_nav == 'tools' else ''}" onclick="toggleMobileMenu()">Directory Index</a></li>
+      <li><a href="{rel_base}/collections/" class="mobile-nav-link {'active' if current_nav == 'collections' else ''}" onclick="toggleMobileMenu()">Curated Collections</a></li>
+      <li><a href="{rel_base}/blog/" class="mobile-nav-link {'active' if current_nav == 'blog' else ''}" onclick="toggleMobileMenu()">Guides & Blog</a></li>
+      <li><a href="{rel_base}/about/" class="mobile-nav-link {'active' if current_nav == 'about' else ''}" onclick="toggleMobileMenu()">About Directory</a></li>
+      <li><a href="{rel_base}/contact/" class="mobile-nav-link" onclick="toggleMobileMenu()">Submit Tool</a></li>
+    </ul>
+  </div>
 
   <!-- Main Page Content -->
   <main id="main-content">
@@ -277,54 +411,55 @@ def render_page(title, meta_desc, content, canonical_path="", structured_data=No
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <div class="brand-logo" style="margin-bottom: 1rem;">
-            <img src="{BASE_URL}/static/img/logo.png" alt="AI Tools Directory Logo" class="brand-icon-img" width="36" height="36">
+          <div class="brand-logo" style="margin-bottom: 1.25rem;">
+            <img src="{rel_base}/static/img/logo.png" alt="AI Tools Directory Logo" class="brand-icon-img" width="40" height="40">
             <span>AI Tools Directory</span>
           </div>
-          <p style="font-size: 0.875rem; color: var(--text-muted); max-width: 320px; margin-bottom: 1.25rem;">
-            The trusted, independent directory of verified AI software, open-source models, and developer companions.
+          <p style="font-size: 0.9375rem; color: var(--text-secondary); max-width: 320px; margin-bottom: 1.25rem; line-height: 1.6;">
+            The premier independent, fact-checked directory of verified AI software, open models, and developer assistants.
           </p>
           <div style="font-size: 0.8125rem; color: var(--text-muted);">
-            Zero paid endorsements. 100% verified data.
+            Zero sponsored bias. 100% verified facts.
           </div>
         </div>
 
         <div class="footer-col">
-          <h4>Explore</h4>
+          <h4>Directory Index</h4>
           <ul class="footer-links">
-            <li><a href="{BASE_URL}/tools/">Directory Index</a></li>
-            <li><a href="{BASE_URL}/collections/">Curated Collections</a></li>
-            <li><a href="{BASE_URL}/category/coding-development/">Coding Tools</a></li>
-            <li><a href="{BASE_URL}/category/chatbots-assistants/">AI Assistants</a></li>
-            <li><a href="{BASE_URL}/category/opensource-models-platforms/">Open-Source AI</a></li>
+            <li><a href="{rel_base}/tools/">Complete Directory</a></li>
+            <li><a href="{rel_base}/collections/">Curated Collections</a></li>
+            <li><a href="{rel_base}/category/coding-development/">Coding & Dev Tools</a></li>
+            <li><a href="{rel_base}/category/chatbots-assistants/">Conversational LLMs</a></li>
+            <li><a href="{rel_base}/category/opensource-models-platforms/">Open-Source AI</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Resources</h4>
+          <h4>Editorial & Guides</h4>
           <ul class="footer-links">
-            <li><a href="{BASE_URL}/blog/">Blog & Tutorials</a></li>
-            <li><a href="{BASE_URL}/data/manifest.json">Data Manifest (API)</a></li>
-            <li><a href="{BASE_URL}/data/tools/index.json">Static JSON Feed</a></li>
-            <li><a href="{BASE_URL}/sitemap.xml">XML Sitemap</a></li>
+            <li><a href="{rel_base}/blog/">Guides & Tutorials</a></li>
+            <li><a href="{rel_base}/blog/top-ai-coding-assistants-2026/">Top Coding Assistants 2026</a></li>
+            <li><a href="{rel_base}/blog/running-open-source-llms-locally-with-ollama/">Running Local LLMs</a></li>
+            <li><a href="{rel_base}/data/manifest.json">Static API Manifest</a></li>
+            <li><a href="{rel_base}/sitemap.xml">XML Sitemap</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Transparency</h4>
           <ul class="footer-links">
-            <li><a href="{BASE_URL}/about/">About the Directory</a></li>
-            <li><a href="{BASE_URL}/contact/">Contact & Feedback</a></li>
-            <li><a href="{BASE_URL}/privacy/">Privacy Policy</a></li>
-            <li><a href="{BASE_URL}/terms/">Terms of Use</a></li>
+            <li><a href="{rel_base}/about/">About the Directory</a></li>
+            <li><a href="{rel_base}/contact/">Submit a Tool</a></li>
+            <li><a href="{rel_base}/privacy/">Privacy Policy</a></li>
+            <li><a href="{rel_base}/terms/">Terms of Use</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div>&copy; {datetime.datetime.now().year} AI Tools Directory. Built with zero-cost static architecture.</div>
-        <div style="display: flex; gap: 1.5rem;">
-          <span>Android App: in.ni18.aitoolsdirectory</span>
+        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+          <span>Android App: <code>in.ni18.aitoolsdirectory</code></span>
           <span>Hosted on GitHub Pages</span>
         </div>
       </div>
@@ -332,18 +467,20 @@ def render_page(title, meta_desc, content, canonical_path="", structured_data=No
   </footer>
 
   <script>
-    window.__SITE_BASE_URL__ = "{BASE_URL}";
+    window.__SITE_BASE_URL__ = "{rel_base}";
   </script>
-  <script src="{BASE_URL}/static/js/app.js"></script>
+  <script src="{rel_base}/static/js/app.js"></script>
 </body>
 </html>"""
 
-def render_tool_card(tool, show_full_category=True):
+def render_tool_card(tool, rel_base="."):
     pricing = tool.get("pricing", {}).get("model", "freemium")
     badge_class = "badge-oss" if pricing == "open-source" else f"badge-{pricing}"
     initial = tool["name"][0].upper()
 
     tags_html = "".join([f'<span class="tool-tag">#{escape(t)}</span>' for t in tool.get("tags", [])[:3]])
+
+    platforms_str = ", ".join([p.capitalize() for p in tool.get("platforms", [])[:3]])
 
     return f"""
     <div class="tool-card tool-card-item" 
@@ -359,19 +496,49 @@ def render_tool_card(tool, show_full_category=True):
         <div class="tool-monogram">{escape(initial)}</div>
         <div class="tool-header-content">
           <div class="tool-name-wrap">
-            <a href="{BASE_URL}/tool/{tool['slug']}/" class="tool-title">{escape(tool['name'])}</a>
-            <span class="verified-badge" title="Verified Factually">&#x2714;</span>
+            <a href="{rel_base}/tool/{tool['slug']}/" class="tool-title">{escape(tool['name'])}</a>
+            <span class="verified-badge" title="Factually Verified">&#x2714;</span>
           </div>
-          <span class="badge {badge_class}" style="margin-top: 0.35rem;">{escape(pricing)}</span>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge {badge_class}">{escape(pricing)}</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; {escape(platforms_str)}</span>
+          </div>
         </div>
       </div>
       <p class="tool-short-desc">{escape(tool['shortDescription'])}</p>
       <div class="tool-tags">{tags_html}</div>
       <div class="card-footer">
         <span style="color: var(--text-muted); font-size: 0.75rem;">Verified {escape(tool.get('lastVerifiedAt', 'Recently'))}</span>
-        <a href="{BASE_URL}/tool/{tool['slug']}/" class="view-all-link" style="font-size: 0.8125rem;">Details &rarr;</a>
+        <a href="{rel_base}/tool/{tool['slug']}/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
       </div>
     </div>"""
+
+def generate_tool_faqs(tool, primary_cat_name):
+    name = tool["name"]
+    pricing = tool.get("pricing", {}).get("model", "freemium")
+    details = tool.get("pricing", {}).get("details", "")
+    platforms = ", ".join(tool.get("platforms", ["Web"]))
+    is_oss = tool.get("isOpenSource", False)
+
+    faqs = [
+        {
+            "question": f"Is {name} free or paid?",
+            "answer": f"{name} uses a {pricing} model. {details if details else f'Please check the official {name} website for the latest pricing plans.'}"
+        },
+        {
+            "question": f"What platforms does {name} support?",
+            "answer": f"{name} is currently available on: {platforms}."
+        },
+        {
+            "question": f"Is {name} open-source?",
+            "answer": f"{'Yes, ' + name + ' is open-source. You can inspect its source code in its public repository.' if is_oss else 'No, ' + name + ' is proprietary software.'}"
+        },
+        {
+            "question": f"What are the best alternatives to {name}?",
+            "answer": f"Top alternatives in the {primary_cat_name} category include {', '.join(tool.get('alternatives', ['other curated tools in this directory']))}."
+        }
+    ]
+    return faqs
 
 def build_site(data_dir=None):
     data_source = data_dir or resolve_and_sync_data()
@@ -405,31 +572,45 @@ def build_site(data_dir=None):
     category_map = {c["id"]: c for c in categories}
     sitemap_urls = []
 
-    # 1. Homepage
+    # 1. Homepage (rel_base = ".")
     featured_tools = [t for t in tools if t.get("isFeatured")]
     recent_tools = sorted(tools, key=lambda x: x.get("createdAt", ""), reverse=True)[:6]
 
     home_content = f"""
     <section class="hero-section">
-      <div class="container">
+      <div class="hero-glow-blob"></div>
+      <div class="container hero-content-wrap">
         <div class="hero-badge">
-          <span>&starf; Single Source of Truth &bull; Zero Sponsored Bias</span>
+          <span>&starf; 100% Independent &bull; 40+ Fact-Checked Tools &bull; Zero Sponsored Bias</span>
         </div>
         <h1 class="hero-title">
-          Explore the World of <br><span class="text-gradient">Verified AI Tools</span>
+          Discover, Compare & Master <br><span class="text-gradient">the World's Best AI Tools</span>
         </h1>
         <p class="hero-subtitle">
-          Curated, benchmarked, and factually verified directory of artificial intelligence software, local runtimes, and developer assistants.
+          Curated, benchmarked, and fact-verified directory of artificial intelligence software, local runtimes, and developer assistants. Zero paywalls, zero sponsored rankings.
         </p>
 
         <!-- Live Instant Search -->
         <div class="search-container">
           <div class="search-input-wrapper">
             <span class="search-icon-prefix">&#128269;</span>
-            <input type="text" id="home-search-input" class="search-input" placeholder="Search by name, category, coding, diffusion, reasoning..." autocomplete="off">
-            <button id="home-search-clear" class="search-clear-btn" aria-label="Clear Search">&times;</button>
+            <input type="text" id="home-search-input" class="search-input" placeholder="Search by name, category, coding, diffusion, reasoning, or tag..." autocomplete="off">
+            <div class="search-right-actions">
+              <button id="home-search-clear" class="search-clear-btn" aria-label="Clear Search">&times;</button>
+              <span class="kbd-shortcut">Ctrl+K</span>
+            </div>
           </div>
           <div id="home-search-dropdown" class="search-dropdown"></div>
+
+          <!-- Quick category filter pills -->
+          <div class="quick-pills-row">
+            <button class="quick-pill" data-filter="">&bull; All Tools</button>
+            <button class="quick-pill" data-filter="?category=coding-development">&#128187; Coding & IDEs</button>
+            <button class="quick-pill" data-filter="?category=chatbots-assistants">&#128172; Conversational LLMs</button>
+            <button class="quick-pill" data-filter="?category=image-generation">&#127912; Image & Creative</button>
+            <button class="quick-pill" data-filter="?oss=true">&#128275; Open Source</button>
+            <button class="quick-pill" data-filter="?pricing=free">&#127873; Free Tier</button>
+          </div>
         </div>
 
         <!-- Live Stats Ribbon -->
@@ -448,7 +629,7 @@ def build_site(data_dir=None):
           </div>
           <div class="stat-item">
             <span class="stat-number">100%</span>
-            <span class="stat-label">Zero Cost Hosting</span>
+            <span class="stat-label">Zero Sponsored Bias</span>
           </div>
         </div>
       </div>
@@ -460,34 +641,34 @@ def build_site(data_dir=None):
         <div class="section-header">
           <div>
             <h2 class="section-title">Editor's Featured Selections</h2>
-            <p class="section-desc">Hand-picked AI tools setting industry standards for performance and utility.</p>
+            <p class="section-desc">Hand-picked AI tools setting industry standards for performance, utility, and innovation.</p>
           </div>
-          <a href="{BASE_URL}/tools/" class="view-all-link">Browse all {len(tools)} tools &rarr;</a>
+          <a href="./tools/" class="view-all-link">Browse all {len(tools)} tools &rarr;</a>
         </div>
         <div class="grid-tools">
-          {"".join([render_tool_card(t) for t in featured_tools[:6]])}
+          {"".join([render_tool_card(t, rel_base=".") for t in featured_tools[:6]])}
         </div>
       </div>
     </section>
 
     <!-- Browse By Category -->
-    <section class="section" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <section class="section section-alt">
       <div class="container">
         <div class="section-header">
           <div>
-            <h2 class="section-title">Browse by Category</h2>
-            <p class="section-desc">Find specialized solutions tailored to your industry and technical stack.</p>
+            <h2 class="section-title">Explore by Category</h2>
+            <p class="section-desc">Find specialized solutions tailored to your industry, engineering stack, or creative workflow.</p>
           </div>
         </div>
         <div class="grid-categories">
           {"".join([f'''
-          <a href="{BASE_URL}/category/{c['slug']}/" class="category-card">
+          <a href="./category/{c['slug']}/" class="category-card">
             <div class="category-card-icon">&#9670;</div>
             <div class="category-card-title">{escape(c['name'])}</div>
-            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1;">
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
               {escape(c['shortDescription'])}
             </p>
-            <div class="category-card-count">Explore &rarr;</div>
+            <div class="category-card-count">Explore Category &rarr;</div>
           </a>''' for c in categories])}
         </div>
       </div>
@@ -498,18 +679,18 @@ def build_site(data_dir=None):
       <div class="container">
         <div class="section-header">
           <div>
-            <h2 class="section-title">Curated Collections</h2>
-            <p class="section-desc">Focused toolsets grouped for specific workflows and use cases.</p>
+            <h2 class="section-title">Curated Workflows & Collections</h2>
+            <p class="section-desc">Focused toolsets grouped together for specific engineering goals and business operations.</p>
           </div>
-          <a href="{BASE_URL}/collections/" class="view-all-link">View all collections &rarr;</a>
+          <a href="./collections/" class="view-all-link">View all collections &rarr;</a>
         </div>
         <div class="grid-collections">
           {"".join([f'''
-          <a href="{BASE_URL}/collection/{col['slug']}/" class="collection-card">
-            <div style="color: var(--brand-primary); font-size: 1.5rem; margin-bottom: 0.75rem;">&#9733;</div>
+          <a href="./collection/{col['slug']}/" class="collection-card">
+            <div style="color: var(--brand-primary); font-size: 1.75rem; margin-bottom: 0.75rem;">&#9733;</div>
             <div class="collection-card-title">{escape(col['title'])}</div>
             <p class="collection-card-desc">{escape(col['description'])}</p>
-            <div style="font-size: 0.8125rem; color: var(--text-muted); font-weight: 600;">
+            <div style="font-size: 0.875rem; color: var(--brand-primary); font-weight: 700;">
               {len(col['toolIds'])} Curated Tools &rarr;
             </div>
           </a>''' for col in collections[:3]])}
@@ -517,18 +698,31 @@ def build_site(data_dir=None):
       </div>
     </section>
 
-    <!-- Recently Added Tools -->
-    <section class="section" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+    <!-- Recently Verified Tools -->
+    <section class="section section-alt">
       <div class="container">
         <div class="section-header">
           <div>
-            <h2 class="section-title">Recently Added to Directory</h2>
-            <p class="section-desc">The latest verified tools added by our editorial maintainers.</p>
+            <h2 class="section-title">Recently Verified Additions</h2>
+            <p class="section-desc">The latest verified tools added to the catalog by our editorial maintainers.</p>
           </div>
-          <a href="{BASE_URL}/tools/" class="view-all-link">See full directory &rarr;</a>
+          <a href="./tools/" class="view-all-link">See full directory &rarr;</a>
         </div>
         <div class="grid-tools">
-          {"".join([render_tool_card(t) for t in recent_tools])}
+          {"".join([render_tool_card(t, rel_base=".") for t in recent_tools])}
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Callout -->
+    <section class="section" style="padding: 4rem 0;">
+      <div class="container">
+        <div style="background: var(--brand-gradient-subtle); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: 3rem; text-align: center; max-width: 900px; margin: 0 auto;">
+          <h2 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem;">Are You Building an AI Tool?</h2>
+          <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1.5rem; line-height: 1.6;">
+            We maintain an open-source, community-driven database. Submit your AI tool via a GitHub pull request. Zero listing fees, zero paid sponsorship bias.
+          </p>
+          <a href="./contact/" class="btn btn-primary">Submit Your Tool For Review &UpperRightArrow;</a>
         </div>
       </div>
     </section>
@@ -539,38 +733,41 @@ def build_site(data_dir=None):
         "@type": "WebSite",
         "name": SITE_TITLE,
         "description": SITE_DESCRIPTION,
-        "url": BASE_URL or "https://in-ni18.github.io/ai-tools-directory",
+        "url": CANONICAL_HOST,
         "potentialAction": {
             "@type": "SearchAction",
-            "target": f"{BASE_URL}/tools/?q={{search_term_string}}",
+            "target": f"{CANONICAL_HOST}/tools/?q={{search_term_string}}",
             "query-input": "required name=search_term_string"
         }
     }
 
-    write_page("index.html", render_page(SITE_TITLE, SITE_DESCRIPTION, home_content, "/", home_sd, "home"))
+    write_page("index.html", render_page(SITE_TITLE, SITE_DESCRIPTION, home_content, "/", home_sd, "home", rel_base="."))
     sitemap_urls.append(("/", "1.0", "daily"))
 
-    # 2. Directory Page (/tools/index.html)
+    # 2. Directory Page (/tools/index.html - rel_base = "..")
     dir_content = f"""
-    <div class="container" style="padding: 2.5rem 1.5rem 4rem;">
-      <div style="margin-bottom: 2rem;">
-        <h1 class="section-title" style="font-size: 2.25rem;">Complete AI Tools Directory</h1>
-        <p class="section-desc">Search, filter, and compare {len(tools)} verified artificial intelligence tools across categories and pricing tiers.</p>
+    <div class="container" style="padding: 3rem 1.5rem 5rem;">
+      <div style="margin-bottom: 2.5rem;">
+        <h1 class="section-title" style="font-size: 2.5rem;">Complete AI Tools Directory</h1>
+        <p class="section-desc">Search, filter, and compare {len(tools)} factually verified artificial intelligence tools across categories and pricing models.</p>
       </div>
 
       <div class="directory-layout">
         <!-- Interactive Filter Sidebar -->
         <aside class="filter-sidebar">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
-            <span style="font-weight: 700; font-size: 1.05rem;">Filters</span>
-            <button onclick="clearAllFilters()" style="background: none; border: none; color: var(--brand-primary); font-size: 0.8125rem; font-weight: 600; cursor: pointer;">Reset All</button>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+            <span style="font-weight: 800; font-size: 1.1rem; font-family: var(--font-display);">Filter Tools</span>
+            <button onclick="clearAllFilters()" style="background: none; border: none; color: var(--brand-primary); font-size: 0.8125rem; font-weight: 700; cursor: pointer;">Reset All</button>
           </div>
 
           <!-- Open Source Switch -->
           <div class="filter-group">
-            <label class="filter-label" style="font-weight: 600; color: var(--text-primary);">
-              <input type="checkbox" id="filter-oss-only">
-              <span>Open Source Only</span>
+            <label class="filter-label" style="font-weight: 700; color: var(--text-primary);">
+              <span class="filter-label-inner">
+                <input type="checkbox" id="filter-oss-only">
+                <span>Open Source Only</span>
+              </span>
+              <span class="badge badge-oss">OSS</span>
             </label>
           </div>
 
@@ -578,42 +775,70 @@ def build_site(data_dir=None):
           <div class="filter-group">
             <div class="filter-title">Pricing Model</div>
             <div class="filter-options">
-              <label class="filter-label"><input type="checkbox" class="filter-pricing-checkbox" value="free"> Free</label>
-              <label class="filter-label"><input type="checkbox" class="filter-pricing-checkbox" value="freemium"> Freemium</label>
-              <label class="filter-label"><input type="checkbox" class="filter-pricing-checkbox" value="paid"> Paid</label>
-              <label class="filter-label"><input type="checkbox" class="filter-pricing-checkbox" value="open-source"> Open Source</label>
+              <label class="filter-label">
+                <span class="filter-label-inner">
+                  <input type="checkbox" class="filter-pricing-checkbox" value="free"> Free
+                </span>
+                <span class="filter-count-badge">{len([t for t in tools if t.get('pricing', {}).get('model') == 'free'])}</span>
+              </label>
+              <label class="filter-label">
+                <span class="filter-label-inner">
+                  <input type="checkbox" class="filter-pricing-checkbox" value="freemium"> Freemium
+                </span>
+                <span class="filter-count-badge">{len([t for t in tools if t.get('pricing', {}).get('model') == 'freemium'])}</span>
+              </label>
+              <label class="filter-label">
+                <span class="filter-label-inner">
+                  <input type="checkbox" class="filter-pricing-checkbox" value="paid"> Paid
+                </span>
+                <span class="filter-count-badge">{len([t for t in tools if t.get('pricing', {}).get('model') == 'paid'])}</span>
+              </label>
+              <label class="filter-label">
+                <span class="filter-label-inner">
+                  <input type="checkbox" class="filter-pricing-checkbox" value="open-source"> Open Source
+                </span>
+                <span class="filter-count-badge">{len([t for t in tools if t.get('pricing', {}).get('model') == 'open-source'])}</span>
+              </label>
             </div>
           </div>
 
           <!-- Platforms -->
           <div class="filter-group">
-            <div class="filter-title">Platform</div>
+            <div class="filter-title">Platform Support</div>
             <div class="filter-options">
-              <label class="filter-label"><input type="checkbox" class="filter-platform-checkbox" value="web"> Web Browser</label>
-              <label class="filter-label"><input type="checkbox" class="filter-platform-checkbox" value="windows"> Windows</label>
-              <label class="filter-label"><input type="checkbox" class="filter-platform-checkbox" value="macos"> macOS</label>
-              <label class="filter-label"><input type="checkbox" class="filter-platform-checkbox" value="linux"> Linux</label>
-              <label class="filter-label"><input type="checkbox" class="filter-platform-checkbox" value="android"> Android</label>
-              <label class="filter-label"><input type="checkbox" class="filter-platform-checkbox" value="ios"> iOS</label>
+              <label class="filter-label"><span class="filter-label-inner"><input type="checkbox" class="filter-platform-checkbox" value="web"> Web Browser</span></label>
+              <label class="filter-label"><span class="filter-label-inner"><input type="checkbox" class="filter-platform-checkbox" value="windows"> Windows</span></label>
+              <label class="filter-label"><span class="filter-label-inner"><input type="checkbox" class="filter-platform-checkbox" value="macos"> macOS</span></label>
+              <label class="filter-label"><span class="filter-label-inner"><input type="checkbox" class="filter-platform-checkbox" value="linux"> Linux</span></label>
+              <label class="filter-label"><span class="filter-label-inner"><input type="checkbox" class="filter-platform-checkbox" value="android"> Android</span></label>
+              <label class="filter-label"><span class="filter-label-inner"><input type="checkbox" class="filter-platform-checkbox" value="ios"> iOS</span></label>
             </div>
           </div>
 
           <!-- Categories -->
           <div class="filter-group">
-            <div class="filter-title">Category</div>
-            <div class="filter-options" style="max-height: 280px; overflow-y: auto; padding-right: 0.25rem;">
-              {"".join([f'<label class="filter-label"><input type="checkbox" class="filter-category-checkbox" value="{c["id"]}"> {escape(c["name"])}</label>' for c in categories])}
+            <div class="filter-title">Categories ({len(categories)})</div>
+            <div class="filter-options" style="max-height: 280px; overflow-y: auto; padding-right: 0.35rem;">
+              {"".join([f'<label class="filter-label"><span class="filter-label-inner"><input type="checkbox" class="filter-category-checkbox" value="{c["id"]}"> {escape(c["name"])}</span></label>' for c in categories])}
             </div>
           </div>
         </aside>
 
         <!-- Main Directory Listing -->
         <section>
-          <!-- Search input bar -->
-          <div style="margin-bottom: 1.5rem;">
-            <div class="search-input-wrapper">
+          <!-- Search input bar & Sort dropdown -->
+          <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+            <div class="search-input-wrapper" style="flex: 1; min-width: 260px;">
               <span class="search-icon-prefix">&#128269;</span>
-              <input type="text" id="directory-search-input" class="search-input" placeholder="Filter tools by keyword, feature, or platform..." style="height: 3.25rem; font-size: 0.95rem;">
+              <input type="text" id="directory-search-input" class="search-input" placeholder="Filter tools by keyword, feature, or platform..." style="height: 3.5rem; font-size: 1rem;">
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <label for="directory-sort-select" style="font-size: 0.875rem; font-weight: 600; color: var(--text-muted); white-space: nowrap;">Sort by:</label>
+              <select id="directory-sort-select" style="height: 3.5rem; padding: 0 1rem; border-radius: var(--radius-md); border: 2px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: inherit; font-size: 0.9375rem; cursor: pointer; outline: none;">
+                <option value="featured">Featured First</option>
+                <option value="name-asc">Alphabetical (A-Z)</option>
+                <option value="name-desc">Alphabetical (Z-A)</option>
+              </select>
             </div>
           </div>
 
@@ -622,23 +847,23 @@ def build_site(data_dir=None):
 
           <!-- Results Header -->
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-            <span id="directory-result-count" style="font-size: 0.9375rem; color: var(--text-muted); font-weight: 500;">
+            <span id="directory-result-count" style="font-size: 0.9375rem; color: var(--text-muted); font-weight: 600;">
               Showing all {len(tools)} tools
             </span>
           </div>
 
           <!-- Directory Cards Grid -->
           <div id="directory-cards-container" class="grid-tools">
-            {"".join([render_tool_card(t) for t in tools])}
+            {"".join([render_tool_card(t, rel_base="..") for t in tools])}
           </div>
         </section>
       </div>
     </div>
     """
-    write_page("tools/index.html", render_page("AI Tools Directory Index", "Browse, search, and filter verified artificial intelligence tools.", dir_content, "/tools/", current_nav="tools"))
+    write_page("tools/index.html", render_page("AI Tools Directory Index", "Browse, search, and filter verified artificial intelligence tools.", dir_content, "/tools/", current_nav="tools", rel_base=".."))
     sitemap_urls.append(("/tools/", "0.9", "daily"))
 
-    # 3. Individual Tool Detail Pages (/tool/<slug>/index.html)
+    # 3. Individual Tool Detail Pages (/tool/<slug>/index.html - rel_base = "../..")
     full_tools_dir = os.path.join(data_source, "tools")
     for tool_entry in tools:
         slug = tool_entry["slug"]
@@ -655,46 +880,58 @@ def build_site(data_dir=None):
 
         features_html = "".join([f'<li class="feature-list-item"><span class="check-icon">&#x2714;</span><span>{escape(feat)}</span></li>' for feat in tool.get("features", [])])
         use_cases_html = "".join([f'<li class="feature-list-item"><span class="check-icon">&#9670;</span><span>{escape(uc)}</span></li>' for uc in tool.get("useCases", [])])
-        limitations_html = "".join([f'<li class="feature-list-item"><span style="color: #ef4444; flex-shrink: 0;">&bull;</span><span>{escape(lim)}</span></li>' for lim in tool.get("limitations", [])])
+        limitations_html = "".join([f'<li class="feature-list-item"><span class="caution-icon">&bull;</span><span>{escape(lim)}</span></li>' for lim in tool.get("limitations", [])])
 
         alternatives_html = ""
         for alt_id in tool.get("alternatives", []):
             alt_tool = tool_map.get(alt_id)
             if alt_tool:
-                alternatives_html += f'<a href="{BASE_URL}/tool/{alt_tool["slug"]}/" class="filter-chip" style="margin-right: 0.5rem; margin-bottom: 0.5rem;">{escape(alt_tool["name"])} &rarr;</a>'
+                alternatives_html += f'<a href="../../tool/{alt_tool["slug"]}/" class="filter-chip" style="margin-right: 0.5rem; margin-bottom: 0.5rem;">{escape(alt_tool["name"])} &rarr;</a>'
 
         related_html = ""
         for rel_id in tool.get("relatedTools", []):
             rel_tool = tool_map.get(rel_id)
             if rel_tool:
-                related_html += f'<a href="{BASE_URL}/tool/{rel_tool["slug"]}/" class="filter-chip" style="margin-right: 0.5rem; margin-bottom: 0.5rem;">{escape(rel_tool["name"])} &rarr;</a>'
+                related_html += f'<a href="../../tool/{rel_tool["slug"]}/" class="filter-chip" style="margin-right: 0.5rem; margin-bottom: 0.5rem;">{escape(rel_tool["name"])} &rarr;</a>'
 
         platforms_html = "".join([f'<span class="tool-tag" style="text-transform: capitalize;">{escape(p)}</span>' for p in tool.get("platforms", [])])
+
+        faqs = generate_tool_faqs(tool, primary_cat["name"])
+        faqs_html = "".join([f'''
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>{escape(q["question"])}</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>{escape(q["answer"])}</p>
+          </div>
+        </div>''' for q in faqs])
 
         tool_content = f"""
         <div class="detail-header">
           <div class="container">
             <nav class="breadcrumbs" aria-label="Breadcrumb">
-              <a href="{BASE_URL}/">Home</a> &rsaquo;
-              <a href="{BASE_URL}/tools/">Tools</a> &rsaquo;
-              <a href="{BASE_URL}/category/{primary_cat['slug']}/">{escape(primary_cat['name'])}</a> &rsaquo;
+              <a href="../../">Home</a> &rsaquo;
+              <a href="../../tools/">Tools</a> &rsaquo;
+              <a href="../../category/{primary_cat['slug']}/">{escape(primary_cat['name'])}</a> &rsaquo;
               <span>{escape(tool['name'])}</span>
             </nav>
 
-            <div style="display: flex; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap;">
-              <div class="tool-monogram" style="width: 4.5rem; height: 4.5rem; font-size: 2rem;">{escape(initial)}</div>
+            <div style="display: flex; align-items: flex-start; gap: 2rem; flex-wrap: wrap;">
+              <div class="tool-monogram" style="width: 5rem; height: 5rem; font-size: 2.25rem;">{escape(initial)}</div>
               <div style="flex: 1; min-width: 280px;">
                 <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
-                  <h1 style="font-size: 2.25rem; font-weight: 800; letter-spacing: -0.02em;">{escape(tool['name'])}</h1>
-                  <span class="verified-badge" style="font-size: 1.25rem;" title="Factually Verified">&#x2714; Verified</span>
+                  <h1 style="font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em;">{escape(tool['name'])}</h1>
+                  <span class="verified-badge" style="font-size: 1.15rem;" title="Factually Verified">&#x2714; Verified</span>
                   <span class="badge {badge_class}" style="font-size: 0.875rem;">{escape(pricing)}</span>
                   {f'<span class="badge badge-oss">Open Source</span>' if tool.get('isOpenSource') else ''}
                 </div>
-                <p style="font-size: 1.15rem; color: var(--text-secondary); margin-top: 0.5rem; max-width: 800px;">
+                <p style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 0.5rem; max-width: 800px; line-height: 1.5;">
                   {escape(tool['shortDescription'])}
                 </p>
               </div>
-              <div style="display: flex; gap: 0.75rem; align-items: center;">
+              <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
                 <a href="{escape(tool['websiteUrl'])}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                   Visit Official Website &UpperRightArrow;
                 </a>
@@ -703,7 +940,7 @@ def build_site(data_dir=None):
           </div>
         </div>
 
-        <div class="container" style="padding-bottom: 4rem;">
+        <div class="container" style="padding-bottom: 5rem;">
           <div class="detail-main-layout">
             <!-- Left Main Column -->
             <div>
@@ -713,31 +950,39 @@ def build_site(data_dir=None):
                   {escape(tool['description'])}
                 </p>
 
-                {f'''<h3 style="font-size: 1.1rem; margin: 1.5rem 0 0.75rem;">Key Capabilities & Features</h3>
-                <ul class="feature-list" style="margin-bottom: 1.75rem;">
+                {f'''<h3 style="font-size: 1.15rem; margin: 2rem 0 0.85rem;">Key Capabilities & Features</h3>
+                <ul class="feature-list" style="margin-bottom: 2rem;">
                   {features_html}
                 </ul>''' if features_html else ''}
 
-                {f'''<h3 style="font-size: 1.1rem; margin: 1.5rem 0 0.75rem;">Recommended Use Cases</h3>
-                <ul class="feature-list" style="margin-bottom: 1.75rem;">
+                {f'''<h3 style="font-size: 1.15rem; margin: 2rem 0 0.85rem;">Recommended Use Cases</h3>
+                <ul class="feature-list" style="margin-bottom: 2rem;">
                   {use_cases_html}
                 </ul>''' if use_cases_html else ''}
 
-                {f'''<h3 style="font-size: 1.1rem; margin: 1.5rem 0 0.75rem; color: #ef4444;">Known Limitations</h3>
+                {f'''<h3 style="font-size: 1.15rem; margin: 2rem 0 0.85rem; color: #ef4444;">Known Limitations & Trade-offs</h3>
                 <ul class="feature-list">
                   {limitations_html}
                 </ul>''' if limitations_html else ''}
               </div>
 
+              <!-- Frequently Asked Questions -->
+              <div class="detail-content-box">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-section">
+                  {faqs_html}
+                </div>
+              </div>
+
               <!-- Alternatives & Related Tools -->
               <div class="detail-content-box">
                 <h2>Alternatives & Related Tools</h2>
-                <div style="margin-bottom: 1.25rem;">
-                  <div style="font-size: 0.875rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">Direct Alternatives</div>
+                <div style="margin-bottom: 1.5rem;">
+                  <div style="font-size: 0.875rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.65rem;">Direct Competitors</div>
                   <div style="display: flex; flex-wrap: wrap;">{alternatives_html or '<span style="color: var(--text-muted);">No direct alternatives listed.</span>'}</div>
                 </div>
                 <div>
-                  <div style="font-size: 0.875rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">Complementary Tools</div>
+                  <div style="font-size: 0.875rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.65rem;">Complementary Tools</div>
                   <div style="display: flex; flex-wrap: wrap;">{related_html or '<span style="color: var(--text-muted);">No complementary tools listed.</span>'}</div>
                 </div>
               </div>
@@ -746,33 +991,33 @@ def build_site(data_dir=None):
             <!-- Right Sidebar Meta -->
             <aside>
               <div class="sidebar-card">
-                <h3 style="font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem;">Pricing & Model</h3>
+                <h3 style="font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem;">Pricing & Model</h3>
                 <div style="margin-bottom: 1rem;">
-                  <span class="badge {badge_class}" style="font-size: 0.9rem; padding: 0.35rem 0.75rem;">{escape(pricing)}</span>
+                  <span class="badge {badge_class}" style="font-size: 0.95rem; padding: 0.4rem 0.85rem;">{escape(pricing)}</span>
                 </div>
-                {f'<p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">{escape(pricing_details)}</p>' if pricing_details else ''}
-                <div style="font-size: 0.8125rem; color: var(--text-muted);">
-                  Verified: {escape(tool.get('lastVerifiedAt', 'Recently'))}
+                {f'<p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 1.25rem;">{escape(pricing_details)}</p>' if pricing_details else ''}
+                <div style="font-size: 0.8125rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 0.85rem;">
+                  Fact-Checked: {escape(tool.get('lastVerifiedAt', 'Recently'))}
                 </div>
               </div>
 
               <div class="sidebar-card">
-                <h3 style="font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem;">Platforms Supported</h3>
+                <h3 style="font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem;">Platform Availability</h3>
                 <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
                   {platforms_html}
                 </div>
 
-                <h3 style="font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;">Account Requirement</h3>
-                <div style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                <h3 style="font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75rem;">Account Requirement</h3>
+                <div style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
                   {'Account Required' if tool.get('accountRequired') is True else ('No Account Required' if tool.get('accountRequired') is False else 'Unspecified')}
                 </div>
 
-                {f'''<a href="{escape(tool.get('sourceCodeUrl'))}" target="_blank" rel="noopener noreferrer" class="btn" style="background: var(--bg-tertiary); width: 100%; border: 1px solid var(--border-color); font-size: 0.875rem; margin-bottom: 1rem;">
+                {f'''<a href="{escape(tool.get('sourceCodeUrl'))}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; margin-bottom: 1rem;">
                   View Source Code &UpperRightArrow;
                 </a>''' if tool.get('sourceCodeUrl') else ''}
 
                 <a href="{escape(tool['websiteUrl'])}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
-                  Open Official Site &UpperRightArrow;
+                  Visit {escape(tool['name'])} &UpperRightArrow;
                 </a>
               </div>
             </aside>
@@ -780,28 +1025,54 @@ def build_site(data_dir=None):
         </div>
         """
 
-        tool_sd = {
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": tool["name"],
-            "description": tool["shortDescription"],
-            "url": tool["websiteUrl"],
-            "applicationCategory": primary_cat["name"],
-            "operatingSystem": ", ".join(tool.get("platforms", [])),
-            "offers": {
-                "@type": "Offer",
-                "price": "0" if pricing in ("free", "open-source") else None,
-                "priceCurrency": "USD",
-                "category": pricing
+        tool_sd = [
+            {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": tool["name"],
+                "description": tool["shortDescription"],
+                "url": tool["websiteUrl"],
+                "applicationCategory": primary_cat["name"],
+                "operatingSystem": ", ".join(tool.get("platforms", [])),
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0" if pricing in ("free", "open-source") else None,
+                    "priceCurrency": "USD",
+                    "category": pricing
+                }
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": q["question"],
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": q["answer"]
+                        }
+                    } for q in faqs
+                ]
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{CANONICAL_HOST}/"},
+                    {"@type": "ListItem", "position": 2, "name": "Tools", "item": f"{CANONICAL_HOST}/tools/"},
+                    {"@type": "ListItem", "position": 3, "name": primary_cat["name"], "item": f"{CANONICAL_HOST}/category/{primary_cat['slug']}/"},
+                    {"@type": "ListItem", "position": 4, "name": tool["name"], "item": f"{CANONICAL_HOST}/tool/{slug}/"}
+                ]
             }
-        }
+        ]
 
         page_title = tool.get("seo", {}).get("title") or f"{tool['name']} — AI Tool Review, Features & Pricing"
         page_desc = tool.get("seo", {}).get("description") or tool["shortDescription"]
-        write_page(f"tool/{slug}/index.html", render_page(page_title, page_desc, tool_content, f"/tool/{slug}/", tool_sd))
+        write_page(f"tool/{slug}/index.html", render_page(page_title, page_desc, tool_content, f"/tool/{slug}/", tool_sd, rel_base="../.."))
         sitemap_urls.append((f"/tool/{slug}/", "0.8", "weekly"))
 
-    # 4. Category Pages (/category/<slug>/index.html)
+    # 4. Category Pages (/category/<slug>/index.html - rel_base = "../..")
     for cat in categories:
         cat_id = cat["id"]
         cat_tools = [t for t in tools if cat_id in t.get("categories", [])]
@@ -814,27 +1085,27 @@ def build_site(data_dir=None):
             </div>"""
 
         cat_content = f"""
-        <div class="container" style="padding: 3rem 1.5rem 4rem;">
+        <div class="container" style="padding: 3.5rem 1.5rem 5rem;">
           <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <a href="{BASE_URL}/">Home</a> &rsaquo;
-            <a href="{BASE_URL}/tools/">Categories</a> &rsaquo;
+            <a href="../../">Home</a> &rsaquo;
+            <a href="../../tools/">Categories</a> &rsaquo;
             <span>{escape(cat['name'])}</span>
           </nav>
 
-          <div style="margin-bottom: 2.5rem; max-width: 840px;">
-            <h1 class="section-title" style="font-size: 2.25rem; margin-bottom: 0.75rem;">{escape(cat['name'])}</h1>
-            <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.6;">
+          <div style="margin-bottom: 3rem; max-width: 860px;">
+            <h1 class="section-title" style="font-size: 2.5rem; margin-bottom: 0.85rem;">{escape(cat['name'])}</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.6;">
               {escape(cat['description'])}
             </p>
             {subcats_html}
           </div>
 
-          <div style="font-size: 0.9375rem; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 600;">
+          <div style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.75rem; font-weight: 700;">
             {len(cat_tools)} verified AI tools in this category
           </div>
 
           <div class="grid-tools">
-            {"".join([render_tool_card(t) for t in cat_tools])}
+            {"".join([render_tool_card(t, rel_base="../..") for t in cat_tools])}
           </div>
         </div>
         """
@@ -844,61 +1115,62 @@ def build_site(data_dir=None):
             "@type": "CollectionPage",
             "name": f"{cat['name']} — AI Tools",
             "description": cat["shortDescription"],
-            "url": f"{BASE_URL}/category/{cat['slug']}/"
+            "url": f"{CANONICAL_HOST}/category/{cat['slug']}/"
         }
 
-        write_page(f"category/{cat['slug']}/index.html", render_page(f"{cat['name']} AI Tools", cat["shortDescription"], cat_content, f"/category/{cat['slug']}/", cat_sd))
+        write_page(f"category/{cat['slug']}/index.html", render_page(f"{cat['name']} AI Tools", cat["shortDescription"], cat_content, f"/category/{cat['slug']}/", cat_sd, rel_base="../.."))
         sitemap_urls.append((f"/category/{cat['slug']}/", "0.8", "weekly"))
 
     # 5. Collections Pages (/collections/index.html & /collection/<slug>/index.html)
     cols_index_content = f"""
-    <div class="container" style="padding: 3rem 1.5rem 4rem;">
-      <div style="margin-bottom: 2.5rem;">
-        <h1 class="section-title" style="font-size: 2.25rem;">Curated AI Collections</h1>
-        <p class="section-desc">Hand-crafted toolsets assembled by our editorial team for specific goals and technical environments.</p>
+    <div class="container" style="padding: 3.5rem 1.5rem 5rem;">
+      <div style="margin-bottom: 3rem;">
+        <h1 class="section-title" style="font-size: 2.5rem;">Curated AI Collections</h1>
+        <p class="section-desc">Hand-crafted toolsets assembled by our editorial team for specific goals, technical environments, and industry workflows.</p>
       </div>
+
       <div class="grid-collections">
         {"".join([f'''
-        <a href="{BASE_URL}/collection/{col['slug']}/" class="collection-card">
-          <div style="color: var(--brand-primary); font-size: 1.75rem; margin-bottom: 0.75rem;">&#9733;</div>
+        <a href="../collection/{col['slug']}/" class="collection-card">
+          <div style="color: var(--brand-primary); font-size: 1.85rem; margin-bottom: 0.85rem;">&#9733;</div>
           <div class="collection-card-title">{escape(col['title'])}</div>
           <p class="collection-card-desc">{escape(col['description'])}</p>
-          <div style="font-size: 0.8125rem; color: var(--brand-primary); font-weight: 600;">
+          <div style="font-size: 0.875rem; color: var(--brand-primary); font-weight: 700;">
             View {len(col['toolIds'])} Curated Tools &rarr;
           </div>
         </a>''' for col in collections])}
       </div>
     </div>
     """
-    write_page("collections/index.html", render_page("Curated AI Tool Collections", "Explore expert-curated collections of AI tools.", cols_index_content, "/collections/", current_nav="collections"))
+    write_page("collections/index.html", render_page("Curated AI Tool Collections", "Explore expert-curated collections of AI tools.", cols_index_content, "/collections/", current_nav="collections", rel_base=".."))
     sitemap_urls.append(("/collections/", "0.8", "weekly"))
 
     for col in collections:
         col_tools = [tool_map[tid] for tid in col["toolIds"] if tid in tool_map]
         col_detail_content = f"""
-        <div class="container" style="padding: 3rem 1.5rem 4rem;">
+        <div class="container" style="padding: 3.5rem 1.5rem 5rem;">
           <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <a href="{BASE_URL}/">Home</a> &rsaquo;
-            <a href="{BASE_URL}/collections/">Collections</a> &rsaquo;
+            <a href="../../">Home</a> &rsaquo;
+            <a href="../../collections/">Collections</a> &rsaquo;
             <span>{escape(col['title'])}</span>
           </nav>
 
-          <div style="margin-bottom: 2.5rem; max-width: 800px;">
-            <h1 class="section-title" style="font-size: 2.25rem; margin-bottom: 0.75rem;">{escape(col['title'])}</h1>
-            <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+          <div style="margin-bottom: 3rem; max-width: 820px;">
+            <h1 class="section-title" style="font-size: 2.5rem; margin-bottom: 0.85rem;">{escape(col['title'])}</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.75rem;">
               {escape(col['description'])}
             </p>
-            <div style="background: var(--bg-card); border-left: 4px solid var(--brand-primary); padding: 1.25rem; border-radius: var(--radius-sm); font-size: 0.95rem; color: var(--text-secondary);">
-              <strong>Curator Note:</strong> {escape(col['curatorNotes'])}
+            <div style="background: var(--bg-card); border-left: 4px solid var(--brand-primary); padding: 1.5rem; border-radius: var(--radius-md); font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+              <strong style="color: var(--text-primary);">Curator Note:</strong> {escape(col['curatorNotes'])}
             </div>
           </div>
 
           <div class="grid-tools">
-            {"".join([render_tool_card(t) for t in col_tools])}
+            {"".join([render_tool_card(t, rel_base="../..") for t in col_tools])}
           </div>
         </div>
         """
-        write_page(f"collection/{col['slug']}/index.html", render_page(col["title"], col["description"], col_detail_content, f"/collection/{col['slug']}/"))
+        write_page(f"collection/{col['slug']}/index.html", render_page(col["title"], col["description"], col_detail_content, f"/collection/{col['slug']}/", rel_base="../.."))
         sitemap_urls.append((f"/collection/{col['slug']}/", "0.7", "weekly"))
 
     # 6. Blog & Markdown Articles (/blog/index.html & /blog/<slug>/index.html)
@@ -912,57 +1184,75 @@ def build_site(data_dir=None):
                 meta, body = parse_frontmatter(raw)
                 meta["body"] = body
                 meta["filename"] = fname
+                # Estimate read time (approx 200 words per min)
+                word_count = len(body.split())
+                meta["readTime"] = max(2, round(word_count / 200))
                 articles.append(meta)
 
     # Sort articles newest first
     articles.sort(key=lambda x: x.get("publishedAt", ""), reverse=True)
 
     blog_index_cards = "".join([f"""
-    <article class="collection-card" style="padding: 2rem;">
-      <div style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 0.5rem;">{escape(a.get('publishedAt', '2026-10-15'))} &bull; {escape(a.get('author', 'Editorial Staff'))}</div>
-      <h2 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem;">
-        <a href="{BASE_URL}/blog/{a['slug']}/" style="color: var(--text-primary);">{escape(a['title'])}</a>
+    <article class="collection-card" style="padding: 2.25rem;">
+      <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 0.85rem;">
+        <span>{escape(a.get('publishedAt', '2026-10-15'))}</span>
+        <span>&bull;</span>
+        <span>{a.get('readTime', 3)} min read</span>
+      </div>
+      <h2 style="font-size: 1.45rem; font-weight: 700; margin-bottom: 0.85rem; line-height: 1.3;">
+        <a href="../blog/{a['slug']}/" style="color: var(--text-primary);">{escape(a['title'])}</a>
       </h2>
-      <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.6; flex: 1;">
+      <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6; flex: 1;">
         {escape(a.get('description', ''))}
       </p>
-      <a href="{BASE_URL}/blog/{a['slug']}/" class="view-all-link">Read Full Guide &rarr;</a>
+      <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1.25rem;">
+        <span style="font-size: 0.8125rem; color: var(--text-muted);">By {escape(a.get('author', 'Editorial Staff'))}</span>
+        <a href="../blog/{a['slug']}/" class="view-all-link">Read Full Guide &rarr;</a>
+      </div>
     </article>""" for a in articles])
 
     blog_index_content = f"""
-    <div class="container" style="padding: 3rem 1.5rem 4rem;">
-      <div style="margin-bottom: 2.5rem;">
-        <h1 class="section-title" style="font-size: 2.25rem;">AI Guides, Benchmarks & Tutorials</h1>
-        <p class="section-desc">Practical workflows, tool comparisons, and guides for developers and knowledge workers.</p>
+    <div class="container" style="padding: 3.5rem 1.5rem 5rem;">
+      <div style="margin-bottom: 3rem;">
+        <h1 class="section-title" style="font-size: 2.5rem;">AI Guides, Benchmarks & Tutorials</h1>
+        <p class="section-desc">Practical workflows, tool comparison matrices, and step-by-step guides for developers and knowledge workers.</p>
       </div>
       <div class="grid-collections">
         {blog_index_cards}
       </div>
     </div>
     """
-    write_page("blog/index.html", render_page("AI Guides & Tutorials", "Read practical guides and benchmarks on artificial intelligence tools.", blog_index_content, "/blog/", current_nav="blog"))
+    write_page("blog/index.html", render_page("AI Guides & Tutorials", "Read practical guides and benchmarks on artificial intelligence tools.", blog_index_content, "/blog/", current_nav="blog", rel_base=".."))
     sitemap_urls.append(("/blog/", "0.8", "weekly"))
 
     for a in articles:
-        html_body = parse_markdown(a["body"])
+        html_body = parse_markdown(a["body"], rel_base="../..")
         article_content = f"""
         <article class="article-container">
-          <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <a href="{BASE_URL}/">Home</a> &rsaquo;
-            <a href="{BASE_URL}/blog/">Blog</a> &rsaquo;
+          <nav class="breadcrumbs" aria-label="Breadcrumb" style="justify-content: center;">
+            <a href="../../">Home</a> &rsaquo;
+            <a href="../../blog/">Blog</a> &rsaquo;
             <span>{escape(a['title'])}</span>
           </nav>
 
           <header class="article-header">
+            <h1 class="article-title">{escape(a['title'])}</h1>
             <div class="article-meta">
               <span>Published {escape(a.get('publishedAt', ''))}</span>
               <span>&bull;</span>
               <span>By {escape(a.get('author', 'Editorial Staff'))}</span>
+              <span>&bull;</span>
+              <span>{a.get('readTime', 3)} min read</span>
             </div>
           </header>
 
           <div class="prose">
             {html_body}
+          </div>
+
+          <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <a href="../../blog/" class="view-all-link">&larr; Back to all guides</a>
+            <a href="../../tools/" class="btn btn-primary">Browse AI Directory &UpperRightArrow;</a>
           </div>
         </article>
         """
@@ -973,9 +1263,10 @@ def build_site(data_dir=None):
             "description": a.get("description", ""),
             "author": {"@type": "Organization", "name": a.get("author", "AI Tools Directory")},
             "datePublished": a.get("publishedAt", ""),
-            "dateModified": a.get("updatedAt", a.get("publishedAt", ""))
+            "dateModified": a.get("updatedAt", a.get("publishedAt", "")),
+            "mainEntityOfPage": f"{CANONICAL_HOST}/blog/{a['slug']}/"
         }
-        write_page(f"blog/{a['slug']}/index.html", render_page(a["title"], a.get("description", ""), article_content, f"/blog/{a['slug']}/", article_sd, "blog"))
+        write_page(f"blog/{a['slug']}/index.html", render_page(a["title"], a.get("description", ""), article_content, f"/blog/{a['slug']}/", article_sd, "blog", rel_base="../.."))
         sitemap_urls.append((f"/blog/{a['slug']}/", "0.7", "monthly"))
 
     # 7. Static Pages: About, Contact, Privacy, Terms, 404
@@ -998,19 +1289,19 @@ def build_site(data_dir=None):
       </div>
     </div>
     """
-    write_page("about/index.html", render_page("About AI Tools Directory", "Learn about the mission and zero-cost static architecture of AI Tools Directory.", about_content, "/about/", current_nav="about"))
+    write_page("about/index.html", render_page("About AI Tools Directory", "Learn about the mission and zero-cost static architecture of AI Tools Directory.", about_content, "/about/", current_nav="about", rel_base=".."))
     sitemap_urls.append(("/about/", "0.5", "monthly"))
 
     contact_content = f"""
     <div class="article-container">
-      <h1 class="article-title" style="text-align: left; margin-bottom: 1.5rem;">Contact & Feedback</h1>
+      <h1 class="article-title" style="text-align: left; margin-bottom: 1.5rem;">Contact & Tool Submission</h1>
       <div class="prose">
         <p>We welcome submissions, bug reports, and corrections from the community.</p>
 
         <h2>Submitting a New AI Tool</h2>
         <p>To request a listing for your tool or report outdated pricing:</p>
         <ol>
-          <li>Ensure your tool satisfies our <a href="{BASE_URL}/about/">editorial guidelines</a>.</li>
+          <li>Ensure your tool satisfies our <a href="../about/">editorial guidelines</a>.</li>
           <li>Submit a pull request to the open-source database repository.</li>
           <li>Our automated test suite will validate the schema and referential integrity before review.</li>
         </ol>
@@ -1020,32 +1311,32 @@ def build_site(data_dir=None):
       </div>
     </div>
     """
-    write_page("contact/index.html", render_page("Contact & Feedback", "Submit AI tools or contact the directory maintainers.", contact_content, "/contact/"))
+    write_page("contact/index.html", render_page("Contact & Feedback", "Submit AI tools or contact the directory maintainers.", contact_content, "/contact/", rel_base=".."))
     sitemap_urls.append(("/contact/", "0.5", "monthly"))
 
     privacy_content = f"""
     <div class="article-container">
       <h1 class="article-title" style="text-align: left; margin-bottom: 1.5rem;">Privacy Policy</h1>
       <div class="prose">
-        <p>Last updated: October 15, 2026</p>
+        <p>Last updated: October 16, 2026</p>
         <h2>Zero Tracking & Data Sovereignty</h2>
         <p>AI Tools Directory is committed to maximum user privacy:</p>
         <ul>
-          <li><strong>No Tracking Cookies</strong>: We do not use third-party advertising cookies or trackers.</li>
-          <li><strong>Local Browser Storage</strong>: The only data stored in your browser is your dark/light theme preference (<code>ai_tools_dir_theme</code>) in <code>localStorage</code>.</li>
+          <li><strong>No Tracking Cookies</strong>: We do not use third-party advertising cookies or tracking pixels.</li>
+          <li><strong>Local Browser Storage</strong>: The only data stored in your browser is your dark/light theme preference in <code>localStorage</code>.</li>
           <li><strong>Client-Side Search</strong>: Search queries remain 100% in your browser and are never transmitted to external query logging endpoints.</li>
         </ul>
       </div>
     </div>
     """
-    write_page("privacy/index.html", render_page("Privacy Policy", "AI Tools Directory privacy statement. Zero tracking cookies.", privacy_content, "/privacy/"))
+    write_page("privacy/index.html", render_page("Privacy Policy", "AI Tools Directory privacy statement. Zero tracking cookies.", privacy_content, "/privacy/", rel_base=".."))
     sitemap_urls.append(("/privacy/", "0.3", "yearly"))
 
     terms_content = f"""
     <div class="article-container">
       <h1 class="article-title" style="text-align: left; margin-bottom: 1.5rem;">Terms of Use</h1>
       <div class="prose">
-        <p>Last updated: October 15, 2026</p>
+        <p>Last updated: October 16, 2026</p>
         <h2>Directory Information Disclaimer</h2>
         <p>The information provided on AI Tools Directory is for general educational and discovery purposes only. Product names, logos, and brands are property of their respective owners. Listing does not imply affiliation or endorsement.</p>
         <h2>External Links</h2>
@@ -1053,26 +1344,26 @@ def build_site(data_dir=None):
       </div>
     </div>
     """
-    write_page("terms/index.html", render_page("Terms of Use", "AI Tools Directory terms of use and editorial disclaimer.", terms_content, "/terms/"))
+    write_page("terms/index.html", render_page("Terms of Use", "AI Tools Directory terms of use and editorial disclaimer.", terms_content, "/terms/", rel_base=".."))
     sitemap_urls.append(("/terms/", "0.3", "yearly"))
 
     error_content = f"""
-    <div class="article-container" style="text-align: center; padding: 5rem 1.5rem;">
-      <h1 style="font-size: 5rem; font-weight: 800; color: var(--brand-primary); margin-bottom: 0.5rem;">404</h1>
-      <h2 style="font-size: 1.75rem; margin-bottom: 1rem;">Page Not Found</h2>
-      <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto 2rem;">
-        The requested page could not be located. It may have been moved or updated.
+    <div class="article-container" style="text-align: center; padding: 6rem 1.5rem;">
+      <h1 style="font-size: 6rem; font-weight: 800; color: var(--brand-primary); margin-bottom: 0.5rem; font-family: var(--font-display);">404</h1>
+      <h2 style="font-size: 2rem; margin-bottom: 1rem;">Page Not Found</h2>
+      <p style="color: var(--text-secondary); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.6;">
+        The requested page could not be located. It may have been updated, moved, or temporarily unavailable.
       </p>
-      <a href="{BASE_URL}/" class="btn btn-primary">Return to Directory Homepage</a>
+      <a href="./" class="btn btn-primary">Return to Directory Homepage</a>
     </div>
     """
-    write_page("404.html", render_page("Page Not Found (404)", "The requested page was not found.", error_content, "/404.html"))
+    write_page("404.html", render_page("Page Not Found (404)", "The requested page was not found.", error_content, "/404.html", rel_base="."))
 
     # 8. Sitemap and Robots
     sitemap_xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     today_str = datetime.datetime.now().strftime("%Y-%m-%d")
     for path, priority, freq in sitemap_urls:
-        full_url = f"https://in-ni18.github.io/ai-tools-directory{path}"
+        full_url = f"{CANONICAL_HOST}{path}"
         sitemap_xml.append(f"""  <url>
     <loc>{full_url}</loc>
     <lastmod>{today_str}</lastmod>
@@ -1085,7 +1376,7 @@ def build_site(data_dir=None):
         f.write("\n".join(sitemap_xml))
 
     with open(os.path.join(DIST_DIR, "robots.txt"), "w", encoding="utf-8") as f:
-        f.write("User-agent: *\nAllow: /\n\nSitemap: https://in-ni18.github.io/ai-tools-directory/sitemap.xml\n")
+        f.write(f"User-agent: *\nAllow: /\n\nSitemap: {CANONICAL_HOST}/sitemap.xml\n")
 
     print(f"[SUCCESS] Website build complete at {DIST_DIR}!")
     print(f"  Indexed routes generated: {len(sitemap_urls)}")
