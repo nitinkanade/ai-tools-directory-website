@@ -1,0 +1,84 @@
+{
+  "id": "ollama",
+  "name": "Ollama",
+  "slug": "ollama",
+  "shortDescription": "Lightweight open-source tool that lets you run large language models locally on macOS, Linux, and Windows.",
+  "description": "Ollama is a command-line tool and local runtime that makes running large language models on personal computers as straightforward as running a Docker container. With simple commands like 'ollama run deepseek-r1', developers can run Llama 3, Mistral, Phi-3, and DeepSeek models locally with GPU acceleration.",
+  "categories": [
+    "opensource-models-platforms",
+    "coding-development",
+    "chatbots-assistants"
+  ],
+  "subcategories": [
+    "local-runtimes",
+    "open-weights"
+  ],
+  "tags": [
+    "local-llm",
+    "open-source",
+    "cli",
+    "terminal",
+    "privacy",
+    "mac",
+    "windows",
+    "linux"
+  ],
+  "websiteUrl": "https://ollama.com",
+  "pricing": {
+    "model": "open-source",
+    "details": "100% free and open-source under MIT license. Completely offline with zero subscription fees.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "macos",
+    "linux",
+    "windows"
+  ],
+  "isOpenSource": true,
+  "sourceCodeUrl": "https://github.com/ollama/ollama",
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Simple CLI interface: 'ollama run <model>' pulls and launches models instantly",
+    "Automatic GPU acceleration across Apple Metal, NVIDIA CUDA, and AMD ROCm",
+    "OpenAI-compatible local REST API endpoint (http://localhost:11434/v1)",
+    "Modelfile syntax for packaging custom system prompts and quantization parameters"
+  ],
+  "useCases": [
+    "100% private, offline coding and chat without sending data to external clouds",
+    "Local backend provider for Cursor, Continue.dev, and open-source web UIs",
+    "Testing model fine-tunes and quantizations on consumer laptops"
+  ],
+  "alternatives": [
+    "vllm",
+    "hugging-face"
+  ],
+  "relatedTools": [
+    "deepseek",
+    "hugging-face",
+    "vllm"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "English",
+    "Chinese",
+    "Spanish",
+    "French",
+    "German"
+  ],
+  "accountRequired": false,
+  "limitations": [
+    "Performance depends entirely on local CPU/GPU hardware and available RAM/VRAM",
+    "Large 70B+ parameter models require high-end workstations with 64GB+ unified memory"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://github.com/ollama/ollama"
+  ],
+  "createdAt": "2023-07-01",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Ollama — Run Llama 3 & DeepSeek Locally on Your Computer",
+    "description": "Download Ollama to run open-source LLMs locally on Mac, Windows, and Linux. Free & MIT."
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "n8n",
+  "name": "n8n",
+  "slug": "n8n",
+  "shortDescription": "Fair-code node-based workflow automation platform with powerful native LangChain and AI agent nodes.",
+  "description": "n8n is an extendable workflow automation tool that can be self-hosted on private servers or run in the cloud. With advanced AI orchestration capabilities, users can visually combine LangChain components, vector stores, OpenAI/Anthropic models, and 400+ SaaS apps with complete data privacy and no per-execution licensing penalties.",
+  "categories": [
+    "nocode-lowcode",
+    "productivity-automation",
+    "agents-workflows"
+  ],
+  "subcategories": [
+    "visual-builders",
+    "workflow-builders"
+  ],
+  "tags": [
+    "no-code",
+    "automation",
+    "open-source",
+    "workflow",
+    "self-hosted"
+  ],
+  "websiteUrl": "https://n8n.io",
+  "pricing": {
+    "model": "freemium",
+    "details": "Self-hosted Community edition is free under sustainable fair-code license; Cloud plans start at €20/mo for 2,500 executions.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "isOpenSource": true,
+  "sourceCodeUrl": "https://github.com/n8n-io/n8n",
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Visual canvas combining standard API webhooks and advanced LangChain AI nodes",
+    "Full self-hosting capabilities using Docker for strict data sovereignty",
+    "Human-in-the-loop approval nodes and interactive chat widgets",
+    "Custom JavaScript and Python code execution within any workflow node"
+  ],
+  "useCases": [
+    "Self-hosted customer support chatbots querying private PostgreSQL databases",
+    "Automating lead triage and enrichment without sending data to third parties",
+    "Scheduled monitoring of industry news with AI summary emails"
+  ],
+  "alternatives": [
+    "make",
+    "zapier-central"
+  ],
+  "relatedTools": [
+    "make",
+    "langchain"
+  ],
+  "languageSupport": [
+    "English"
+  ],
+  "accountRequired": false,
+  "limitations": [
+    "Self-hosting requires basic server maintenance and Docker proficiency",
+    "Enterprise features like SAML SSO and audit logs require commercial license"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://github.com/n8n-io/n8n"
+  ],
+  "createdAt": "2019-06-01",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "n8n — Self-Hosted Workflow Automation with Native AI Agents",
+    "description": "Build private AI automations and workflows with n8n. Free self-hosted and cloud plans."
+  }
+}

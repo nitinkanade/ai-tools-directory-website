@@ -1,0 +1,75 @@
+{
+  "id": "whisper",
+  "name": "OpenAI Whisper",
+  "slug": "whisper",
+  "shortDescription": "Robust, open-source multi-lingual automatic speech recognition (ASR) model trained on 680,000 hours of audio.",
+  "description": "Whisper is an open-source neural net speech recognition system trained on diverse multilingual and multitask supervised data from the web. It achieves human-level robustness to background noise, accents, and technical jargon, supporting speech transcription, translation to English, and timestamped subtitle generation.",
+  "categories": [
+    "audio-music",
+    "opensource-models-platforms"
+  ],
+  "subcategories": [
+    "transcription",
+    "local-runtimes"
+  ],
+  "tags": [
+    "transcription",
+    "speech-to-text",
+    "audio",
+    "open-source",
+    "local-llm"
+  ],
+  "websiteUrl": "https://github.com/openai/whisper",
+  "pricing": {
+    "model": "open-source",
+    "details": "Completely free and open-source under MIT license for self-hosting; OpenAI also offers hosted API at $0.006 per minute.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "linux",
+    "windows",
+    "macos",
+    "api"
+  ],
+  "isOpenSource": true,
+  "sourceCodeUrl": "https://github.com/openai/whisper",
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Open-source model checkpoints from tiny (39M) to large-v3 (1.5B parameters)",
+    "Automatic language identification across 99 languages",
+    "Native word-level and phrase-level timestamp alignment",
+    "Extreme resilience against background noise and varied speaker accents"
+  ],
+  "useCases": [
+    "Transcribing podcast episodes and video interviews offline",
+    "Generating SRT and VTT subtitles for media production",
+    "Voice input layer for local dictation and accessibility software"
+  ],
+  "alternatives": [
+    "elevenlabs"
+  ],
+  "relatedTools": [
+    "elevenlabs",
+    "ollama"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "99 languages supported"
+  ],
+  "accountRequired": false,
+  "limitations": [
+    "Large-v3 model requires dedicated GPU or quantization (whisper.cpp) for real-time speed",
+    "Does not identify distinct speakers (no native diarization without pyannote)"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://github.com/openai/whisper"
+  ],
+  "createdAt": "2022-09-21",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "OpenAI Whisper — Open-Source Speech Recognition & Transcription",
+    "description": "Transcribe audio offline with OpenAI Whisper. Features, open models, and benchmarks."
+  }
+}

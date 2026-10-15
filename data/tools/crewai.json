@@ -1,0 +1,74 @@
+{
+  "id": "crewai",
+  "name": "CrewAI",
+  "slug": "crewai",
+  "shortDescription": "Multi-agent orchestration framework enabling autonomous role-playing AI agents to collaborate on complex goals.",
+  "description": "CrewAI is an open-source Python framework for orchestrating role-playing autonomous AI agents. By assigning agents specific roles, backstories, tools, and delegative authority, teams can create multi-agent crews that collaboratively plan, research, write, and execute complex business processes.",
+  "categories": [
+    "agents-workflows",
+    "coding-development"
+  ],
+  "subcategories": [
+    "agent-frameworks"
+  ],
+  "tags": [
+    "agents",
+    "multi-agent",
+    "automation",
+    "python",
+    "open-source"
+  ],
+  "websiteUrl": "https://www.crewai.com",
+  "pricing": {
+    "model": "freemium",
+    "details": "Open-source core library is free under MIT license; CrewAI Enterprise offers managed hosting, visual orchestration, and security governance.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "linux",
+    "macos",
+    "windows",
+    "api"
+  ],
+  "isOpenSource": true,
+  "sourceCodeUrl": "https://github.com/crewAIInc/crewAI",
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "Role-based agent definitions (Researcher, Writer, QA, Fact-Checker)",
+    "Autonomous inter-agent communication, delegation, and review loops",
+    "Support for sequential, hierarchical, and asynchronous execution processes",
+    "Broad compatibility with LangChain tools and custom Python functions"
+  ],
+  "useCases": [
+    "Automated market intelligence gathering and comprehensive dossier writing",
+    "Autonomous code auditing crews (security auditor, performance reviewer, tester)",
+    "Automating customer support escalation and resolution research"
+  ],
+  "alternatives": [
+    "langchain",
+    "dify"
+  ],
+  "relatedTools": [
+    "langchain",
+    "ollama"
+  ],
+  "languageSupport": [
+    "Python"
+  ],
+  "accountRequired": false,
+  "limitations": [
+    "Agents can enter redundant reasoning loops if prompts lack clear termination criteria",
+    "Token consumption accumulates across multi-agent exchanges"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://github.com/crewAIInc/crewAI"
+  ],
+  "createdAt": "2023-11-20",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "CrewAI — Multi-Agent Orchestration Framework in Python",
+    "description": "Build teams of autonomous role-playing AI agents with CrewAI. Documentation and examples."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "categoryId": "opensource-models-platforms",
+  "toolIds": [
+    "deepseek",
+    "dify",
+    "hugging-face",
+    "langchain",
+    "ollama",
+    "stable-diffusion-webui",
+    "vllm",
+    "whisper"
+  ],
+  "count": 8
+}

@@ -1,0 +1,78 @@
+{
+  "id": "surfer-seo",
+  "name": "Surfer SEO",
+  "slug": "surfer-seo",
+  "shortDescription": "Data-driven SEO content optimization platform providing real-time NLP keyword guidelines and SERP scoring.",
+  "description": "Surfer is an on-page SEO optimization tool that analyzes top-ranking pages on Google to deliver actionable content guidelines. Its Content Editor scores articles in real time based on keyword frequency, heading structures, NLP entities, and image counts, complemented by Surfer AI for instant article drafts.",
+  "categories": [
+    "seo-optimization",
+    "writing-content"
+  ],
+  "subcategories": [
+    "content-optimization",
+    "keyword-research"
+  ],
+  "tags": [
+    "seo",
+    "content-optimization",
+    "keywords",
+    "serp",
+    "marketing"
+  ],
+  "websiteUrl": "https://surferseo.com",
+  "pricing": {
+    "model": "paid",
+    "details": "Essential plan ($89/mo billed annually) includes 30 Content Editors/mo; Scale plan ($129/mo) includes 100 editors; 7-day money-back guarantee.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "browser-extension"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "Real-time Content Score based on 500+ on-page SEO factors",
+    "NLP entity and keyword recommendations derived from top 10 competitors",
+    "Keyword Research clustering and topical authority mapping",
+    "Native Google Docs and WordPress CMS integrations"
+  ],
+  "useCases": [
+    "Optimizing existing blog articles to climb Google search rankings",
+    "Creating structured content briefs for freelance writing teams",
+    "Auditing competitor domains for keyword gaps and low-competition terms"
+  ],
+  "alternatives": [
+    "semrush-ai"
+  ],
+  "relatedTools": [
+    "jasper",
+    "semrush-ai"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "English",
+    "Spanish",
+    "German",
+    "French",
+    "Dutch",
+    "Polish"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Premium pricing tailored primarily to agencies and professional publishers",
+    "Over-optimizing solely for score can sometimes hinder natural prose flow"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://surferseo.com"
+  ],
+  "createdAt": "2017-09-01",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Surfer SEO — Data-Driven Content Editor & SERP Optimization",
+    "description": "Optimize articles with Surfer SEO real-time guidelines. Pricing, features, and reviews."
+  }
+}

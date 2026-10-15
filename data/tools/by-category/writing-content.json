@@ -1,0 +1,13 @@
+{
+  "categoryId": "writing-content",
+  "toolIds": [
+    "chatgpt",
+    "claude",
+    "copy-ai",
+    "deepl",
+    "jasper",
+    "notion-ai",
+    "surfer-seo"
+  ],
+  "count": 7
+}

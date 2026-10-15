@@ -1,0 +1,73 @@
+{
+  "id": "copy-ai",
+  "name": "Copy.ai",
+  "slug": "copy-ai",
+  "shortDescription": "AI marketing and sales automation platform for go-to-market teams scaling content and lead workflows.",
+  "description": "Copy.ai has evolved from an ad copy generator into a comprehensive AI platform for GTM (Go-to-Market) teams. It combines conversational drafting with autonomous workflow tables, allowing marketing and sales professionals to automate prospect research, outbound email sequences, and SEO content clusters.",
+  "categories": [
+    "writing-content",
+    "business-marketing"
+  ],
+  "subcategories": [
+    "copywriting",
+    "sales-prospecting"
+  ],
+  "tags": [
+    "copywriting",
+    "marketing",
+    "sales",
+    "outbound",
+    "writing"
+  ],
+  "websiteUrl": "https://www.copy.ai",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free plan with 2,000 words/mo in chat; Pro plan at $36/mo (billed annually) with unlimited chat words; Team tier for multi-seat workflow tables.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "GTM AI workflows that run batch operations across lead lists",
+    "Infobase for saving company mission, ICP, and product details",
+    "Multi-language generation across 95+ languages",
+    "Pre-built templates for cold emails, headlines, and product descriptions"
+  ],
+  "useCases": [
+    "Enriching sales leads with personalized company research snippets",
+    "Drafting high-converting eCommerce product descriptions in bulk",
+    "Generating social media schedules and caption variants"
+  ],
+  "alternatives": [
+    "jasper",
+    "chatgpt"
+  ],
+  "relatedTools": [
+    "jasper",
+    "surfer-seo"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "95+ languages supported"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Free tier word counts deplete rapidly during long-form testing",
+    "Advanced multi-member workflows require higher tier plans"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://www.copy.ai"
+  ],
+  "createdAt": "2020-10-01",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Copy.ai — Go-to-Market AI Copywriting & Sales Automation",
+    "description": "Scale marketing copy and sales research with Copy.ai. Plans, features, and workflows."
+  }
+}

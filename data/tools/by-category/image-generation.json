@@ -1,0 +1,10 @@
+{
+  "categoryId": "image-generation",
+  "toolIds": [
+    "canva-magic-studio",
+    "midjourney",
+    "runway-gen-2",
+    "stable-diffusion-webui"
+  ],
+  "count": 4
+}

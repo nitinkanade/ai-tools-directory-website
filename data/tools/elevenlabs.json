@@ -1,0 +1,83 @@
+{
+  "id": "elevenlabs",
+  "name": "ElevenLabs",
+  "slug": "elevenlabs",
+  "shortDescription": "State-of-the-art voice synthesis, realistic voice cloning, text-to-speech, and automatic video dubbing.",
+  "description": "ElevenLabs is an AI audio research platform that produces ultra-lifelike speech synthesis with emotional nuance, breathing, and pitch inflection. It enables instantaneous voice cloning from brief audio samples, professional long-form audiobook reading, automated multi-language video dubbing, and expressive sound effects.",
+  "categories": [
+    "audio-music",
+    "productivity-automation"
+  ],
+  "subcategories": [
+    "text-to-speech",
+    "music-generation"
+  ],
+  "tags": [
+    "audio",
+    "voice-cloning",
+    "text-to-speech",
+    "dubbing",
+    "speech"
+  ],
+  "websiteUrl": "https://elevenlabs.io",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free tier with 10,000 characters/month; Starter plan ($5/mo) with instant voice cloning and 30,000 characters; Creator ($22/mo) with 100,000 characters.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "api",
+    "ios",
+    "android"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Lifelike emotional text-to-speech across 32 languages",
+    "Instant and professional high-fidelity voice cloning",
+    "AI Dubbing with automatic speaker separation and lip-sync matching",
+    "Text-to-Sound Effects engine for foley and video editing"
+  ],
+  "useCases": [
+    "Audiobook and podcast voiceover narration",
+    "Localizing YouTube videos into multiple languages automatically",
+    "Interactive voice agents and game NPC dialogue"
+  ],
+  "alternatives": [
+    "whisper"
+  ],
+  "relatedTools": [
+    "whisper",
+    "suno"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "English",
+    "Spanish",
+    "German",
+    "Polish",
+    "Italian",
+    "French",
+    "Portuguese",
+    "Hindi",
+    "Japanese"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Monthly character limits require careful script planning",
+    "Voice verification safeguards required for public cloning"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://elevenlabs.io"
+  ],
+  "createdAt": "2022-11-01",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "ElevenLabs — AI Voice Generator, Text to Speech & Voice Cloning",
+    "description": "Discover ElevenLabs lifelike voice synthesis, pricing, features, and API integrations."
+  }
+}

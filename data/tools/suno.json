@@ -1,0 +1,74 @@
+{
+  "id": "suno",
+  "name": "Suno",
+  "slug": "suno",
+  "shortDescription": "Generative AI music platform that composes complete radio-ready songs with vocals, lyrics, and instrumentation.",
+  "description": "Suno is a generative music creation system capable of generating full 2-to-4 minute songs with coherent vocals, lyrics, instrumentation, and arrangement from simple text prompts. Users can specify genres (from rock and jazz to hyperpop and EDM) or bring their own custom lyrics.",
+  "categories": [
+    "audio-music"
+  ],
+  "subcategories": [
+    "music-generation"
+  ],
+  "tags": [
+    "music",
+    "audio",
+    "songwriting",
+    "vocals",
+    "creative"
+  ],
+  "websiteUrl": "https://suno.com",
+  "pricing": {
+    "model": "freemium",
+    "details": "Basic plan free with 50 daily credits (non-commercial); Pro tier ($10/mo) includes 2,500 credits and commercial rights; Premier ($30/mo) with 10,000 credits.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "ios"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "Full vocal generation with harmonizing and verse-chorus song structures",
+    "Custom lyrics mode with verse, chorus, and bridge tags",
+    "Audio upload and song continuation feature",
+    "Stems separation to isolate vocal and instrumental tracks"
+  ],
+  "useCases": [
+    "Background music production for YouTube, podcasts, and indie games",
+    "Custom novelty songs for gifts, birthdays, and celebrations",
+    "Songwriting ideation, melody drafting, and genre exploration"
+  ],
+  "alternatives": [
+    "elevenlabs"
+  ],
+  "relatedTools": [
+    "elevenlabs"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "English",
+    "Spanish",
+    "Japanese",
+    "German",
+    "French"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "High-frequency audio artifacts can sometimes occur in dense vocal mixes",
+    "Commercial rights restricted to paid plans"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://suno.com"
+  ],
+  "createdAt": "2023-12-01",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Suno AI — Generate Complete Songs & Music from Text Prompts",
+    "description": "Learn about Suno AI music generation, vocal models, commercial rights, and plans."
+  }
+}

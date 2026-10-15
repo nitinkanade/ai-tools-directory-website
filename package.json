@@ -1,0 +1,14 @@
+{
+  "name": "ai-tools-directory-website",
+  "version": "1.0.0",
+  "description": "Fast, responsive, SEO-friendly AI Tools Directory website hosted on GitHub Pages",
+  "scripts": {
+    "build": "python scripts/build.py",
+    "sync": "python scripts/sync_data.py",
+    "dev": "node server.js",
+    "test": "python -m unittest discover tests"
+  },
+  "keywords": ["ai-tools", "directory", "static-site", "seo", "github-pages"],
+  "author": "AI Tools Directory Maintainers",
+  "license": "MIT"
+}

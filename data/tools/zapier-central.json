@@ -1,0 +1,74 @@
+{
+  "id": "zapier-central",
+  "name": "Zapier Central",
+  "slug": "zapier-central",
+  "shortDescription": "Experimental AI agent workspace that connects LLMs to 6,000+ business applications with live data access.",
+  "description": "Zapier Central is an AI agent workspace that allows users to build, train, and operate AI bots that interact directly with thousands of business apps. Agents can trigger actions in CRM systems, search live spreadsheets, send Slack messages, and execute complex business logic based on natural language instructions.",
+  "categories": [
+    "productivity-automation",
+    "agents-workflows",
+    "nocode-lowcode"
+  ],
+  "subcategories": [
+    "workflow-builders",
+    "autonomous-apps"
+  ],
+  "tags": [
+    "automation",
+    "agents",
+    "no-code",
+    "productivity",
+    "integrations"
+  ],
+  "websiteUrl": "https://zapier.com/central",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free tier with up to 4 active bots; paid plans scale with Zapier ecosystem task usage and enhanced execution quotas.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "browser-extension"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "Access to Zapier's 6,000+ app integrations without manual webhook coding",
+    "Behavior training using step-by-step natural language instructions",
+    "Instant document and spreadsheet data retrieval",
+    "Chrome extension to trigger agent actions on any webpage"
+  ],
+  "useCases": [
+    "Triaging lead emails and updating Salesforce or HubSpot records",
+    "Scraping competitor pricing updates directly into Google Sheets",
+    "Automated weekly status reporting to team Slack channels"
+  ],
+  "alternatives": [
+    "make",
+    "n8n"
+  ],
+  "relatedTools": [
+    "make",
+    "n8n"
+  ],
+  "languageSupport": [
+    "English"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Complex multi-branch workflows may still require traditional Zapier Zaps",
+    "Requires active authentication across target external services"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://zapier.com/central"
+  ],
+  "createdAt": "2024-03-01",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Zapier Central — AI Agents for 6,000+ Business Applications",
+    "description": "Automate company tasks with Zapier Central agents. Features, integrations, and pricing."
+  }
+}

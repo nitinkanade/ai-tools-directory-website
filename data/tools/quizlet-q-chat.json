@@ -1,0 +1,74 @@
+{
+  "id": "quizlet-q-chat",
+  "name": "Quizlet Q-Chat",
+  "slug": "quizlet-q-chat",
+  "shortDescription": "Conversational study coach that quizzes students on their own flashcard sets using adaptive Socratic methods.",
+  "description": "Q-Chat is Quizlet's AI-powered conversational study coach. Built on OpenAI's GPT models, it engages students in natural dialogue about their flashcard study sets—testing knowledge, prompting recall, providing real-world analogies, and adapting question difficulty based on student confidence.",
+  "categories": [
+    "education-learning"
+  ],
+  "subcategories": [
+    "study-tools",
+    "tutoring"
+  ],
+  "tags": [
+    "education",
+    "study-tools",
+    "flashcards",
+    "learning"
+  ],
+  "websiteUrl": "https://quizlet.com/features/q-chat",
+  "pricing": {
+    "model": "freemium",
+    "details": "Limited free study sessions; full unlimited access included with Quizlet Plus ($35.99/year).",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "android",
+    "ios"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "Conversational quizzes tailored to any user-created Quizlet flashcard deck",
+    "Storyteller and Socratic questioning study modes",
+    "Instant explanation of vocabulary definitions and historical dates",
+    "Confidence tracking and spaced repetition scheduling"
+  ],
+  "useCases": [
+    "Preparing for high school and university midterm examinations",
+    "Medical, nursing, and law terminology memorization practice",
+    "Conversational foreign language vocabulary drills"
+  ],
+  "alternatives": [
+    "khanmigo"
+  ],
+  "relatedTools": [
+    "khanmigo"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "English",
+    "Spanish",
+    "French",
+    "German"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Accuracy depends on the quality of the flashcards provided by the user",
+    "Full access requires Quizlet Plus annual subscription"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://quizlet.com/features/q-chat"
+  ],
+  "createdAt": "2023-02-28",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Quizlet Q-Chat — AI Conversational Study Coach & Flashcard Quizzer",
+    "description": "Master study sets interactively with Quizlet Q-Chat. Pricing, features, and tips."
+  }
+}

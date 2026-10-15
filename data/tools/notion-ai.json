@@ -1,0 +1,83 @@
+{
+  "id": "notion-ai",
+  "name": "Notion AI",
+  "slug": "notion-ai",
+  "shortDescription": "Connected workspace assistant that searches, drafts, and analyzes information across company docs and databases.",
+  "description": "Notion AI is an integrated workspace intelligence tool embedded inside Notion. It connects across all notes, tasks, projects, and synced apps (Slack, Google Drive, Jira) to answer questions, draft meeting recaps, auto-fill database properties, and extract key action items.",
+  "categories": [
+    "productivity-automation",
+    "writing-content"
+  ],
+  "subcategories": [
+    "smart-notes",
+    "meeting-assistants",
+    "editing-grammar"
+  ],
+  "tags": [
+    "productivity",
+    "notes",
+    "workspace",
+    "writing",
+    "summarization"
+  ],
+  "websiteUrl": "https://www.notion.so/product/ai",
+  "pricing": {
+    "model": "paid",
+    "details": "$10 per member/month add-on to existing Notion plans; limited free trial queries included in basic workspace.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "windows",
+    "macos",
+    "android",
+    "ios"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Q&A across entire Notion workspace and third-party connected tools",
+    "Autofill database columns with summaries, tags, and translation",
+    "Inline writing assistant for grammar, tone, and document expansion",
+    "Automated action item extraction from meeting notes"
+  ],
+  "useCases": [
+    "Onboarding new team members with instant company documentation search",
+    "Maintaining clean, structured product sprint databases automatically",
+    "Summarizing long customer feedback transcripts into prioritized features"
+  ],
+  "alternatives": [
+    "chatgpt",
+    "claude"
+  ],
+  "relatedTools": [
+    "chatgpt",
+    "zapier-central"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "English",
+    "Japanese",
+    "Korean",
+    "German",
+    "Spanish",
+    "French"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Requires an underlying Notion workspace",
+    "Paid add-on per user rather than standalone app"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://www.notion.so/product/ai"
+  ],
+  "createdAt": "2023-02-22",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Notion AI — Connected Workspace Assistant & Database Intelligence",
+    "description": "Discover Notion AI capabilities, company wiki Q&A, database autofill, and pricing."
+  }
+}

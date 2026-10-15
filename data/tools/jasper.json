@@ -1,0 +1,75 @@
+{
+  "id": "jasper",
+  "name": "Jasper",
+  "slug": "jasper",
+  "shortDescription": "Enterprise AI marketing copilot trained on brand voice, style guides, and multi-channel campaign assets.",
+  "description": "Jasper is an AI content platform built specifically for corporate marketing teams. It integrates brand voice style guides, company knowledge bases, and SEO guidelines to generate on-brand blog posts, social media campaigns, ad copy, and executive thought leadership at scale.",
+  "categories": [
+    "writing-content",
+    "business-marketing",
+    "seo-optimization"
+  ],
+  "subcategories": [
+    "copywriting",
+    "long-form"
+  ],
+  "tags": [
+    "writing",
+    "copywriting",
+    "marketing",
+    "brand-voice",
+    "seo"
+  ],
+  "websiteUrl": "https://www.jasper.ai",
+  "pricing": {
+    "model": "paid",
+    "details": "Creator plan ($39/seat/mo billed annually); Pro plan ($59/seat/mo) includes 3 brand voices and collaboration tools; 7-day free trial.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "browser-extension"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "Brand Voice customization using uploaded company style guides and URLs",
+    "Multi-channel marketing campaign generation from a single project brief",
+    "Built-in Surfer SEO integration for real-time keyword optimization",
+    "Enterprise governance, compliance, and user permissions management"
+  ],
+  "useCases": [
+    "Publishing high-volume marketing copy with consistent corporate tone",
+    "Generating localized ad variations for Google Ads and Facebook Ads",
+    "Repurposing webinar transcripts into newsletters and LinkedIn posts"
+  ],
+  "alternatives": [
+    "copy-ai",
+    "chatgpt"
+  ],
+  "relatedTools": [
+    "copy-ai",
+    "surfer-seo"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "30+ languages supported"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Significantly higher price point than general-purpose chat models",
+    "Requires ongoing editorial review to prevent repetitive marketing cadence"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://www.jasper.ai"
+  ],
+  "createdAt": "2021-02-01",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Jasper AI — Marketing Content Copilot & Brand Voice Generator",
+    "description": "Discover Jasper AI marketing platform features, pricing tiers, and brand voice tools."
+  }
+}

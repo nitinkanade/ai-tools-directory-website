@@ -1,0 +1,106 @@
+[
+  {
+    "id": "essential-coding-assistants",
+    "slug": "essential-coding-assistants",
+    "title": "Top AI Coding Assistants & Modern IDEs",
+    "description": "Essential AI tools that streamline programming, full-repo refactoring, and frontend generation.",
+    "curatorNotes": "Curated for software engineers seeking the highest-productivity coding companions. These tools span from in-editor auto-completions to autonomous terminal agents and rapid frontend UI generators.",
+    "icon": "terminal",
+    "featured": true,
+    "updatedAt": "2026-10-15",
+    "toolIds": [
+      "cursor",
+      "claude-code",
+      "github-copilot",
+      "v0",
+      "claude"
+    ]
+  },
+  {
+    "id": "frontier-reasoning-models",
+    "slug": "frontier-reasoning-models",
+    "title": "Frontier LLMs & Conversational Reasoning",
+    "description": "The leading conversational AI models and answer engines setting benchmarks in intelligence.",
+    "curatorNotes": "Hand-picked flagship conversational platforms. Each represents peak performance in long-context reasoning, web search with citations, or mathematical problem solving.",
+    "icon": "psychology",
+    "featured": true,
+    "updatedAt": "2026-10-15",
+    "toolIds": [
+      "chatgpt",
+      "claude",
+      "deepseek",
+      "perplexity"
+    ]
+  },
+  {
+    "id": "open-source-powerhouses",
+    "slug": "open-source-powerhouses",
+    "title": "Open-Source & Local AI Stack",
+    "description": "Run AI completely private and offline with open weights, local runtimes, and open inference engines.",
+    "curatorNotes": "Perfect for developers and privacy-focused teams who want zero subscription lock-in and 100% data sovereignty on personal hardware or private cloud clusters.",
+    "icon": "lock_open",
+    "featured": true,
+    "updatedAt": "2026-10-15",
+    "toolIds": [
+      "ollama",
+      "deepseek",
+      "hugging-face",
+      "vllm",
+      "stable-diffusion-webui",
+      "whisper"
+    ]
+  },
+  {
+    "id": "creative-media-studio",
+    "slug": "creative-media-studio",
+    "title": "Generative Visuals, Video & Audio Studio",
+    "description": "State-of-the-art tools for photorealistic imagery, cinematic video, voice cloning, and music.",
+    "curatorNotes": "For digital artists, content creators, and video directors looking to produce studio-grade creative assets with cutting-edge diffusion and generative transformer models.",
+    "icon": "palette",
+    "featured": false,
+    "updatedAt": "2026-10-15",
+    "toolIds": [
+      "midjourney",
+      "runway-gen-2",
+      "elevenlabs",
+      "suno",
+      "canva-magic-studio",
+      "luma-dream-machine"
+    ]
+  },
+  {
+    "id": "research-and-academic",
+    "slug": "research-and-academic",
+    "title": "AI for Researchers & Knowledge Workers",
+    "description": "Tools that extract empirical evidence, synthesize literature, and analyze scientific papers.",
+    "curatorNotes": "Verified tools that minimize hallucination by grounding responses in peer-reviewed literature, direct PDF citations, and scientific consensus scoring.",
+    "icon": "school",
+    "featured": false,
+    "updatedAt": "2026-10-15",
+    "toolIds": [
+      "elicit",
+      "consensus",
+      "perplexity",
+      "chatpdf",
+      "julius-ai"
+    ]
+  },
+  {
+    "id": "workflow-automation-heroes",
+    "slug": "workflow-automation-heroes",
+    "title": "Autonomous Workflows & Agent Frameworks",
+    "description": "No-code canvases and developer SDKs for deploying multi-agent systems and business automations.",
+    "curatorNotes": "Connect APIs, build custom enterprise RAG pipelines, or let teams of autonomous role-playing agents handle multi-step business operations.",
+    "icon": "auto_mode",
+    "featured": false,
+    "updatedAt": "2026-10-15",
+    "toolIds": [
+      "langchain",
+      "n8n",
+      "crewai",
+      "make",
+      "zapier-central",
+      "dify"
+    ]
+  }
+]

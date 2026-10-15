@@ -1,0 +1,73 @@
+{
+  "id": "figma-ai",
+  "name": "Figma AI",
+  "slug": "figma-ai",
+  "shortDescription": "Native AI features embedded in Figma for generating visual mockups, renaming layers, and auto-filling content.",
+  "description": "Figma AI integrates machine learning directly into the collaborative design environment. Designers can turn natural language descriptions into editable mobile and web mockups, rename disorganized layers automatically, generate contextually relevant placeholder copy, and find matching components across design systems.",
+  "categories": [
+    "design-ui-ux"
+  ],
+  "subcategories": [
+    "ui-generation",
+    "graphic-design"
+  ],
+  "tags": [
+    "design",
+    "ui-ux",
+    "prototyping",
+    "figma",
+    "wireframing"
+  ],
+  "websiteUrl": "https://www.figma.com/ai",
+  "pricing": {
+    "model": "freemium",
+    "details": "Included within Figma Starter (free), Professional ($12/editor/mo), and Organization ($45/editor/mo) plans.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "macos",
+    "windows"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Generate editable UI wireframes and design system components from prompts",
+    "One-click layer renaming and frame reorganization",
+    "Contextual content population (realistic names, addresses, and images)",
+    "Visual search to discover existing design system elements"
+  ],
+  "useCases": [
+    "Quickly iterating early-stage mobile app concepts",
+    "Cleaning up complex, messy Figma files before client delivery",
+    "Replacing generic lorem ipsum with realistic contextual data"
+  ],
+  "alternatives": [
+    "v0",
+    "canva-magic-studio"
+  ],
+  "relatedTools": [
+    "v0",
+    "canva-magic-studio"
+  ],
+  "languageSupport": [
+    "English"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Generations require manual layout adjustments for final production fidelity",
+    "Dependent on the broader Figma platform subscription"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://www.figma.com/ai"
+  ],
+  "createdAt": "2024-06-26",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Figma AI — Generative UI Design & Smart Workspace Tools",
+    "description": "Explore Figma AI features: UI generation, automatic layer renaming, and visual search."
+  }
+}

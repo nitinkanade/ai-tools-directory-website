@@ -1,0 +1,77 @@
+{
+  "id": "make",
+  "name": "Make",
+  "slug": "make",
+  "shortDescription": "Visual workflow automation platform featuring native AI modules for OpenAI, Anthropic, and custom APIs.",
+  "description": "Make (formerly Integromat) is a visual integration platform that allows users to design, build, and automate complex workflows using an interactive canvas. With native modules for OpenAI, Anthropic, Gemini, and vector databases, teams can build sophisticated multi-step AI pipelines without coding.",
+  "categories": [
+    "productivity-automation",
+    "nocode-lowcode",
+    "agents-workflows"
+  ],
+  "subcategories": [
+    "workflow-builders",
+    "visual-builders"
+  ],
+  "tags": [
+    "automation",
+    "no-code",
+    "workflow",
+    "productivity",
+    "api"
+  ],
+  "websiteUrl": "https://www.make.com",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free plan with 1,000 operations/month; Core plan starting at $9/mo for 10,000 operations; Pro plan ($16/mo) with full execution logs.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "Interactive drag-and-drop canvas with visual branching and error routers",
+    "Pre-built native AI connectors for OpenAI, Anthropic, Mistral, and Pinecone",
+    "JSON/XML parsing and data manipulation transformers",
+    "Real-time visual execution inspector and rollback history"
+  ],
+  "useCases": [
+    "Building automated customer sentiment analysis pipelines",
+    "Synthesizing inbound job applications into structured ATS candidates",
+    "Publishing approved blog drafts to CMS with automated SEO metadata"
+  ],
+  "alternatives": [
+    "zapier-central",
+    "n8n"
+  ],
+  "relatedTools": [
+    "n8n",
+    "zapier-central"
+  ],
+  "languageSupport": [
+    "English",
+    "French",
+    "German",
+    "Spanish",
+    "Portuguese"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Heavy looping workflows consume operations quota quickly",
+    "Steeper learning curve than simple two-step automation builders"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://www.make.com"
+  ],
+  "createdAt": "2022-02-22",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Make — Visual AI Workflow Automation Platform",
+    "description": "Design visual AI integrations and automations with Make. Pricing and capabilities."
+  }
+}

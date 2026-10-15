@@ -1,0 +1,73 @@
+{
+  "id": "khanmigo",
+  "name": "Khanmigo",
+  "slug": "khanmigo",
+  "shortDescription": "Socratic AI tutor and teacher assistant developed by Khan Academy for safe, guided educational problem solving.",
+  "description": "Khanmigo is an educational AI assistant created by Khan Academy. Rather than giving students direct answers, Khanmigo acts as a Socratic tutor—asking guiding questions, explaining underlying mathematical concepts, diagnosing misconceptions, and helping teachers draft lesson plans and rubrics.",
+  "categories": [
+    "education-learning"
+  ],
+  "subcategories": [
+    "tutoring",
+    "study-tools"
+  ],
+  "tags": [
+    "education",
+    "tutoring",
+    "learning",
+    "socratic",
+    "math"
+  ],
+  "websiteUrl": "https://www.khanacademy.org/khanmigo",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free for teachers in participating school districts; individual parent/student access available for a low monthly donation ($4/mo).",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "android",
+    "ios"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "Socratic tutoring that refuses to simply do student homework",
+    "Integrated directly with Khan Academy exercises, videos, and mastery system",
+    "Teacher toolset: automated rubric builder and lesson planning assistant",
+    "Strict safety, moderation, and student privacy controls"
+  ],
+  "useCases": [
+    "K-12 math and science homework assistance",
+    "Coding tutor for beginners learning JavaScript and Python basics",
+    "Creating differentiated lesson materials for diverse classroom abilities"
+  ],
+  "alternatives": [
+    "quizlet-q-chat",
+    "chatgpt"
+  ],
+  "relatedTools": [
+    "quizlet-q-chat"
+  ],
+  "languageSupport": [
+    "English",
+    "Spanish"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Optimized for school curricula; not designed for enterprise research",
+    "Requires internet connection and Khan Academy account"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://www.khanacademy.org/khanmigo"
+  ],
+  "createdAt": "2023-03-14",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Khanmigo by Khan Academy — Socratic AI Tutor & Lesson Assistant",
+    "description": "Learn with Khanmigo AI tutor. Understand concepts without having answers spoiled."
+  }
+}

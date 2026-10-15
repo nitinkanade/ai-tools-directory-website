@@ -1,0 +1,1540 @@
+[
+  {
+    "id": "canva-magic-studio",
+    "name": "Canva Magic Studio",
+    "slug": "canva-magic-studio",
+    "shortDescription": "Accessible AI creative suite for generating social graphics, removing backgrounds, and translating presentations.",
+    "categories": [
+      "design-ui-ux",
+      "image-generation",
+      "presentations-documents"
+    ],
+    "subcategories": [
+      "graphic-design",
+      "photo-editing",
+      "slide-generators"
+    ],
+    "tags": [
+      "design",
+      "social-media",
+      "photo-editing",
+      "presentations",
+      "graphics"
+    ],
+    "websiteUrl": "https://www.canva.com/magic-studio",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free plan with basic Magic tools; Canva Pro ($120/year for 1 person) unlocks full Magic Studio usage and brand kits.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "android",
+      "ios",
+      "windows",
+      "macos"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2023-10-04",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "slug": "chatgpt",
+    "shortDescription": "General-purpose conversational AI assistant developed by OpenAI with reasoning, voice, and multimodal capabilities.",
+    "categories": [
+      "chatbots-assistants",
+      "writing-content",
+      "coding-development"
+    ],
+    "subcategories": [
+      "general-purpose",
+      "code-assistants"
+    ],
+    "tags": [
+      "chat",
+      "assistant",
+      "reasoning",
+      "coding",
+      "writing",
+      "multimodal"
+    ],
+    "websiteUrl": "https://chatgpt.com",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free tier with GPT-4o mini; Plus subscription ($20/mo) includes priority access to reasoning models and advanced voice mode.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "android",
+      "ios",
+      "macos",
+      "windows"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2023-01-15",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "chatpdf",
+    "name": "ChatPDF",
+    "slug": "chatpdf",
+    "shortDescription": "Interactive document intelligence tool for chatting with research papers, textbooks, and legal contracts.",
+    "categories": [
+      "presentations-documents",
+      "research-knowledge",
+      "productivity-automation"
+    ],
+    "subcategories": [
+      "document-parsing",
+      "synthesizers"
+    ],
+    "tags": [
+      "pdf",
+      "documents",
+      "research",
+      "summarization",
+      "contracts"
+    ],
+    "websiteUrl": "https://www.chatpdf.com",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free tier with 2 PDFs/day up to 120 pages each; Plus tier ($5/mo) with unlimited PDFs, 2,000 pages per file, and larger question quotas.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2023-03-01",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "claude-code",
+    "name": "Claude Code",
+    "slug": "claude-code",
+    "shortDescription": "Anthropic's agentic CLI tool that searches repositories, edits code across files, and executes tests directly in the terminal.",
+    "categories": [
+      "coding-development",
+      "agents-workflows"
+    ],
+    "subcategories": [
+      "terminal-agents",
+      "debugging-testing"
+    ],
+    "tags": [
+      "cli",
+      "terminal",
+      "agents",
+      "coding",
+      "git"
+    ],
+    "websiteUrl": "https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview",
+    "pricing": {
+      "model": "paid",
+      "details": "Billed directly through Anthropic API key usage or bundled with Anthropic enterprise workspaces.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "macos",
+      "linux",
+      "windows"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2025-02-24",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "slug": "claude",
+    "shortDescription": "Anthropic's advanced AI assistant built for nuanced reasoning, extensive writing, coding, and large context windows.",
+    "categories": [
+      "chatbots-assistants",
+      "coding-development",
+      "writing-content"
+    ],
+    "subcategories": [
+      "general-purpose",
+      "code-assistants",
+      "long-form"
+    ],
+    "tags": [
+      "chat",
+      "assistant",
+      "reasoning",
+      "coding",
+      "artifacts",
+      "long-context"
+    ],
+    "websiteUrl": "https://claude.ai",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free tier with Claude 3.5 Sonnet daily limits; Pro tier ($20/mo) for 5x usage, early access, and priority capacity.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "android",
+      "ios",
+      "macos",
+      "windows",
+      "api"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2023-03-14",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "consensus",
+    "name": "Consensus",
+    "slug": "consensus",
+    "shortDescription": "Search engine for scientific research that delivers consensus meters and evidence summaries from peer-reviewed papers.",
+    "categories": [
+      "research-knowledge",
+      "education-learning"
+    ],
+    "subcategories": [
+      "paper-discovery",
+      "synthesizers"
+    ],
+    "tags": [
+      "research",
+      "science",
+      "citations",
+      "academic",
+      "evidence"
+    ],
+    "websiteUrl": "https://consensus.app",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free tier with unlimited basic searches; Premium tier ($8.99/mo) with unlimited Consensus Meters, study snapshots, and GPT-4 synthesis.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2022-09-01",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "copy-ai",
+    "name": "Copy.ai",
+    "slug": "copy-ai",
+    "shortDescription": "AI marketing and sales automation platform for go-to-market teams scaling content and lead workflows.",
+    "categories": [
+      "writing-content",
+      "business-marketing"
+    ],
+    "subcategories": [
+      "copywriting",
+      "sales-prospecting"
+    ],
+    "tags": [
+      "copywriting",
+      "marketing",
+      "sales",
+      "outbound",
+      "writing"
+    ],
+    "websiteUrl": "https://www.copy.ai",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free plan with 2,000 words/mo in chat; Pro plan at $36/mo (billed annually) with unlimited chat words; Team tier for multi-seat workflow tables.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2020-10-01",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "crewai",
+    "name": "CrewAI",
+    "slug": "crewai",
+    "shortDescription": "Multi-agent orchestration framework enabling autonomous role-playing AI agents to collaborate on complex goals.",
+    "categories": [
+      "agents-workflows",
+      "coding-development"
+    ],
+    "subcategories": [
+      "agent-frameworks"
+    ],
+    "tags": [
+      "agents",
+      "multi-agent",
+      "automation",
+      "python",
+      "open-source"
+    ],
+    "websiteUrl": "https://www.crewai.com",
+    "pricing": {
+      "model": "freemium",
+      "details": "Open-source core library is free under MIT license; CrewAI Enterprise offers managed hosting, visual orchestration, and security governance.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "api"
+    ],
+    "isOpenSource": true,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2023-11-20",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "slug": "cursor",
+    "shortDescription": "AI-first code editor fork of VS Code engineered for whole-codebase indexing, multi-file edits, and agentic workflows.",
+    "categories": [
+      "coding-development",
+      "agents-workflows"
+    ],
+    "subcategories": [
+      "code-assistants",
+      "terminal-agents"
+    ],
+    "tags": [
+      "coding",
+      "ide",
+      "agent",
+      "autocomplete",
+      "vscode"
+    ],
+    "websiteUrl": "https://www.cursor.com",
+    "pricing": {
+      "model": "freemium",
+      "details": "Hobby plan with 2,000 completions; Pro plan at $20/mo with 500 fast premium requests and unlimited slow requests.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "windows",
+      "macos",
+      "linux"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2023-08-01",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "deepl",
+    "name": "DeepL",
+    "slug": "deepl",
+    "shortDescription": "Neural machine translation system recognized for superior linguistic nuance, accuracy, and natural prose.",
+    "categories": [
+      "translation-languages",
+      "productivity-automation",
+      "writing-content"
+    ],
+    "subcategories": [
+      "neural-translation",
+      "editing-grammar"
+    ],
+    "tags": [
+      "translation",
+      "language",
+      "nlp",
+      "documents",
+      "writing"
+    ],
+    "websiteUrl": "https://www.deepl.com",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free web translation up to 1,500 characters per translation; DeepL Pro Starter ($8.74/mo) with unlimited text, file translation, and maximum data security.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "windows",
+      "macos",
+      "android",
+      "ios",
+      "browser-extension",
+      "api"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2017-08-29",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "slug": "deepseek",
+    "shortDescription": "High-efficiency open-weights reasoning and coding model with exceptional mathematical and programming prowess.",
+    "categories": [
+      "chatbots-assistants",
+      "coding-development",
+      "opensource-models-platforms"
+    ],
+    "subcategories": [
+      "open-weights",
+      "code-assistants",
+      "local-runtimes"
+    ],
+    "tags": [
+      "reasoning",
+      "coding",
+      "open-source",
+      "local-llm",
+      "math"
+    ],
+    "websiteUrl": "https://www.deepseek.com",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free web and mobile chat; API pricing is among the lowest in the industry per million tokens; model weights are free under MIT license.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "android",
+      "ios",
+      "api"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2024-01-10",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "dify",
+    "name": "Dify.ai",
+    "slug": "dify",
+    "shortDescription": "Open-source LLM application development platform combining visual prompt engineering, RAG, and agent workflows.",
+    "categories": [
+      "nocode-lowcode",
+      "agents-workflows",
+      "opensource-models-platforms"
+    ],
+    "subcategories": [
+      "visual-builders",
+      "agent-frameworks"
+    ],
+    "tags": [
+      "no-code",
+      "open-source",
+      "rag",
+      "agents",
+      "llm-ops"
+    ],
+    "websiteUrl": "https://dify.ai",
+    "pricing": {
+      "model": "freemium",
+      "details": "Self-hosted version is 100% free and open-source under Apache-2.0 license; Dify Cloud offers free tier with 200 GPT calls and Professional plan ($59/mo).",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "linux",
+      "macos",
+      "windows",
+      "api"
+    ],
+    "isOpenSource": true,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2023-05-10",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "slug": "elevenlabs",
+    "shortDescription": "State-of-the-art voice synthesis, realistic voice cloning, text-to-speech, and automatic video dubbing.",
+    "categories": [
+      "audio-music",
+      "productivity-automation"
+    ],
+    "subcategories": [
+      "text-to-speech",
+      "music-generation"
+    ],
+    "tags": [
+      "audio",
+      "voice-cloning",
+      "text-to-speech",
+      "dubbing",
+      "speech"
+    ],
+    "websiteUrl": "https://elevenlabs.io",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free tier with 10,000 characters/month; Starter plan ($5/mo) with instant voice cloning and 30,000 characters; Creator ($22/mo) with 100,000 characters.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "api",
+      "ios",
+      "android"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2022-11-01",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "elicit",
+    "name": "Elicit",
+    "slug": "elicit",
+    "shortDescription": "AI research assistant that automates literature reviews, extracts key study findings, and analyzes papers.",
+    "categories": [
+      "research-knowledge",
+      "education-learning"
+    ],
+    "subcategories": [
+      "paper-discovery",
+      "synthesizers"
+    ],
+    "tags": [
+      "research",
+      "citations",
+      "academic",
+      "papers",
+      "science"
+    ],
+    "websiteUrl": "https://elicit.com",
+    "pricing": {
+      "model": "freemium",
+      "details": "Basic tier free with 5,000 one-time credits; Plus tier ($12/mo) with 12,000 monthly credits and high-accuracy model extraction.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2021-11-01",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "figma-ai",
+    "name": "Figma AI",
+    "slug": "figma-ai",
+    "shortDescription": "Native AI features embedded in Figma for generating visual mockups, renaming layers, and auto-filling content.",
+    "categories": [
+      "design-ui-ux"
+    ],
+    "subcategories": [
+      "ui-generation",
+      "graphic-design"
+    ],
+    "tags": [
+      "design",
+      "ui-ux",
+      "prototyping",
+      "figma",
+      "wireframing"
+    ],
+    "websiteUrl": "https://www.figma.com/ai",
+    "pricing": {
+      "model": "freemium",
+      "details": "Included within Figma Starter (free), Professional ($12/editor/mo), and Organization ($45/editor/mo) plans.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "macos",
+      "windows"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2024-06-26",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "gamma",
+    "name": "Gamma",
+    "slug": "gamma",
+    "shortDescription": "Generative AI medium for creating polished presentation decks, responsive webpages, and documents in seconds.",
+    "categories": [
+      "presentations-documents",
+      "design-ui-ux"
+    ],
+    "subcategories": [
+      "slide-generators",
+      "ui-generation"
+    ],
+    "tags": [
+      "presentations",
+      "slides",
+      "documents",
+      "design",
+      "pitch-deck"
+    ],
+    "websiteUrl": "https://gamma.app",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free plan includes 400 one-time AI credits; Plus tier ($8/user/mo billed annually) with unlimited AI generations; Pro ($15/user/mo) with custom fonts and analytics.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2022-11-15",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "slug": "github-copilot",
+    "shortDescription": "Pioneering AI pair programmer providing code completions, CLI suggestions, and in-editor chat across major IDEs.",
+    "categories": [
+      "coding-development",
+      "productivity-automation"
+    ],
+    "subcategories": [
+      "code-assistants",
+      "debugging-testing"
+    ],
+    "tags": [
+      "coding",
+      "autocomplete",
+      "copilot",
+      "ide",
+      "developer-tools"
+    ],
+    "websiteUrl": "https://github.com/features/copilot",
+    "pricing": {
+      "model": "paid",
+      "details": "$10/mo for Individual plan, $19/user/mo for Business; free for verified students, teachers, and popular open-source maintainers.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "windows",
+      "macos",
+      "linux",
+      "api"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2021-06-29",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "hugging-face",
+    "name": "Hugging Face",
+    "slug": "hugging-face",
+    "shortDescription": "The central open-source collaboration hub for AI models, datasets, demo spaces, and developer libraries.",
+    "categories": [
+      "opensource-models-platforms",
+      "coding-development"
+    ],
+    "subcategories": [
+      "model-hubs",
+      "developer-sdks"
+    ],
+    "tags": [
+      "open-source",
+      "models",
+      "datasets",
+      "transformers",
+      "machine-learning"
+    ],
+    "websiteUrl": "https://huggingface.co",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free access to public models, datasets, and CPU Spaces; Hugging Face PRO ($9/mo) unlocks high-tier GPU compute and early beta features.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "linux",
+      "macos",
+      "windows",
+      "api"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2016-10-01",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "intercom-fin",
+    "name": "Fin AI Agent by Intercom",
+    "slug": "intercom-fin",
+    "shortDescription": "Enterprise customer service AI agent that resolves support tickets instantly using company knowledge bases.",
+    "categories": [
+      "customer-support",
+      "agents-workflows"
+    ],
+    "subcategories": [
+      "ticket-deflection",
+      "agent-co-pilot"
+    ],
+    "tags": [
+      "customer-support",
+      "helpdesk",
+      "chat",
+      "agents",
+      "deflection"
+    ],
+    "websiteUrl": "https://www.intercom.com/fin",
+    "pricing": {
+      "model": "paid",
+      "details": "$0.99 per resolution (only billed when Fin successfully resolves a customer issue without human escalation); requires Intercom workspace.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "ios",
+      "android"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2023-03-28",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "jasper",
+    "name": "Jasper",
+    "slug": "jasper",
+    "shortDescription": "Enterprise AI marketing copilot trained on brand voice, style guides, and multi-channel campaign assets.",
+    "categories": [
+      "writing-content",
+      "business-marketing",
+      "seo-optimization"
+    ],
+    "subcategories": [
+      "copywriting",
+      "long-form"
+    ],
+    "tags": [
+      "writing",
+      "copywriting",
+      "marketing",
+      "brand-voice",
+      "seo"
+    ],
+    "websiteUrl": "https://www.jasper.ai",
+    "pricing": {
+      "model": "paid",
+      "details": "Creator plan ($39/seat/mo billed annually); Pro plan ($59/seat/mo) includes 3 brand voices and collaboration tools; 7-day free trial.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "browser-extension"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2021-02-01",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "julius-ai",
+    "name": "Julius AI",
+    "slug": "julius-ai",
+    "shortDescription": "Intelligent data analyst that analyzes spreadsheets, runs Python scripts, and builds statistical charts from prompts.",
+    "categories": [
+      "data-visualization",
+      "productivity-automation"
+    ],
+    "subcategories": [
+      "auto-charts",
+      "text-to-sql"
+    ],
+    "tags": [
+      "data-analysis",
+      "python",
+      "statistics",
+      "visualization",
+      "excel"
+    ],
+    "websiteUrl": "https://julius.ai",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free plan with 15 monthly messages; Basic ($20/mo) includes 250 messages; Pro ($45/mo) with unlimited messages and larger dataset processing.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "ios",
+      "android"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2023-04-10",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "khanmigo",
+    "name": "Khanmigo",
+    "slug": "khanmigo",
+    "shortDescription": "Socratic AI tutor and teacher assistant developed by Khan Academy for safe, guided educational problem solving.",
+    "categories": [
+      "education-learning"
+    ],
+    "subcategories": [
+      "tutoring",
+      "study-tools"
+    ],
+    "tags": [
+      "education",
+      "tutoring",
+      "learning",
+      "socratic",
+      "math"
+    ],
+    "websiteUrl": "https://www.khanacademy.org/khanmigo",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free for teachers in participating school districts; individual parent/student access available for a low monthly donation ($4/mo).",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "android",
+      "ios"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2023-03-14",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "langchain",
+    "name": "LangChain",
+    "slug": "langchain",
+    "shortDescription": "Leading open-source framework for building context-aware reasoning applications and autonomous agent pipelines.",
+    "categories": [
+      "agents-workflows",
+      "coding-development",
+      "opensource-models-platforms"
+    ],
+    "subcategories": [
+      "agent-frameworks",
+      "developer-sdks"
+    ],
+    "tags": [
+      "open-source",
+      "agents",
+      "framework",
+      "python",
+      "typescript",
+      "sdk"
+    ],
+    "websiteUrl": "https://www.langchain.com",
+    "pricing": {
+      "model": "open-source",
+      "details": "Core framework is 100% free and open-source under MIT license; LangSmith observability platform offers generous free tier and paid enterprise plans.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "api"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2022-10-25",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "luma-dream-machine",
+    "name": "Luma Dream Machine",
+    "slug": "luma-dream-machine",
+    "shortDescription": "High-speed realistic video generation model creating physically consistent camera moves and smooth motion.",
+    "categories": [
+      "video-generation"
+    ],
+    "subcategories": [
+      "text-to-video"
+    ],
+    "tags": [
+      "video-generation",
+      "3d",
+      "animation",
+      "motion"
+    ],
+    "websiteUrl": "https://lumalabs.ai/dream-machine",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free tier with 30 monthly generations; Standard tier ($29.99/mo) with 120 generations; Pro ($99.99/mo) with 400 generations.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "ios"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2024-06-12",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "make",
+    "name": "Make",
+    "slug": "make",
+    "shortDescription": "Visual workflow automation platform featuring native AI modules for OpenAI, Anthropic, and custom APIs.",
+    "categories": [
+      "productivity-automation",
+      "nocode-lowcode",
+      "agents-workflows"
+    ],
+    "subcategories": [
+      "workflow-builders",
+      "visual-builders"
+    ],
+    "tags": [
+      "automation",
+      "no-code",
+      "workflow",
+      "productivity",
+      "api"
+    ],
+    "websiteUrl": "https://www.make.com",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free plan with 1,000 operations/month; Core plan starting at $9/mo for 10,000 operations; Pro plan ($16/mo) with full execution logs.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2022-02-22",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "slug": "midjourney",
+    "shortDescription": "Industry-leading artistic text-to-image generator known for cinematic lighting, photorealism, and stylistic control.",
+    "categories": [
+      "image-generation",
+      "design-ui-ux"
+    ],
+    "subcategories": [
+      "text-to-image",
+      "photo-editing"
+    ],
+    "tags": [
+      "image-generation",
+      "art",
+      "diffusion",
+      "design",
+      "creative"
+    ],
+    "websiteUrl": "https://www.midjourney.com",
+    "pricing": {
+      "model": "paid",
+      "details": "Basic tier ($10/mo, 3.3 fast GPU hrs), Standard ($30/mo, 15 fast hrs + unlimited relax mode), Pro ($60/mo with stealth mode).",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2022-07-12",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "n8n",
+    "name": "n8n",
+    "slug": "n8n",
+    "shortDescription": "Fair-code node-based workflow automation platform with powerful native LangChain and AI agent nodes.",
+    "categories": [
+      "nocode-lowcode",
+      "productivity-automation",
+      "agents-workflows"
+    ],
+    "subcategories": [
+      "visual-builders",
+      "workflow-builders"
+    ],
+    "tags": [
+      "no-code",
+      "automation",
+      "open-source",
+      "workflow",
+      "self-hosted"
+    ],
+    "websiteUrl": "https://n8n.io",
+    "pricing": {
+      "model": "freemium",
+      "details": "Self-hosted Community edition is free under sustainable fair-code license; Cloud plans start at €20/mo for 2,500 executions.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2019-06-01",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "notion-ai",
+    "name": "Notion AI",
+    "slug": "notion-ai",
+    "shortDescription": "Connected workspace assistant that searches, drafts, and analyzes information across company docs and databases.",
+    "categories": [
+      "productivity-automation",
+      "writing-content"
+    ],
+    "subcategories": [
+      "smart-notes",
+      "meeting-assistants",
+      "editing-grammar"
+    ],
+    "tags": [
+      "productivity",
+      "notes",
+      "workspace",
+      "writing",
+      "summarization"
+    ],
+    "websiteUrl": "https://www.notion.so/product/ai",
+    "pricing": {
+      "model": "paid",
+      "details": "$10 per member/month add-on to existing Notion plans; limited free trial queries included in basic workspace.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "windows",
+      "macos",
+      "android",
+      "ios"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2023-02-22",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "ollama",
+    "name": "Ollama",
+    "slug": "ollama",
+    "shortDescription": "Lightweight open-source tool that lets you run large language models locally on macOS, Linux, and Windows.",
+    "categories": [
+      "opensource-models-platforms",
+      "coding-development",
+      "chatbots-assistants"
+    ],
+    "subcategories": [
+      "local-runtimes",
+      "open-weights"
+    ],
+    "tags": [
+      "local-llm",
+      "open-source",
+      "cli",
+      "terminal",
+      "privacy",
+      "mac",
+      "windows",
+      "linux"
+    ],
+    "websiteUrl": "https://ollama.com",
+    "pricing": {
+      "model": "open-source",
+      "details": "100% free and open-source under MIT license. Completely offline with zero subscription fees.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "macos",
+      "linux",
+      "windows"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2023-07-01",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "slug": "perplexity",
+    "shortDescription": "AI-powered conversational search engine delivering real-time answers backed by transparent, clickable citations.",
+    "categories": [
+      "chatbots-assistants",
+      "research-knowledge",
+      "productivity-automation"
+    ],
+    "subcategories": [
+      "research-search",
+      "paper-discovery"
+    ],
+    "tags": [
+      "search",
+      "citations",
+      "research",
+      "assistant",
+      "web-search"
+    ],
+    "websiteUrl": "https://www.perplexity.ai",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free unlimited Quick searches; Pro tier ($20/mo) includes 300+ daily Pro queries with model switching (Claude, GPT-4o, Sonar).",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "android",
+      "ios",
+      "macos",
+      "windows",
+      "browser-extension"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2022-08-01",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "quizlet-q-chat",
+    "name": "Quizlet Q-Chat",
+    "slug": "quizlet-q-chat",
+    "shortDescription": "Conversational study coach that quizzes students on their own flashcard sets using adaptive Socratic methods.",
+    "categories": [
+      "education-learning"
+    ],
+    "subcategories": [
+      "study-tools",
+      "tutoring"
+    ],
+    "tags": [
+      "education",
+      "study-tools",
+      "flashcards",
+      "learning"
+    ],
+    "websiteUrl": "https://quizlet.com/features/q-chat",
+    "pricing": {
+      "model": "freemium",
+      "details": "Limited free study sessions; full unlimited access included with Quizlet Plus ($35.99/year).",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "android",
+      "ios"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2023-02-28",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "runway-gen-2",
+    "name": "Runway Gen-3 Alpha",
+    "slug": "runway-gen-2",
+    "shortDescription": "Cutting-edge text-to-video, image-to-video, and cinematic generative video suite for creative directors.",
+    "categories": [
+      "video-generation",
+      "image-generation"
+    ],
+    "subcategories": [
+      "text-to-video",
+      "video-editors"
+    ],
+    "tags": [
+      "video-generation",
+      "creative",
+      "cinematic",
+      "vfx",
+      "animation"
+    ],
+    "websiteUrl": "https://runwayml.com",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free plan with 125 one-time credits; Standard plan ($15/mo) with 625 credits; Pro ($35/mo) with 2250 credits and 4K upscaling.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "ios"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2023-02-15",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "semrush-ai",
+    "name": "Semrush AI Writing & SEO Toolkit",
+    "slug": "semrush-ai",
+    "shortDescription": "Comprehensive search marketing suite with AI tools for keyword analysis, SEO writing, and competitor audits.",
+    "categories": [
+      "seo-optimization",
+      "business-marketing"
+    ],
+    "subcategories": [
+      "keyword-research",
+      "content-optimization"
+    ],
+    "tags": [
+      "seo",
+      "marketing",
+      "keywords",
+      "analytics",
+      "competitors"
+    ],
+    "websiteUrl": "https://www.semrush.com",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free account with limited queries; Pro plan ($129.95/mo); Guru plan ($249.95/mo) unlocks historical data and full Content Marketing Platform.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2008-08-01",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "stable-diffusion-webui",
+    "name": "Stable Diffusion WebUI",
+    "slug": "stable-diffusion-webui",
+    "shortDescription": "Browser interface for open-source Stable Diffusion models with full local control, LoRA, and ControlNet support.",
+    "categories": [
+      "image-generation",
+      "opensource-models-platforms"
+    ],
+    "subcategories": [
+      "text-to-image",
+      "photo-editing",
+      "local-runtimes"
+    ],
+    "tags": [
+      "image-generation",
+      "open-source",
+      "local-llm",
+      "diffusion",
+      "art"
+    ],
+    "websiteUrl": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+    "pricing": {
+      "model": "open-source",
+      "details": "100% free and open-source under AGPL-3.0 license. Requires a GPU for local hardware execution.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "windows",
+      "linux",
+      "macos"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2022-09-01",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "suno",
+    "name": "Suno",
+    "slug": "suno",
+    "shortDescription": "Generative AI music platform that composes complete radio-ready songs with vocals, lyrics, and instrumentation.",
+    "categories": [
+      "audio-music"
+    ],
+    "subcategories": [
+      "music-generation"
+    ],
+    "tags": [
+      "music",
+      "audio",
+      "songwriting",
+      "vocals",
+      "creative"
+    ],
+    "websiteUrl": "https://suno.com",
+    "pricing": {
+      "model": "freemium",
+      "details": "Basic plan free with 50 daily credits (non-commercial); Pro tier ($10/mo) includes 2,500 credits and commercial rights; Premier ($30/mo) with 10,000 credits.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "ios"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2023-12-01",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "surfer-seo",
+    "name": "Surfer SEO",
+    "slug": "surfer-seo",
+    "shortDescription": "Data-driven SEO content optimization platform providing real-time NLP keyword guidelines and SERP scoring.",
+    "categories": [
+      "seo-optimization",
+      "writing-content"
+    ],
+    "subcategories": [
+      "content-optimization",
+      "keyword-research"
+    ],
+    "tags": [
+      "seo",
+      "content-optimization",
+      "keywords",
+      "serp",
+      "marketing"
+    ],
+    "websiteUrl": "https://surferseo.com",
+    "pricing": {
+      "model": "paid",
+      "details": "Essential plan ($89/mo billed annually) includes 30 Content Editors/mo; Scale plan ($129/mo) includes 100 editors; 7-day money-back guarantee.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "browser-extension"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2017-09-01",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "v0",
+    "name": "v0 by Vercel",
+    "slug": "v0",
+    "shortDescription": "Generative frontend design and code system that converts text prompts and screenshots into production-ready React UI.",
+    "categories": [
+      "design-ui-ux",
+      "coding-development"
+    ],
+    "subcategories": [
+      "ui-generation",
+      "code-assistants"
+    ],
+    "tags": [
+      "ui-ux",
+      "frontend",
+      "react",
+      "tailwind",
+      "design"
+    ],
+    "websiteUrl": "https://v0.dev",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free tier with 200 monthly credits; Premium plan ($20/mo) includes 5,000 credits, private generations, and team sharing.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2023-09-15",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "vllm",
+    "name": "vLLM",
+    "slug": "vllm",
+    "shortDescription": "High-throughput and memory-efficient LLM serving engine powered by PagedAttention algorithms.",
+    "categories": [
+      "opensource-models-platforms",
+      "coding-development"
+    ],
+    "subcategories": [
+      "local-runtimes",
+      "developer-sdks"
+    ],
+    "tags": [
+      "inference",
+      "serving",
+      "open-source",
+      "python",
+      "pagedattention",
+      "cuda"
+    ],
+    "websiteUrl": "https://vllm.ai",
+    "pricing": {
+      "model": "open-source",
+      "details": "100% free and open-source under Apache-2.0 license.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "linux"
+    ],
+    "isOpenSource": true,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2023-06-20",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "whisper",
+    "name": "OpenAI Whisper",
+    "slug": "whisper",
+    "shortDescription": "Robust, open-source multi-lingual automatic speech recognition (ASR) model trained on 680,000 hours of audio.",
+    "categories": [
+      "audio-music",
+      "opensource-models-platforms"
+    ],
+    "subcategories": [
+      "transcription",
+      "local-runtimes"
+    ],
+    "tags": [
+      "transcription",
+      "speech-to-text",
+      "audio",
+      "open-source",
+      "local-llm"
+    ],
+    "websiteUrl": "https://github.com/openai/whisper",
+    "pricing": {
+      "model": "open-source",
+      "details": "Completely free and open-source under MIT license for self-hosting; OpenAI also offers hosted API at $0.006 per minute.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "linux",
+      "windows",
+      "macos",
+      "api"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2022-09-21",
+    "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "zapier-central",
+    "name": "Zapier Central",
+    "slug": "zapier-central",
+    "shortDescription": "Experimental AI agent workspace that connects LLMs to 6,000+ business applications with live data access.",
+    "categories": [
+      "productivity-automation",
+      "agents-workflows",
+      "nocode-lowcode"
+    ],
+    "subcategories": [
+      "workflow-builders",
+      "autonomous-apps"
+    ],
+    "tags": [
+      "automation",
+      "agents",
+      "no-code",
+      "productivity",
+      "integrations"
+    ],
+    "websiteUrl": "https://zapier.com/central",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free tier with up to 4 active bots; paid plans scale with Zapier ecosystem task usage and enhanced execution quotas.",
+      "lastVerifiedAt": "2026-10-15"
+    },
+    "platforms": [
+      "web",
+      "browser-extension"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-15",
+    "createdAt": "2024-03-01",
+    "updatedAt": "2026-10-15"
+  }
+]

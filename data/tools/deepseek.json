@@ -1,0 +1,81 @@
+{
+  "id": "deepseek",
+  "name": "DeepSeek",
+  "slug": "deepseek",
+  "shortDescription": "High-efficiency open-weights reasoning and coding model with exceptional mathematical and programming prowess.",
+  "description": "DeepSeek is an AI research platform and model creator known for DeepSeek-R1 and DeepSeek-V3. It pioneered low-cost training architectures using Mixture of Experts (MoE) and Multi-head Latent Attention, delivering frontier-grade coding and math reasoning benchmarks alongside freely downloadable open model weights.",
+  "categories": [
+    "chatbots-assistants",
+    "coding-development",
+    "opensource-models-platforms"
+  ],
+  "subcategories": [
+    "open-weights",
+    "code-assistants",
+    "local-runtimes"
+  ],
+  "tags": [
+    "reasoning",
+    "coding",
+    "open-source",
+    "local-llm",
+    "math"
+  ],
+  "websiteUrl": "https://www.deepseek.com",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free web and mobile chat; API pricing is among the lowest in the industry per million tokens; model weights are free under MIT license.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "android",
+    "ios",
+    "api"
+  ],
+  "isOpenSource": true,
+  "sourceCodeUrl": "https://github.com/deepseek-ai",
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "DeepSeek-R1 reasoning model with open chain-of-thought tokens",
+    "MIT licensed open weights for self-hosting and fine-tuning",
+    "Ultra-low latency inference with Mixture of Experts architecture",
+    "Competitive performance against closed frontier commercial models"
+  ],
+  "useCases": [
+    "Self-hosted enterprise AI on private GPU infrastructure",
+    "Competitive math and algorithmic coding problem solving",
+    "High-throughput cost-effective batch data processing"
+  ],
+  "alternatives": [
+    "chatgpt",
+    "claude",
+    "ollama"
+  ],
+  "relatedTools": [
+    "ollama",
+    "hugging-face",
+    "vllm"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "English",
+    "Chinese"
+  ],
+  "accountRequired": false,
+  "limitations": [
+    "High server traffic occasionally slows free web app responses",
+    "Requires substantial GPU VRAM for full unquantized self-hosting"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://github.com/deepseek-ai"
+  ],
+  "createdAt": "2024-01-10",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "DeepSeek — Open Weights Frontier AI Reasoning & Coding",
+    "description": "Discover DeepSeek-R1 and V3, open-source model details, benchmarks, and API pricing."
+  }
+}

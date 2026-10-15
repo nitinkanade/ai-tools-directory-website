@@ -1,0 +1,510 @@
+[
+  {
+    "id": "chatbots-assistants",
+    "slug": "chatbots-assistants",
+    "name": "AI Chatbots & Assistants",
+    "shortDescription": "Conversational AI models and multi-purpose personal assistants for general queries, reasoning, and problem solving.",
+    "description": "General-purpose conversational AI systems, large language model chat interfaces, and personal virtual assistants capable of answering questions, drafting text, reasoning, and multimodal interactions.",
+    "icon": "chat_bubble_outline",
+    "featured": true,
+    "subcategories": [
+      {
+        "id": "general-purpose",
+        "name": "General Purpose",
+        "slug": "general-purpose",
+        "description": "Multi-modal conversation and reasoning"
+      },
+      {
+        "id": "open-weights",
+        "name": "Open Weights & Local",
+        "slug": "open-weights",
+        "description": "Models runnable on private hardware"
+      },
+      {
+        "id": "research-search",
+        "name": "Search & Grounded Reasoning",
+        "slug": "research-search",
+        "description": "Chatbots with live web search and citations"
+      }
+    ]
+  },
+  {
+    "id": "coding-development",
+    "slug": "coding-development",
+    "name": "Coding & Software Development",
+    "shortDescription": "AI code generators, IDE extensions, autonomous software engineering agents, and debugging assistants.",
+    "description": "Tools and IDE plugins designed to assist software developers with code autocomplete, automated testing, refactoring, code review, documentation generation, and terminal command assistance.",
+    "icon": "code",
+    "featured": true,
+    "subcategories": [
+      {
+        "id": "code-assistants",
+        "name": "AI Code Editors & Extensions",
+        "slug": "code-assistants",
+        "description": "In-editor completions, diffs, and context-aware chat"
+      },
+      {
+        "id": "terminal-agents",
+        "name": "CLI & Autonomous Agents",
+        "slug": "terminal-agents",
+        "description": "Agentic coding in shell and repository workspaces"
+      },
+      {
+        "id": "debugging-testing",
+        "name": "Debugging & Testing",
+        "slug": "debugging-testing",
+        "description": "Bug identification and test generation"
+      }
+    ]
+  },
+  {
+    "id": "writing-content",
+    "slug": "writing-content",
+    "name": "Writing & Content Creation",
+    "shortDescription": "Tools for copywriting, long-form articles, marketing copy, editing, and grammar correction.",
+    "description": "AI-powered writing companions for authors, bloggers, journalists, and marketers that help outline, draft, edit, rewrite, and polish written content across different formats and voices.",
+    "icon": "edit_note",
+    "featured": true,
+    "subcategories": [
+      {
+        "id": "copywriting",
+        "name": "Marketing Copy & Ads",
+        "slug": "copywriting",
+        "description": "Headlines, social posts, and ad copy"
+      },
+      {
+        "id": "long-form",
+        "name": "Long-form & Articles",
+        "slug": "long-form",
+        "description": "In-depth blog posts and essays"
+      },
+      {
+        "id": "editing-grammar",
+        "name": "Proofreading & Tone",
+        "slug": "editing-grammar",
+        "description": "Grammar, syntax, clarity, and tone shifts"
+      }
+    ]
+  },
+  {
+    "id": "image-generation",
+    "slug": "image-generation",
+    "name": "Image Generation & Editing",
+    "shortDescription": "Text-to-image synthesis, image upscaling, inpainting, object removal, and digital art generation.",
+    "description": "Generative diffusion and transformer models that convert natural language descriptions into photorealistic images, digital illustrations, concept art, and high-resolution visual assets.",
+    "icon": "image",
+    "featured": true,
+    "subcategories": [
+      {
+        "id": "text-to-image",
+        "name": "Text to Image",
+        "slug": "text-to-image",
+        "description": "Generating original visual art from prompts"
+      },
+      {
+        "id": "photo-editing",
+        "name": "Photo Editing & Inpainting",
+        "slug": "photo-editing",
+        "description": "Removing backgrounds, objects, and expanding canvas"
+      },
+      {
+        "id": "upscaling",
+        "name": "Upscaling & Enhancement",
+        "slug": "upscaling",
+        "description": "Increasing resolution and texture quality"
+      }
+    ]
+  },
+  {
+    "id": "video-generation",
+    "slug": "video-generation",
+    "name": "Video Generation & Editing",
+    "shortDescription": "Generative video synthesis, AI video editing, automated captions, text-to-video, and avatar creation.",
+    "description": "Software for generating dynamic video clips from text or static pictures, auto-editing footage, creating synthetic human avatars, and converting scripts to published videos.",
+    "icon": "videocam",
+    "featured": true,
+    "subcategories": [
+      {
+        "id": "text-to-video",
+        "name": "Text-to-Video Synthesis",
+        "slug": "text-to-video",
+        "description": "Generating motion footage from text descriptions"
+      },
+      {
+        "id": "video-editors",
+        "name": "Automated Video Editing",
+        "slug": "video-editors",
+        "description": "Clipping, scene detection, silence removal, and captions"
+      },
+      {
+        "id": "ai-avatars",
+        "name": "AI Avatars & Presenters",
+        "slug": "ai-avatars",
+        "description": "Photorealistic synthetic presenters reading scripts"
+      }
+    ]
+  },
+  {
+    "id": "audio-music",
+    "slug": "audio-music",
+    "name": "Audio, Music & Voice",
+    "shortDescription": "Text-to-speech synthesis, voice cloning, audio transcription, noise cancellation, and AI music composition.",
+    "description": "Deep-learning tools that transcribe spoken audio, generate lifelike synthetic voices, clone speaker voices across languages, and compose original background music.",
+    "icon": "headphones",
+    "featured": true,
+    "subcategories": [
+      {
+        "id": "text-to-speech",
+        "name": "Text to Speech & Voice Cloning",
+        "slug": "text-to-speech",
+        "description": "High-fidelity voice synthesis and dubbing"
+      },
+      {
+        "id": "transcription",
+        "name": "Speech to Text & Transcription",
+        "slug": "transcription",
+        "description": "Accurate voice recognition and subtitle generation"
+      },
+      {
+        "id": "music-generation",
+        "name": "Music & Sound Effects",
+        "slug": "music-generation",
+        "description": "Generating songs and foley sound effects"
+      }
+    ]
+  },
+  {
+    "id": "productivity-automation",
+    "slug": "productivity-automation",
+    "name": "Productivity & Automation",
+    "shortDescription": "Workflow automation, AI note-taking, meeting assistants, and intelligent task management.",
+    "description": "Software designed to streamline daily professional workflows, automate repetitive data handling, summarize meetings, and organize personal and team knowledge.",
+    "icon": "bolt",
+    "featured": true,
+    "subcategories": [
+      {
+        "id": "meeting-assistants",
+        "name": "Meeting Summarizers",
+        "slug": "meeting-assistants",
+        "description": "Transcribing and extracting action items from calls"
+      },
+      {
+        "id": "workflow-builders",
+        "name": "Workflow Integrations",
+        "slug": "workflow-builders",
+        "description": "Connecting apps with triggers and automated LLM steps"
+      },
+      {
+        "id": "smart-notes",
+        "name": "Smart Notes & Workspaces",
+        "slug": "smart-notes",
+        "description": "Contextual documentation and personal knowledge bases"
+      }
+    ]
+  },
+  {
+    "id": "research-knowledge",
+    "slug": "research-knowledge",
+    "name": "Research & Knowledge Management",
+    "shortDescription": "Academic literature search, paper summarization, citation discovery, and verified question answering.",
+    "description": "Tools that index peer-reviewed literature, extract experimental findings, map citation networks, and provide grounded answers with primary source references.",
+    "icon": "school",
+    "featured": false,
+    "subcategories": [
+      {
+        "id": "paper-discovery",
+        "name": "Literature Search",
+        "slug": "paper-discovery",
+        "description": "Semantic discovery of scientific papers"
+      },
+      {
+        "id": "synthesizers",
+        "name": "Knowledge Synthesis",
+        "slug": "synthesizers",
+        "description": "Extracting key findings across multiple research sources"
+      }
+    ]
+  },
+  {
+    "id": "education-learning",
+    "slug": "education-learning",
+    "name": "Education & Learning",
+    "shortDescription": "Personalized AI tutors, flashcard generators, interactive problem solvers, and curriculum aids.",
+    "description": "Educational technology platforms leveraging LLMs to offer adaptive learning experiences, generate study materials, provide step-by-step explanations, and tutor students.",
+    "icon": "menu_book",
+    "featured": false,
+    "subcategories": [
+      {
+        "id": "tutoring",
+        "name": "AI Tutors & Homework Help",
+        "slug": "tutoring",
+        "description": "Step-by-step guidance on complex subjects"
+      },
+      {
+        "id": "study-tools",
+        "name": "Flashcards & Quizzes",
+        "slug": "study-tools",
+        "description": "Automated study material creation"
+      }
+    ]
+  },
+  {
+    "id": "business-marketing",
+    "slug": "business-marketing",
+    "name": "Business & Marketing",
+    "shortDescription": "Market intelligence, ad campaign management, email marketing automation, and sales intelligence.",
+    "description": "AI applications that optimize customer acquisition, personalize outreach emails, conduct competitive analysis, and assist sales representatives with deal insights.",
+    "icon": "trending_up",
+    "featured": false,
+    "subcategories": [
+      {
+        "id": "sales-prospecting",
+        "name": "Sales Outreach",
+        "slug": "sales-prospecting",
+        "description": "Prospect research and personalized outreach"
+      },
+      {
+        "id": "market-intelligence",
+        "name": "Competitive Intelligence",
+        "slug": "market-intelligence",
+        "description": "Automated competitor tracking and market analysis"
+      }
+    ]
+  },
+  {
+    "id": "seo-optimization",
+    "slug": "seo-optimization",
+    "name": "SEO & Website Optimization",
+    "shortDescription": "Keyword clustering, SERP analysis, AI content optimization, and search rank tracking.",
+    "description": "Specialized SEO software providing automated keyword suggestions, on-page optimization guidance, internal linking recommendations, and search intent analysis.",
+    "icon": "search",
+    "featured": false,
+    "subcategories": [
+      {
+        "id": "keyword-research",
+        "name": "Keyword Discovery",
+        "slug": "keyword-research",
+        "description": "Search volume estimation and query clustering"
+      },
+      {
+        "id": "content-optimization",
+        "name": "On-Page Audits",
+        "slug": "content-optimization",
+        "description": "Real-time content scoring against search competitors"
+      }
+    ]
+  },
+  {
+    "id": "design-ui-ux",
+    "slug": "design-ui-ux",
+    "name": "Design & UI/UX",
+    "shortDescription": "Wireframing, UI mockup generation, vector graphics, design systems, and frontend prototyping.",
+    "description": "AI tools for product designers, visual artists, and web creators to generate UI layouts, wireframes, color palettes, vector icons, and interactive mockups.",
+    "icon": "palette",
+    "featured": true,
+    "subcategories": [
+      {
+        "id": "ui-generation",
+        "name": "UI & Frontend Generators",
+        "slug": "ui-generation",
+        "description": "Translating prompts into responsive web and app components"
+      },
+      {
+        "id": "graphic-design",
+        "name": "Visual Assets & Vector Art",
+        "slug": "graphic-design",
+        "description": "Generating logos, banners, and vector assets"
+      }
+    ]
+  },
+  {
+    "id": "data-visualization",
+    "slug": "data-visualization",
+    "name": "Data Analysis & Visualization",
+    "shortDescription": "Natural language SQL queries, automated dashboard generation, anomaly detection, and data storytelling.",
+    "description": "Platforms that empower non-technical users and analysts to query data using plain English, generate charts, spot statistical trends, and automate ETL tasks.",
+    "icon": "bar_chart",
+    "featured": false,
+    "subcategories": [
+      {
+        "id": "text-to-sql",
+        "name": "Text to SQL",
+        "slug": "text-to-sql",
+        "description": "Querying relational databases with natural language"
+      },
+      {
+        "id": "auto-charts",
+        "name": "Automated Charting",
+        "slug": "auto-charts",
+        "description": "Instant visualization of uploaded datasets"
+      }
+    ]
+  },
+  {
+    "id": "presentations-documents",
+    "slug": "presentations-documents",
+    "name": "Presentations & Documents",
+    "shortDescription": "Automated slide deck creation, PDF summarization, document parsing, and proposal drafting.",
+    "description": "Tools that convert outlines or topics into professional presentation decks with matching layouts, and parse complex multi-page PDF documents.",
+    "icon": "slideshow",
+    "featured": false,
+    "subcategories": [
+      {
+        "id": "slide-generators",
+        "name": "Slide Generators",
+        "slug": "slide-generators",
+        "description": "Complete presentation generation from outlines"
+      },
+      {
+        "id": "document-parsing",
+        "name": "PDF & Document Chat",
+        "slug": "document-parsing",
+        "description": "Q&A and summarization over large documents"
+      }
+    ]
+  },
+  {
+    "id": "agents-workflows",
+    "slug": "agents-workflows",
+    "name": "AI Agents & Workflows",
+    "shortDescription": "Autonomous multi-agent orchestration, reasoning loops, tool-calling frameworks, and background execution.",
+    "description": "Frameworks and platforms for deploying autonomous AI agents that can browse the web, execute terminal commands, call external APIs, and coordinate complex multi-step workflows.",
+    "icon": "smart_toy",
+    "featured": true,
+    "subcategories": [
+      {
+        "id": "agent-frameworks",
+        "name": "Developer Agent Frameworks",
+        "slug": "agent-frameworks",
+        "description": "SDKs and libraries for building custom agents"
+      },
+      {
+        "id": "autonomous-apps",
+        "name": "Turnkey Agent Applications",
+        "slug": "autonomous-apps",
+        "description": "Ready-to-use agents for web research and task execution"
+      }
+    ]
+  },
+  {
+    "id": "nocode-lowcode",
+    "slug": "nocode-lowcode",
+    "name": "No-Code & Low-Code AI",
+    "shortDescription": "Visual builders for AI workflows, custom chatbot builders, and drag-and-drop prompt orchestration.",
+    "description": "Visual drag-and-drop environments that allow teams to assemble complex AI applications, knowledge retrieval pipelines, and interactive chatbots without writing backend code.",
+    "icon": "widgets",
+    "featured": false,
+    "subcategories": [
+      {
+        "id": "visual-builders",
+        "name": "Visual Workflow Builders",
+        "slug": "visual-builders",
+        "description": "Node-based canvas for connecting LLMs and APIs"
+      },
+      {
+        "id": "custom-chatbots",
+        "name": "Custom Chatbot Platforms",
+        "slug": "custom-chatbots",
+        "description": "Building support bots from uploaded business documents"
+      }
+    ]
+  },
+  {
+    "id": "finance-accounting",
+    "slug": "finance-accounting",
+    "name": "Finance & Accounting",
+    "shortDescription": "Expense categorization, financial forecasting, invoice processing, and financial reporting.",
+    "description": "Financial technology tools utilizing machine learning to read invoices, reconcile transactions, forecast cash flow, and assist with corporate financial compliance.",
+    "icon": "account_balance",
+    "featured": false,
+    "subcategories": [
+      {
+        "id": "bookkeeping",
+        "name": "Automated Bookkeeping",
+        "slug": "bookkeeping",
+        "description": "Receipt scanning and transaction categorization"
+      },
+      {
+        "id": "financial-insights",
+        "name": "Financial Analytics",
+        "slug": "financial-insights",
+        "description": "Predictive forecasting and variance reporting"
+      }
+    ]
+  },
+  {
+    "id": "customer-support",
+    "slug": "customer-support",
+    "name": "Customer Support",
+    "shortDescription": "Helpdesk automation, ticket deflection, automated responses, and sentiment analysis.",
+    "description": "AI systems that automate tier-1 customer queries, route complex tickets to specialized agents, and provide real-time agent response drafting.",
+    "icon": "support_agent",
+    "featured": false,
+    "subcategories": [
+      {
+        "id": "ticket-deflection",
+        "name": "Deflection & Help Center Bots",
+        "slug": "ticket-deflection",
+        "description": "Instant answers from company documentation"
+      },
+      {
+        "id": "agent-co-pilot",
+        "name": "Human Agent Co-pilots",
+        "slug": "agent-co-pilot",
+        "description": "Drafting responses for human support staff"
+      }
+    ]
+  },
+  {
+    "id": "translation-languages",
+    "slug": "translation-languages",
+    "name": "Translation & Language Learning",
+    "shortDescription": "Neural machine translation, context-aware localization, dialect adaptation, and language practice.",
+    "description": "Next-generation translation engines that preserve document formatting and cultural context, alongside interactive conversational language practice tools.",
+    "icon": "translate",
+    "featured": false,
+    "subcategories": [
+      {
+        "id": "neural-translation",
+        "name": "Machine Translation",
+        "slug": "neural-translation",
+        "description": "Document and text translation across global languages"
+      },
+      {
+        "id": "language-practice",
+        "name": "Conversational Language Practice",
+        "slug": "language-practice",
+        "description": "AI conversation partners for language learners"
+      }
+    ]
+  },
+  {
+    "id": "opensource-models-platforms",
+    "slug": "opensource-models-platforms",
+    "name": "Open-Source Models & Developer Platforms",
+    "shortDescription": "Open-weight foundational models, model hubs, local runtimes, and LLM inference engines.",
+    "description": "Open source foundational repositories, model hosting platforms, local inference runtimes, and developer tooling for deploying AI models on personal hardware or cloud infrastructure.",
+    "icon": "terminal",
+    "featured": true,
+    "subcategories": [
+      {
+        "id": "model-hubs",
+        "name": "Model Hubs & Repositories",
+        "slug": "model-hubs",
+        "description": "Sharing and discovering open weights and datasets"
+      },
+      {
+        "id": "local-runtimes",
+        "name": "Local Runtimes & Inference",
+        "slug": "local-runtimes",
+        "description": "Running large models locally on consumer hardware"
+      },
+      {
+        "id": "developer-sdks",
+        "name": "LLM Orchestration Frameworks",
+        "slug": "developer-sdks",
+        "description": "Pipelines, prompts, and vector database connectors"
+      }
+    ]
+  }
+]

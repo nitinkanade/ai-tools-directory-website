@@ -1,0 +1,10 @@
+{
+  "categoryId": "education-learning",
+  "toolIds": [
+    "consensus",
+    "elicit",
+    "khanmigo",
+    "quizlet-q-chat"
+  ],
+  "count": 4
+}

@@ -1,0 +1,10 @@
+{
+  "categoryId": "research-knowledge",
+  "toolIds": [
+    "chatpdf",
+    "consensus",
+    "elicit",
+    "perplexity"
+  ],
+  "count": 4
+}

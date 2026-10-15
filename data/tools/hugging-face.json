@@ -1,0 +1,78 @@
+{
+  "id": "hugging-face",
+  "name": "Hugging Face",
+  "slug": "hugging-face",
+  "shortDescription": "The central open-source collaboration hub for AI models, datasets, demo spaces, and developer libraries.",
+  "description": "Hugging Face is the central collaboration platform for machine learning. Often referred to as the GitHub of AI, it hosts over a million open-source model weights, benchmark datasets, and interactive Spaces demos, supported by essential Python libraries like Transformers, Diffusers, and Datasets.",
+  "categories": [
+    "opensource-models-platforms",
+    "coding-development"
+  ],
+  "subcategories": [
+    "model-hubs",
+    "developer-sdks"
+  ],
+  "tags": [
+    "open-source",
+    "models",
+    "datasets",
+    "transformers",
+    "machine-learning"
+  ],
+  "websiteUrl": "https://huggingface.co",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free access to public models, datasets, and CPU Spaces; Hugging Face PRO ($9/mo) unlocks high-tier GPU compute and early beta features.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "linux",
+    "macos",
+    "windows",
+    "api"
+  ],
+  "isOpenSource": true,
+  "sourceCodeUrl": "https://github.com/huggingface",
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Repository hosting for over 1,000,000 public and private model checkpoints",
+    "Transformers and Diffusers Python libraries powering modern deep learning",
+    "Hugging Face Spaces for deploying interactive Streamlit and Gradio AI demos",
+    "Inference Endpoints for zero-friction production cloud deployment"
+  ],
+  "useCases": [
+    "Discovering and downloading state-of-the-art open weights (Llama, Mistral, Whisper)",
+    "Hosting interactive machine learning portfolio demos for research papers",
+    "Deploying scalable, dedicated inference microservices in private clouds"
+  ],
+  "alternatives": [
+    "ollama"
+  ],
+  "relatedTools": [
+    "ollama",
+    "vllm",
+    "stable-diffusion-webui"
+  ],
+  "languageSupport": [
+    "Python",
+    "JavaScript",
+    "Rust"
+  ],
+  "accountRequired": false,
+  "limitations": [
+    "Hardware GPU Spaces incur hourly usage costs",
+    "Navigating million-model repositories requires discernment regarding model quality"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://huggingface.co"
+  ],
+  "createdAt": "2016-10-01",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Hugging Face — The Open-Source AI Model & Dataset Platform",
+    "description": "Explore open machine learning models, datasets, and Spaces on Hugging Face hub."
+  }
+}

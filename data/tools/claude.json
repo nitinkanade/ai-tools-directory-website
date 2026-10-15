@@ -1,0 +1,88 @@
+{
+  "id": "claude",
+  "name": "Claude",
+  "slug": "claude",
+  "shortDescription": "Anthropic's advanced AI assistant built for nuanced reasoning, extensive writing, coding, and large context windows.",
+  "description": "Claude is a family of foundational AI models developed by Anthropic, powered by Claude 3.5 Sonnet and Haiku. Renowned for natural prose, superior coding benchmark performance, thoughtful reasoning, and safe Constitutional AI alignment. Features an interactive Artifacts side-by-side canvas for interactive web apps, diagrams, and documents.",
+  "categories": [
+    "chatbots-assistants",
+    "coding-development",
+    "writing-content"
+  ],
+  "subcategories": [
+    "general-purpose",
+    "code-assistants",
+    "long-form"
+  ],
+  "tags": [
+    "chat",
+    "assistant",
+    "reasoning",
+    "coding",
+    "artifacts",
+    "long-context"
+  ],
+  "websiteUrl": "https://claude.ai",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free tier with Claude 3.5 Sonnet daily limits; Pro tier ($20/mo) for 5x usage, early access, and priority capacity.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "android",
+    "ios",
+    "macos",
+    "windows",
+    "api"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "200K token standard context window for extensive document ingestion",
+    "Interactive Artifacts UI to render code, SVGs, and web components live",
+    "Superior software development, frontend generation, and refactoring",
+    "Constitutional AI safety guardrails and reduced sycophancy"
+  ],
+  "useCases": [
+    "Reviewing large codebases and complex pull requests",
+    "Drafting nuanced legal, academic, and business prose",
+    "Synthesizing 100+ page PDF manuals and financial reports",
+    "Building interactive web prototypes directly in the chat window"
+  ],
+  "alternatives": [
+    "chatgpt",
+    "deepseek",
+    "perplexity"
+  ],
+  "relatedTools": [
+    "claude-code",
+    "cursor",
+    "v0"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "English",
+    "Japanese",
+    "French",
+    "German",
+    "Spanish"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Strict usage message caps during high server traffic",
+    "No native web browsing without external API tools"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://anthropic.com/claude"
+  ],
+  "createdAt": "2023-03-14",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Claude by Anthropic — Advanced Reasoning, Coding & Writing AI",
+    "description": "Explore Claude AI capabilities, Artifacts workspace, pricing, and comparisons."
+  }
+}

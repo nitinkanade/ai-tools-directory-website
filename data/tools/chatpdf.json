@@ -1,0 +1,74 @@
+{
+  "id": "chatpdf",
+  "name": "ChatPDF",
+  "slug": "chatpdf",
+  "shortDescription": "Interactive document intelligence tool for chatting with research papers, textbooks, and legal contracts.",
+  "description": "ChatPDF allows users to upload any PDF document and ask questions in natural language. Powered by semantic search and LLMs, ChatPDF extracts answers, references exact source page numbers, summarizes complex clauses, and supports multi-lingual document comprehension without requiring software installation.",
+  "categories": [
+    "presentations-documents",
+    "research-knowledge",
+    "productivity-automation"
+  ],
+  "subcategories": [
+    "document-parsing",
+    "synthesizers"
+  ],
+  "tags": [
+    "pdf",
+    "documents",
+    "research",
+    "summarization",
+    "contracts"
+  ],
+  "websiteUrl": "https://www.chatpdf.com",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free tier with 2 PDFs/day up to 120 pages each; Plus tier ($5/mo) with unlimited PDFs, 2,000 pages per file, and larger question quotas.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "Instant indexing of textbooks, research papers, and technical manuals",
+    "Exact page citation indicators for every extracted fact",
+    "Multilingual comprehension (reads foreign language PDFs and responds in English)",
+    "Cloud document folder organization and chat history persistence"
+  ],
+  "useCases": [
+    "Students extracting key exam concepts from 500-page textbooks",
+    "Attorneys cross-examining long legal discovery documents and lease agreements",
+    "Researchers rapidly scanning dozens of academic preprints"
+  ],
+  "alternatives": [
+    "elicit",
+    "notion-ai"
+  ],
+  "relatedTools": [
+    "elicit",
+    "perplexity"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "Works with all languages written in standard scripts"
+  ],
+  "accountRequired": false,
+  "limitations": [
+    "Scanned non-OCR image PDFs require prior text layer generation",
+    "Free tier caps file size at 10 MB per document"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://www.chatpdf.com"
+  ],
+  "createdAt": "2023-03-01",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "ChatPDF — Chat with Any PDF Document Using AI",
+    "description": "Upload and summarize PDFs, research papers, and contracts with ChatPDF. Free and Pro tiers."
+  }
+}

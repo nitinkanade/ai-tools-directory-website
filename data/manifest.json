@@ -1,0 +1,336 @@
+{
+  "schemaVersion": "1.0.0",
+  "datasetVersion": "2026.10.15-v1",
+  "generatedAt": "2026-10-15T18:29:30.002044+00:00",
+  "totalTools": 40,
+  "totalCategories": 20,
+  "totalCollections": 6,
+  "minAppVersion": "1.0.0",
+  "files": {
+    "categories.json": {
+      "path": "/data/categories.json",
+      "sha256": "9f42df9cbabfbc6b7c23fdedf2439029d479da583ffcd93f997dc96b62b5ec34",
+      "bytes": 20054
+    },
+    "collections.json": {
+      "path": "/data/collections.json",
+      "sha256": "f0f821e23dd23199c5962ae0cfef6b1373f6d14c1ea1d24383d45afe23f11443",
+      "bytes": 3975
+    },
+    "search-index.json": {
+      "path": "/data/search-index.json",
+      "sha256": "22c637be3804839d72ee5a067cf71e35e9062d71dd9dda85603c9a8d01dbfed8",
+      "bytes": 36889
+    },
+    "tags.json": {
+      "path": "/data/tags.json",
+      "sha256": "e37e15c25c056f0800284a0b05b561ba87312e85dc5b228dc755228fcd013df0",
+      "bytes": 1972
+    },
+    "tools/canva-magic-studio.json": {
+      "path": "/data/tools/canva-magic-studio.json",
+      "sha256": "3dc5e4b77f13db049f6f8cb088200b49894e9a49b1c070a84da4693c6b5bd1c6",
+      "bytes": 2701
+    },
+    "tools/chatgpt.json": {
+      "path": "/data/tools/chatgpt.json",
+      "sha256": "6a95b559f02ee85df6bec52a188c0405a54c80e08ac6214d26e67022df3ac4be",
+      "bytes": 2675
+    },
+    "tools/chatpdf.json": {
+      "path": "/data/tools/chatpdf.json",
+      "sha256": "e6a548033aea1b3e9829b918c4b9a796f43ccd7b79cb9fa66b9ca2279e9b822b",
+      "bytes": 2574
+    },
+    "tools/claude-code.json": {
+      "path": "/data/tools/claude-code.json",
+      "sha256": "14519268a4374b8f0431a9d39dd91c3bbfda622744c984b8219666fa540e57b1",
+      "bytes": 2476
+    },
+    "tools/claude.json": {
+      "path": "/data/tools/claude.json",
+      "sha256": "28afb6db66b39f01b09dc341a6137f545cf9882c6c2d3590c698909a242c7099",
+      "bytes": 2762
+    },
+    "tools/consensus.json": {
+      "path": "/data/tools/consensus.json",
+      "sha256": "77b0d255bb3b266e1e009feb39ea7b3f453c7ed1a6b89db7ea2b6d4d1d5a0341",
+      "bytes": 2502
+    },
+    "tools/copy-ai.json": {
+      "path": "/data/tools/copy-ai.json",
+      "sha256": "4f456d230737ea3bff0bd104a6f7f59f6785ce12bb8f7d0f3aab3b97c0172217",
+      "bytes": 2468
+    },
+    "tools/crewai.json": {
+      "path": "/data/tools/crewai.json",
+      "sha256": "3352691c6038531c71f25f42ae2dcbc975a11056ea72b33d0be289773588c3f7",
+      "bytes": 2598
+    },
+    "tools/cursor.json": {
+      "path": "/data/tools/cursor.json",
+      "sha256": "78d929233773f058c1929cf7b1fed88d007194e0f48f69cf477d7ca15a9698fb",
+      "bytes": 2504
+    },
+    "tools/deepl.json": {
+      "path": "/data/tools/deepl.json",
+      "sha256": "7c41b230c6de826b866d55a9d64139ba983c62957ce680966101a4c1e3b1360b",
+      "bytes": 2834
+    },
+    "tools/deepseek.json": {
+      "path": "/data/tools/deepseek.json",
+      "sha256": "6eb1d6c42d9f29d74e9913773db9485c8318fa914d8d947ea709a69d008aaf6f",
+      "bytes": 2647
+    },
+    "tools/dify.json": {
+      "path": "/data/tools/dify.json",
+      "sha256": "67c464e825ab39a90c80c856a86650cb1beb524af30e44cc213af632a30e9b07",
+      "bytes": 2722
+    },
+    "tools/elevenlabs.json": {
+      "path": "/data/tools/elevenlabs.json",
+      "sha256": "b093243140bb423225ae5d73c28fd232cf084289d54365deb4cfb5505b3dfe89",
+      "bytes": 2606
+    },
+    "tools/elicit.json": {
+      "path": "/data/tools/elicit.json",
+      "sha256": "69e1f00e822fc3126397ba5ea34b895175fa06e88df452beacbe2b61c866c2c5",
+      "bytes": 2428
+    },
+    "tools/figma-ai.json": {
+      "path": "/data/tools/figma-ai.json",
+      "sha256": "daae6cdf3c90bac05762313e8eb275eb275f4c47baf318f8f93de9eb3d1eb0b1",
+      "bytes": 2444
+    },
+    "tools/gamma.json": {
+      "path": "/data/tools/gamma.json",
+      "sha256": "c0a3b108baff37f60ed8269bd8603eeed050d41c83fecd8197ff0800a0f6c72d",
+      "bytes": 2643
+    },
+    "tools/github-copilot.json": {
+      "path": "/data/tools/github-copilot.json",
+      "sha256": "75f700de5f5983f1939d320fc20975ca990be6a28507b40cfd1ab17183e93e07",
+      "bytes": 2639
+    },
+    "tools/hugging-face.json": {
+      "path": "/data/tools/hugging-face.json",
+      "sha256": "669c53b2e8a632fcc085306493d5ca99f8ea071ce28b3862fb3feadabffd2a22",
+      "bytes": 2678
+    },
+    "tools/index.json": {
+      "path": "/data/tools/index.json",
+      "sha256": "9c2a5efd4641ee7297a4033a063b94a0e837140b13d207189c8df2e37014b621",
+      "bytes": 42707
+    },
+    "tools/intercom-fin.json": {
+      "path": "/data/tools/intercom-fin.json",
+      "sha256": "6943ebf554567ee4f64242ea87dd7fc3d44211773c99380b99c54627017c56c0",
+      "bytes": 2595
+    },
+    "tools/jasper.json": {
+      "path": "/data/tools/jasper.json",
+      "sha256": "9b60e1a6d99ab50f7d89ced4bdc973d71e16a098ac81ef0912d3aa5b913d3dc7",
+      "bytes": 2552
+    },
+    "tools/julius-ai.json": {
+      "path": "/data/tools/julius-ai.json",
+      "sha256": "5655b9347c5c0fb7ec666f34ef6598c34591fb715cfeb2b3b48a79130d24729d",
+      "bytes": 2511
+    },
+    "tools/khanmigo.json": {
+      "path": "/data/tools/khanmigo.json",
+      "sha256": "562860d68da88dba62a7c54e6bbb5b9fa37b09ced234d5fab0f7e905e4f3b4a0",
+      "bytes": 2484
+    },
+    "tools/langchain.json": {
+      "path": "/data/tools/langchain.json",
+      "sha256": "bed6fe154696ab5448215cd5c2e8835c0735f3a5b30859dd5b5fdf03bda67c6d",
+      "bytes": 2772
+    },
+    "tools/luma-dream-machine.json": {
+      "path": "/data/tools/luma-dream-machine.json",
+      "sha256": "749229922633fc9b89b0bf5395feff17660b2938d19d2d716e397a8adcfaf10c",
+      "bytes": 2303
+    },
+    "tools/make.json": {
+      "path": "/data/tools/make.json",
+      "sha256": "165326771bbc8f4e120b871b1e250befd82a644b0539eb080f6938a76e4a9b63",
+      "bytes": 2523
+    },
+    "tools/midjourney.json": {
+      "path": "/data/tools/midjourney.json",
+      "sha256": "b997dd1bfafea0b998ae7eaf09987c2364c7dd7b8779e02b6f6eec8a672a5e49",
+      "bytes": 2490
+    },
+    "tools/n8n.json": {
+      "path": "/data/tools/n8n.json",
+      "sha256": "853d3c9fd7eed04ca84eb3a94ecddedf745fd47aedaa1426eaa9fcafcd71ae5e",
+      "bytes": 2640
+    },
+    "tools/notion-ai.json": {
+      "path": "/data/tools/notion-ai.json",
+      "sha256": "4ba9020624e77a0c6f96baf0965de66f0f02cb0598a5bfbf9504632128bd1f3d",
+      "bytes": 2609
+    },
+    "tools/ollama.json": {
+      "path": "/data/tools/ollama.json",
+      "sha256": "fa16cfbcb8b381af2217102f8ca8e4e8be568ff18940fd77d62f02944de2b59d",
+      "bytes": 2774
+    },
+    "tools/perplexity.json": {
+      "path": "/data/tools/perplexity.json",
+      "sha256": "13a6c38b4426ee0beed26c614ef34e4242a2a621c1328e4903303e2866022a2f",
+      "bytes": 2601
+    },
+    "tools/quizlet-q-chat.json": {
+      "path": "/data/tools/quizlet-q-chat.json",
+      "sha256": "b113180e736f042a25d5b98b7fa2093eb676964975c1a8a859179c907f476642",
+      "bytes": 2449
+    },
+    "tools/runway-gen-2.json": {
+      "path": "/data/tools/runway-gen-2.json",
+      "sha256": "da503ae3ce31fe0367403582a2265c224f87b858fde6f36d131cc1febac5407e",
+      "bytes": 2466
+    },
+    "tools/semrush-ai.json": {
+      "path": "/data/tools/semrush-ai.json",
+      "sha256": "ff6ec02e2f14a9f249d8d84772b1e63b3cb73c91352f3cee7095fd132e704a59",
+      "bytes": 2599
+    },
+    "tools/stable-diffusion-webui.json": {
+      "path": "/data/tools/stable-diffusion-webui.json",
+      "sha256": "8c2f6fc85fef30a3c2741f7ffbc5aaf0f195d52486a1d52dcee42092d7bb0bc5",
+      "bytes": 2729
+    },
+    "tools/suno.json": {
+      "path": "/data/tools/suno.json",
+      "sha256": "8c02f71a5ec8c582797e87d4088fc5400e9148a410c6965800b11b0079dc0d5e",
+      "bytes": 2407
+    },
+    "tools/surfer-seo.json": {
+      "path": "/data/tools/surfer-seo.json",
+      "sha256": "20f98f8a6a15ebe78d2e0deb9ad5b344b6a3be8302954c85efac10176bf356d6",
+      "bytes": 2609
+    },
+    "tools/v0.json": {
+      "path": "/data/tools/v0.json",
+      "sha256": "4d2f4da7177f6bdca4684627287b5c2ab0ae9517b2075d2e948fbf3ff2a28dc4",
+      "bytes": 2309
+    },
+    "tools/vllm.json": {
+      "path": "/data/tools/vllm.json",
+      "sha256": "8d571f938c26b5397740f653f8ec0114f61927f6b1ae2509dd7d10709d0b9629",
+      "bytes": 2466
+    },
+    "tools/whisper.json": {
+      "path": "/data/tools/whisper.json",
+      "sha256": "73a79b33f9a2e70a31215248686deba12646f8c366e045979d57c2e4ef531741",
+      "bytes": 2638
+    },
+    "tools/zapier-central.json": {
+      "path": "/data/tools/zapier-central.json",
+      "sha256": "721f10f8e574bfacc0408d0160e4b3283ca1a5dc70036b88886b72cccf0ddbb4",
+      "bytes": 2527
+    },
+    "tools/by-category/agents-workflows.json": {
+      "path": "/data/tools/by-category/agents-workflows.json",
+      "sha256": "cd6ad02f2ed473720149caabce9aed4668288db56742c6671201fdac89e1ba0a",
+      "bytes": 226
+    },
+    "tools/by-category/audio-music.json": {
+      "path": "/data/tools/by-category/audio-music.json",
+      "sha256": "be0a7fc449609912eeda633d1f3277746527f42505650a2d2de05aa2eea325b7",
+      "bytes": 119
+    },
+    "tools/by-category/business-marketing.json": {
+      "path": "/data/tools/by-category/business-marketing.json",
+      "sha256": "f445513791e2093176fce27480207668298ff94308dcad43dd286d610eb6749a",
+      "bytes": 128
+    },
+    "tools/by-category/chatbots-assistants.json": {
+      "path": "/data/tools/by-category/chatbots-assistants.json",
+      "sha256": "da6cbb4dc5622d6fcd72b4c762c55664ca71916bbab5522d04fbbd57faf3358e",
+      "bytes": 161
+    },
+    "tools/by-category/coding-development.json": {
+      "path": "/data/tools/by-category/coding-development.json",
+      "sha256": "64f6357b0dbfab644008ec434dbb4e5124ab70af25f89b5d9911f0d41b0e8cf3",
+      "bytes": 278
+    },
+    "tools/by-category/customer-support.json": {
+      "path": "/data/tools/by-category/customer-support.json",
+      "sha256": "9683b3c295675bf96e84ab297c0f573193703615a60c067c524c90bed0b3729c",
+      "bytes": 97
+    },
+    "tools/by-category/data-visualization.json": {
+      "path": "/data/tools/by-category/data-visualization.json",
+      "sha256": "df0924b47672aa1d891b9b3e98a8886cd203c096876eaf9fb48039bd790d7e38",
+      "bytes": 96
+    },
+    "tools/by-category/design-ui-ux.json": {
+      "path": "/data/tools/by-category/design-ui-ux.json",
+      "sha256": "1e2a98bf1b04de39af8f8d8842c0d8b2ebe121ab3de815ab152efd8004f4002e",
+      "bytes": 160
+    },
+    "tools/by-category/education-learning.json": {
+      "path": "/data/tools/by-category/education-learning.json",
+      "sha256": "d0eeeef48257f55b35018c610269f4348febeaac3751f88077997806afb3297e",
+      "bytes": 151
+    },
+    "tools/by-category/finance-accounting.json": {
+      "path": "/data/tools/by-category/finance-accounting.json",
+      "sha256": "3072d18d6a0c92828e8da459ed9937ff98d3e828e22c6fc14666a9d357095143",
+      "bytes": 75
+    },
+    "tools/by-category/image-generation.json": {
+      "path": "/data/tools/by-category/image-generation.json",
+      "sha256": "74d7f8afffb0aba685a3c888cb5e03206cd95ddc892d9901a4736972a4284c5d",
+      "bytes": 174
+    },
+    "tools/by-category/nocode-lowcode.json": {
+      "path": "/data/tools/by-category/nocode-lowcode.json",
+      "sha256": "886a6cf4b98e3a81964bc09c6ab0fdc42cfd51efb6dad7170513f76e27bb0295",
+      "bytes": 135
+    },
+    "tools/by-category/opensource-models-platforms.json": {
+      "path": "/data/tools/by-category/opensource-models-platforms.json",
+      "sha256": "bc8c476ec4d1c71875ac102058c77c5da64ba37bd2fd31dc42de1147cf027094",
+      "bytes": 231
+    },
+    "tools/by-category/presentations-documents.json": {
+      "path": "/data/tools/by-category/presentations-documents.json",
+      "sha256": "7d919f45edca2376be54b7fc275c7fb37a20267e7c6b9bc23af5825ef392b3d0",
+      "bytes": 140
+    },
+    "tools/by-category/productivity-automation.json": {
+      "path": "/data/tools/by-category/productivity-automation.json",
+      "sha256": "1201d014c5fffdd5ce1bea2360c1dd034af4d0bb19bda8e037b187cc36670983",
+      "bytes": 259
+    },
+    "tools/by-category/research-knowledge.json": {
+      "path": "/data/tools/by-category/research-knowledge.json",
+      "sha256": "a80aa53baa9aae31de49244689f9fec8f72382fbb333ed4434f23bc1c92e35b1",
+      "bytes": 146
+    },
+    "tools/by-category/seo-optimization.json": {
+      "path": "/data/tools/by-category/seo-optimization.json",
+      "sha256": "bdb6102e44b9f6c267b647be4479c8492811eb2243d316a825d946dbacb6ca87",
+      "bytes": 129
+    },
+    "tools/by-category/translation-languages.json": {
+      "path": "/data/tools/by-category/translation-languages.json",
+      "sha256": "25cfade1c9753397c0a7c81b5a9e9efdd395d36d5fe456610236d29bc1441e56",
+      "bytes": 95
+    },
+    "tools/by-category/video-generation.json": {
+      "path": "/data/tools/by-category/video-generation.json",
+      "sha256": "4ee8adaed7929340598a30156fbf23e0038c2df5a0d51e63cbbd869f656da72c",
+      "bytes": 124
+    },
+    "tools/by-category/writing-content.json": {
+      "path": "/data/tools/by-category/writing-content.json",
+      "sha256": "6bbeaf4bfa230b0b4707bee1209a206c7e7a8842e3d348df2d35f35ca292e9ed",
+      "bytes": 188
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "categoryId": "coding-development",
+  "toolIds": [
+    "chatgpt",
+    "claude-code",
+    "claude",
+    "crewai",
+    "cursor",
+    "deepseek",
+    "github-copilot",
+    "hugging-face",
+    "langchain",
+    "ollama",
+    "v0",
+    "vllm"
+  ],
+  "count": 12
+}

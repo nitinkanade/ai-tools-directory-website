@@ -1,0 +1,72 @@
+{
+  "id": "consensus",
+  "name": "Consensus",
+  "slug": "consensus",
+  "shortDescription": "Search engine for scientific research that delivers consensus meters and evidence summaries from peer-reviewed papers.",
+  "description": "Consensus is an academic search engine that extracts claims directly from peer-reviewed scientific literature. Its proprietary Consensus Meter analyzes published papers to show whether the scientific community leans yes, no, or possibly on contentious medical, psychological, and economic questions.",
+  "categories": [
+    "research-knowledge",
+    "education-learning"
+  ],
+  "subcategories": [
+    "paper-discovery",
+    "synthesizers"
+  ],
+  "tags": [
+    "research",
+    "science",
+    "citations",
+    "academic",
+    "evidence"
+  ],
+  "websiteUrl": "https://consensus.app",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free tier with unlimited basic searches; Premium tier ($8.99/mo) with unlimited Consensus Meters, study snapshots, and GPT-4 synthesis.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "Consensus Meter quantifying agreement among published studies",
+    "Direct citations with journal impact factors and study design tags (RCT, meta-analysis)",
+    "One-click Copilot synthesis of search results",
+    "Bookmarking and export to standard reference managers"
+  ],
+  "useCases": [
+    "Finding evidence-based answers to health and nutrition questions",
+    "Validating policy claims with peer-reviewed academic studies",
+    "Teaching students how to evaluate scientific consensus"
+  ],
+  "alternatives": [
+    "elicit",
+    "perplexity"
+  ],
+  "relatedTools": [
+    "elicit",
+    "perplexity"
+  ],
+  "languageSupport": [
+    "English"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Only indexes academic peer-reviewed sources, not general news or consumer products",
+    "Syntheses reflect current published research biases and study limitations"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://consensus.app"
+  ],
+  "createdAt": "2022-09-01",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Consensus — AI Academic Search Engine & Scientific Consensus Meter",
+    "description": "Search peer-reviewed science and see consensus on research questions with Consensus.app."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "categoryId": "productivity-automation",
+  "toolIds": [
+    "chatpdf",
+    "deepl",
+    "elevenlabs",
+    "github-copilot",
+    "julius-ai",
+    "make",
+    "n8n",
+    "notion-ai",
+    "perplexity",
+    "zapier-central"
+  ],
+  "count": 10
+}

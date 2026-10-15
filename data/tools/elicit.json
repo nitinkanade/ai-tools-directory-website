@@ -1,0 +1,72 @@
+{
+  "id": "elicit",
+  "name": "Elicit",
+  "slug": "elicit",
+  "shortDescription": "AI research assistant that automates literature reviews, extracts key study findings, and analyzes papers.",
+  "description": "Elicit is an AI-powered scientific research assistant that indexes over 200 million academic papers from Semantic Scholar and PubMed. It automates literature discovery, extracts structured claims from PDFs into comparison tables, and synthesizes consensus findings without hallucinations.",
+  "categories": [
+    "research-knowledge",
+    "education-learning"
+  ],
+  "subcategories": [
+    "paper-discovery",
+    "synthesizers"
+  ],
+  "tags": [
+    "research",
+    "citations",
+    "academic",
+    "papers",
+    "science"
+  ],
+  "websiteUrl": "https://elicit.com",
+  "pricing": {
+    "model": "freemium",
+    "details": "Basic tier free with 5,000 one-time credits; Plus tier ($12/mo) with 12,000 monthly credits and high-accuracy model extraction.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Structured data extraction from PDFs (sample size, methodology, outcomes)",
+    "Systematic literature review search across 200M+ research papers",
+    "Automated synthesis of findings across multiple studies",
+    "BibTeX citation export for Zotero and Mendeley"
+  ],
+  "useCases": [
+    "Conducting systematic literature reviews in medicine and biology",
+    "Finding empirical benchmark evidence for grant proposals",
+    "Comparing methodological approaches across academic publications"
+  ],
+  "alternatives": [
+    "consensus",
+    "perplexity"
+  ],
+  "relatedTools": [
+    "consensus",
+    "perplexity"
+  ],
+  "languageSupport": [
+    "English"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Cannot access papers behind strict non-partnered paywalls",
+    "Focus is specialized on scientific research rather than general web search"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://elicit.com"
+  ],
+  "createdAt": "2021-11-01",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Elicit — AI Research Assistant & Literature Review Synthesizer",
+    "description": "Discover scientific papers and automate evidence tables with Elicit research assistant."
+  }
+}

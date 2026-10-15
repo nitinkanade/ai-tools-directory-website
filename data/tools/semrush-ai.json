@@ -1,0 +1,77 @@
+{
+  "id": "semrush-ai",
+  "name": "Semrush AI Writing & SEO Toolkit",
+  "slug": "semrush-ai",
+  "shortDescription": "Comprehensive search marketing suite with AI tools for keyword analysis, SEO writing, and competitor audits.",
+  "description": "Semrush is a premier online visibility and search marketing platform. Its integrated AI suite includes the SEO Writing Assistant, AI Content Generator, and Smart Keyword Clustering, combining twenty billion search keywords with LLMs to help businesses dominate organic search rankings.",
+  "categories": [
+    "seo-optimization",
+    "business-marketing"
+  ],
+  "subcategories": [
+    "keyword-research",
+    "content-optimization"
+  ],
+  "tags": [
+    "seo",
+    "marketing",
+    "keywords",
+    "analytics",
+    "competitors"
+  ],
+  "websiteUrl": "https://www.semrush.com",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free account with limited queries; Pro plan ($129.95/mo); Guru plan ($249.95/mo) unlocks historical data and full Content Marketing Platform.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "SEO Writing Assistant checking readability, SEO, tone of voice, and originality",
+    "Keyword Magic Tool with billions of search intent data points",
+    "Automated competitor backlink and traffic gap analysis",
+    "Domain authority tracking and rank tracking across geographical regions"
+  ],
+  "useCases": [
+    "Enterprise search engine marketing and paid ad campaign audits",
+    "Discovering long-tail keyword opportunities with low competitive difficulty",
+    "Monitoring brand mentions and technical website health"
+  ],
+  "alternatives": [
+    "surfer-seo"
+  ],
+  "relatedTools": [
+    "surfer-seo"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "English",
+    "Spanish",
+    "German",
+    "French",
+    "Italian",
+    "Portuguese",
+    "Japanese"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Comprehensive feature set can be overwhelming for beginners",
+    "Enterprise price tier intended for serious marketing operations"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://www.semrush.com"
+  ],
+  "createdAt": "2008-08-01",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Semrush AI Toolkit — Keyword Research & SEO Writing Assistant",
+    "description": "Audit competitor traffic and optimize content with Semrush AI. Features and pricing."
+  }
+}

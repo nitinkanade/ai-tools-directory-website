@@ -1,0 +1,68 @@
+{
+  "id": "luma-dream-machine",
+  "name": "Luma Dream Machine",
+  "slug": "luma-dream-machine",
+  "shortDescription": "High-speed realistic video generation model creating physically consistent camera moves and smooth motion.",
+  "description": "Dream Machine is an AI video generator created by Luma AI. Built on scalable transformer architecture trained directly on video data, it synthesizes photorealistic, physics-grounded scenes with natural lighting, smooth character movement, and dynamic camera choreography.",
+  "categories": [
+    "video-generation"
+  ],
+  "subcategories": [
+    "text-to-video"
+  ],
+  "tags": [
+    "video-generation",
+    "3d",
+    "animation",
+    "motion"
+  ],
+  "websiteUrl": "https://lumalabs.ai/dream-machine",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free tier with 30 monthly generations; Standard tier ($29.99/mo) with 120 generations; Pro ($99.99/mo) with 400 generations.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "ios"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "5-second high-definition video generation from text or image prompts",
+    "Physically accurate light reflections and camera physics",
+    "Keyframe camera path manipulation and camera motion presets",
+    "Looping animation generation capability"
+  ],
+  "useCases": [
+    "Social media video visual hooks and teaser animations",
+    "E-commerce product 360-degree rotation demonstrations",
+    "Concept art animated backdrops"
+  ],
+  "alternatives": [
+    "runway-gen-2"
+  ],
+  "relatedTools": [
+    "runway-gen-2"
+  ],
+  "languageSupport": [
+    "English"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Occasional visual artifacts when depicting rapid human limb movement",
+    "Free generations subject to server queuing during peak times"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://lumalabs.ai/dream-machine"
+  ],
+  "createdAt": "2024-06-12",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Luma Dream Machine — Realistic AI Video Generation Engine",
+    "description": "Generate smooth, physically accurate video clips with Luma Dream Machine."
+  }
+}

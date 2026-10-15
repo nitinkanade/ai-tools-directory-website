@@ -1,0 +1,9 @@
+{
+  "categoryId": "audio-music",
+  "toolIds": [
+    "elevenlabs",
+    "suno",
+    "whisper"
+  ],
+  "count": 3
+}
