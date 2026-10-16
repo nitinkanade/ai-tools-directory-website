@@ -351,12 +351,12 @@ def render_page(title, meta_desc, content, canonical_path="", structured_data=No
   <header class="site-header">
     <div class="container nav-container">
       <a href="{rel_base}/" class="brand-logo" aria-label="AI Tools Directory Homepage">
-        <img src="{rel_base}/static/img/logo.png" alt="AI Tools Directory Logo" class="brand-icon-img" width="40" height="40">
-        <span>AI Tools Directory</span>
+        <img src="{rel_base}/static/img/logo.png" alt="AI Tools Directory Logo" class="brand-icon-img" width="38" height="38">
+        <span class="brand-title">AI Tools Directory</span>
         <span class="brand-badge">v1.0 Verified</span>
       </a>
 
-      <nav aria-label="Main navigation">
+      <nav aria-label="Main navigation" class="desktop-nav">
         <ul class="nav-links">
           <li><a href="{rel_base}/" class="nav-link {'active' if current_nav == 'home' else ''}">Home</a></li>
           <li><a href="{rel_base}/tools/" class="nav-link {'active' if current_nav == 'tools' else ''}">Directory</a></li>
@@ -367,38 +367,128 @@ def render_page(title, meta_desc, content, canonical_path="", structured_data=No
       </nav>
 
       <div class="header-actions">
-        <button id="quick-search-trigger" class="quick-search-trigger" aria-label="Quick Search">
-          <span>Search...</span>
+        <!-- Universal Spotlight Trigger -->
+        <button id="quick-search-trigger" class="quick-search-trigger" onclick="openSpotlight()" aria-label="Quick Search" title="Search all tools (Ctrl+K)">
+          <svg class="search-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-trigger-text">Search...</span>
           <span class="kbd-shortcut">Ctrl+K</span>
         </button>
 
         <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="theme-moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
 
-        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open navigation menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
+        <button id="mobile-hamburger-btn" class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
         </button>
       </div>
     </div>
   </header>
 
   <!-- Mobile Drawer -->
-  <div id="mobile-drawer" class="mobile-drawer">
-    <ul class="mobile-nav-links">
-      <li><a href="{rel_base}/" class="mobile-nav-link {'active' if current_nav == 'home' else ''}" onclick="toggleMobileMenu()">Home</a></li>
-      <li><a href="{rel_base}/tools/" class="mobile-nav-link {'active' if current_nav == 'tools' else ''}" onclick="toggleMobileMenu()">Directory Index</a></li>
-      <li><a href="{rel_base}/collections/" class="mobile-nav-link {'active' if current_nav == 'collections' else ''}" onclick="toggleMobileMenu()">Curated Collections</a></li>
-      <li><a href="{rel_base}/blog/" class="mobile-nav-link {'active' if current_nav == 'blog' else ''}" onclick="toggleMobileMenu()">Guides & Blog</a></li>
-      <li><a href="{rel_base}/about/" class="mobile-nav-link {'active' if current_nav == 'about' else ''}" onclick="toggleMobileMenu()">About Directory</a></li>
-      <li><a href="{rel_base}/contact/" class="mobile-nav-link" onclick="toggleMobileMenu()">Submit Tool</a></li>
-    </ul>
+  <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-backdrop" onclick="toggleMobileMenu()"></div>
+    <div class="mobile-drawer-content">
+      <div class="mobile-search-banner">
+        <button class="mobile-search-btn" onclick="toggleMobileMenu(); openSpotlight();">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search 40+ AI tools...</span>
+          <span class="kbd-shortcut">Ctrl+K</span>
+        </button>
+      </div>
+
+      <ul class="mobile-nav-links">
+        <li>
+          <a href="{rel_base}/" class="mobile-nav-link {'active' if current_nav == 'home' else ''}" onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#127968;</span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="{rel_base}/tools/" class="mobile-nav-link {'active' if current_nav == 'tools' else ''}" onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#9889;</span>
+            <span>All AI Tools</span>
+            <span class="mobile-count-pill">40+</span>
+          </a>
+        </li>
+        <li>
+          <a href="{rel_base}/collections/" class="mobile-nav-link {'active' if current_nav == 'collections' else ''}" onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#10024;</span>
+            <span>Curated Collections</span>
+          </a>
+        </li>
+        <li>
+          <a href="{rel_base}/blog/" class="mobile-nav-link {'active' if current_nav == 'blog' else ''}" onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#128218;</span>
+            <span>Guides & Tutorials</span>
+          </a>
+        </li>
+        <li>
+          <a href="{rel_base}/about/" class="mobile-nav-link {'active' if current_nav == 'about' else ''}" onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#8505;&#65039;</span>
+            <span>About & Methodology</span>
+          </a>
+        </li>
+        <li>
+          <a href="{rel_base}/contact/" class="mobile-nav-link" onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#10133;</span>
+            <span>Submit a Tool</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="mobile-drawer-categories">
+        <div class="mobile-drawer-cat-title">Popular Categories</div>
+        <div class="mobile-drawer-cat-pills">
+          <a href="{rel_base}/category/coding-development/" class="cat-pill" onclick="toggleMobileMenu()">Coding & IDEs</a>
+          <a href="{rel_base}/category/chatbots-assistants/" class="cat-pill" onclick="toggleMobileMenu()">Conversational LLMs</a>
+          <a href="{rel_base}/category/image-generation/" class="cat-pill" onclick="toggleMobileMenu()">Image & Creative</a>
+          <a href="{rel_base}/category/opensource-models-platforms/" class="cat-pill" onclick="toggleMobileMenu()">Open-Source AI</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Universal Spotlight Search Modal -->
+  <div id="spotlight-modal" class="spotlight-modal" style="display: none;" role="dialog" aria-modal="true" aria-label="Search AI Tools">
+    <div class="spotlight-backdrop" onclick="closeSpotlight()"></div>
+    <div class="spotlight-panel">
+      <div class="spotlight-input-wrap">
+        <svg class="spotlight-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="spotlight-input" class="spotlight-input" placeholder="Type a tool name, coding, reasoning, pricing, or tag..." autocomplete="off">
+        <button id="spotlight-clear-btn" class="spotlight-clear-btn" aria-label="Clear Search" onclick="clearSpotlightInput()">&times;</button>
+        <button class="spotlight-close-btn" onclick="closeSpotlight()" aria-label="Close search">Esc</button>
+      </div>
+
+      <div id="spotlight-suggestions" class="spotlight-quick-tags">
+        <span class="quick-tags-label">Quick:</span>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('coding')">Coding</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('chat')">Chatbots</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('image')">Image</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('open-source')">Open Source</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('free')">Free Tier</button>
+      </div>
+
+      <div id="spotlight-results" class="spotlight-results">
+        <!-- Rendered dynamically by JS -->
+      </div>
+
+      <div class="spotlight-footer">
+        <div class="spotlight-footer-shortcuts">
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> Navigate</span>
+          <span><kbd>&crarr;</kbd> Select</span>
+          <span><kbd>Esc</kbd> Close</span>
+        </div>
+        <a href="{rel_base}/tools/" class="spotlight-view-all">All Tools &rarr;</a>
+      </div>
+    </div>
   </div>
 
   <!-- Main Page Content -->
@@ -473,10 +563,27 @@ def render_page(title, meta_desc, content, canonical_path="", structured_data=No
 </body>
 </html>"""
 
+def get_tool_gradient(tool):
+    cats = tool.get("categories", [])
+    if "coding-development" in cats:
+        return "linear-gradient(135deg, #0284c7 0%, #2563eb 100%)"
+    if "chatbots-assistants" in cats:
+        return "linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%)"
+    if "image-generation" in cats or "design-ui-ux" in cats:
+        return "linear-gradient(135deg, #db2777 0%, #e11d48 100%)"
+    if "opensource-models-platforms" in cats:
+        return "linear-gradient(135deg, #059669 0%, #0d9488 100%)"
+    if "audio-music" in cats or "video-generation" in cats:
+        return "linear-gradient(135deg, #d97706 0%, #ea580c 100%)"
+    if "research-knowledge" in cats or "education-learning" in cats:
+        return "linear-gradient(135deg, #4f46e5 0%, #0284c7 100%)"
+    return "linear-gradient(135deg, #6366f1 0%, #a855f7 100%)"
+
 def render_tool_card(tool, rel_base="."):
     pricing = tool.get("pricing", {}).get("model", "freemium")
     badge_class = "badge-oss" if pricing == "open-source" else f"badge-{pricing}"
     initial = tool["name"][0].upper()
+    gradient = get_tool_gradient(tool)
 
     tags_html = "".join([f'<span class="tool-tag">#{escape(t)}</span>' for t in tool.get("tags", [])[:3]])
 
@@ -484,6 +591,7 @@ def render_tool_card(tool, rel_base="."):
 
     return f"""
     <div class="tool-card tool-card-item" 
+         data-id="{escape(tool['id'])}"
          data-name="{escape(tool['name'].lower())}"
          data-slug="{escape(tool['slug'])}"
          data-desc="{escape(tool['shortDescription'].lower())}"
@@ -492,12 +600,17 @@ def render_tool_card(tool, rel_base="."):
          data-pricing="{escape(pricing)}"
          data-platforms="{escape(','.join(tool.get('platforms', [])))}"
          data-oss="{str(tool.get('isOpenSource') is True).lower()}">
+      <button class="card-fav-btn" data-tool-id="{escape(tool['id'])}" onclick="toggleFavorite(event, '{escape(tool['id'])}')" aria-label="Bookmark {escape(tool['name'])}" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
       <div class="card-header">
-        <div class="tool-monogram">{escape(initial)}</div>
+        <div class="tool-monogram" style="background: {gradient}; color: #ffffff;">{escape(initial)}</div>
         <div class="tool-header-content">
           <div class="tool-name-wrap">
             <a href="{rel_base}/tool/{tool['slug']}/" class="tool-title">{escape(tool['name'])}</a>
-            <span class="verified-badge" title="Factually Verified">&#x2714;</span>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
           </div>
           <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
             <span class="badge {badge_class}">{escape(pricing)}</span>
@@ -508,7 +621,9 @@ def render_tool_card(tool, rel_base="."):
       <p class="tool-short-desc">{escape(tool['shortDescription'])}</p>
       <div class="tool-tags">{tags_html}</div>
       <div class="card-footer">
-        <span style="color: var(--text-muted); font-size: 0.75rem;">Verified {escape(tool.get('lastVerifiedAt', 'Recently'))}</span>
+        <a href="{escape(tool['websiteUrl'])}" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for {escape(tool['name'])}">
+          Visit &UpperRightArrow;
+        </a>
         <a href="{rel_base}/tool/{tool['slug']}/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
       </div>
     </div>"""
@@ -610,6 +725,7 @@ def build_site(data_dir=None):
             <button class="quick-pill" data-filter="?category=image-generation">&#127912; Image & Creative</button>
             <button class="quick-pill" data-filter="?oss=true">&#128275; Open Source</button>
             <button class="quick-pill" data-filter="?pricing=free">&#127873; Free Tier</button>
+            <button class="quick-pill" data-filter="?saved=true">&#9733; Saved Tools</button>
           </div>
         </div>
 
@@ -753,18 +869,29 @@ def build_site(data_dir=None):
       </div>
 
       <div class="directory-layout">
-        <!-- Interactive Filter Sidebar -->
+        <!-- Interactive Filter Sidebar (Desktop) -->
         <aside class="filter-sidebar">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
             <span style="font-weight: 800; font-size: 1.1rem; font-family: var(--font-display);">Filter Tools</span>
             <button onclick="clearAllFilters()" style="background: none; border: none; color: var(--brand-primary); font-size: 0.8125rem; font-weight: 700; cursor: pointer;">Reset All</button>
           </div>
 
+          <!-- Saved Tools Switch -->
+          <div class="filter-group">
+            <label class="filter-label" style="font-weight: 700; color: var(--text-primary);">
+              <span class="filter-label-inner">
+                <input type="checkbox" id="filter-saved-only" class="filter-saved-checkbox">
+                <span>&#9733; Saved Tools Only</span>
+              </span>
+              <span id="saved-count-badge" class="filter-count-badge">0</span>
+            </label>
+          </div>
+
           <!-- Open Source Switch -->
           <div class="filter-group">
             <label class="filter-label" style="font-weight: 700; color: var(--text-primary);">
               <span class="filter-label-inner">
-                <input type="checkbox" id="filter-oss-only">
+                <input type="checkbox" id="filter-oss-only" class="filter-oss-checkbox">
                 <span>Open Source Only</span>
               </span>
               <span class="badge badge-oss">OSS</span>
@@ -825,16 +952,35 @@ def build_site(data_dir=None):
         </aside>
 
         <!-- Main Directory Listing -->
-        <section>
-          <!-- Search input bar & Sort dropdown -->
-          <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
-            <div class="search-input-wrapper" style="flex: 1; min-width: 260px;">
-              <span class="search-icon-prefix">&#128269;</span>
-              <input type="text" id="directory-search-input" class="search-input" placeholder="Filter tools by keyword, feature, or platform..." style="height: 3.5rem; font-size: 1rem;">
+        <section style="min-width: 0;">
+          <!-- Mobile Controls Bar (< 992px) -->
+          <div class="mobile-directory-controls">
+            <button id="mobile-filter-trigger" class="mobile-filter-btn" onclick="toggleMobileFilterDrawer()" aria-label="Open Filter Drawer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+              </svg>
+              <span>Filter Tools</span>
+              <span id="mobile-filter-badge" class="filter-count-badge" style="display: none;">0</span>
+            </button>
+            <div class="mobile-sort-wrap">
+              <select id="mobile-directory-sort-select" onchange="syncDirectorySort(this.value)" class="sort-select">
+                <option value="featured">Featured First</option>
+                <option value="name-asc">Alphabetical (A-Z)</option>
+                <option value="name-desc">Alphabetical (Z-A)</option>
+              </select>
             </div>
-            <div style="display: flex; align-items: center; gap: 0.5rem;">
+          </div>
+
+          <!-- Search input bar & Desktop Sort dropdown -->
+          <div class="directory-search-bar-wrap">
+            <div class="search-input-wrapper" style="flex: 1; min-width: 240px;">
+              <span class="search-icon-prefix">&#128269;</span>
+              <input type="text" id="directory-search-input" class="search-input" placeholder="Search by name, feature, category, or task..." style="height: 3.5rem; font-size: 1rem;">
+              <button id="directory-search-clear" class="search-clear-btn" aria-label="Clear Search" onclick="clearDirectorySearch()">&times;</button>
+            </div>
+            <div class="desktop-sort-wrap" style="display: flex; align-items: center; gap: 0.5rem;">
               <label for="directory-sort-select" style="font-size: 0.875rem; font-weight: 600; color: var(--text-muted); white-space: nowrap;">Sort by:</label>
-              <select id="directory-sort-select" style="height: 3.5rem; padding: 0 1rem; border-radius: var(--radius-md); border: 2px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-family: inherit; font-size: 0.9375rem; cursor: pointer; outline: none;">
+              <select id="directory-sort-select" onchange="syncDirectorySort(this.value)" class="sort-select">
                 <option value="featured">Featured First</option>
                 <option value="name-asc">Alphabetical (A-Z)</option>
                 <option value="name-desc">Alphabetical (Z-A)</option>
@@ -846,7 +992,7 @@ def build_site(data_dir=None):
           <div id="active-filter-chips" class="active-filter-chips"></div>
 
           <!-- Results Header -->
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 0.5rem;">
             <span id="directory-result-count" style="font-size: 0.9375rem; color: var(--text-muted); font-weight: 600;">
               Showing all {len(tools)} tools
             </span>
@@ -857,6 +1003,90 @@ def build_site(data_dir=None):
             {"".join([render_tool_card(t, rel_base="..") for t in tools])}
           </div>
         </section>
+      </div>
+
+      <!-- Mobile Filter Drawer Modal (< 992px) -->
+      <div id="mobile-filter-drawer" class="mobile-filter-drawer" style="display: none;" role="dialog" aria-modal="true" aria-label="Filter Options">
+        <div class="mobile-filter-backdrop" onclick="toggleMobileFilterDrawer()"></div>
+        <div class="mobile-filter-panel">
+          <div class="mobile-filter-header">
+            <h3>Filter AI Tools</h3>
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+              <button onclick="clearAllFilters()" class="text-btn">Reset All</button>
+              <button class="filter-close-btn" onclick="toggleMobileFilterDrawer()" aria-label="Close filters">&times;</button>
+            </div>
+          </div>
+          <div class="mobile-filter-body">
+            <!-- Saved Tools Switch -->
+            <div class="filter-group">
+              <label class="filter-label" style="font-weight: 700; color: var(--text-primary);">
+                <span class="filter-label-inner">
+                  <input type="checkbox" id="mobile-filter-saved-only" class="filter-saved-checkbox">
+                  <span>&#9733; Saved Tools Only</span>
+                </span>
+                <span id="mobile-saved-count-badge" class="filter-count-badge">0</span>
+              </label>
+            </div>
+
+            <!-- Open Source Switch -->
+            <div class="filter-group">
+              <label class="filter-label" style="font-weight: 700; color: var(--text-primary);">
+                <span class="filter-label-inner">
+                  <input type="checkbox" id="mobile-filter-oss-only" class="filter-oss-checkbox">
+                  <span>Open Source Only</span>
+                </span>
+                <span class="badge badge-oss">OSS</span>
+              </label>
+            </div>
+
+            <!-- Pricing Models -->
+            <div class="filter-group">
+              <div class="filter-title">Pricing Model</div>
+              <div class="filter-options">
+                <label class="filter-label">
+                  <span class="filter-label-inner"><input type="checkbox" class="filter-pricing-checkbox" value="free"> Free</span>
+                  <span class="filter-count-badge">{len([t for t in tools if t.get('pricing', {}).get('model') == 'free'])}</span>
+                </label>
+                <label class="filter-label">
+                  <span class="filter-label-inner"><input type="checkbox" class="filter-pricing-checkbox" value="freemium"> Freemium</span>
+                  <span class="filter-count-badge">{len([t for t in tools if t.get('pricing', {}).get('model') == 'freemium'])}</span>
+                </label>
+                <label class="filter-label">
+                  <span class="filter-label-inner"><input type="checkbox" class="filter-pricing-checkbox" value="paid"> Paid</span>
+                  <span class="filter-count-badge">{len([t for t in tools if t.get('pricing', {}).get('model') == 'paid'])}</span>
+                </label>
+                <label class="filter-label">
+                  <span class="filter-label-inner"><input type="checkbox" class="filter-pricing-checkbox" value="open-source"> Open Source</span>
+                  <span class="filter-count-badge">{len([t for t in tools if t.get('pricing', {}).get('model') == 'open-source'])}</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Platforms -->
+            <div class="filter-group">
+              <div class="filter-title">Platform Support</div>
+              <div class="filter-options">
+                <label class="filter-label"><span class="filter-label-inner"><input type="checkbox" class="filter-platform-checkbox" value="web"> Web Browser</span></label>
+                <label class="filter-label"><span class="filter-label-inner"><input type="checkbox" class="filter-platform-checkbox" value="windows"> Windows</span></label>
+                <label class="filter-label"><span class="filter-label-inner"><input type="checkbox" class="filter-platform-checkbox" value="macos"> macOS</span></label>
+                <label class="filter-label"><span class="filter-label-inner"><input type="checkbox" class="filter-platform-checkbox" value="linux"> Linux</span></label>
+                <label class="filter-label"><span class="filter-label-inner"><input type="checkbox" class="filter-platform-checkbox" value="android"> Android</span></label>
+                <label class="filter-label"><span class="filter-label-inner"><input type="checkbox" class="filter-platform-checkbox" value="ios"> iOS</span></label>
+              </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="filter-group">
+              <div class="filter-title">Categories ({len(categories)})</div>
+              <div class="filter-options" style="max-height: 220px; overflow-y: auto;">
+                {"".join([f'<label class="filter-label"><span class="filter-label-inner"><input type="checkbox" class="filter-category-checkbox" value="{c["id"]}"> {escape(c["name"])}</span></label>' for c in categories])}
+              </div>
+            </div>
+          </div>
+          <div class="mobile-filter-footer">
+            <button class="btn btn-primary btn-block" onclick="toggleMobileFilterDrawer()">Show Matching Tools</button>
+          </div>
+        </div>
       </div>
     </div>
     """
@@ -919,11 +1149,11 @@ def build_site(data_dir=None):
             </nav>
 
             <div style="display: flex; align-items: flex-start; gap: 2rem; flex-wrap: wrap;">
-              <div class="tool-monogram" style="width: 5rem; height: 5rem; font-size: 2.25rem;">{escape(initial)}</div>
+              <div class="tool-monogram" style="width: 5rem; height: 5rem; font-size: 2.25rem; background: {get_tool_gradient(tool)}; color: #ffffff;">{escape(initial)}</div>
               <div style="flex: 1; min-width: 280px;">
                 <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
                   <h1 style="font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em;">{escape(tool['name'])}</h1>
-                  <span class="verified-badge" style="font-size: 1.15rem;" title="Factually Verified">&#x2714; Verified</span>
+                  <span class="verified-badge" style="font-size: 1.15rem;" title="Factually Verified by Editors">&#x2714; Verified</span>
                   <span class="badge {badge_class}" style="font-size: 0.875rem;">{escape(pricing)}</span>
                   {f'<span class="badge badge-oss">Open Source</span>' if tool.get('isOpenSource') else ''}
                 </div>
@@ -932,6 +1162,12 @@ def build_site(data_dir=None):
                 </p>
               </div>
               <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                <button class="btn btn-outline fav-detail-btn" data-tool-id="{tool['id']}" onclick="toggleFavorite(event, '{tool['id']}')" aria-label="Save {escape(tool['name'])}">
+                  <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <span class="fav-detail-label">Save Tool</span>
+                </button>
                 <a href="{escape(tool['websiteUrl'])}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                   Visit Official Website &UpperRightArrow;
                 </a>
