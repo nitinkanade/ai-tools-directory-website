@@ -332,6 +332,8 @@ def render_page(title, meta_desc, content, canonical_path="", structured_data=No
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{rel_base}/static/css/styles.css">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="manifest" href="{rel_base}/manifest.webmanifest">
   
   <!-- Schema.org Structured Data -->
   {sd_tag}
@@ -560,6 +562,13 @@ def render_page(title, meta_desc, content, canonical_path="", structured_data=No
     window.__SITE_BASE_URL__ = "{rel_base}";
   </script>
   <script src="{rel_base}/static/js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {{
+      window.addEventListener('load', function() {{
+        navigator.serviceWorker.register('{rel_base}/sw.js').catch(function() {{}});
+      }});
+    }}
+  </script>
 </body>
 </html>"""
 
@@ -673,6 +682,15 @@ def build_site(data_dir=None):
     # Create .nojekyll so GitHub Pages serves dotfiles like .well-known
     with open(os.path.join(DIST_DIR, ".nojekyll"), "w", encoding="utf-8") as f:
         f.write("")
+
+    # Copy Service Worker and web app manifest to dist root
+    sw_src = os.path.join(STATIC_SRC, "sw.js")
+    if os.path.exists(sw_src):
+        shutil.copy2(sw_src, os.path.join(DIST_DIR, "sw.js"))
+
+    webmanifest_src = os.path.join(STATIC_SRC, "manifest.webmanifest")
+    if os.path.exists(webmanifest_src):
+        shutil.copy2(webmanifest_src, os.path.join(DIST_DIR, "manifest.webmanifest"))
 
     # Copy database public JSON data
     shutil.copytree(data_source, os.path.join(DIST_DIR, "data"))

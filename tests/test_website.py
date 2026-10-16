@@ -97,6 +97,18 @@ class TestWebsiteBuild(unittest.TestCase):
         nojekyll_path = os.path.join(DIST_DIR, ".nojekyll")
         self.assertTrue(os.path.exists(nojekyll_path), ".nojekyll file must exist in dist to prevent Jekyll ignoring .well-known")
 
+    def test_pwa_assets_and_service_worker_exist(self):
+        sw_path = os.path.join(DIST_DIR, "sw.js")
+        manifest_path = os.path.join(DIST_DIR, "manifest.webmanifest")
+        self.assertTrue(os.path.exists(sw_path), "sw.js must exist in dist root for root offline scope")
+        self.assertTrue(os.path.exists(manifest_path), "manifest.webmanifest must exist in dist root")
+
+        index_path = os.path.join(DIST_DIR, "index.html")
+        with open(index_path, "r", encoding="utf-8") as f:
+            html = f.read()
+            self.assertIn('rel="manifest"', html)
+            self.assertIn('serviceWorker', html)
+
     def test_website_data_synced_with_database_folder(self):
         import hashlib
         def sha256(fp):
