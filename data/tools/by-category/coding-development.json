@@ -1,6 +1,7 @@
 {
   "categoryId": "coding-development",
   "toolIds": [
+    "bolt-new",
     "chatgpt",
     "claude-code",
     "claude",
@@ -14,5 +15,5 @@
     "v0",
     "vllm"
   ],
-  "count": 12
+  "count": 13
 }

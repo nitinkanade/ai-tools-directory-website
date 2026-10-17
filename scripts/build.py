@@ -44,43 +44,34 @@ def _copy_directory_tree(src, dst):
 
 def resolve_and_sync_data():
     """
-    Ensures website data is loaded directly from the database folder,
-    and that website and app data are kept strictly synchronized.
+    Ensures website data is loaded strictly from the official GitHub Pages database:
+    https://nitinkanade.github.io/ai-tools-directory-database/public/data
+    Falls back gracefully to local database folder if offline or running in local dev.
     """
+    sync_script = os.path.join(WEBSITE_DIR, "scripts", "sync_data.py")
+    
+    # 1. Primary: Sync directly from remote database GitHub Pages
+    try:
+        print("--> [DATA SYNC] Fetching latest verified dataset from remote GitHub Pages...")
+        import sync_data
+        sync_data.sync_from_remote()
+        return LOCAL_DATA_DIR
+    except Exception as e:
+        print(f"[WARN] Remote GitHub Pages sync encountered an issue: {e}")
+
+    # 2. Fallback: If local database repository exists, rebuild and sync
     db_public = os.path.join(DB_DIR, "public", "data")
     db_build_script = os.path.join(DB_DIR, "scripts", "build_indexes.py")
-
-    # 1. If local database exists, rebuild indexes from master data/ and sync to website & app
     if os.path.exists(DB_DIR) and os.path.exists(db_build_script):
-        print(f"--> [DATA SYNC] Rebuilding database indexes from {DB_DIR}/data...")
+        print(f"--> [DATA SYNC] Using local master database from {DB_DIR}...")
         res = subprocess.run([sys.executable, db_build_script], cwd=DB_DIR, capture_output=True, text=True)
-        if res.returncode != 0:
-            print(f"[WARN] Failed to rebuild database indexes:\n{res.stderr}")
-        else:
-            print(f"    {res.stdout.strip()}")
-
-        if os.path.exists(db_public):
-            print(f"--> [DATA SYNC] Syncing database to website data folder ({LOCAL_DATA_DIR})...")
+        if res.returncode == 0 and os.path.exists(db_public):
             _copy_directory_tree(db_public, LOCAL_DATA_DIR)
+            return LOCAL_DATA_DIR
 
-        # Sync to app assets if present
-        app_assets = os.path.join(APP_DIR, "assets", "data")
-        if os.path.exists(APP_DIR):
-            print(f"--> [DATA SYNC] Syncing database to mobile app assets ({app_assets})...")
-            _copy_directory_tree(db_public, app_assets)
-
-        return LOCAL_DATA_DIR
-
-    # 2. If website repository has its synced data snapshot, use it
+    # 3. Fallback: If local data snapshot already exists
     if os.path.exists(os.path.join(LOCAL_DATA_DIR, "manifest.json")):
-        print(f"--> [DATA] Using local synced website data at {LOCAL_DATA_DIR}")
-        return LOCAL_DATA_DIR
-
-    # 3. Fallback: Run sync_data.py to pull from remote host
-    sync_script = os.path.join(WEBSITE_DIR, "scripts", "sync_data.py")
-    if os.path.exists(sync_script):
-        print("--> [DATA SYNC] No local data found, running website sync_data.py...")
-        subprocess.run([sys.executable, sync_script], cwd=WEBSITE_DIR, check=True)
+        print(f"--> [DATA SYNC] Using cached local dataset at {LOCAL_DATA_DIR}")
         return LOCAL_DATA_DIR
 
     raise FileNotFoundError("Could not locate or synchronize dataset for website build.")

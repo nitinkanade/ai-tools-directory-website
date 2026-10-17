@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "datasetVersion": "2026.10.16-38be0433",
-  "generatedAt": "2026-10-16T08:13:05.020614+00:00",
-  "totalTools": 40,
+  "datasetVersion": "2026.10.17-82639123",
+  "generatedAt": "2026-10-17T06:09:05.516187+00:00",
+  "totalTools": 41,
   "totalCategories": 20,
   "totalCollections": 6,
   "minAppVersion": "1.0.0",
@@ -19,13 +19,18 @@
     },
     "search-index.json": {
       "path": "/data/search-index.json",
-      "sha256": "f3c0be705cd082693cc032a7e44a999403dfedf04382c22b5be4cd148fbed13f",
-      "bytes": 35631
+      "sha256": "deb1e83885221603a799d3805ba08213efb473035142fc48daa06a8df3ade342",
+      "bytes": 36644
     },
     "tags.json": {
       "path": "/data/tags.json",
       "sha256": "8613d905b8339e1bcae84b5cf12ce1359f3f375ee3e2233533fa22cf6dd34f9d",
       "bytes": 1843
+    },
+    "tools/bolt-new.json": {
+      "path": "/data/tools/bolt-new.json",
+      "sha256": "fabbd3f60972281a4ec3e6c08fc6a62508a0043c7927823382cc8e804608671f",
+      "bytes": 2730
     },
     "tools/canva-magic-studio.json": {
       "path": "/data/tools/canva-magic-studio.json",
@@ -119,8 +124,8 @@
     },
     "tools/index.json": {
       "path": "/data/tools/index.json",
-      "sha256": "fe1292ba53c2a07b017001d964e4ded5101bb692c6875d0a1cf16a0cc1faf8dc",
-      "bytes": 41168
+      "sha256": "01a36860d186d8e291d520a2dacc4e304097a4152f3bdd05a0f116421e38646b",
+      "bytes": 42264
     },
     "tools/intercom-fin.json": {
       "path": "/data/tools/intercom-fin.json",
@@ -254,8 +259,8 @@
     },
     "tools/by-category/coding-development.json": {
       "path": "/data/tools/by-category/coding-development.json",
-      "sha256": "67e644f17fbd47b2d24bc8c3423a02df3a63d927863915d91e6c7911d9623f85",
-      "bytes": 261
+      "sha256": "b451c86e17e99c629719927ae91c1787a5fcd037956b3b269d9ce54aeba2cf51",
+      "bytes": 277
     },
     "tools/by-category/customer-support.json": {
       "path": "/data/tools/by-category/customer-support.json",
@@ -269,8 +274,8 @@
     },
     "tools/by-category/design-ui-ux.json": {
       "path": "/data/tools/by-category/design-ui-ux.json",
-      "sha256": "0bd7d569bc89da1f8d908a32bdcf65a84ae07f34281c151f958f257126cdf8c4",
-      "bytes": 150
+      "sha256": "9bfae760df27d75a5b9706cfce1d15473beb68f357b2dd722c1d5cd4e9bb8bde",
+      "bytes": 166
     },
     "tools/by-category/education-learning.json": {
       "path": "/data/tools/by-category/education-learning.json",

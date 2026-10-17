@@ -109,11 +109,12 @@ def sync_from_remote(remote_url=REMOTE_BASE_URL):
     manifest_url = f"{remote_url}/manifest.json"
     req = urllib.request.Request(manifest_url, headers={"User-Agent": "AI-Tools-Website-Sync/1.0"})
     with urllib.request.urlopen(req) as resp:
-        manifest = json.loads(resp.read().decode("utf-8"))
+        manifest_raw = resp.read()
+    manifest = json.loads(manifest_raw.decode("utf-8"))
 
     os.makedirs(LOCAL_DATA_DIR, exist_ok=True)
-    with open(os.path.join(LOCAL_DATA_DIR, "manifest.json"), "w", encoding="utf-8") as f:
-        json.dump(manifest, f, indent=2)
+    with open(os.path.join(LOCAL_DATA_DIR, "manifest.json"), "wb") as f:
+        f.write(manifest_raw)
 
     files_map = manifest.get("files", {})
     print(f"--> Manifest specifies {len(files_map)} files to download...")

@@ -1,5 +1,47 @@
 [
   {
+    "id": "bolt-new",
+    "name": "Bolt.new",
+    "slug": "bolt-new",
+    "shortDescription": "In-browser AI web development agent powered by WebContainers that builds, runs, and deploys full-stack web applications.",
+    "categories": [
+      "coding-development",
+      "design-ui-ux"
+    ],
+    "subcategories": [
+      "code-assistants",
+      "ui-generation"
+    ],
+    "tags": [
+      "agent",
+      "autocomplete",
+      "coding",
+      "developer-tools",
+      "frontend",
+      "open-source",
+      "prototyping",
+      "react",
+      "typescript",
+      "ui-ux",
+      "web-search"
+    ],
+    "websiteUrl": "https://bolt.new",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free plan includes daily token allocations; Pro plan starts at $20/month for higher token limits and custom LLM model selections.",
+      "lastVerifiedAt": "2026-10-17"
+    },
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-17",
+    "createdAt": "2026-10-17",
+    "updatedAt": "2026-10-17"
+  },
+  {
     "id": "canva-magic-studio",
     "name": "Canva Magic Studio",
     "slug": "canva-magic-studio",

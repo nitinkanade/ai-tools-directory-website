@@ -1,5 +1,40 @@
 [
   {
+    "id": "bolt-new",
+    "name": "Bolt.new",
+    "slug": "bolt-new",
+    "shortDescription": "In-browser AI web development agent powered by WebContainers that builds, runs, and deploys full-stack web applications.",
+    "categories": [
+      "coding-development",
+      "design-ui-ux"
+    ],
+    "tags": [
+      "agent",
+      "autocomplete",
+      "coding",
+      "developer-tools",
+      "frontend",
+      "open-source",
+      "prototyping",
+      "react",
+      "typescript",
+      "ui-ux",
+      "web-search"
+    ],
+    "features": [
+      "Full-stack WebContainer environment executing Node.js applications directly in the browser",
+      "Automated package installation, terminal execution, and dev server orchestration",
+      "AI agent file editing, bug diagnosis, and live preview updates",
+      "One-click application deployment to Netlify and code export options"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true
+  },
+  {
     "id": "canva-magic-studio",
     "name": "Canva Magic Studio",
     "slug": "canva-magic-studio",
