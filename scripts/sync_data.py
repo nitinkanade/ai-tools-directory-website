@@ -22,7 +22,10 @@ LOCAL_DATA_DIR = os.path.join(WEBSITE_DIR, "data")
 APP_DIR = os.path.abspath(os.path.join(WEBSITE_DIR, "..", "ai-tools-directory-app"))
 APP_DATA_DIR = os.path.join(APP_DIR, "assets", "data")
 
-REMOTE_BASE_URL = "https://in-ni18.github.io/ai-tools-directory/data"
+REMOTE_BASE_URL = os.environ.get(
+    "REMOTE_DATABASE_URL",
+    "https://nitinkanade.github.io/ai-tools-directory-database/public/data"
+)
 
 def sha256_file(filepath):
     h = hashlib.sha256()

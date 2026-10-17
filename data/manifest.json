@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "datasetVersion": "2026.10.16-06a8f375",
-  "generatedAt": "2026-10-16T07:11:54.818599+00:00",
+  "datasetVersion": "2026.10.16-38be0433",
+  "generatedAt": "2026-10-16T08:13:05.020614+00:00",
   "totalTools": 40,
   "totalCategories": 20,
   "totalCollections": 6,
@@ -9,328 +9,328 @@
   "files": {
     "categories.json": {
       "path": "/data/categories.json",
-      "sha256": "9f42df9cbabfbc6b7c23fdedf2439029d479da583ffcd93f997dc96b62b5ec34",
-      "bytes": 20054
+      "sha256": "782cf3b2e65a7ecb3b039b42bb98956a4411b92f5c7038a7dcf6f163ec55ae30",
+      "bytes": 19545
     },
     "collections.json": {
       "path": "/data/collections.json",
-      "sha256": "f0f821e23dd23199c5962ae0cfef6b1373f6d14c1ea1d24383d45afe23f11443",
-      "bytes": 3975
+      "sha256": "361d309f086a2bf4101389349affb7dec86ac40d039972f2bcf0f35c2f4bf8b2",
+      "bytes": 3870
     },
     "search-index.json": {
       "path": "/data/search-index.json",
-      "sha256": "22c637be3804839d72ee5a067cf71e35e9062d71dd9dda85603c9a8d01dbfed8",
-      "bytes": 36889
+      "sha256": "f3c0be705cd082693cc032a7e44a999403dfedf04382c22b5be4cd148fbed13f",
+      "bytes": 35631
     },
     "tags.json": {
       "path": "/data/tags.json",
-      "sha256": "e37e15c25c056f0800284a0b05b561ba87312e85dc5b228dc755228fcd013df0",
-      "bytes": 1972
+      "sha256": "8613d905b8339e1bcae84b5cf12ce1359f3f375ee3e2233533fa22cf6dd34f9d",
+      "bytes": 1843
     },
     "tools/canva-magic-studio.json": {
       "path": "/data/tools/canva-magic-studio.json",
-      "sha256": "3dc5e4b77f13db049f6f8cb088200b49894e9a49b1c070a84da4693c6b5bd1c6",
-      "bytes": 2701
+      "sha256": "16d9bc221de57291d8968e63119d23a47d6817fda6c1b0e15d838351e008c44b",
+      "bytes": 2623
     },
     "tools/chatgpt.json": {
       "path": "/data/tools/chatgpt.json",
-      "sha256": "6a95b559f02ee85df6bec52a188c0405a54c80e08ac6214d26e67022df3ac4be",
-      "bytes": 2675
+      "sha256": "3cb408cac728c7025c8bfadd980218f4543ecdc3f0e6e7ba49b4ca8c32c055a9",
+      "bytes": 2588
     },
     "tools/chatpdf.json": {
       "path": "/data/tools/chatpdf.json",
-      "sha256": "e6a548033aea1b3e9829b918c4b9a796f43ccd7b79cb9fa66b9ca2279e9b822b",
-      "bytes": 2574
+      "sha256": "271d4d549a59dafd196a47c8ed776b69b2f24bdba6bfb90434bf2f0eeff89d0c",
+      "bytes": 2501
     },
     "tools/claude-code.json": {
       "path": "/data/tools/claude-code.json",
-      "sha256": "14519268a4374b8f0431a9d39dd91c3bbfda622744c984b8219666fa540e57b1",
-      "bytes": 2476
+      "sha256": "a4453e46c4576de578796290ab4d58f7fc3e61bbb620ae2d637f4fae973ac655",
+      "bytes": 2403
     },
     "tools/claude.json": {
       "path": "/data/tools/claude.json",
-      "sha256": "28afb6db66b39f01b09dc341a6137f545cf9882c6c2d3590c698909a242c7099",
-      "bytes": 2762
+      "sha256": "dae244798cfc49f36efbb679ec7b838019a7e51a014c1b99fbdf136b3b5729b5",
+      "bytes": 2675
     },
     "tools/consensus.json": {
       "path": "/data/tools/consensus.json",
-      "sha256": "77b0d255bb3b266e1e009feb39ea7b3f453c7ed1a6b89db7ea2b6d4d1d5a0341",
-      "bytes": 2502
+      "sha256": "e1e561eb97bcba62f75910a3048efa15edd84884bd983f9bae18927a0d65f468",
+      "bytes": 2431
     },
     "tools/copy-ai.json": {
       "path": "/data/tools/copy-ai.json",
-      "sha256": "4f456d230737ea3bff0bd104a6f7f59f6785ce12bb8f7d0f3aab3b97c0172217",
-      "bytes": 2468
+      "sha256": "a68d135a8d67c5cb5bc377ad44450439720d295604093f01390d76fac996319b",
+      "bytes": 2396
     },
     "tools/crewai.json": {
       "path": "/data/tools/crewai.json",
-      "sha256": "3352691c6038531c71f25f42ae2dcbc975a11056ea72b33d0be289773588c3f7",
-      "bytes": 2598
+      "sha256": "850bb3831cf6ff0be62653be2c9f50b540ad1d67645479842ca48942d25aae4e",
+      "bytes": 2525
     },
     "tools/cursor.json": {
       "path": "/data/tools/cursor.json",
-      "sha256": "78d929233773f058c1929cf7b1fed88d007194e0f48f69cf477d7ca15a9698fb",
-      "bytes": 2504
+      "sha256": "0b309dd5cd430458c463b0f7633306f667a8d01ac7d2ebb11c2145781f673257",
+      "bytes": 2425
     },
     "tools/deepl.json": {
       "path": "/data/tools/deepl.json",
-      "sha256": "7c41b230c6de826b866d55a9d64139ba983c62957ce680966101a4c1e3b1360b",
-      "bytes": 2834
+      "sha256": "db95ffc093c41afa4a1432f338106445d63cbc2c861d1788b68e79fe33d34e8e",
+      "bytes": 2748
     },
     "tools/deepseek.json": {
       "path": "/data/tools/deepseek.json",
-      "sha256": "6eb1d6c42d9f29d74e9913773db9485c8318fa914d8d947ea709a69d008aaf6f",
-      "bytes": 2647
+      "sha256": "f7dda1bb01285b5092a0476b112e8283f09b286a3c752cd507a2940f533d65b3",
+      "bytes": 2567
     },
     "tools/dify.json": {
       "path": "/data/tools/dify.json",
-      "sha256": "67c464e825ab39a90c80c856a86650cb1beb524af30e44cc213af632a30e9b07",
-      "bytes": 2722
+      "sha256": "380fd56cda138fcb50c388b785fc77409185d82197245da4dee97f107c7fd3e3",
+      "bytes": 2642
     },
     "tools/elevenlabs.json": {
       "path": "/data/tools/elevenlabs.json",
-      "sha256": "b093243140bb423225ae5d73c28fd232cf084289d54365deb4cfb5505b3dfe89",
-      "bytes": 2606
+      "sha256": "280f51e429bf84c2396bff9e9d278b8ee8d4ab6cbb38bab45e682911c9b4819a",
+      "bytes": 2524
     },
     "tools/elicit.json": {
       "path": "/data/tools/elicit.json",
-      "sha256": "69e1f00e822fc3126397ba5ea34b895175fa06e88df452beacbe2b61c866c2c5",
-      "bytes": 2428
+      "sha256": "68fd929a7bb565ce49b0d5984536c24ab39f880a8593279e564a75897391edb9",
+      "bytes": 2357
     },
     "tools/figma-ai.json": {
       "path": "/data/tools/figma-ai.json",
-      "sha256": "daae6cdf3c90bac05762313e8eb275eb275f4c47baf318f8f93de9eb3d1eb0b1",
-      "bytes": 2444
+      "sha256": "838b7f7e7211967e8c2d515c90d0a50e6833db4fbd1578221f95ef57ed49b082",
+      "bytes": 2372
     },
     "tools/gamma.json": {
       "path": "/data/tools/gamma.json",
-      "sha256": "c0a3b108baff37f60ed8269bd8603eeed050d41c83fecd8197ff0800a0f6c72d",
-      "bytes": 2643
+      "sha256": "6cb1b6b28e56bb4fdda9d7cbe44f9518dbc5ae09a1b9de1901122877cc6d0d55",
+      "bytes": 2567
     },
     "tools/github-copilot.json": {
       "path": "/data/tools/github-copilot.json",
-      "sha256": "75f700de5f5983f1939d320fc20975ca990be6a28507b40cfd1ab17183e93e07",
-      "bytes": 2639
+      "sha256": "918a8cd3d951714f350f1166d7c495a270766ec58e8adc8d16b58683cfff0db6",
+      "bytes": 2556
     },
     "tools/hugging-face.json": {
       "path": "/data/tools/hugging-face.json",
-      "sha256": "669c53b2e8a632fcc085306493d5ca99f8ea071ce28b3862fb3feadabffd2a22",
-      "bytes": 2678
+      "sha256": "fc93bc3d3cc7c3b6b8d40211ff8d5a9a52159eabae8d2168089a953ad7a314e0",
+      "bytes": 2601
     },
     "tools/index.json": {
       "path": "/data/tools/index.json",
-      "sha256": "9c2a5efd4641ee7297a4033a063b94a0e837140b13d207189c8df2e37014b621",
-      "bytes": 42707
+      "sha256": "fe1292ba53c2a07b017001d964e4ded5101bb692c6875d0a1cf16a0cc1faf8dc",
+      "bytes": 41168
     },
     "tools/intercom-fin.json": {
       "path": "/data/tools/intercom-fin.json",
-      "sha256": "6943ebf554567ee4f64242ea87dd7fc3d44211773c99380b99c54627017c56c0",
-      "bytes": 2595
+      "sha256": "0307afdd9e3ba3a3be97792e90e36654b3ce3dda4ef990b20507d029ce481206",
+      "bytes": 2523
     },
     "tools/jasper.json": {
       "path": "/data/tools/jasper.json",
-      "sha256": "9b60e1a6d99ab50f7d89ced4bdc973d71e16a098ac81ef0912d3aa5b913d3dc7",
-      "bytes": 2552
+      "sha256": "de4de2c7408d29b6408b5fdafac52d15af984b199e946e39bc1e3b0114a204d9",
+      "bytes": 2478
     },
     "tools/julius-ai.json": {
       "path": "/data/tools/julius-ai.json",
-      "sha256": "5655b9347c5c0fb7ec666f34ef6598c34591fb715cfeb2b3b48a79130d24729d",
-      "bytes": 2511
+      "sha256": "f2bf184bbcd55619aaf04f05a4de4b0cef9b484ba2170e28f57f69b60c8c1312",
+      "bytes": 2440
     },
     "tools/khanmigo.json": {
       "path": "/data/tools/khanmigo.json",
-      "sha256": "562860d68da88dba62a7c54e6bbb5b9fa37b09ced234d5fab0f7e905e4f3b4a0",
-      "bytes": 2484
+      "sha256": "904c1f1faf79e57fc756c61e5e2627fa93262dd1e5d2a5184866de85d47b6986",
+      "bytes": 2412
     },
     "tools/langchain.json": {
       "path": "/data/tools/langchain.json",
-      "sha256": "bed6fe154696ab5448215cd5c2e8835c0735f3a5b30859dd5b5fdf03bda67c6d",
-      "bytes": 2772
+      "sha256": "1d08765eebdfc45c82ce216e6c39b6887a37f079f12f29a4238d98a1104e4c4b",
+      "bytes": 2693
     },
     "tools/luma-dream-machine.json": {
       "path": "/data/tools/luma-dream-machine.json",
-      "sha256": "749229922633fc9b89b0bf5395feff17660b2938d19d2d716e397a8adcfaf10c",
-      "bytes": 2303
+      "sha256": "f8b68adb25e63dc6ede644d0b124d687d9dfd5ebccc1b69e1a1407bcf9d01041",
+      "bytes": 2236
     },
     "tools/make.json": {
       "path": "/data/tools/make.json",
-      "sha256": "165326771bbc8f4e120b871b1e250befd82a644b0539eb080f6938a76e4a9b63",
-      "bytes": 2523
+      "sha256": "fe8e7226babe80cc62f3f7fe2c30c5693e219f14c88cdb36fbde90bba278fdc2",
+      "bytes": 2447
     },
     "tools/midjourney.json": {
       "path": "/data/tools/midjourney.json",
-      "sha256": "b997dd1bfafea0b998ae7eaf09987c2364c7dd7b8779e02b6f6eec8a672a5e49",
-      "bytes": 2490
+      "sha256": "559e57c1403734c195eec337447eb7dcc97c977efa4f349d0b2386a61c135ef4",
+      "bytes": 2419
     },
     "tools/n8n.json": {
       "path": "/data/tools/n8n.json",
-      "sha256": "853d3c9fd7eed04ca84eb3a94ecddedf745fd47aedaa1426eaa9fcafcd71ae5e",
-      "bytes": 2640
+      "sha256": "e25fd83f9437689d2f7062dcabb77afdccd7aac7f43d2b218ece8fe0d6f3ef7d",
+      "bytes": 2565
     },
     "tools/notion-ai.json": {
       "path": "/data/tools/notion-ai.json",
-      "sha256": "4ba9020624e77a0c6f96baf0965de66f0f02cb0598a5bfbf9504632128bd1f3d",
-      "bytes": 2609
+      "sha256": "ab0714509786bedf56e747fbf11caf628679fa709a6e2a68d82abc9f525b7224",
+      "bytes": 2527
     },
     "tools/ollama.json": {
       "path": "/data/tools/ollama.json",
-      "sha256": "fa16cfbcb8b381af2217102f8ca8e4e8be568ff18940fd77d62f02944de2b59d",
-      "bytes": 2774
+      "sha256": "2ec0a3cb529d813b3f2637278c3e45e7252c6c90135e3c7fc0518a11edbd16fe",
+      "bytes": 2691
     },
     "tools/perplexity.json": {
       "path": "/data/tools/perplexity.json",
-      "sha256": "13a6c38b4426ee0beed26c614ef34e4242a2a621c1328e4903303e2866022a2f",
-      "bytes": 2601
+      "sha256": "8772deba511c6bda13eed58f5e46a025fa8c9d6d929a43d2923cbf3c9a4b3610",
+      "bytes": 2518
     },
     "tools/quizlet-q-chat.json": {
       "path": "/data/tools/quizlet-q-chat.json",
-      "sha256": "b113180e736f042a25d5b98b7fa2093eb676964975c1a8a859179c907f476642",
-      "bytes": 2449
+      "sha256": "8db6177a1574411e0f0bcd646c2b1f0fb164c37e684ece447bcfb6418b803e5c",
+      "bytes": 2376
     },
     "tools/runway-gen-2.json": {
       "path": "/data/tools/runway-gen-2.json",
-      "sha256": "da503ae3ce31fe0367403582a2265c224f87b858fde6f36d131cc1febac5407e",
-      "bytes": 2466
+      "sha256": "862813a8e50f811092cb49e9618bc029d4c5d0ef4915aec99b952d6450494cfb",
+      "bytes": 2395
     },
     "tools/semrush-ai.json": {
       "path": "/data/tools/semrush-ai.json",
-      "sha256": "ff6ec02e2f14a9f249d8d84772b1e63b3cb73c91352f3cee7095fd132e704a59",
-      "bytes": 2599
+      "sha256": "3916b6e50583d87b82ee8e2ba1e089871b0c642586662f2e9694e7f9c7dfd47c",
+      "bytes": 2523
     },
     "tools/stable-diffusion-webui.json": {
       "path": "/data/tools/stable-diffusion-webui.json",
-      "sha256": "8c2f6fc85fef30a3c2741f7ffbc5aaf0f195d52486a1d52dcee42092d7bb0bc5",
-      "bytes": 2729
+      "sha256": "aa6ffc0aa7d5f47fdd30ef9cbf8dbd38d0592b0ea3cc35347d422fd92f1218ca",
+      "bytes": 2653
     },
     "tools/suno.json": {
       "path": "/data/tools/suno.json",
-      "sha256": "8c02f71a5ec8c582797e87d4088fc5400e9148a410c6965800b11b0079dc0d5e",
-      "bytes": 2407
+      "sha256": "9b6392b23cdb74083fce60ea5943040835313a2cfb642f411ea227b87d1e29f0",
+      "bytes": 2334
     },
     "tools/surfer-seo.json": {
       "path": "/data/tools/surfer-seo.json",
-      "sha256": "20f98f8a6a15ebe78d2e0deb9ad5b344b6a3be8302954c85efac10176bf356d6",
-      "bytes": 2609
+      "sha256": "9580666d5007a58ef70c99bd48998cce102936ac28aea5a6570b3d6e3f53c377",
+      "bytes": 2532
     },
     "tools/v0.json": {
       "path": "/data/tools/v0.json",
-      "sha256": "4d2f4da7177f6bdca4684627287b5c2ab0ae9517b2075d2e948fbf3ff2a28dc4",
-      "bytes": 2309
+      "sha256": "f00cd614ae67d19601dc0d5806baf10293cb5537c0b30d018876244bc64d1311",
+      "bytes": 2238
     },
     "tools/vllm.json": {
       "path": "/data/tools/vllm.json",
-      "sha256": "8d571f938c26b5397740f653f8ec0114f61927f6b1ae2509dd7d10709d0b9629",
-      "bytes": 2466
+      "sha256": "b7884ca2762d817055fdb82a1b7dca47af9766ba337b9e9b316426ed35e87c71",
+      "bytes": 2394
     },
     "tools/whisper.json": {
       "path": "/data/tools/whisper.json",
-      "sha256": "73a79b33f9a2e70a31215248686deba12646f8c366e045979d57c2e4ef531741",
-      "bytes": 2638
+      "sha256": "ed6779feef6873fadcb8bff7de32c193259c0bde51f7a6a924b8681993964833",
+      "bytes": 2564
     },
     "tools/zapier-central.json": {
       "path": "/data/tools/zapier-central.json",
-      "sha256": "721f10f8e574bfacc0408d0160e4b3283ca1a5dc70036b88886b72cccf0ddbb4",
-      "bytes": 2527
+      "sha256": "c6a9448ca3954f82a7a52341f93e9a998bff6a8a1b8e9bf3fc7c98b155f470ca",
+      "bytes": 2454
     },
     "tools/by-category/agents-workflows.json": {
       "path": "/data/tools/by-category/agents-workflows.json",
-      "sha256": "cd6ad02f2ed473720149caabce9aed4668288db56742c6671201fdac89e1ba0a",
-      "bytes": 226
+      "sha256": "edfda6c3165095dce744e674753c6ea3964e9fb624ebd0569c48c12520151e7f",
+      "bytes": 212
     },
     "tools/by-category/audio-music.json": {
       "path": "/data/tools/by-category/audio-music.json",
-      "sha256": "be0a7fc449609912eeda633d1f3277746527f42505650a2d2de05aa2eea325b7",
-      "bytes": 119
+      "sha256": "7f7e7c9c531313a6ae647a075211b2668f2d6f018df1cfae62328d2ab575b463",
+      "bytes": 111
     },
     "tools/by-category/business-marketing.json": {
       "path": "/data/tools/by-category/business-marketing.json",
-      "sha256": "f445513791e2093176fce27480207668298ff94308dcad43dd286d610eb6749a",
-      "bytes": 128
+      "sha256": "526384f7559d9cb98285379664152c2fb36f081e98bc68b6912e855e1608fd0c",
+      "bytes": 120
     },
     "tools/by-category/chatbots-assistants.json": {
       "path": "/data/tools/by-category/chatbots-assistants.json",
-      "sha256": "da6cbb4dc5622d6fcd72b4c762c55664ca71916bbab5522d04fbbd57faf3358e",
-      "bytes": 161
+      "sha256": "e2cfa3218df2c14dd8c2137efc8f18aba63d2eec5c85085241f519bfd93fbe30",
+      "bytes": 151
     },
     "tools/by-category/coding-development.json": {
       "path": "/data/tools/by-category/coding-development.json",
-      "sha256": "64f6357b0dbfab644008ec434dbb4e5124ab70af25f89b5d9911f0d41b0e8cf3",
-      "bytes": 278
+      "sha256": "67e644f17fbd47b2d24bc8c3423a02df3a63d927863915d91e6c7911d9623f85",
+      "bytes": 261
     },
     "tools/by-category/customer-support.json": {
       "path": "/data/tools/by-category/customer-support.json",
-      "sha256": "9683b3c295675bf96e84ab297c0f573193703615a60c067c524c90bed0b3729c",
-      "bytes": 97
+      "sha256": "f274b8ed4a90d6b2ddcc5e0ff80fa249bb1a7db1b95d9e3b49c7b71fd1d275ab",
+      "bytes": 91
     },
     "tools/by-category/data-visualization.json": {
       "path": "/data/tools/by-category/data-visualization.json",
-      "sha256": "df0924b47672aa1d891b9b3e98a8886cd203c096876eaf9fb48039bd790d7e38",
-      "bytes": 96
+      "sha256": "13b84d341092f344c3f736df35a174300b5df16a79e677daf32767409fe62548",
+      "bytes": 90
     },
     "tools/by-category/design-ui-ux.json": {
       "path": "/data/tools/by-category/design-ui-ux.json",
-      "sha256": "1e2a98bf1b04de39af8f8d8842c0d8b2ebe121ab3de815ab152efd8004f4002e",
-      "bytes": 160
+      "sha256": "0bd7d569bc89da1f8d908a32bdcf65a84ae07f34281c151f958f257126cdf8c4",
+      "bytes": 150
     },
     "tools/by-category/education-learning.json": {
       "path": "/data/tools/by-category/education-learning.json",
-      "sha256": "d0eeeef48257f55b35018c610269f4348febeaac3751f88077997806afb3297e",
-      "bytes": 151
+      "sha256": "7fd4f8611cd2fc7e7c8acf579595267a8a152081147e5500381a11648f077b30",
+      "bytes": 142
     },
     "tools/by-category/finance-accounting.json": {
       "path": "/data/tools/by-category/finance-accounting.json",
-      "sha256": "3072d18d6a0c92828e8da459ed9937ff98d3e828e22c6fc14666a9d357095143",
-      "bytes": 75
+      "sha256": "3a6491d4d217581d4a9f82f12b9f757958aba7ec19924dc4cd71410db606d26f",
+      "bytes": 71
     },
     "tools/by-category/image-generation.json": {
       "path": "/data/tools/by-category/image-generation.json",
-      "sha256": "74d7f8afffb0aba685a3c888cb5e03206cd95ddc892d9901a4736972a4284c5d",
-      "bytes": 174
+      "sha256": "ac7dc74fc9e6f0a0f074cf56b03a985859ac161dc2be93dddf4ed87d8a1bdf65",
+      "bytes": 165
     },
     "tools/by-category/nocode-lowcode.json": {
       "path": "/data/tools/by-category/nocode-lowcode.json",
-      "sha256": "886a6cf4b98e3a81964bc09c6ab0fdc42cfd51efb6dad7170513f76e27bb0295",
-      "bytes": 135
+      "sha256": "9a1311cd434474fde9591bae19af30899b4280ff9d02babb6f9def3c32eb3c2b",
+      "bytes": 126
     },
     "tools/by-category/opensource-models-platforms.json": {
       "path": "/data/tools/by-category/opensource-models-platforms.json",
-      "sha256": "bc8c476ec4d1c71875ac102058c77c5da64ba37bd2fd31dc42de1147cf027094",
-      "bytes": 231
+      "sha256": "5be2d000b69807f9b4274f38c7eee836c6ccc6564329d0b176ac1de9b4dddcc0",
+      "bytes": 218
     },
     "tools/by-category/presentations-documents.json": {
       "path": "/data/tools/by-category/presentations-documents.json",
-      "sha256": "7d919f45edca2376be54b7fc275c7fb37a20267e7c6b9bc23af5825ef392b3d0",
-      "bytes": 140
+      "sha256": "36f0f41b90b4fbb88dc0d071f81ce44ca650dc0ae6d8d21120a5e1d2efe790f1",
+      "bytes": 132
     },
     "tools/by-category/productivity-automation.json": {
       "path": "/data/tools/by-category/productivity-automation.json",
-      "sha256": "1201d014c5fffdd5ce1bea2360c1dd034af4d0bb19bda8e037b187cc36670983",
-      "bytes": 259
+      "sha256": "764115048677b7f4788e0e3bca6b07e2682e327b9995da338ba07794c7e7406c",
+      "bytes": 244
     },
     "tools/by-category/research-knowledge.json": {
       "path": "/data/tools/by-category/research-knowledge.json",
-      "sha256": "a80aa53baa9aae31de49244689f9fec8f72382fbb333ed4434f23bc1c92e35b1",
-      "bytes": 146
+      "sha256": "d182e3e03c2415bb0b51ef18a59377c73959c2bbacd633cf87f56a36e8e53bff",
+      "bytes": 137
     },
     "tools/by-category/seo-optimization.json": {
       "path": "/data/tools/by-category/seo-optimization.json",
-      "sha256": "bdb6102e44b9f6c267b647be4479c8492811eb2243d316a825d946dbacb6ca87",
-      "bytes": 129
+      "sha256": "67693f37eb2c533b81454cb2332013dfe1631e8e2d6fae6a1696d98bcf6aaece",
+      "bytes": 121
     },
     "tools/by-category/translation-languages.json": {
       "path": "/data/tools/by-category/translation-languages.json",
-      "sha256": "25cfade1c9753397c0a7c81b5a9e9efdd395d36d5fe456610236d29bc1441e56",
-      "bytes": 95
+      "sha256": "80219bc5547acf0e90fde457ea0ca4031532e6d9824a9fb54014fd49602b276e",
+      "bytes": 89
     },
     "tools/by-category/video-generation.json": {
       "path": "/data/tools/by-category/video-generation.json",
-      "sha256": "4ee8adaed7929340598a30156fbf23e0038c2df5a0d51e63cbbd869f656da72c",
-      "bytes": 124
+      "sha256": "803591f89dac407b3fc6390452e1810428428fd84301dc7fb36960b282b89874",
+      "bytes": 117
     },
     "tools/by-category/writing-content.json": {
       "path": "/data/tools/by-category/writing-content.json",
-      "sha256": "6bbeaf4bfa230b0b4707bee1209a206c7e7a8842e3d348df2d35f35ca292e9ed",
-      "bytes": 188
+      "sha256": "ca0efe77c4d193d6221437e34316efd3c8be20be5fc68aa22211ff78552645b9",
+      "bytes": 176
     }
   }
 }
