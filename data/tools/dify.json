@@ -1,0 +1,81 @@
+{
+  "id": "dify",
+  "name": "Dify.ai",
+  "slug": "dify",
+  "shortDescription": "Open-source LLM application development platform combining visual prompt engineering, RAG, and agent workflows.",
+  "description": "Dify is an open-source development platform for LLM applications. It unifies visual prompt orchestration, enterprise Retrieval-Augmented Generation (RAG) pipelines, conversational agents, and backend-as-a-service APIs, enabling teams to build and deploy production-ready AI tools in minutes.",
+  "categories": [
+    "nocode-lowcode",
+    "agents-workflows",
+    "opensource-models-platforms"
+  ],
+  "subcategories": [
+    "visual-builders",
+    "agent-frameworks"
+  ],
+  "tags": [
+    "no-code",
+    "open-source",
+    "rag",
+    "agents",
+    "llm-ops"
+  ],
+  "websiteUrl": "https://dify.ai",
+  "pricing": {
+    "model": "freemium",
+    "details": "Self-hosted version is 100% free and open-source under Apache-2.0 license; Dify Cloud offers free tier with 200 GPT calls and Professional plan ($59/mo).",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "linux",
+    "macos",
+    "windows",
+    "api"
+  ],
+  "isOpenSource": true,
+  "sourceCodeUrl": "https://github.com/langgenius/dify",
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "Visual workflow canvas for multi-step LLM chaining and tool invocation",
+    "Full RAG engine supporting hybrid keyword/vector search and document chunking",
+    "Instant webapp generation and embeddable chat widgets",
+    "Comprehensive API keys and user management for enterprise deployment"
+  ],
+  "useCases": [
+    "Deploying internal corporate policy chatbots grounded in company handbooks",
+    "Automated content generation backends powering external web applications",
+    "Prototyping complex multi-agent workflows before coding custom microservices"
+  ],
+  "alternatives": [
+    "langchain",
+    "n8n"
+  ],
+  "relatedTools": [
+    "n8n",
+    "langchain",
+    "ollama"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "English",
+    "Chinese",
+    "Japanese"
+  ],
+  "accountRequired": false,
+  "limitations": [
+    "Cloud free tier has strict message quota limits",
+    "Self-hosted setup requires configuring multiple Docker containers (PostgreSQL, Redis, Weaviate)"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://github.com/langgenius/dify"
+  ],
+  "createdAt": "2023-05-10",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Dify.ai — Open-Source LLM App Development & Visual RAG Platform",
+    "description": "Build production AI apps, RAG pipelines, and agents visually with Dify. Apache-2.0."
+  }
+}

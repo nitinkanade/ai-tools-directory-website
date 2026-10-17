@@ -1,0 +1,72 @@
+{
+  "id": "runway-gen-2",
+  "name": "Runway Gen-3 Alpha",
+  "slug": "runway-gen-2",
+  "shortDescription": "Cutting-edge text-to-video, image-to-video, and cinematic generative video suite for creative directors.",
+  "description": "Runway is an applied AI research company producing frontier video models like Gen-3 Alpha and Gen-2. Creators can turn text prompts and still imagery into expressive, controllable high-definition video clips with camera motion directors, lip sync, and frame-accurate motion brush tools.",
+  "categories": [
+    "video-generation",
+    "image-generation"
+  ],
+  "subcategories": [
+    "text-to-video",
+    "video-editors"
+  ],
+  "tags": [
+    "video-generation",
+    "creative",
+    "cinematic",
+    "vfx",
+    "animation"
+  ],
+  "websiteUrl": "https://runwayml.com",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free plan with 125 one-time credits; Standard plan ($15/mo) with 625 credits; Pro ($35/mo) with 2250 credits and 4K upscaling.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "ios"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "High-fidelity Gen-3 Alpha text-to-video and image-to-video rendering",
+    "Camera Control for panning, zooming, and orbital tracking shots",
+    "Motion Brush to animate specific regions of static photographs",
+    "AI Green Screen and background element replacement"
+  ],
+  "useCases": [
+    "Producing cinematic B-roll footage for film and commercial productions",
+    "Animating static character portraits for storytelling and music videos",
+    "Rapid visual effects prototyping and animatics"
+  ],
+  "alternatives": [
+    "luma-dream-machine"
+  ],
+  "relatedTools": [
+    "luma-dream-machine",
+    "midjourney"
+  ],
+  "languageSupport": [
+    "English"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Clip duration capped at 5 to 10 seconds per individual generation",
+    "Credits consumed rapidly during high-resolution experimentation"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://runwayml.com"
+  ],
+  "createdAt": "2023-02-15",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Runway Gen-3 — Cinematic AI Video Generation & Creative Tools",
+    "description": "Explore Runway Gen-3 Alpha capabilities, text-to-video prompts, pricing, and features."
+  }
+}

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Feedback | AI Tools Directory</title>
+  <meta name="description" content="Submit AI tools or contact the directory maintainers.">
+  <link rel="canonical" href="https://nitinkanade.github.io/ai-tools-directory-website/contact/">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nitinkanade.github.io/ai-tools-directory-website/contact/">
+  <meta property="og:title" content="Contact &amp; Feedback | AI Tools Directory">
+  <meta property="og:description" content="Submit AI tools or contact the directory maintainers.">
+  <meta property="og:site_name" content="AI Tools Directory">
+  <meta property="og:image" content="https://nitinkanade.github.io/ai-tools-directory-website/static/img/playstore-icon.png">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://nitinkanade.github.io/ai-tools-directory-website/contact/">
+  <meta name="twitter:title" content="Contact &amp; Feedback | AI Tools Directory">
+  <meta name="twitter:description" content="Submit AI tools or contact the directory maintainers.">
+  <meta name="twitter:image" content="https://nitinkanade.github.io/ai-tools-directory-website/static/img/playstore-icon.png">
+
+  <!-- Favicons & Brand Icons -->
+  <link rel="icon" type="image/x-icon" href="../static/img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../static/img/apple-touch-icon.png">
+
+  <!-- Fonts & Styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="manifest" href="../manifest.webmanifest">
+  
+  <!-- Schema.org Structured Data -->
+  
+
+  <script>
+    // Zero-flicker theme initialization
+    (function() {
+      const saved = localStorage.getItem('ai_tools_dir_theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Global Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../" class="brand-logo" aria-label="AI Tools Directory Homepage">
+        <img src="../static/img/logo.png" alt="AI Tools Directory Logo" class="brand-icon-img" width="38" height="38">
+        <span class="brand-title">AI Tools Directory</span>
+        <span class="brand-badge">v1.0 Verified</span>
+      </a>
+
+      <nav aria-label="Main navigation" class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="../" class="nav-link ">Home</a></li>
+          <li><a href="../tools/" class="nav-link ">Directory</a></li>
+          <li><a href="../collections/" class="nav-link ">Collections</a></li>
+          <li><a href="../blog/" class="nav-link ">Guides & Blog</a></li>
+          <li><a href="../about/" class="nav-link ">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Universal Spotlight Trigger -->
+        <button id="quick-search-trigger" class="quick-search-trigger" onclick="openSpotlight()" aria-label="Quick Search" title="Search all tools (Ctrl+K)">
+          <svg class="search-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-trigger-text">Search...</span>
+          <span class="kbd-shortcut">Ctrl+K</span>
+        </button>
+
+        <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <svg class="theme-moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button id="mobile-hamburger-btn" class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-backdrop" onclick="toggleMobileMenu()"></div>
+    <div class="mobile-drawer-content">
+      <div class="mobile-search-banner">
+        <button class="mobile-search-btn" onclick="toggleMobileMenu(); openSpotlight();">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search 40+ AI tools...</span>
+          <span class="kbd-shortcut">Ctrl+K</span>
+        </button>
+      </div>
+
+      <ul class="mobile-nav-links">
+        <li>
+          <a href="../" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#127968;</span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="../tools/" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#9889;</span>
+            <span>All AI Tools</span>
+            <span class="mobile-count-pill">40+</span>
+          </a>
+        </li>
+        <li>
+          <a href="../collections/" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#10024;</span>
+            <span>Curated Collections</span>
+          </a>
+        </li>
+        <li>
+          <a href="../blog/" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#128218;</span>
+            <span>Guides & Tutorials</span>
+          </a>
+        </li>
+        <li>
+          <a href="../about/" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#8505;&#65039;</span>
+            <span>About & Methodology</span>
+          </a>
+        </li>
+        <li>
+          <a href="../contact/" class="mobile-nav-link" onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#10133;</span>
+            <span>Submit a Tool</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="mobile-drawer-categories">
+        <div class="mobile-drawer-cat-title">Popular Categories</div>
+        <div class="mobile-drawer-cat-pills">
+          <a href="../category/coding-development/" class="cat-pill" onclick="toggleMobileMenu()">Coding & IDEs</a>
+          <a href="../category/chatbots-assistants/" class="cat-pill" onclick="toggleMobileMenu()">Conversational LLMs</a>
+          <a href="../category/image-generation/" class="cat-pill" onclick="toggleMobileMenu()">Image & Creative</a>
+          <a href="../category/opensource-models-platforms/" class="cat-pill" onclick="toggleMobileMenu()">Open-Source AI</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Universal Spotlight Search Modal -->
+  <div id="spotlight-modal" class="spotlight-modal" style="display: none;" role="dialog" aria-modal="true" aria-label="Search AI Tools">
+    <div class="spotlight-backdrop" onclick="closeSpotlight()"></div>
+    <div class="spotlight-panel">
+      <div class="spotlight-input-wrap">
+        <svg class="spotlight-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="spotlight-input" class="spotlight-input" placeholder="Type a tool name, coding, reasoning, pricing, or tag..." autocomplete="off">
+        <button id="spotlight-clear-btn" class="spotlight-clear-btn" aria-label="Clear Search" onclick="clearSpotlightInput()">&times;</button>
+        <button class="spotlight-close-btn" onclick="closeSpotlight()" aria-label="Close search">Esc</button>
+      </div>
+
+      <div id="spotlight-suggestions" class="spotlight-quick-tags">
+        <span class="quick-tags-label">Quick:</span>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('coding')">Coding</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('chat')">Chatbots</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('image')">Image</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('open-source')">Open Source</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('free')">Free Tier</button>
+      </div>
+
+      <div id="spotlight-results" class="spotlight-results">
+        <!-- Rendered dynamically by JS -->
+      </div>
+
+      <div class="spotlight-footer">
+        <div class="spotlight-footer-shortcuts">
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> Navigate</span>
+          <span><kbd>&crarr;</kbd> Select</span>
+          <span><kbd>Esc</kbd> Close</span>
+        </div>
+        <a href="../tools/" class="spotlight-view-all">All Tools &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Page Content -->
+  <main id="main-content">
+    
+    <div class="article-container">
+      <h1 class="article-title" style="text-align: left; margin-bottom: 1.5rem;">Contact & Tool Submission</h1>
+      <div class="prose">
+        <p>We welcome submissions, bug reports, and corrections from the community.</p>
+
+        <h2>Submitting a New AI Tool</h2>
+        <p>To request a listing for your tool or report outdated pricing:</p>
+        <ol>
+          <li>Ensure your tool satisfies our <a href="../about/">editorial guidelines</a>.</li>
+          <li>Submit a pull request to the open-source database repository.</li>
+          <li>Our automated test suite will validate the schema and referential integrity before review.</li>
+        </ol>
+
+        <h2>Reporting Inaccuracies</h2>
+        <p>AI pricing and terms change quickly. If you discover a discrepancy in any record, please file an issue with the link to the official pricing page.</p>
+      </div>
+    </div>
+    
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1.25rem;">
+            <img src="../static/img/logo.png" alt="AI Tools Directory Logo" class="brand-icon-img" width="40" height="40">
+            <span>AI Tools Directory</span>
+          </div>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary); max-width: 320px; margin-bottom: 1.25rem; line-height: 1.6;">
+            The premier independent, fact-checked directory of verified AI software, open models, and developer assistants.
+          </p>
+          <div style="font-size: 0.8125rem; color: var(--text-muted);">
+            Zero sponsored bias. 100% verified facts.
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Directory Index</h4>
+          <ul class="footer-links">
+            <li><a href="../tools/">Complete Directory</a></li>
+            <li><a href="../collections/">Curated Collections</a></li>
+            <li><a href="../category/coding-development/">Coding & Dev Tools</a></li>
+            <li><a href="../category/chatbots-assistants/">Conversational LLMs</a></li>
+            <li><a href="../category/opensource-models-platforms/">Open-Source AI</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Editorial & Guides</h4>
+          <ul class="footer-links">
+            <li><a href="../blog/">Guides & Tutorials</a></li>
+            <li><a href="../blog/top-ai-coding-assistants-2026/">Top Coding Assistants 2026</a></li>
+            <li><a href="../blog/running-open-source-llms-locally-with-ollama/">Running Local LLMs</a></li>
+            <li><a href="../data/manifest.json">Static API Manifest</a></li>
+            <li><a href="../sitemap.xml">XML Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Transparency</h4>
+          <ul class="footer-links">
+            <li><a href="../about/">About the Directory</a></li>
+            <li><a href="../contact/">Submit a Tool</a></li>
+            <li><a href="../privacy/">Privacy Policy</a></li>
+            <li><a href="../terms/">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AI Tools Directory. Built with zero-cost static architecture.</div>
+        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+          <span>Android App: <code>in.ni18.aitoolsdirectory</code></span>
+          <span>Hosted on GitHub Pages</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.__SITE_BASE_URL__ = "..";
+  </script>
+  <script src="../static/js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('../sw.js').catch(function() {});
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "categoryId": "chatbots-assistants",
+  "toolIds": [
+    "chatgpt",
+    "claude",
+    "deepseek",
+    "ollama",
+    "perplexity"
+  ],
+  "count": 5
+}

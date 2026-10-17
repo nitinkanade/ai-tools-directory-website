@@ -1,0 +1,77 @@
+{
+  "id": "gamma",
+  "name": "Gamma",
+  "slug": "gamma",
+  "shortDescription": "Generative AI medium for creating polished presentation decks, responsive webpages, and documents in seconds.",
+  "description": "Gamma is a modern presentation and document creation tool powered by AI. Users can input a topic, outline, or document, and Gamma generates an interactive card-based deck complete with smart typography, contextual stock photography, charts, and responsive mobile layouts without manual slide formatting.",
+  "categories": [
+    "presentations-documents",
+    "design-ui-ux"
+  ],
+  "subcategories": [
+    "slide-generators",
+    "ui-generation"
+  ],
+  "tags": [
+    "presentations",
+    "slides",
+    "documents",
+    "design",
+    "pitch-deck"
+  ],
+  "websiteUrl": "https://gamma.app",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free plan includes 400 one-time AI credits; Plus tier ($8/user/mo billed annually) with unlimited AI generations; Pro ($15/user/mo) with custom fonts and analytics.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Generate complete presentations from text prompts or imported notes",
+    "Fluid card-based layouts that look great on both desktop and mobile screens",
+    "One-click theme swapping across dozens of curated aesthetic palettes",
+    "Export to PowerPoint (.pptx), PDF, or interactive public web links"
+  ],
+  "useCases": [
+    "Drafting investor pitch decks and startup introduction overviews",
+    "Building company training handbooks and onboarding documents",
+    "Creating responsive project proposals for freelance clients"
+  ],
+  "alternatives": [
+    "canva-magic-studio"
+  ],
+  "relatedTools": [
+    "canva-magic-studio",
+    "notion-ai"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "English",
+    "Spanish",
+    "German",
+    "French",
+    "Japanese",
+    "Portuguese"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Card-based aspect ratio differs slightly from traditional 16:9 fixed slide bounds",
+    "Credit depletion occurs quickly when regenerating multiple full decks"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://gamma.app"
+  ],
+  "createdAt": "2022-11-15",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Gamma App — AI Presentation, Slide Deck & Document Generator",
+    "description": "Build interactive slide decks and documents with Gamma AI. Features, pricing, and exports."
+  }
+}

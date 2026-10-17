@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nitinkanade.github.io/ai-tools-directory-website/sitemap.xml

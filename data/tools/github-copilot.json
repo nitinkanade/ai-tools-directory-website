@@ -1,0 +1,84 @@
+{
+  "id": "github-copilot",
+  "name": "GitHub Copilot",
+  "slug": "github-copilot",
+  "shortDescription": "Pioneering AI pair programmer providing code completions, CLI suggestions, and in-editor chat across major IDEs.",
+  "description": "GitHub Copilot is an AI code completion and assistant system developed by GitHub and OpenAI. Integrated directly into VS Code, Visual Studio, JetBrains, and Neovim, Copilot predicts code in real time, converts natural language comments into executable functions, and offers an interactive contextual chat assistant.",
+  "categories": [
+    "coding-development",
+    "productivity-automation"
+  ],
+  "subcategories": [
+    "code-assistants",
+    "debugging-testing"
+  ],
+  "tags": [
+    "coding",
+    "autocomplete",
+    "copilot",
+    "ide",
+    "developer-tools"
+  ],
+  "websiteUrl": "https://github.com/features/copilot",
+  "pricing": {
+    "model": "paid",
+    "details": "$10/mo for Individual plan, $19/user/mo for Business; free for verified students, teachers, and popular open-source maintainers.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "windows",
+    "macos",
+    "linux",
+    "api"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Ghost-text real-time code completions across dozens of languages",
+    "Copilot Chat in sidebar with @workspace repository awareness",
+    "Pull request summary and code review generation",
+    "Copilot in GitHub CLI for bash and powershell translation"
+  ],
+  "useCases": [
+    "Boilerplate code generation and API consumption",
+    "Writing unit tests and integration assertions",
+    "Translating algorithms between programming languages"
+  ],
+  "alternatives": [
+    "cursor",
+    "claude-code"
+  ],
+  "relatedTools": [
+    "cursor",
+    "claude"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "Dart",
+    "Go",
+    "Rust",
+    "Java",
+    "C++"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Requires active GitHub account and subscription",
+    "Multi-file codebase awareness is less deep than dedicated native AI IDEs"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://github.com/features/copilot"
+  ],
+  "createdAt": "2021-06-29",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "GitHub Copilot — AI Pair Programmer for Visual Studio & JetBrains",
+    "description": "Full overview of GitHub Copilot features, pricing tiers, IDE plugins, and alternatives."
+  }
+}

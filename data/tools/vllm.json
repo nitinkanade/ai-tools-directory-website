@@ -1,0 +1,73 @@
+{
+  "id": "vllm",
+  "name": "vLLM",
+  "slug": "vllm",
+  "shortDescription": "High-throughput and memory-efficient LLM serving engine powered by PagedAttention algorithms.",
+  "description": "vLLM is a high-throughput, low-latency open-source serving engine for LLMs developed at UC Berkeley. Using PagedAttention to manage attention key-value memory with zero waste, vLLM delivers up to 24x higher serving throughput than standard Hugging Face implementations, making it the industry standard for enterprise inference.",
+  "categories": [
+    "opensource-models-platforms",
+    "coding-development"
+  ],
+  "subcategories": [
+    "local-runtimes",
+    "developer-sdks"
+  ],
+  "tags": [
+    "inference",
+    "serving",
+    "open-source",
+    "python",
+    "pagedattention",
+    "cuda"
+  ],
+  "websiteUrl": "https://vllm.ai",
+  "pricing": {
+    "model": "open-source",
+    "details": "100% free and open-source under Apache-2.0 license.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "linux"
+  ],
+  "isOpenSource": true,
+  "sourceCodeUrl": "https://github.com/vllm-project/vllm",
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "PagedAttention algorithm managing KV cache with near-zero memory fragmentation",
+    "Continuous batching of incoming requests for maximum GPU saturation",
+    "Native quantization support (AWQ, GPTQ, FP8, INT4)",
+    "Drop-in OpenAI-compatible API server specification"
+  ],
+  "useCases": [
+    "Enterprise production deployment of open-source models (Llama, Mistral, DeepSeek)",
+    "High-concurrency batch processing of millions of documents",
+    "Building cost-effective private AI cloud infrastructure"
+  ],
+  "alternatives": [
+    "ollama"
+  ],
+  "relatedTools": [
+    "ollama",
+    "hugging-face",
+    "deepseek"
+  ],
+  "languageSupport": [
+    "Python"
+  ],
+  "accountRequired": false,
+  "limitations": [
+    "Requires Linux operating system and NVIDIA/AMD server GPUs",
+    "Designed for backend engineering and infrastructure rather than end-user desktop chat"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://github.com/vllm-project/vllm"
+  ],
+  "createdAt": "2023-06-20",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "vLLM — High-Throughput Open-Source LLM Serving Engine",
+    "description": "Serve open-source LLMs at maximum speed with vLLM and PagedAttention. Apache-2.0."
+  }
+}

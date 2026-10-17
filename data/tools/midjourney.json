@@ -1,0 +1,72 @@
+{
+  "id": "midjourney",
+  "name": "Midjourney",
+  "slug": "midjourney",
+  "shortDescription": "Industry-leading artistic text-to-image generator known for cinematic lighting, photorealism, and stylistic control.",
+  "description": "Midjourney is an independent generative AI research lab producing a leading text-to-image synthesis tool. Accessible via Discord and a dedicated web platform, Midjourney creates photorealistic images, architectural renders, fashion concepts, and illustrative art with precise aspect ratios, inpainting, and stylistic parameter tuning.",
+  "categories": [
+    "image-generation",
+    "design-ui-ux"
+  ],
+  "subcategories": [
+    "text-to-image",
+    "photo-editing"
+  ],
+  "tags": [
+    "image-generation",
+    "art",
+    "diffusion",
+    "design",
+    "creative"
+  ],
+  "websiteUrl": "https://www.midjourney.com",
+  "pricing": {
+    "model": "paid",
+    "details": "Basic tier ($10/mo, 3.3 fast GPU hrs), Standard ($30/mo, 15 fast hrs + unlimited relax mode), Pro ($60/mo with stealth mode).",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Photorealistic textures, skin tones, and cinematic compositions",
+    "Vary Region inpainting and Pan/Zoom canvas expansion",
+    "Style Reference (--sref) and Character Consistency (--cref) flags",
+    "Dedicated web generation interface with drag-and-drop prompt controls"
+  ],
+  "useCases": [
+    "Concept art and moodboards for films, video games, and advertising",
+    "Editorial illustration for magazine articles and social media",
+    "Architectural and product design visualization"
+  ],
+  "alternatives": [
+    "stable-diffusion-webui",
+    "canva-magic-studio"
+  ],
+  "relatedTools": [
+    "stable-diffusion-webui",
+    "runway-gen-2"
+  ],
+  "languageSupport": [
+    "English"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "No permanent free trial tier",
+    "Fine text rendering inside images can occasionally require rerolls"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://www.midjourney.com"
+  ],
+  "createdAt": "2022-07-12",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Midjourney — Generative Text-to-Image Art & Photorealism",
+    "description": "Review Midjourney subscription plans, version features, prompt flags, and examples."
+  }
+}

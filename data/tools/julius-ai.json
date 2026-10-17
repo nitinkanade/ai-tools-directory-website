@@ -1,0 +1,72 @@
+{
+  "id": "julius-ai",
+  "name": "Julius AI",
+  "slug": "julius-ai",
+  "shortDescription": "Intelligent data analyst that analyzes spreadsheets, runs Python scripts, and builds statistical charts from prompts.",
+  "description": "Julius AI is an AI computational data analyst that connects directly to CSVs, Excel workbooks, and SQL databases. Users can upload raw datasets and prompt Julius in plain English to clean messy data, perform regression analysis, train predictive machine learning models, and produce publication-ready visualizations.",
+  "categories": [
+    "data-visualization",
+    "productivity-automation"
+  ],
+  "subcategories": [
+    "auto-charts",
+    "text-to-sql"
+  ],
+  "tags": [
+    "data-analysis",
+    "python",
+    "statistics",
+    "visualization",
+    "excel"
+  ],
+  "websiteUrl": "https://julius.ai",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free plan with 15 monthly messages; Basic ($20/mo) includes 250 messages; Pro ($45/mo) with unlimited messages and larger dataset processing.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "Executes Python data science libraries (pandas, matplotlib, seaborn, scikit-learn)",
+    "Automated data cleaning and missing value imputation",
+    "Interactive plot export in PNG, SVG, or Jupyter Notebook format",
+    "Mathematical modeling, forecasting, and statistical hypothesis testing"
+  ],
+  "useCases": [
+    "Analyzing quarterly financial spreadsheets for revenue anomalies",
+    "Creating publication-quality scientific charts from raw lab measurements",
+    "Predictive churn modeling without manual Python coding"
+  ],
+  "alternatives": [
+    "chatgpt"
+  ],
+  "relatedTools": [
+    "chatgpt"
+  ],
+  "languageSupport": [
+    "English"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "File upload sizes restricted on lower-tier plans",
+    "Domain-specific statistical context still requires human verification"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://julius.ai"
+  ],
+  "createdAt": "2023-04-10",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Julius AI — The AI Data Analyst for Spreadsheets & Python Charts",
+    "description": "Analyze spreadsheets and create charts with plain English using Julius AI. Plans and guide."
+  }
+}

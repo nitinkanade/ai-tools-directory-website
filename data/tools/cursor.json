@@ -1,0 +1,80 @@
+{
+  "id": "cursor",
+  "name": "Cursor",
+  "slug": "cursor",
+  "shortDescription": "AI-first code editor fork of VS Code engineered for whole-codebase indexing, multi-file edits, and agentic workflows.",
+  "description": "Cursor is an AI-native code editor built as an accessible fork of VS Code by Anysphere. It incorporates whole-codebase semantic indexing, predictive multi-line tab completions, natural language terminal commands, and agentic multi-file refactoring powered by Claude 3.5 Sonnet and GPT-4o.",
+  "categories": [
+    "coding-development",
+    "agents-workflows"
+  ],
+  "subcategories": [
+    "code-assistants",
+    "terminal-agents"
+  ],
+  "tags": [
+    "coding",
+    "ide",
+    "agent",
+    "autocomplete",
+    "vscode"
+  ],
+  "websiteUrl": "https://www.cursor.com",
+  "pricing": {
+    "model": "freemium",
+    "details": "Hobby plan with 2,000 completions; Pro plan at $20/mo with 500 fast premium requests and unlimited slow requests.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Composer mode: multi-file generation and interactive git diffing",
+    "Copilot++ smart predictive next-edit cursor jumping",
+    "Codebase indexing with @docs and @git references",
+    "Complete compatibility with all existing VS Code extensions"
+  ],
+  "useCases": [
+    "Refactoring complex architectural patterns across multiple files",
+    "Rapid full-stack prototyping from scratch",
+    "Diagnosing runtime bugs with automatic terminal log inspection"
+  ],
+  "alternatives": [
+    "github-copilot",
+    "claude-code"
+  ],
+  "relatedTools": [
+    "claude",
+    "github-copilot"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "TypeScript",
+    "Python",
+    "Dart",
+    "Rust",
+    "Go",
+    "C++"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Pro fast request pool depletes during intense coding sessions",
+    "Requires switching or syncing extensions from primary VS Code install"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://www.cursor.com"
+  ],
+  "createdAt": "2023-08-01",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Cursor — The AI-First Code Editor Built on VS Code",
+    "description": "Explore Cursor editor capabilities, Composer multi-file edits, pricing, and setup."
+  }
+}

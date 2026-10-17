@@ -1,0 +1,8 @@
+{
+  "categoryId": "video-generation",
+  "toolIds": [
+    "luma-dream-machine",
+    "runway-gen-2"
+  ],
+  "count": 2
+}

@@ -1,0 +1,72 @@
+{
+  "id": "v0",
+  "name": "v0 by Vercel",
+  "slug": "v0",
+  "shortDescription": "Generative frontend design and code system that converts text prompts and screenshots into production-ready React UI.",
+  "description": "v0 is an AI-powered generative UI tool created by Vercel. By describing an interface or uploading a screenshot, v0 produces clean, responsive React, Next.js, and Tailwind CSS code with shadcn/ui components, complete with a live interactive browser preview and one-click deployment.",
+  "categories": [
+    "design-ui-ux",
+    "coding-development"
+  ],
+  "subcategories": [
+    "ui-generation",
+    "code-assistants"
+  ],
+  "tags": [
+    "ui-ux",
+    "frontend",
+    "react",
+    "tailwind",
+    "design"
+  ],
+  "websiteUrl": "https://v0.dev",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free tier with 200 monthly credits; Premium plan ($20/mo) includes 5,000 credits, private generations, and team sharing.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Generates React, Next.js App Router, and Tailwind CSS code",
+    "Native integration with shadcn/ui and Lucide Icons",
+    "Screenshot-to-code visual reproduction",
+    "Instant npx v0 add CLI component import into local projects"
+  ],
+  "useCases": [
+    "Rapid landing page and dashboard interface prototyping",
+    "Translating Figma mockups into structured React components",
+    "Building functional form flows and animated modals"
+  ],
+  "alternatives": [
+    "figma-ai",
+    "cursor"
+  ],
+  "relatedTools": [
+    "cursor",
+    "figma-ai"
+  ],
+  "languageSupport": [
+    "English"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Optimized specifically for React/Tailwind ecosystem",
+    "Complex backend state logic must still be written manually"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://v0.dev"
+  ],
+  "createdAt": "2023-09-15",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "v0 by Vercel — AI Generative UI & React Code Prototyping",
+    "description": "Build modern web interfaces with v0.dev. Learn features, credits, and export options."
+  }
+}

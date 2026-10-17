@@ -1,0 +1,79 @@
+{
+  "id": "bolt-new",
+  "name": "Bolt.new",
+  "slug": "bolt-new",
+  "shortDescription": "In-browser AI web development agent powered by WebContainers that builds, runs, and deploys full-stack web applications.",
+  "description": "Bolt.new is an AI-powered full-stack web development environment created by StackBlitz. Operating directly inside browser sandboxes via WebContainer technology, Bolt.new allows users to prompt, execute, debug, and deploy full-stack Node.js and web applications without local environment configuration.",
+  "categories": [
+    "coding-development",
+    "design-ui-ux"
+  ],
+  "subcategories": [
+    "code-assistants",
+    "ui-generation"
+  ],
+  "tags": [
+    "agent",
+    "autocomplete",
+    "coding",
+    "developer-tools",
+    "frontend",
+    "open-source",
+    "prototyping",
+    "react",
+    "typescript",
+    "ui-ux",
+    "web-search"
+  ],
+  "websiteUrl": "https://bolt.new",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free plan includes daily token allocations; Pro plan starts at $20/month for higher token limits and custom LLM model selections.",
+    "lastVerifiedAt": "2026-10-17"
+  },
+  "platforms": [
+    "web"
+  ],
+  "isOpenSource": true,
+  "sourceCodeUrl": "https://github.com/stackblitz/bolt.new",
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Full-stack WebContainer environment executing Node.js applications directly in the browser",
+    "Automated package installation, terminal execution, and dev server orchestration",
+    "AI agent file editing, bug diagnosis, and live preview updates",
+    "One-click application deployment to Netlify and code export options"
+  ],
+  "useCases": [
+    "Rapid prototyping of modern full-stack web applications and React dashboards",
+    "Debugging complex npm package errors in an isolated browser sandbox",
+    "Generating responsive UI components with integrated frontend frameworks"
+  ],
+  "alternatives": [
+    "v0",
+    "cursor"
+  ],
+  "relatedTools": [
+    "claude-code",
+    "v0"
+  ],
+  "languageSupport": [
+    "English"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Token usage caps on free tier require upgrading to Pro for heavy development loops",
+    "Browser WebContainer environment is limited to Node.js ecosystem capabilities"
+  ],
+  "lastVerifiedAt": "2026-10-17",
+  "sourceReferences": [
+    "https://bolt.new",
+    "https://github.com/stackblitz/bolt.new"
+  ],
+  "createdAt": "2026-10-17",
+  "updatedAt": "2026-10-17",
+  "seo": {
+    "title": "Bolt.new — In-Browser AI Full-Stack Web Development Agent",
+    "description": "Build, run, and deploy full-stack web applications in your browser with Bolt.new by StackBlitz. Explore features, pricing, and open-source codebase."
+  }
+}

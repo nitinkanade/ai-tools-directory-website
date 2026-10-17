@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Agents &amp; Workflows AI Tools | AI Tools Directory</title>
+  <meta name="description" content="Autonomous multi-agent orchestration, reasoning loops, tool-calling frameworks, and background execution.">
+  <link rel="canonical" href="https://nitinkanade.github.io/ai-tools-directory-website/category/agents-workflows/">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nitinkanade.github.io/ai-tools-directory-website/category/agents-workflows/">
+  <meta property="og:title" content="AI Agents &amp; Workflows AI Tools | AI Tools Directory">
+  <meta property="og:description" content="Autonomous multi-agent orchestration, reasoning loops, tool-calling frameworks, and background execution.">
+  <meta property="og:site_name" content="AI Tools Directory">
+  <meta property="og:image" content="https://nitinkanade.github.io/ai-tools-directory-website/static/img/playstore-icon.png">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://nitinkanade.github.io/ai-tools-directory-website/category/agents-workflows/">
+  <meta name="twitter:title" content="AI Agents &amp; Workflows AI Tools | AI Tools Directory">
+  <meta name="twitter:description" content="Autonomous multi-agent orchestration, reasoning loops, tool-calling frameworks, and background execution.">
+  <meta name="twitter:image" content="https://nitinkanade.github.io/ai-tools-directory-website/static/img/playstore-icon.png">
+
+  <!-- Favicons & Brand Icons -->
+  <link rel="icon" type="image/x-icon" href="../../static/img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../static/img/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../static/img/apple-touch-icon.png">
+
+  <!-- Fonts & Styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/css/styles.css">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "AI Agents & Workflows — AI Tools", "description": "Autonomous multi-agent orchestration, reasoning loops, tool-calling frameworks, and background execution.", "url": "https://nitinkanade.github.io/ai-tools-directory-website/category/agents-workflows/"}</script>
+
+  <script>
+    // Zero-flicker theme initialization
+    (function() {
+      const saved = localStorage.getItem('ai_tools_dir_theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Global Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../../" class="brand-logo" aria-label="AI Tools Directory Homepage">
+        <img src="../../static/img/logo.png" alt="AI Tools Directory Logo" class="brand-icon-img" width="38" height="38">
+        <span class="brand-title">AI Tools Directory</span>
+        <span class="brand-badge">v1.0 Verified</span>
+      </a>
+
+      <nav aria-label="Main navigation" class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="../../" class="nav-link ">Home</a></li>
+          <li><a href="../../tools/" class="nav-link ">Directory</a></li>
+          <li><a href="../../collections/" class="nav-link ">Collections</a></li>
+          <li><a href="../../blog/" class="nav-link ">Guides & Blog</a></li>
+          <li><a href="../../about/" class="nav-link ">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Universal Spotlight Trigger -->
+        <button id="quick-search-trigger" class="quick-search-trigger" onclick="openSpotlight()" aria-label="Quick Search" title="Search all tools (Ctrl+K)">
+          <svg class="search-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-trigger-text">Search...</span>
+          <span class="kbd-shortcut">Ctrl+K</span>
+        </button>
+
+        <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <svg class="theme-moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button id="mobile-hamburger-btn" class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-backdrop" onclick="toggleMobileMenu()"></div>
+    <div class="mobile-drawer-content">
+      <div class="mobile-search-banner">
+        <button class="mobile-search-btn" onclick="toggleMobileMenu(); openSpotlight();">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search 40+ AI tools...</span>
+          <span class="kbd-shortcut">Ctrl+K</span>
+        </button>
+      </div>
+
+      <ul class="mobile-nav-links">
+        <li>
+          <a href="../../" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#127968;</span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="../../tools/" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#9889;</span>
+            <span>All AI Tools</span>
+            <span class="mobile-count-pill">40+</span>
+          </a>
+        </li>
+        <li>
+          <a href="../../collections/" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#10024;</span>
+            <span>Curated Collections</span>
+          </a>
+        </li>
+        <li>
+          <a href="../../blog/" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#128218;</span>
+            <span>Guides & Tutorials</span>
+          </a>
+        </li>
+        <li>
+          <a href="../../about/" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#8505;&#65039;</span>
+            <span>About & Methodology</span>
+          </a>
+        </li>
+        <li>
+          <a href="../../contact/" class="mobile-nav-link" onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#10133;</span>
+            <span>Submit a Tool</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="mobile-drawer-categories">
+        <div class="mobile-drawer-cat-title">Popular Categories</div>
+        <div class="mobile-drawer-cat-pills">
+          <a href="../../category/coding-development/" class="cat-pill" onclick="toggleMobileMenu()">Coding & IDEs</a>
+          <a href="../../category/chatbots-assistants/" class="cat-pill" onclick="toggleMobileMenu()">Conversational LLMs</a>
+          <a href="../../category/image-generation/" class="cat-pill" onclick="toggleMobileMenu()">Image & Creative</a>
+          <a href="../../category/opensource-models-platforms/" class="cat-pill" onclick="toggleMobileMenu()">Open-Source AI</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Universal Spotlight Search Modal -->
+  <div id="spotlight-modal" class="spotlight-modal" style="display: none;" role="dialog" aria-modal="true" aria-label="Search AI Tools">
+    <div class="spotlight-backdrop" onclick="closeSpotlight()"></div>
+    <div class="spotlight-panel">
+      <div class="spotlight-input-wrap">
+        <svg class="spotlight-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="spotlight-input" class="spotlight-input" placeholder="Type a tool name, coding, reasoning, pricing, or tag..." autocomplete="off">
+        <button id="spotlight-clear-btn" class="spotlight-clear-btn" aria-label="Clear Search" onclick="clearSpotlightInput()">&times;</button>
+        <button class="spotlight-close-btn" onclick="closeSpotlight()" aria-label="Close search">Esc</button>
+      </div>
+
+      <div id="spotlight-suggestions" class="spotlight-quick-tags">
+        <span class="quick-tags-label">Quick:</span>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('coding')">Coding</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('chat')">Chatbots</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('image')">Image</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('open-source')">Open Source</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('free')">Free Tier</button>
+      </div>
+
+      <div id="spotlight-results" class="spotlight-results">
+        <!-- Rendered dynamically by JS -->
+      </div>
+
+      <div class="spotlight-footer">
+        <div class="spotlight-footer-shortcuts">
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> Navigate</span>
+          <span><kbd>&crarr;</kbd> Select</span>
+          <span><kbd>Esc</kbd> Close</span>
+        </div>
+        <a href="../../tools/" class="spotlight-view-all">All Tools &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Page Content -->
+  <main id="main-content">
+    
+        <div class="container" style="padding: 3.5rem 1.5rem 5rem;">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="../../">Home</a> &rsaquo;
+            <a href="../../tools/">Categories</a> &rsaquo;
+            <span>AI Agents &amp; Workflows</span>
+          </nav>
+
+          <div style="margin-bottom: 3rem; max-width: 860px;">
+            <h1 class="section-title" style="font-size: 2.5rem; margin-bottom: 0.85rem;">AI Agents &amp; Workflows</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.6;">
+              Frameworks and platforms for deploying autonomous AI agents that can browse the web, execute terminal commands, call external APIs, and coordinate complex multi-step workflows.
+            </p>
+            
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.25rem;">
+              <span class="filter-chip">Developer Agent Frameworks</span><span class="filter-chip">Turnkey Agent Applications</span>
+            </div>
+          </div>
+
+          <div style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.75rem; font-weight: 700;">
+            9 verified AI tools in this category
+          </div>
+
+          <div class="grid-tools">
+            
+    <div class="tool-card tool-card-item" 
+         data-id="claude-code"
+         data-name="claude code"
+         data-slug="claude-code"
+         data-desc="anthropic&#x27;s agentic cli tool that searches repositories, edits code across files, and executes tests directly in the terminal."
+         data-categories="coding-development,agents-workflows"
+         data-tags="cli,terminal,agents,coding,git"
+         data-pricing="paid"
+         data-platforms="macos,linux,windows"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="claude-code" onclick="toggleFavorite(event, 'claude-code')" aria-label="Bookmark Claude Code" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">C</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/claude-code/" class="tool-title">Claude Code</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-paid">paid</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Macos, Linux, Windows</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Anthropic&#x27;s agentic CLI tool that searches repositories, edits code across files, and executes tests directly in the terminal.</p>
+      <div class="tool-tags"><span class="tool-tag">#cli</span><span class="tool-tag">#terminal</span><span class="tool-tag">#agents</span></div>
+      <div class="card-footer">
+        <a href="https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Claude Code">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/claude-code/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="crewai"
+         data-name="crewai"
+         data-slug="crewai"
+         data-desc="multi-agent orchestration framework enabling autonomous role-playing ai agents to collaborate on complex goals."
+         data-categories="agents-workflows,coding-development"
+         data-tags="agents,multi-agent,automation,python,open-source"
+         data-pricing="freemium"
+         data-platforms="linux,macos,windows,api"
+         data-oss="true">
+      <button class="card-fav-btn" data-tool-id="crewai" onclick="toggleFavorite(event, 'crewai')" aria-label="Bookmark CrewAI" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">C</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/crewai/" class="tool-title">CrewAI</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Linux, Macos, Windows</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Multi-agent orchestration framework enabling autonomous role-playing AI agents to collaborate on complex goals.</p>
+      <div class="tool-tags"><span class="tool-tag">#agents</span><span class="tool-tag">#multi-agent</span><span class="tool-tag">#automation</span></div>
+      <div class="card-footer">
+        <a href="https://www.crewai.com" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for CrewAI">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/crewai/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="cursor"
+         data-name="cursor"
+         data-slug="cursor"
+         data-desc="ai-first code editor fork of vs code engineered for whole-codebase indexing, multi-file edits, and agentic workflows."
+         data-categories="coding-development,agents-workflows"
+         data-tags="coding,ide,agent,autocomplete,vscode"
+         data-pricing="freemium"
+         data-platforms="windows,macos,linux"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="cursor" onclick="toggleFavorite(event, 'cursor')" aria-label="Bookmark Cursor" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">C</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/cursor/" class="tool-title">Cursor</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Windows, Macos, Linux</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">AI-first code editor fork of VS Code engineered for whole-codebase indexing, multi-file edits, and agentic workflows.</p>
+      <div class="tool-tags"><span class="tool-tag">#coding</span><span class="tool-tag">#ide</span><span class="tool-tag">#agent</span></div>
+      <div class="card-footer">
+        <a href="https://www.cursor.com" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Cursor">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/cursor/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="dify"
+         data-name="dify.ai"
+         data-slug="dify"
+         data-desc="open-source llm application development platform combining visual prompt engineering, rag, and agent workflows."
+         data-categories="nocode-lowcode,agents-workflows,opensource-models-platforms"
+         data-tags="no-code,open-source,rag,agents,llm-ops"
+         data-pricing="freemium"
+         data-platforms="web,linux,macos,windows,api"
+         data-oss="true">
+      <button class="card-fav-btn" data-tool-id="dify" onclick="toggleFavorite(event, 'dify')" aria-label="Bookmark Dify.ai" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #059669 0%, #0d9488 100%); color: #ffffff;">D</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/dify/" class="tool-title">Dify.ai</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web, Linux, Macos</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Open-source LLM application development platform combining visual prompt engineering, RAG, and agent workflows.</p>
+      <div class="tool-tags"><span class="tool-tag">#no-code</span><span class="tool-tag">#open-source</span><span class="tool-tag">#rag</span></div>
+      <div class="card-footer">
+        <a href="https://dify.ai" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Dify.ai">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/dify/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="intercom-fin"
+         data-name="fin ai agent by intercom"
+         data-slug="intercom-fin"
+         data-desc="enterprise customer service ai agent that resolves support tickets instantly using company knowledge bases."
+         data-categories="customer-support,agents-workflows"
+         data-tags="customer-support,helpdesk,chat,agents,deflection"
+         data-pricing="paid"
+         data-platforms="web,ios,android"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="intercom-fin" onclick="toggleFavorite(event, 'intercom-fin')" aria-label="Bookmark Fin AI Agent by Intercom" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); color: #ffffff;">F</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/intercom-fin/" class="tool-title">Fin AI Agent by Intercom</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-paid">paid</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web, Ios, Android</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Enterprise customer service AI agent that resolves support tickets instantly using company knowledge bases.</p>
+      <div class="tool-tags"><span class="tool-tag">#customer-support</span><span class="tool-tag">#helpdesk</span><span class="tool-tag">#chat</span></div>
+      <div class="card-footer">
+        <a href="https://www.intercom.com/fin" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Fin AI Agent by Intercom">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/intercom-fin/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="langchain"
+         data-name="langchain"
+         data-slug="langchain"
+         data-desc="leading open-source framework for building context-aware reasoning applications and autonomous agent pipelines."
+         data-categories="agents-workflows,coding-development,opensource-models-platforms"
+         data-tags="open-source,agents,framework,python,typescript,sdk"
+         data-pricing="open-source"
+         data-platforms="linux,macos,windows,api"
+         data-oss="true">
+      <button class="card-fav-btn" data-tool-id="langchain" onclick="toggleFavorite(event, 'langchain')" aria-label="Bookmark LangChain" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">L</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/langchain/" class="tool-title">LangChain</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-oss">open-source</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Linux, Macos, Windows</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Leading open-source framework for building context-aware reasoning applications and autonomous agent pipelines.</p>
+      <div class="tool-tags"><span class="tool-tag">#open-source</span><span class="tool-tag">#agents</span><span class="tool-tag">#framework</span></div>
+      <div class="card-footer">
+        <a href="https://www.langchain.com" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for LangChain">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/langchain/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="make"
+         data-name="make"
+         data-slug="make"
+         data-desc="visual workflow automation platform featuring native ai modules for openai, anthropic, and custom apis."
+         data-categories="productivity-automation,nocode-lowcode,agents-workflows"
+         data-tags="automation,no-code,workflow,productivity,api"
+         data-pricing="freemium"
+         data-platforms="web"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="make" onclick="toggleFavorite(event, 'make')" aria-label="Bookmark Make" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); color: #ffffff;">M</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/make/" class="tool-title">Make</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Visual workflow automation platform featuring native AI modules for OpenAI, Anthropic, and custom APIs.</p>
+      <div class="tool-tags"><span class="tool-tag">#automation</span><span class="tool-tag">#no-code</span><span class="tool-tag">#workflow</span></div>
+      <div class="card-footer">
+        <a href="https://www.make.com" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Make">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/make/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="n8n"
+         data-name="n8n"
+         data-slug="n8n"
+         data-desc="fair-code node-based workflow automation platform with powerful native langchain and ai agent nodes."
+         data-categories="nocode-lowcode,productivity-automation,agents-workflows"
+         data-tags="no-code,automation,open-source,workflow,self-hosted"
+         data-pricing="freemium"
+         data-platforms="web,linux,macos,windows"
+         data-oss="true">
+      <button class="card-fav-btn" data-tool-id="n8n" onclick="toggleFavorite(event, 'n8n')" aria-label="Bookmark n8n" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); color: #ffffff;">N</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/n8n/" class="tool-title">n8n</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web, Linux, Macos</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Fair-code node-based workflow automation platform with powerful native LangChain and AI agent nodes.</p>
+      <div class="tool-tags"><span class="tool-tag">#no-code</span><span class="tool-tag">#automation</span><span class="tool-tag">#open-source</span></div>
+      <div class="card-footer">
+        <a href="https://n8n.io" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for n8n">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/n8n/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="zapier-central"
+         data-name="zapier central"
+         data-slug="zapier-central"
+         data-desc="experimental ai agent workspace that connects llms to 6,000+ business applications with live data access."
+         data-categories="productivity-automation,agents-workflows,nocode-lowcode"
+         data-tags="automation,agents,no-code,productivity,integrations"
+         data-pricing="freemium"
+         data-platforms="web,browser-extension"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="zapier-central" onclick="toggleFavorite(event, 'zapier-central')" aria-label="Bookmark Zapier Central" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); color: #ffffff;">Z</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/zapier-central/" class="tool-title">Zapier Central</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web, Browser-extension</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Experimental AI agent workspace that connects LLMs to 6,000+ business applications with live data access.</p>
+      <div class="tool-tags"><span class="tool-tag">#automation</span><span class="tool-tag">#agents</span><span class="tool-tag">#no-code</span></div>
+      <div class="card-footer">
+        <a href="https://zapier.com/central" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Zapier Central">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/zapier-central/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+          </div>
+        </div>
+        
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1.25rem;">
+            <img src="../../static/img/logo.png" alt="AI Tools Directory Logo" class="brand-icon-img" width="40" height="40">
+            <span>AI Tools Directory</span>
+          </div>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary); max-width: 320px; margin-bottom: 1.25rem; line-height: 1.6;">
+            The premier independent, fact-checked directory of verified AI software, open models, and developer assistants.
+          </p>
+          <div style="font-size: 0.8125rem; color: var(--text-muted);">
+            Zero sponsored bias. 100% verified facts.
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Directory Index</h4>
+          <ul class="footer-links">
+            <li><a href="../../tools/">Complete Directory</a></li>
+            <li><a href="../../collections/">Curated Collections</a></li>
+            <li><a href="../../category/coding-development/">Coding & Dev Tools</a></li>
+            <li><a href="../../category/chatbots-assistants/">Conversational LLMs</a></li>
+            <li><a href="../../category/opensource-models-platforms/">Open-Source AI</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Editorial & Guides</h4>
+          <ul class="footer-links">
+            <li><a href="../../blog/">Guides & Tutorials</a></li>
+            <li><a href="../../blog/top-ai-coding-assistants-2026/">Top Coding Assistants 2026</a></li>
+            <li><a href="../../blog/running-open-source-llms-locally-with-ollama/">Running Local LLMs</a></li>
+            <li><a href="../../data/manifest.json">Static API Manifest</a></li>
+            <li><a href="../../sitemap.xml">XML Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Transparency</h4>
+          <ul class="footer-links">
+            <li><a href="../../about/">About the Directory</a></li>
+            <li><a href="../../contact/">Submit a Tool</a></li>
+            <li><a href="../../privacy/">Privacy Policy</a></li>
+            <li><a href="../../terms/">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AI Tools Directory. Built with zero-cost static architecture.</div>
+        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+          <span>Android App: <code>in.ni18.aitoolsdirectory</code></span>
+          <span>Hosted on GitHub Pages</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.__SITE_BASE_URL__ = "../..";
+  </script>
+  <script src="../../static/js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('../../sw.js').catch(function() {});
+      });
+    }
+  </script>
+</body>
+</html>

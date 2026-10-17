@@ -1,0 +1,1294 @@
+[
+  {
+    "id": "bolt-new",
+    "name": "Bolt.new",
+    "slug": "bolt-new",
+    "shortDescription": "In-browser AI web development agent powered by WebContainers that builds, runs, and deploys full-stack web applications.",
+    "categories": [
+      "coding-development",
+      "design-ui-ux"
+    ],
+    "tags": [
+      "agent",
+      "autocomplete",
+      "coding",
+      "developer-tools",
+      "frontend",
+      "open-source",
+      "prototyping",
+      "react",
+      "typescript",
+      "ui-ux",
+      "web-search"
+    ],
+    "features": [
+      "Full-stack WebContainer environment executing Node.js applications directly in the browser",
+      "Automated package installation, terminal execution, and dev server orchestration",
+      "AI agent file editing, bug diagnosis, and live preview updates",
+      "One-click application deployment to Netlify and code export options"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true
+  },
+  {
+    "id": "canva-magic-studio",
+    "name": "Canva Magic Studio",
+    "slug": "canva-magic-studio",
+    "shortDescription": "Accessible AI creative suite for generating social graphics, removing backgrounds, and translating presentations.",
+    "categories": [
+      "design-ui-ux",
+      "image-generation",
+      "presentations-documents"
+    ],
+    "tags": [
+      "design",
+      "social-media",
+      "photo-editing",
+      "presentations",
+      "graphics"
+    ],
+    "features": [
+      "Magic Design for generating customized social posts from a simple prompt",
+      "Magic Switch to convert a whiteboard brainstorming session into a doc or deck",
+      "Magic Eraser and Background Remover for photo cleanup",
+      "Multi-language automated layout translation while preserving typography"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "android",
+      "ios",
+      "windows",
+      "macos"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "slug": "chatgpt",
+    "shortDescription": "General-purpose conversational AI assistant developed by OpenAI with reasoning, voice, and multimodal capabilities.",
+    "categories": [
+      "chatbots-assistants",
+      "writing-content",
+      "coding-development"
+    ],
+    "tags": [
+      "chat",
+      "assistant",
+      "reasoning",
+      "coding",
+      "writing",
+      "multimodal"
+    ],
+    "features": [
+      "Multimodal input and output (text, images, files, voice)",
+      "Advanced reasoning models (o1, o3) for complex math and science",
+      "Web search with live citations",
+      "Custom GPTs creation and store ecosystem",
+      "Code Interpreter and interactive Python execution environment"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "android",
+      "ios",
+      "macos",
+      "windows"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
+    "id": "chatpdf",
+    "name": "ChatPDF",
+    "slug": "chatpdf",
+    "shortDescription": "Interactive document intelligence tool for chatting with research papers, textbooks, and legal contracts.",
+    "categories": [
+      "presentations-documents",
+      "research-knowledge",
+      "productivity-automation"
+    ],
+    "tags": [
+      "pdf",
+      "documents",
+      "research",
+      "summarization",
+      "contracts"
+    ],
+    "features": [
+      "Instant indexing of textbooks, research papers, and technical manuals",
+      "Exact page citation indicators for every extracted fact",
+      "Multilingual comprehension (reads foreign language PDFs and responds in English)",
+      "Cloud document folder organization and chat history persistence"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false
+  },
+  {
+    "id": "claude-code",
+    "name": "Claude Code",
+    "slug": "claude-code",
+    "shortDescription": "Anthropic's agentic CLI tool that searches repositories, edits code across files, and executes tests directly in the terminal.",
+    "categories": [
+      "coding-development",
+      "agents-workflows"
+    ],
+    "tags": [
+      "cli",
+      "terminal",
+      "agents",
+      "coding",
+      "git"
+    ],
+    "features": [
+      "Native terminal workflow with git branch awareness",
+      "Autonomous multi-step planning and tool execution",
+      "Runs tests and iterates on errors until all checks pass",
+      "Direct commit and PR generation commands"
+    ],
+    "pricingModel": "paid",
+    "platforms": [
+      "macos",
+      "linux",
+      "windows"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "slug": "claude",
+    "shortDescription": "Anthropic's advanced AI assistant built for nuanced reasoning, extensive writing, coding, and large context windows.",
+    "categories": [
+      "chatbots-assistants",
+      "coding-development",
+      "writing-content"
+    ],
+    "tags": [
+      "chat",
+      "assistant",
+      "reasoning",
+      "coding",
+      "artifacts",
+      "long-context"
+    ],
+    "features": [
+      "200K token standard context window for extensive document ingestion",
+      "Interactive Artifacts UI to render code, SVGs, and web components live",
+      "Superior software development, frontend generation, and refactoring",
+      "Constitutional AI safety guardrails and reduced sycophancy"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "android",
+      "ios",
+      "macos",
+      "windows",
+      "api"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
+    "id": "consensus",
+    "name": "Consensus",
+    "slug": "consensus",
+    "shortDescription": "Search engine for scientific research that delivers consensus meters and evidence summaries from peer-reviewed papers.",
+    "categories": [
+      "research-knowledge",
+      "education-learning"
+    ],
+    "tags": [
+      "research",
+      "science",
+      "citations",
+      "academic",
+      "evidence"
+    ],
+    "features": [
+      "Consensus Meter quantifying agreement among published studies",
+      "Direct citations with journal impact factors and study design tags (RCT, meta-analysis)",
+      "One-click Copilot synthesis of search results",
+      "Bookmarking and export to standard reference managers"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false
+  },
+  {
+    "id": "copy-ai",
+    "name": "Copy.ai",
+    "slug": "copy-ai",
+    "shortDescription": "AI marketing and sales automation platform for go-to-market teams scaling content and lead workflows.",
+    "categories": [
+      "writing-content",
+      "business-marketing"
+    ],
+    "tags": [
+      "copywriting",
+      "marketing",
+      "sales",
+      "outbound",
+      "writing"
+    ],
+    "features": [
+      "GTM AI workflows that run batch operations across lead lists",
+      "Infobase for saving company mission, ICP, and product details",
+      "Multi-language generation across 95+ languages",
+      "Pre-built templates for cold emails, headlines, and product descriptions"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false
+  },
+  {
+    "id": "crewai",
+    "name": "CrewAI",
+    "slug": "crewai",
+    "shortDescription": "Multi-agent orchestration framework enabling autonomous role-playing AI agents to collaborate on complex goals.",
+    "categories": [
+      "agents-workflows",
+      "coding-development"
+    ],
+    "tags": [
+      "agents",
+      "multi-agent",
+      "automation",
+      "python",
+      "open-source"
+    ],
+    "features": [
+      "Role-based agent definitions (Researcher, Writer, QA, Fact-Checker)",
+      "Autonomous inter-agent communication, delegation, and review loops",
+      "Support for sequential, hierarchical, and asynchronous execution processes",
+      "Broad compatibility with LangChain tools and custom Python functions"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "api"
+    ],
+    "isOpenSource": true,
+    "isFeatured": false
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "slug": "cursor",
+    "shortDescription": "AI-first code editor fork of VS Code engineered for whole-codebase indexing, multi-file edits, and agentic workflows.",
+    "categories": [
+      "coding-development",
+      "agents-workflows"
+    ],
+    "tags": [
+      "coding",
+      "ide",
+      "agent",
+      "autocomplete",
+      "vscode"
+    ],
+    "features": [
+      "Composer mode: multi-file generation and interactive git diffing",
+      "Copilot++ smart predictive next-edit cursor jumping",
+      "Codebase indexing with @docs and @git references",
+      "Complete compatibility with all existing VS Code extensions"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "windows",
+      "macos",
+      "linux"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
+    "id": "deepl",
+    "name": "DeepL",
+    "slug": "deepl",
+    "shortDescription": "Neural machine translation system recognized for superior linguistic nuance, accuracy, and natural prose.",
+    "categories": [
+      "translation-languages",
+      "productivity-automation",
+      "writing-content"
+    ],
+    "tags": [
+      "translation",
+      "language",
+      "nlp",
+      "documents",
+      "writing"
+    ],
+    "features": [
+      "Industry-leading neural translation accuracy across 30+ major languages",
+      "Full document translation retaining original formatting for DOCX, PDF, and PPTX",
+      "DeepL Write AI writing assistant for grammar, clarity, and tone refinement",
+      "Custom glossary support to enforce consistent corporate terminology"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "windows",
+      "macos",
+      "android",
+      "ios",
+      "browser-extension",
+      "api"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "slug": "deepseek",
+    "shortDescription": "High-efficiency open-weights reasoning and coding model with exceptional mathematical and programming prowess.",
+    "categories": [
+      "chatbots-assistants",
+      "coding-development",
+      "opensource-models-platforms"
+    ],
+    "tags": [
+      "reasoning",
+      "coding",
+      "open-source",
+      "local-llm",
+      "math"
+    ],
+    "features": [
+      "DeepSeek-R1 reasoning model with open chain-of-thought tokens",
+      "MIT licensed open weights for self-hosting and fine-tuning",
+      "Ultra-low latency inference with Mixture of Experts architecture",
+      "Competitive performance against closed frontier commercial models"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "android",
+      "ios",
+      "api"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true
+  },
+  {
+    "id": "dify",
+    "name": "Dify.ai",
+    "slug": "dify",
+    "shortDescription": "Open-source LLM application development platform combining visual prompt engineering, RAG, and agent workflows.",
+    "categories": [
+      "nocode-lowcode",
+      "agents-workflows",
+      "opensource-models-platforms"
+    ],
+    "tags": [
+      "no-code",
+      "open-source",
+      "rag",
+      "agents",
+      "llm-ops"
+    ],
+    "features": [
+      "Visual workflow canvas for multi-step LLM chaining and tool invocation",
+      "Full RAG engine supporting hybrid keyword/vector search and document chunking",
+      "Instant webapp generation and embeddable chat widgets",
+      "Comprehensive API keys and user management for enterprise deployment"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "linux",
+      "macos",
+      "windows",
+      "api"
+    ],
+    "isOpenSource": true,
+    "isFeatured": false
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "slug": "elevenlabs",
+    "shortDescription": "State-of-the-art voice synthesis, realistic voice cloning, text-to-speech, and automatic video dubbing.",
+    "categories": [
+      "audio-music",
+      "productivity-automation"
+    ],
+    "tags": [
+      "audio",
+      "voice-cloning",
+      "text-to-speech",
+      "dubbing",
+      "speech"
+    ],
+    "features": [
+      "Lifelike emotional text-to-speech across 32 languages",
+      "Instant and professional high-fidelity voice cloning",
+      "AI Dubbing with automatic speaker separation and lip-sync matching",
+      "Text-to-Sound Effects engine for foley and video editing"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "api",
+      "ios",
+      "android"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
+    "id": "elicit",
+    "name": "Elicit",
+    "slug": "elicit",
+    "shortDescription": "AI research assistant that automates literature reviews, extracts key study findings, and analyzes papers.",
+    "categories": [
+      "research-knowledge",
+      "education-learning"
+    ],
+    "tags": [
+      "research",
+      "citations",
+      "academic",
+      "papers",
+      "science"
+    ],
+    "features": [
+      "Structured data extraction from PDFs (sample size, methodology, outcomes)",
+      "Systematic literature review search across 200M+ research papers",
+      "Automated synthesis of findings across multiple studies",
+      "BibTeX citation export for Zotero and Mendeley"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
+    "id": "figma-ai",
+    "name": "Figma AI",
+    "slug": "figma-ai",
+    "shortDescription": "Native AI features embedded in Figma for generating visual mockups, renaming layers, and auto-filling content.",
+    "categories": [
+      "design-ui-ux"
+    ],
+    "tags": [
+      "design",
+      "ui-ux",
+      "prototyping",
+      "figma",
+      "wireframing"
+    ],
+    "features": [
+      "Generate editable UI wireframes and design system components from prompts",
+      "One-click layer renaming and frame reorganization",
+      "Contextual content population (realistic names, addresses, and images)",
+      "Visual search to discover existing design system elements"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "macos",
+      "windows"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
+    "id": "gamma",
+    "name": "Gamma",
+    "slug": "gamma",
+    "shortDescription": "Generative AI medium for creating polished presentation decks, responsive webpages, and documents in seconds.",
+    "categories": [
+      "presentations-documents",
+      "design-ui-ux"
+    ],
+    "tags": [
+      "presentations",
+      "slides",
+      "documents",
+      "design",
+      "pitch-deck"
+    ],
+    "features": [
+      "Generate complete presentations from text prompts or imported notes",
+      "Fluid card-based layouts that look great on both desktop and mobile screens",
+      "One-click theme swapping across dozens of curated aesthetic palettes",
+      "Export to PowerPoint (.pptx), PDF, or interactive public web links"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "slug": "github-copilot",
+    "shortDescription": "Pioneering AI pair programmer providing code completions, CLI suggestions, and in-editor chat across major IDEs.",
+    "categories": [
+      "coding-development",
+      "productivity-automation"
+    ],
+    "tags": [
+      "coding",
+      "autocomplete",
+      "copilot",
+      "ide",
+      "developer-tools"
+    ],
+    "features": [
+      "Ghost-text real-time code completions across dozens of languages",
+      "Copilot Chat in sidebar with @workspace repository awareness",
+      "Pull request summary and code review generation",
+      "Copilot in GitHub CLI for bash and powershell translation"
+    ],
+    "pricingModel": "paid",
+    "platforms": [
+      "web",
+      "windows",
+      "macos",
+      "linux",
+      "api"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
+    "id": "hugging-face",
+    "name": "Hugging Face",
+    "slug": "hugging-face",
+    "shortDescription": "The central open-source collaboration hub for AI models, datasets, demo spaces, and developer libraries.",
+    "categories": [
+      "opensource-models-platforms",
+      "coding-development"
+    ],
+    "tags": [
+      "open-source",
+      "models",
+      "datasets",
+      "transformers",
+      "machine-learning"
+    ],
+    "features": [
+      "Repository hosting for over 1,000,000 public and private model checkpoints",
+      "Transformers and Diffusers Python libraries powering modern deep learning",
+      "Hugging Face Spaces for deploying interactive Streamlit and Gradio AI demos",
+      "Inference Endpoints for zero-friction production cloud deployment"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "linux",
+      "macos",
+      "windows",
+      "api"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true
+  },
+  {
+    "id": "intercom-fin",
+    "name": "Fin AI Agent by Intercom",
+    "slug": "intercom-fin",
+    "shortDescription": "Enterprise customer service AI agent that resolves support tickets instantly using company knowledge bases.",
+    "categories": [
+      "customer-support",
+      "agents-workflows"
+    ],
+    "tags": [
+      "customer-support",
+      "helpdesk",
+      "chat",
+      "agents",
+      "deflection"
+    ],
+    "features": [
+      "Pay-for-performance pricing model ($0.99 per verified resolution)",
+      "Zero hallucination guarantee: refuses to guess when documentation is absent",
+      "Seamless handoff to human support reps with full conversation history",
+      "Omnichannel support across live website chat, email, and WhatsApp"
+    ],
+    "pricingModel": "paid",
+    "platforms": [
+      "web",
+      "ios",
+      "android"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false
+  },
+  {
+    "id": "jasper",
+    "name": "Jasper",
+    "slug": "jasper",
+    "shortDescription": "Enterprise AI marketing copilot trained on brand voice, style guides, and multi-channel campaign assets.",
+    "categories": [
+      "writing-content",
+      "business-marketing",
+      "seo-optimization"
+    ],
+    "tags": [
+      "writing",
+      "copywriting",
+      "marketing",
+      "brand-voice",
+      "seo"
+    ],
+    "features": [
+      "Brand Voice customization using uploaded company style guides and URLs",
+      "Multi-channel marketing campaign generation from a single project brief",
+      "Built-in Surfer SEO integration for real-time keyword optimization",
+      "Enterprise governance, compliance, and user permissions management"
+    ],
+    "pricingModel": "paid",
+    "platforms": [
+      "web",
+      "browser-extension"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false
+  },
+  {
+    "id": "julius-ai",
+    "name": "Julius AI",
+    "slug": "julius-ai",
+    "shortDescription": "Intelligent data analyst that analyzes spreadsheets, runs Python scripts, and builds statistical charts from prompts.",
+    "categories": [
+      "data-visualization",
+      "productivity-automation"
+    ],
+    "tags": [
+      "data-analysis",
+      "python",
+      "statistics",
+      "visualization",
+      "excel"
+    ],
+    "features": [
+      "Executes Python data science libraries (pandas, matplotlib, seaborn, scikit-learn)",
+      "Automated data cleaning and missing value imputation",
+      "Interactive plot export in PNG, SVG, or Jupyter Notebook format",
+      "Mathematical modeling, forecasting, and statistical hypothesis testing"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "ios",
+      "android"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false
+  },
+  {
+    "id": "khanmigo",
+    "name": "Khanmigo",
+    "slug": "khanmigo",
+    "shortDescription": "Socratic AI tutor and teacher assistant developed by Khan Academy for safe, guided educational problem solving.",
+    "categories": [
+      "education-learning"
+    ],
+    "tags": [
+      "education",
+      "tutoring",
+      "learning",
+      "socratic",
+      "math"
+    ],
+    "features": [
+      "Socratic tutoring that refuses to simply do student homework",
+      "Integrated directly with Khan Academy exercises, videos, and mastery system",
+      "Teacher toolset: automated rubric builder and lesson planning assistant",
+      "Strict safety, moderation, and student privacy controls"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "android",
+      "ios"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false
+  },
+  {
+    "id": "langchain",
+    "name": "LangChain",
+    "slug": "langchain",
+    "shortDescription": "Leading open-source framework for building context-aware reasoning applications and autonomous agent pipelines.",
+    "categories": [
+      "agents-workflows",
+      "coding-development",
+      "opensource-models-platforms"
+    ],
+    "tags": [
+      "open-source",
+      "agents",
+      "framework",
+      "python",
+      "typescript",
+      "sdk"
+    ],
+    "features": [
+      "Comprehensive Python and TypeScript SDK implementations",
+      "Hundreds of pre-built integrations for LLMs, vector databases, and tools",
+      "LangGraph for cyclical agent workflows, human-in-the-loop, and persistence",
+      "Ecosystem observability with LangSmith tracing and evaluation"
+    ],
+    "pricingModel": "open-source",
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "api"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true
+  },
+  {
+    "id": "luma-dream-machine",
+    "name": "Luma Dream Machine",
+    "slug": "luma-dream-machine",
+    "shortDescription": "High-speed realistic video generation model creating physically consistent camera moves and smooth motion.",
+    "categories": [
+      "video-generation"
+    ],
+    "tags": [
+      "video-generation",
+      "3d",
+      "animation",
+      "motion"
+    ],
+    "features": [
+      "5-second high-definition video generation from text or image prompts",
+      "Physically accurate light reflections and camera physics",
+      "Keyframe camera path manipulation and camera motion presets",
+      "Looping animation generation capability"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "ios"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false
+  },
+  {
+    "id": "make",
+    "name": "Make",
+    "slug": "make",
+    "shortDescription": "Visual workflow automation platform featuring native AI modules for OpenAI, Anthropic, and custom APIs.",
+    "categories": [
+      "productivity-automation",
+      "nocode-lowcode",
+      "agents-workflows"
+    ],
+    "tags": [
+      "automation",
+      "no-code",
+      "workflow",
+      "productivity",
+      "api"
+    ],
+    "features": [
+      "Interactive drag-and-drop canvas with visual branching and error routers",
+      "Pre-built native AI connectors for OpenAI, Anthropic, Mistral, and Pinecone",
+      "JSON/XML parsing and data manipulation transformers",
+      "Real-time visual execution inspector and rollback history"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "slug": "midjourney",
+    "shortDescription": "Industry-leading artistic text-to-image generator known for cinematic lighting, photorealism, and stylistic control.",
+    "categories": [
+      "image-generation",
+      "design-ui-ux"
+    ],
+    "tags": [
+      "image-generation",
+      "art",
+      "diffusion",
+      "design",
+      "creative"
+    ],
+    "features": [
+      "Photorealistic textures, skin tones, and cinematic compositions",
+      "Vary Region inpainting and Pan/Zoom canvas expansion",
+      "Style Reference (--sref) and Character Consistency (--cref) flags",
+      "Dedicated web generation interface with drag-and-drop prompt controls"
+    ],
+    "pricingModel": "paid",
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
+    "id": "n8n",
+    "name": "n8n",
+    "slug": "n8n",
+    "shortDescription": "Fair-code node-based workflow automation platform with powerful native LangChain and AI agent nodes.",
+    "categories": [
+      "nocode-lowcode",
+      "productivity-automation",
+      "agents-workflows"
+    ],
+    "tags": [
+      "no-code",
+      "automation",
+      "open-source",
+      "workflow",
+      "self-hosted"
+    ],
+    "features": [
+      "Visual canvas combining standard API webhooks and advanced LangChain AI nodes",
+      "Full self-hosting capabilities using Docker for strict data sovereignty",
+      "Human-in-the-loop approval nodes and interactive chat widgets",
+      "Custom JavaScript and Python code execution within any workflow node"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true
+  },
+  {
+    "id": "notion-ai",
+    "name": "Notion AI",
+    "slug": "notion-ai",
+    "shortDescription": "Connected workspace assistant that searches, drafts, and analyzes information across company docs and databases.",
+    "categories": [
+      "productivity-automation",
+      "writing-content"
+    ],
+    "tags": [
+      "productivity",
+      "notes",
+      "workspace",
+      "writing",
+      "summarization"
+    ],
+    "features": [
+      "Q&A across entire Notion workspace and third-party connected tools",
+      "Autofill database columns with summaries, tags, and translation",
+      "Inline writing assistant for grammar, tone, and document expansion",
+      "Automated action item extraction from meeting notes"
+    ],
+    "pricingModel": "paid",
+    "platforms": [
+      "web",
+      "windows",
+      "macos",
+      "android",
+      "ios"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
+    "id": "ollama",
+    "name": "Ollama",
+    "slug": "ollama",
+    "shortDescription": "Lightweight open-source tool that lets you run large language models locally on macOS, Linux, and Windows.",
+    "categories": [
+      "opensource-models-platforms",
+      "coding-development",
+      "chatbots-assistants"
+    ],
+    "tags": [
+      "local-llm",
+      "open-source",
+      "cli",
+      "terminal",
+      "privacy",
+      "mac",
+      "windows",
+      "linux"
+    ],
+    "features": [
+      "Simple CLI interface: 'ollama run <model>' pulls and launches models instantly",
+      "Automatic GPU acceleration across Apple Metal, NVIDIA CUDA, and AMD ROCm",
+      "OpenAI-compatible local REST API endpoint (http://localhost:11434/v1)",
+      "Modelfile syntax for packaging custom system prompts and quantization parameters"
+    ],
+    "pricingModel": "open-source",
+    "platforms": [
+      "macos",
+      "linux",
+      "windows"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "slug": "perplexity",
+    "shortDescription": "AI-powered conversational search engine delivering real-time answers backed by transparent, clickable citations.",
+    "categories": [
+      "chatbots-assistants",
+      "research-knowledge",
+      "productivity-automation"
+    ],
+    "tags": [
+      "search",
+      "citations",
+      "research",
+      "assistant",
+      "web-search"
+    ],
+    "features": [
+      "Direct inline citations for every factual claim",
+      "Pro Search with interactive follow-up clarification questions",
+      "Focus modes: Academic, Writing, Computational, YouTube, Reddit",
+      "Perplexity Pages for sharing structured research dossiers"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "android",
+      "ios",
+      "macos",
+      "windows",
+      "browser-extension"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
+    "id": "quizlet-q-chat",
+    "name": "Quizlet Q-Chat",
+    "slug": "quizlet-q-chat",
+    "shortDescription": "Conversational study coach that quizzes students on their own flashcard sets using adaptive Socratic methods.",
+    "categories": [
+      "education-learning"
+    ],
+    "tags": [
+      "education",
+      "study-tools",
+      "flashcards",
+      "learning"
+    ],
+    "features": [
+      "Conversational quizzes tailored to any user-created Quizlet flashcard deck",
+      "Storyteller and Socratic questioning study modes",
+      "Instant explanation of vocabulary definitions and historical dates",
+      "Confidence tracking and spaced repetition scheduling"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "android",
+      "ios"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false
+  },
+  {
+    "id": "runway-gen-2",
+    "name": "Runway Gen-3 Alpha",
+    "slug": "runway-gen-2",
+    "shortDescription": "Cutting-edge text-to-video, image-to-video, and cinematic generative video suite for creative directors.",
+    "categories": [
+      "video-generation",
+      "image-generation"
+    ],
+    "tags": [
+      "video-generation",
+      "creative",
+      "cinematic",
+      "vfx",
+      "animation"
+    ],
+    "features": [
+      "High-fidelity Gen-3 Alpha text-to-video and image-to-video rendering",
+      "Camera Control for panning, zooming, and orbital tracking shots",
+      "Motion Brush to animate specific regions of static photographs",
+      "AI Green Screen and background element replacement"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "ios"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
+    "id": "semrush-ai",
+    "name": "Semrush AI Writing & SEO Toolkit",
+    "slug": "semrush-ai",
+    "shortDescription": "Comprehensive search marketing suite with AI tools for keyword analysis, SEO writing, and competitor audits.",
+    "categories": [
+      "seo-optimization",
+      "business-marketing"
+    ],
+    "tags": [
+      "seo",
+      "marketing",
+      "keywords",
+      "analytics",
+      "competitors"
+    ],
+    "features": [
+      "SEO Writing Assistant checking readability, SEO, tone of voice, and originality",
+      "Keyword Magic Tool with billions of search intent data points",
+      "Automated competitor backlink and traffic gap analysis",
+      "Domain authority tracking and rank tracking across geographical regions"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false
+  },
+  {
+    "id": "stable-diffusion-webui",
+    "name": "Stable Diffusion WebUI",
+    "slug": "stable-diffusion-webui",
+    "shortDescription": "Browser interface for open-source Stable Diffusion models with full local control, LoRA, and ControlNet support.",
+    "categories": [
+      "image-generation",
+      "opensource-models-platforms"
+    ],
+    "tags": [
+      "image-generation",
+      "open-source",
+      "local-llm",
+      "diffusion",
+      "art"
+    ],
+    "features": [
+      "Full parameter control over sampling methods, steps, and denoising strength",
+      "LoRA and textual inversion model fine-tuning support",
+      "ControlNet integration for pose, depth, and edge-guided generation",
+      "Completely offline and private execution on consumer GPUs"
+    ],
+    "pricingModel": "open-source",
+    "platforms": [
+      "windows",
+      "linux",
+      "macos"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true
+  },
+  {
+    "id": "suno",
+    "name": "Suno",
+    "slug": "suno",
+    "shortDescription": "Generative AI music platform that composes complete radio-ready songs with vocals, lyrics, and instrumentation.",
+    "categories": [
+      "audio-music"
+    ],
+    "tags": [
+      "music",
+      "audio",
+      "songwriting",
+      "vocals",
+      "creative"
+    ],
+    "features": [
+      "Full vocal generation with harmonizing and verse-chorus song structures",
+      "Custom lyrics mode with verse, chorus, and bridge tags",
+      "Audio upload and song continuation feature",
+      "Stems separation to isolate vocal and instrumental tracks"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "ios"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false
+  },
+  {
+    "id": "surfer-seo",
+    "name": "Surfer SEO",
+    "slug": "surfer-seo",
+    "shortDescription": "Data-driven SEO content optimization platform providing real-time NLP keyword guidelines and SERP scoring.",
+    "categories": [
+      "seo-optimization",
+      "writing-content"
+    ],
+    "tags": [
+      "seo",
+      "content-optimization",
+      "keywords",
+      "serp",
+      "marketing"
+    ],
+    "features": [
+      "Real-time Content Score based on 500+ on-page SEO factors",
+      "NLP entity and keyword recommendations derived from top 10 competitors",
+      "Keyword Research clustering and topical authority mapping",
+      "Native Google Docs and WordPress CMS integrations"
+    ],
+    "pricingModel": "paid",
+    "platforms": [
+      "web",
+      "browser-extension"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false
+  },
+  {
+    "id": "v0",
+    "name": "v0 by Vercel",
+    "slug": "v0",
+    "shortDescription": "Generative frontend design and code system that converts text prompts and screenshots into production-ready React UI.",
+    "categories": [
+      "design-ui-ux",
+      "coding-development"
+    ],
+    "tags": [
+      "ui-ux",
+      "frontend",
+      "react",
+      "tailwind",
+      "design"
+    ],
+    "features": [
+      "Generates React, Next.js App Router, and Tailwind CSS code",
+      "Native integration with shadcn/ui and Lucide Icons",
+      "Screenshot-to-code visual reproduction",
+      "Instant npx v0 add CLI component import into local projects"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
+    "id": "vllm",
+    "name": "vLLM",
+    "slug": "vllm",
+    "shortDescription": "High-throughput and memory-efficient LLM serving engine powered by PagedAttention algorithms.",
+    "categories": [
+      "opensource-models-platforms",
+      "coding-development"
+    ],
+    "tags": [
+      "inference",
+      "serving",
+      "open-source",
+      "python",
+      "pagedattention",
+      "cuda"
+    ],
+    "features": [
+      "PagedAttention algorithm managing KV cache with near-zero memory fragmentation",
+      "Continuous batching of incoming requests for maximum GPU saturation",
+      "Native quantization support (AWQ, GPTQ, FP8, INT4)",
+      "Drop-in OpenAI-compatible API server specification"
+    ],
+    "pricingModel": "open-source",
+    "platforms": [
+      "linux"
+    ],
+    "isOpenSource": true,
+    "isFeatured": false
+  },
+  {
+    "id": "whisper",
+    "name": "OpenAI Whisper",
+    "slug": "whisper",
+    "shortDescription": "Robust, open-source multi-lingual automatic speech recognition (ASR) model trained on 680,000 hours of audio.",
+    "categories": [
+      "audio-music",
+      "opensource-models-platforms"
+    ],
+    "tags": [
+      "transcription",
+      "speech-to-text",
+      "audio",
+      "open-source",
+      "local-llm"
+    ],
+    "features": [
+      "Open-source model checkpoints from tiny (39M) to large-v3 (1.5B parameters)",
+      "Automatic language identification across 99 languages",
+      "Native word-level and phrase-level timestamp alignment",
+      "Extreme resilience against background noise and varied speaker accents"
+    ],
+    "pricingModel": "open-source",
+    "platforms": [
+      "linux",
+      "windows",
+      "macos",
+      "api"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true
+  },
+  {
+    "id": "zapier-central",
+    "name": "Zapier Central",
+    "slug": "zapier-central",
+    "shortDescription": "Experimental AI agent workspace that connects LLMs to 6,000+ business applications with live data access.",
+    "categories": [
+      "productivity-automation",
+      "agents-workflows",
+      "nocode-lowcode"
+    ],
+    "tags": [
+      "automation",
+      "agents",
+      "no-code",
+      "productivity",
+      "integrations"
+    ],
+    "features": [
+      "Access to Zapier's 6,000+ app integrations without manual webhook coding",
+      "Behavior training using step-by-step natural language instructions",
+      "Instant document and spreadsheet data retrieval",
+      "Chrome extension to trigger agent actions on any webpage"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "browser-extension"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false
+  }
+]

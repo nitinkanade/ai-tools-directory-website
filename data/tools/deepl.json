@@ -1,0 +1,87 @@
+{
+  "id": "deepl",
+  "name": "DeepL",
+  "slug": "deepl",
+  "shortDescription": "Neural machine translation system recognized for superior linguistic nuance, accuracy, and natural prose.",
+  "description": "DeepL is an AI translation platform built on advanced neural network architectures. Consistently outperforming traditional machine translation on linguistic nuance, idiom comprehension, and grammatical accuracy, DeepL supports full document translation (PDF, Word, PPT) while retaining original typography and layouts.",
+  "categories": [
+    "translation-languages",
+    "productivity-automation",
+    "writing-content"
+  ],
+  "subcategories": [
+    "neural-translation",
+    "editing-grammar"
+  ],
+  "tags": [
+    "translation",
+    "language",
+    "nlp",
+    "documents",
+    "writing"
+  ],
+  "websiteUrl": "https://www.deepl.com",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free web translation up to 1,500 characters per translation; DeepL Pro Starter ($8.74/mo) with unlimited text, file translation, and maximum data security.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "windows",
+    "macos",
+    "android",
+    "ios",
+    "browser-extension",
+    "api"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Industry-leading neural translation accuracy across 30+ major languages",
+    "Full document translation retaining original formatting for DOCX, PDF, and PPTX",
+    "DeepL Write AI writing assistant for grammar, clarity, and tone refinement",
+    "Custom glossary support to enforce consistent corporate terminology"
+  ],
+  "useCases": [
+    "Translating cross-border legal contracts, regulatory filings, and corporate memos",
+    "Localizing software manuals and marketing brochures accurately",
+    "Real-time email and chat translation for international remote teams"
+  ],
+  "alternatives": [
+    "chatgpt"
+  ],
+  "relatedTools": [
+    "chatgpt"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "English",
+    "German",
+    "French",
+    "Spanish",
+    "Japanese",
+    "Chinese",
+    "Italian",
+    "Dutch",
+    "Polish",
+    "Russian"
+  ],
+  "accountRequired": false,
+  "limitations": [
+    "Supports fewer total languages than Google Translate (focuses on quality over raw count)",
+    "Free web tier does not guarantee strict corporate data deletion"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://www.deepl.com"
+  ],
+  "createdAt": "2017-08-29",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "DeepL Translate — Accurate AI Neural Machine Translation",
+    "description": "Translate text and full documents with DeepL. Review plans, features, and API options."
+  }
+}

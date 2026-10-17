@@ -1,0 +1,74 @@
+{
+  "id": "claude-code",
+  "name": "Claude Code",
+  "slug": "claude-code",
+  "shortDescription": "Anthropic's agentic CLI tool that searches repositories, edits code across files, and executes tests directly in the terminal.",
+  "description": "Claude Code is an agentic command-line interface developed by Anthropic. It lives directly in developer terminals, grasps full repository context, performs code searches, writes multi-file edits, executes build commands, and resolves failing test suites autonomously under human supervision.",
+  "categories": [
+    "coding-development",
+    "agents-workflows"
+  ],
+  "subcategories": [
+    "terminal-agents",
+    "debugging-testing"
+  ],
+  "tags": [
+    "cli",
+    "terminal",
+    "agents",
+    "coding",
+    "git"
+  ],
+  "websiteUrl": "https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview",
+  "pricing": {
+    "model": "paid",
+    "details": "Billed directly through Anthropic API key usage or bundled with Anthropic enterprise workspaces.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "macos",
+    "linux",
+    "windows"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Native terminal workflow with git branch awareness",
+    "Autonomous multi-step planning and tool execution",
+    "Runs tests and iterates on errors until all checks pass",
+    "Direct commit and PR generation commands"
+  ],
+  "useCases": [
+    "Tackling complex refactoring tasks across large monorepos",
+    "Diagnosing and fixing flaky integration test suites",
+    "Autonomous routine dependency upgrades and migration scripts"
+  ],
+  "alternatives": [
+    "cursor",
+    "github-copilot"
+  ],
+  "relatedTools": [
+    "claude",
+    "cursor"
+  ],
+  "languageSupport": [
+    "English"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Token consumption can accumulate rapidly on large multi-turn tasks",
+    "Requires terminal access and API key configuration"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview"
+  ],
+  "createdAt": "2025-02-24",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Claude Code — Agentic Coding in Your Terminal by Anthropic",
+    "description": "Discover Claude Code CLI capabilities, multi-file refactoring, and setup instructions."
+  }
+}

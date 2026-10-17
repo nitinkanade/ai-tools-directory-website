@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "in.ni18.aitoolsdirectory",
+      "sha256_cert_fingerprints": [
+        "7D:E5:C2:60:95:EB:06:11:51:A0:DE:B5:23:6E:BC:D8:39:60:02:33:FB:68:54:4A:FE:EA:03:D0:CB:2B:14:0D",
+        "08:AB:FF:A9:0F:0B:01:BD:7F:AE:55:2B:96:9F:CC:63:CF:C2:07:25:41:CB:AB:CF:EB:8C:D9:BB:A8:D7:04:EE"
+      ]
+    }
+  }
+]

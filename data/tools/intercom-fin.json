@@ -1,0 +1,73 @@
+{
+  "id": "intercom-fin",
+  "name": "Fin AI Agent by Intercom",
+  "slug": "intercom-fin",
+  "shortDescription": "Enterprise customer service AI agent that resolves support tickets instantly using company knowledge bases.",
+  "description": "Fin is a frontline customer service AI agent developed by Intercom. Powered by Anthropic and OpenAI foundational models, Fin reads existing help desk articles and public documentation to answer customer queries accurately, deflecting up to 50% of incoming tickets with zero hallucination safeguards.",
+  "categories": [
+    "customer-support",
+    "agents-workflows"
+  ],
+  "subcategories": [
+    "ticket-deflection",
+    "agent-co-pilot"
+  ],
+  "tags": [
+    "customer-support",
+    "helpdesk",
+    "chat",
+    "agents",
+    "deflection"
+  ],
+  "websiteUrl": "https://www.intercom.com/fin",
+  "pricing": {
+    "model": "paid",
+    "details": "$0.99 per resolution (only billed when Fin successfully resolves a customer issue without human escalation); requires Intercom workspace.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "ios",
+    "android"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "Pay-for-performance pricing model ($0.99 per verified resolution)",
+    "Zero hallucination guarantee: refuses to guess when documentation is absent",
+    "Seamless handoff to human support reps with full conversation history",
+    "Omnichannel support across live website chat, email, and WhatsApp"
+  ],
+  "useCases": [
+    "Handling 24/7 repetitive customer inquiries (password resets, return policies)",
+    "Scaling customer support during seasonal e-commerce traffic spikes",
+    "Providing multilingual tier-1 support across international customer bases"
+  ],
+  "alternatives": [
+    "chatgpt"
+  ],
+  "relatedTools": [
+    "chatgpt"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "45+ languages supported"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Requires an underlying Intercom subscription",
+    "Effectiveness depends heavily on comprehensive, up-to-date help center documentation"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://www.intercom.com/fin"
+  ],
+  "createdAt": "2023-03-28",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Fin AI Agent by Intercom — Autonomous Customer Support Resolution",
+    "description": "Deflect support tickets with Fin AI by Intercom. Resolution-based pricing and features."
+  }
+}

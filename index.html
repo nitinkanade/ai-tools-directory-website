@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tools Directory — Discover, Compare &amp; Master the Best AI Tools</title>
+  <meta name="description" content="The premier independent directory of verified artificial intelligence software, open-source models, and developer companions. 100% verified facts, zero sponsored bias.">
+  <link rel="canonical" href="https://nitinkanade.github.io/ai-tools-directory-website/">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nitinkanade.github.io/ai-tools-directory-website/">
+  <meta property="og:title" content="AI Tools Directory — Discover, Compare &amp; Master the Best AI Tools">
+  <meta property="og:description" content="The premier independent directory of verified artificial intelligence software, open-source models, and developer companions. 100% verified facts, zero sponsored bias.">
+  <meta property="og:site_name" content="AI Tools Directory">
+  <meta property="og:image" content="https://nitinkanade.github.io/ai-tools-directory-website/static/img/playstore-icon.png">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://nitinkanade.github.io/ai-tools-directory-website/">
+  <meta name="twitter:title" content="AI Tools Directory — Discover, Compare &amp; Master the Best AI Tools">
+  <meta name="twitter:description" content="The premier independent directory of verified artificial intelligence software, open-source models, and developer companions. 100% verified facts, zero sponsored bias.">
+  <meta name="twitter:image" content="https://nitinkanade.github.io/ai-tools-directory-website/static/img/playstore-icon.png">
+
+  <!-- Favicons & Brand Icons -->
+  <link rel="icon" type="image/x-icon" href="./static/img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="./static/img/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./static/img/apple-touch-icon.png">
+
+  <!-- Fonts & Styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/styles.css">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="manifest" href="./manifest.webmanifest">
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "AI Tools Directory", "description": "The premier independent directory of verified artificial intelligence software, open-source models, and developer companions. 100% verified facts, zero sponsored bias.", "url": "https://nitinkanade.github.io/ai-tools-directory-website", "potentialAction": {"@type": "SearchAction", "target": "https://nitinkanade.github.io/ai-tools-directory-website/tools/?q={search_term_string}", "query-input": "required name=search_term_string"}}</script>
+
+  <script>
+    // Zero-flicker theme initialization
+    (function() {
+      const saved = localStorage.getItem('ai_tools_dir_theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Global Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="./" class="brand-logo" aria-label="AI Tools Directory Homepage">
+        <img src="./static/img/logo.png" alt="AI Tools Directory Logo" class="brand-icon-img" width="38" height="38">
+        <span class="brand-title">AI Tools Directory</span>
+        <span class="brand-badge">v1.0 Verified</span>
+      </a>
+
+      <nav aria-label="Main navigation" class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="./" class="nav-link active">Home</a></li>
+          <li><a href="./tools/" class="nav-link ">Directory</a></li>
+          <li><a href="./collections/" class="nav-link ">Collections</a></li>
+          <li><a href="./blog/" class="nav-link ">Guides & Blog</a></li>
+          <li><a href="./about/" class="nav-link ">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Universal Spotlight Trigger -->
+        <button id="quick-search-trigger" class="quick-search-trigger" onclick="openSpotlight()" aria-label="Quick Search" title="Search all tools (Ctrl+K)">
+          <svg class="search-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-trigger-text">Search...</span>
+          <span class="kbd-shortcut">Ctrl+K</span>
+        </button>
+
+        <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <svg class="theme-moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button id="mobile-hamburger-btn" class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-backdrop" onclick="toggleMobileMenu()"></div>
+    <div class="mobile-drawer-content">
+      <div class="mobile-search-banner">
+        <button class="mobile-search-btn" onclick="toggleMobileMenu(); openSpotlight();">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search 40+ AI tools...</span>
+          <span class="kbd-shortcut">Ctrl+K</span>
+        </button>
+      </div>
+
+      <ul class="mobile-nav-links">
+        <li>
+          <a href="./" class="mobile-nav-link active" onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#127968;</span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="./tools/" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#9889;</span>
+            <span>All AI Tools</span>
+            <span class="mobile-count-pill">40+</span>
+          </a>
+        </li>
+        <li>
+          <a href="./collections/" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#10024;</span>
+            <span>Curated Collections</span>
+          </a>
+        </li>
+        <li>
+          <a href="./blog/" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#128218;</span>
+            <span>Guides & Tutorials</span>
+          </a>
+        </li>
+        <li>
+          <a href="./about/" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#8505;&#65039;</span>
+            <span>About & Methodology</span>
+          </a>
+        </li>
+        <li>
+          <a href="./contact/" class="mobile-nav-link" onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#10133;</span>
+            <span>Submit a Tool</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="mobile-drawer-categories">
+        <div class="mobile-drawer-cat-title">Popular Categories</div>
+        <div class="mobile-drawer-cat-pills">
+          <a href="./category/coding-development/" class="cat-pill" onclick="toggleMobileMenu()">Coding & IDEs</a>
+          <a href="./category/chatbots-assistants/" class="cat-pill" onclick="toggleMobileMenu()">Conversational LLMs</a>
+          <a href="./category/image-generation/" class="cat-pill" onclick="toggleMobileMenu()">Image & Creative</a>
+          <a href="./category/opensource-models-platforms/" class="cat-pill" onclick="toggleMobileMenu()">Open-Source AI</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Universal Spotlight Search Modal -->
+  <div id="spotlight-modal" class="spotlight-modal" style="display: none;" role="dialog" aria-modal="true" aria-label="Search AI Tools">
+    <div class="spotlight-backdrop" onclick="closeSpotlight()"></div>
+    <div class="spotlight-panel">
+      <div class="spotlight-input-wrap">
+        <svg class="spotlight-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="spotlight-input" class="spotlight-input" placeholder="Type a tool name, coding, reasoning, pricing, or tag..." autocomplete="off">
+        <button id="spotlight-clear-btn" class="spotlight-clear-btn" aria-label="Clear Search" onclick="clearSpotlightInput()">&times;</button>
+        <button class="spotlight-close-btn" onclick="closeSpotlight()" aria-label="Close search">Esc</button>
+      </div>
+
+      <div id="spotlight-suggestions" class="spotlight-quick-tags">
+        <span class="quick-tags-label">Quick:</span>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('coding')">Coding</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('chat')">Chatbots</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('image')">Image</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('open-source')">Open Source</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('free')">Free Tier</button>
+      </div>
+
+      <div id="spotlight-results" class="spotlight-results">
+        <!-- Rendered dynamically by JS -->
+      </div>
+
+      <div class="spotlight-footer">
+        <div class="spotlight-footer-shortcuts">
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> Navigate</span>
+          <span><kbd>&crarr;</kbd> Select</span>
+          <span><kbd>Esc</kbd> Close</span>
+        </div>
+        <a href="./tools/" class="spotlight-view-all">All Tools &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Page Content -->
+  <main id="main-content">
+    
+    <section class="hero-section">
+      <div class="hero-glow-blob"></div>
+      <div class="container hero-content-wrap">
+        <div class="hero-badge">
+          <span>&starf; 100% Independent &bull; 40+ Fact-Checked Tools &bull; Zero Sponsored Bias</span>
+        </div>
+        <h1 class="hero-title">
+          Discover, Compare & Master <br><span class="text-gradient">the World's Best AI Tools</span>
+        </h1>
+        <p class="hero-subtitle">
+          Curated, benchmarked, and fact-verified directory of artificial intelligence software, local runtimes, and developer assistants. Zero paywalls, zero sponsored rankings.
+        </p>
+
+        <!-- Live Instant Search -->
+        <div class="search-container">
+          <div class="search-input-wrapper">
+            <span class="search-icon-prefix">&#128269;</span>
+            <input type="text" id="home-search-input" class="search-input" placeholder="Search by name, category, coding, diffusion, reasoning, or tag..." autocomplete="off">
+            <div class="search-right-actions">
+              <button id="home-search-clear" class="search-clear-btn" aria-label="Clear Search">&times;</button>
+              <span class="kbd-shortcut">Ctrl+K</span>
+            </div>
+          </div>
+          <div id="home-search-dropdown" class="search-dropdown"></div>
+
+          <!-- Quick category filter pills -->
+          <div class="quick-pills-row">
+            <button class="quick-pill" data-filter="">&bull; All Tools</button>
+            <button class="quick-pill" data-filter="?category=coding-development">&#128187; Coding & IDEs</button>
+            <button class="quick-pill" data-filter="?category=chatbots-assistants">&#128172; Conversational LLMs</button>
+            <button class="quick-pill" data-filter="?category=image-generation">&#127912; Image & Creative</button>
+            <button class="quick-pill" data-filter="?oss=true">&#128275; Open Source</button>
+            <button class="quick-pill" data-filter="?pricing=free">&#127873; Free Tier</button>
+            <button class="quick-pill" data-filter="?saved=true">&#9733; Saved Tools</button>
+          </div>
+        </div>
+
+        <!-- Live Stats Ribbon -->
+        <div class="stats-ribbon">
+          <div class="stat-item">
+            <span class="stat-number">41+</span>
+            <span class="stat-label">Verified Tools</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">20</span>
+            <span class="stat-label">Taxonomy Categories</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">6</span>
+            <span class="stat-label">Curated Collections</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Zero Sponsored Bias</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured AI Tools -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Editor's Featured Selections</h2>
+            <p class="section-desc">Hand-picked AI tools setting industry standards for performance, utility, and innovation.</p>
+          </div>
+          <a href="./tools/" class="view-all-link">Browse all 41 tools &rarr;</a>
+        </div>
+        <div class="grid-tools">
+          
+    <div class="tool-card tool-card-item" 
+         data-id="bolt-new"
+         data-name="bolt.new"
+         data-slug="bolt-new"
+         data-desc="in-browser ai web development agent powered by webcontainers that builds, runs, and deploys full-stack web applications."
+         data-categories="coding-development,design-ui-ux"
+         data-tags="agent,autocomplete,coding,developer-tools,frontend,open-source,prototyping,react,typescript,ui-ux,web-search"
+         data-pricing="freemium"
+         data-platforms="web"
+         data-oss="true">
+      <button class="card-fav-btn" data-tool-id="bolt-new" onclick="toggleFavorite(event, 'bolt-new')" aria-label="Bookmark Bolt.new" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">B</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="./tool/bolt-new/" class="tool-title">Bolt.new</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">In-browser AI web development agent powered by WebContainers that builds, runs, and deploys full-stack web applications.</p>
+      <div class="tool-tags"><span class="tool-tag">#agent</span><span class="tool-tag">#autocomplete</span><span class="tool-tag">#coding</span></div>
+      <div class="card-footer">
+        <a href="https://bolt.new" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Bolt.new">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="./tool/bolt-new/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="canva-magic-studio"
+         data-name="canva magic studio"
+         data-slug="canva-magic-studio"
+         data-desc="accessible ai creative suite for generating social graphics, removing backgrounds, and translating presentations."
+         data-categories="design-ui-ux,image-generation,presentations-documents"
+         data-tags="design,social-media,photo-editing,presentations,graphics"
+         data-pricing="freemium"
+         data-platforms="web,android,ios,windows,macos"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="canva-magic-studio" onclick="toggleFavorite(event, 'canva-magic-studio')" aria-label="Bookmark Canva Magic Studio" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #db2777 0%, #e11d48 100%); color: #ffffff;">C</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="./tool/canva-magic-studio/" class="tool-title">Canva Magic Studio</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web, Android, Ios</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Accessible AI creative suite for generating social graphics, removing backgrounds, and translating presentations.</p>
+      <div class="tool-tags"><span class="tool-tag">#design</span><span class="tool-tag">#social-media</span><span class="tool-tag">#photo-editing</span></div>
+      <div class="card-footer">
+        <a href="https://www.canva.com/magic-studio" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Canva Magic Studio">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="./tool/canva-magic-studio/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="chatgpt"
+         data-name="chatgpt"
+         data-slug="chatgpt"
+         data-desc="general-purpose conversational ai assistant developed by openai with reasoning, voice, and multimodal capabilities."
+         data-categories="chatbots-assistants,writing-content,coding-development"
+         data-tags="chat,assistant,reasoning,coding,writing,multimodal"
+         data-pricing="freemium"
+         data-platforms="web,android,ios,macos,windows"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="chatgpt" onclick="toggleFavorite(event, 'chatgpt')" aria-label="Bookmark ChatGPT" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">C</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="./tool/chatgpt/" class="tool-title">ChatGPT</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web, Android, Ios</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">General-purpose conversational AI assistant developed by OpenAI with reasoning, voice, and multimodal capabilities.</p>
+      <div class="tool-tags"><span class="tool-tag">#chat</span><span class="tool-tag">#assistant</span><span class="tool-tag">#reasoning</span></div>
+      <div class="card-footer">
+        <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for ChatGPT">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="./tool/chatgpt/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="claude-code"
+         data-name="claude code"
+         data-slug="claude-code"
+         data-desc="anthropic&#x27;s agentic cli tool that searches repositories, edits code across files, and executes tests directly in the terminal."
+         data-categories="coding-development,agents-workflows"
+         data-tags="cli,terminal,agents,coding,git"
+         data-pricing="paid"
+         data-platforms="macos,linux,windows"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="claude-code" onclick="toggleFavorite(event, 'claude-code')" aria-label="Bookmark Claude Code" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">C</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="./tool/claude-code/" class="tool-title">Claude Code</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-paid">paid</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Macos, Linux, Windows</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Anthropic&#x27;s agentic CLI tool that searches repositories, edits code across files, and executes tests directly in the terminal.</p>
+      <div class="tool-tags"><span class="tool-tag">#cli</span><span class="tool-tag">#terminal</span><span class="tool-tag">#agents</span></div>
+      <div class="card-footer">
+        <a href="https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Claude Code">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="./tool/claude-code/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="claude"
+         data-name="claude"
+         data-slug="claude"
+         data-desc="anthropic&#x27;s advanced ai assistant built for nuanced reasoning, extensive writing, coding, and large context windows."
+         data-categories="chatbots-assistants,coding-development,writing-content"
+         data-tags="chat,assistant,reasoning,coding,artifacts,long-context"
+         data-pricing="freemium"
+         data-platforms="web,android,ios,macos,windows,api"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="claude" onclick="toggleFavorite(event, 'claude')" aria-label="Bookmark Claude" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">C</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="./tool/claude/" class="tool-title">Claude</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web, Android, Ios</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Anthropic&#x27;s advanced AI assistant built for nuanced reasoning, extensive writing, coding, and large context windows.</p>
+      <div class="tool-tags"><span class="tool-tag">#chat</span><span class="tool-tag">#assistant</span><span class="tool-tag">#reasoning</span></div>
+      <div class="card-footer">
+        <a href="https://claude.ai" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Claude">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="./tool/claude/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="cursor"
+         data-name="cursor"
+         data-slug="cursor"
+         data-desc="ai-first code editor fork of vs code engineered for whole-codebase indexing, multi-file edits, and agentic workflows."
+         data-categories="coding-development,agents-workflows"
+         data-tags="coding,ide,agent,autocomplete,vscode"
+         data-pricing="freemium"
+         data-platforms="windows,macos,linux"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="cursor" onclick="toggleFavorite(event, 'cursor')" aria-label="Bookmark Cursor" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">C</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="./tool/cursor/" class="tool-title">Cursor</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Windows, Macos, Linux</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">AI-first code editor fork of VS Code engineered for whole-codebase indexing, multi-file edits, and agentic workflows.</p>
+      <div class="tool-tags"><span class="tool-tag">#coding</span><span class="tool-tag">#ide</span><span class="tool-tag">#agent</span></div>
+      <div class="card-footer">
+        <a href="https://www.cursor.com" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Cursor">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="./tool/cursor/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Browse By Category -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Explore by Category</h2>
+            <p class="section-desc">Find specialized solutions tailored to your industry, engineering stack, or creative workflow.</p>
+          </div>
+        </div>
+        <div class="grid-categories">
+          
+          <a href="./category/chatbots-assistants/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">AI Chatbots &amp; Assistants</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Conversational AI models and multi-purpose personal assistants for general queries, reasoning, and problem solving.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/coding-development/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">Coding &amp; Software Development</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              AI code generators, IDE extensions, autonomous software engineering agents, and debugging assistants.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/writing-content/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">Writing &amp; Content Creation</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Tools for copywriting, long-form articles, marketing copy, editing, and grammar correction.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/image-generation/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">Image Generation &amp; Editing</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Text-to-image synthesis, image upscaling, inpainting, object removal, and digital art generation.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/video-generation/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">Video Generation &amp; Editing</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Generative video synthesis, AI video editing, automated captions, text-to-video, and avatar creation.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/audio-music/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">Audio, Music &amp; Voice</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Text-to-speech synthesis, voice cloning, audio transcription, noise cancellation, and AI music composition.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/productivity-automation/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">Productivity &amp; Automation</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Workflow automation, AI note-taking, meeting assistants, and intelligent task management.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/research-knowledge/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">Research &amp; Knowledge Management</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Academic literature search, paper summarization, citation discovery, and verified question answering.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/education-learning/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">Education &amp; Learning</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Personalized AI tutors, flashcard generators, interactive problem solvers, and curriculum aids.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/business-marketing/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">Business &amp; Marketing</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Market intelligence, ad campaign management, email marketing automation, and sales intelligence.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/seo-optimization/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">SEO &amp; Website Optimization</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Keyword clustering, SERP analysis, AI content optimization, and search rank tracking.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/design-ui-ux/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">Design &amp; UI/UX</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Wireframing, UI mockup generation, vector graphics, design systems, and frontend prototyping.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/data-visualization/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">Data Analysis &amp; Visualization</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Natural language SQL queries, automated dashboard generation, anomaly detection, and data storytelling.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/presentations-documents/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">Presentations &amp; Documents</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Automated slide deck creation, PDF summarization, document parsing, and proposal drafting.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/agents-workflows/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">AI Agents &amp; Workflows</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Autonomous multi-agent orchestration, reasoning loops, tool-calling frameworks, and background execution.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/nocode-lowcode/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">No-Code &amp; Low-Code AI</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Visual builders for AI workflows, custom chatbot builders, and drag-and-drop prompt orchestration.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/finance-accounting/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">Finance &amp; Accounting</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Expense categorization, financial forecasting, invoice processing, and financial reporting.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/customer-support/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">Customer Support</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Helpdesk automation, ticket deflection, automated responses, and sentiment analysis.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/translation-languages/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">Translation &amp; Language Learning</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Neural machine translation, context-aware localization, dialect adaptation, and language practice.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+          <a href="./category/opensource-models-platforms/" class="category-card">
+            <div class="category-card-icon">&#9670;</div>
+            <div class="category-card-title">Open-Source Models &amp; Developer Platforms</div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem; flex: 1; line-height: 1.5;">
+              Open-weight foundational models, model hubs, local runtimes, and LLM inference engines.
+            </p>
+            <div class="category-card-count">Explore Category &rarr;</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Collections -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Curated Workflows & Collections</h2>
+            <p class="section-desc">Focused toolsets grouped together for specific engineering goals and business operations.</p>
+          </div>
+          <a href="./collections/" class="view-all-link">View all collections &rarr;</a>
+        </div>
+        <div class="grid-collections">
+          
+          <a href="./collection/essential-coding-assistants/" class="collection-card">
+            <div style="color: var(--brand-primary); font-size: 1.75rem; margin-bottom: 0.75rem;">&#9733;</div>
+            <div class="collection-card-title">Top AI Coding Assistants &amp; Modern IDEs</div>
+            <p class="collection-card-desc">Essential AI tools that streamline programming, full-repo refactoring, and frontend generation.</p>
+            <div style="font-size: 0.875rem; color: var(--brand-primary); font-weight: 700;">
+              5 Curated Tools &rarr;
+            </div>
+          </a>
+          <a href="./collection/frontier-reasoning-models/" class="collection-card">
+            <div style="color: var(--brand-primary); font-size: 1.75rem; margin-bottom: 0.75rem;">&#9733;</div>
+            <div class="collection-card-title">Frontier LLMs &amp; Conversational Reasoning</div>
+            <p class="collection-card-desc">The leading conversational AI models and answer engines setting benchmarks in intelligence.</p>
+            <div style="font-size: 0.875rem; color: var(--brand-primary); font-weight: 700;">
+              4 Curated Tools &rarr;
+            </div>
+          </a>
+          <a href="./collection/open-source-powerhouses/" class="collection-card">
+            <div style="color: var(--brand-primary); font-size: 1.75rem; margin-bottom: 0.75rem;">&#9733;</div>
+            <div class="collection-card-title">Open-Source &amp; Local AI Stack</div>
+            <p class="collection-card-desc">Run AI completely private and offline with open weights, local runtimes, and open inference engines.</p>
+            <div style="font-size: 0.875rem; color: var(--brand-primary); font-weight: 700;">
+              6 Curated Tools &rarr;
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recently Verified Tools -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Recently Verified Additions</h2>
+            <p class="section-desc">The latest verified tools added to the catalog by our editorial maintainers.</p>
+          </div>
+          <a href="./tools/" class="view-all-link">See full directory &rarr;</a>
+        </div>
+        <div class="grid-tools">
+          
+    <div class="tool-card tool-card-item" 
+         data-id="bolt-new"
+         data-name="bolt.new"
+         data-slug="bolt-new"
+         data-desc="in-browser ai web development agent powered by webcontainers that builds, runs, and deploys full-stack web applications."
+         data-categories="coding-development,design-ui-ux"
+         data-tags="agent,autocomplete,coding,developer-tools,frontend,open-source,prototyping,react,typescript,ui-ux,web-search"
+         data-pricing="freemium"
+         data-platforms="web"
+         data-oss="true">
+      <button class="card-fav-btn" data-tool-id="bolt-new" onclick="toggleFavorite(event, 'bolt-new')" aria-label="Bookmark Bolt.new" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">B</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="./tool/bolt-new/" class="tool-title">Bolt.new</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">In-browser AI web development agent powered by WebContainers that builds, runs, and deploys full-stack web applications.</p>
+      <div class="tool-tags"><span class="tool-tag">#agent</span><span class="tool-tag">#autocomplete</span><span class="tool-tag">#coding</span></div>
+      <div class="card-footer">
+        <a href="https://bolt.new" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Bolt.new">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="./tool/bolt-new/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="claude-code"
+         data-name="claude code"
+         data-slug="claude-code"
+         data-desc="anthropic&#x27;s agentic cli tool that searches repositories, edits code across files, and executes tests directly in the terminal."
+         data-categories="coding-development,agents-workflows"
+         data-tags="cli,terminal,agents,coding,git"
+         data-pricing="paid"
+         data-platforms="macos,linux,windows"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="claude-code" onclick="toggleFavorite(event, 'claude-code')" aria-label="Bookmark Claude Code" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">C</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="./tool/claude-code/" class="tool-title">Claude Code</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-paid">paid</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Macos, Linux, Windows</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Anthropic&#x27;s agentic CLI tool that searches repositories, edits code across files, and executes tests directly in the terminal.</p>
+      <div class="tool-tags"><span class="tool-tag">#cli</span><span class="tool-tag">#terminal</span><span class="tool-tag">#agents</span></div>
+      <div class="card-footer">
+        <a href="https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Claude Code">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="./tool/claude-code/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="figma-ai"
+         data-name="figma ai"
+         data-slug="figma-ai"
+         data-desc="native ai features embedded in figma for generating visual mockups, renaming layers, and auto-filling content."
+         data-categories="design-ui-ux"
+         data-tags="design,ui-ux,prototyping,figma,wireframing"
+         data-pricing="freemium"
+         data-platforms="web,macos,windows"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="figma-ai" onclick="toggleFavorite(event, 'figma-ai')" aria-label="Bookmark Figma AI" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #db2777 0%, #e11d48 100%); color: #ffffff;">F</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="./tool/figma-ai/" class="tool-title">Figma AI</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web, Macos, Windows</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Native AI features embedded in Figma for generating visual mockups, renaming layers, and auto-filling content.</p>
+      <div class="tool-tags"><span class="tool-tag">#design</span><span class="tool-tag">#ui-ux</span><span class="tool-tag">#prototyping</span></div>
+      <div class="card-footer">
+        <a href="https://www.figma.com/ai" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Figma AI">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="./tool/figma-ai/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="luma-dream-machine"
+         data-name="luma dream machine"
+         data-slug="luma-dream-machine"
+         data-desc="high-speed realistic video generation model creating physically consistent camera moves and smooth motion."
+         data-categories="video-generation"
+         data-tags="video-generation,3d,animation,motion"
+         data-pricing="freemium"
+         data-platforms="web,ios"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="luma-dream-machine" onclick="toggleFavorite(event, 'luma-dream-machine')" aria-label="Bookmark Luma Dream Machine" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #d97706 0%, #ea580c 100%); color: #ffffff;">L</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="./tool/luma-dream-machine/" class="tool-title">Luma Dream Machine</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web, Ios</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">High-speed realistic video generation model creating physically consistent camera moves and smooth motion.</p>
+      <div class="tool-tags"><span class="tool-tag">#video-generation</span><span class="tool-tag">#3d</span><span class="tool-tag">#animation</span></div>
+      <div class="card-footer">
+        <a href="https://lumalabs.ai/dream-machine" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Luma Dream Machine">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="./tool/luma-dream-machine/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="zapier-central"
+         data-name="zapier central"
+         data-slug="zapier-central"
+         data-desc="experimental ai agent workspace that connects llms to 6,000+ business applications with live data access."
+         data-categories="productivity-automation,agents-workflows,nocode-lowcode"
+         data-tags="automation,agents,no-code,productivity,integrations"
+         data-pricing="freemium"
+         data-platforms="web,browser-extension"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="zapier-central" onclick="toggleFavorite(event, 'zapier-central')" aria-label="Bookmark Zapier Central" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); color: #ffffff;">Z</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="./tool/zapier-central/" class="tool-title">Zapier Central</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web, Browser-extension</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Experimental AI agent workspace that connects LLMs to 6,000+ business applications with live data access.</p>
+      <div class="tool-tags"><span class="tool-tag">#automation</span><span class="tool-tag">#agents</span><span class="tool-tag">#no-code</span></div>
+      <div class="card-footer">
+        <a href="https://zapier.com/central" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Zapier Central">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="./tool/zapier-central/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="deepseek"
+         data-name="deepseek"
+         data-slug="deepseek"
+         data-desc="high-efficiency open-weights reasoning and coding model with exceptional mathematical and programming prowess."
+         data-categories="chatbots-assistants,coding-development,opensource-models-platforms"
+         data-tags="reasoning,coding,open-source,local-llm,math"
+         data-pricing="freemium"
+         data-platforms="web,android,ios,api"
+         data-oss="true">
+      <button class="card-fav-btn" data-tool-id="deepseek" onclick="toggleFavorite(event, 'deepseek')" aria-label="Bookmark DeepSeek" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">D</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="./tool/deepseek/" class="tool-title">DeepSeek</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web, Android, Ios</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">High-efficiency open-weights reasoning and coding model with exceptional mathematical and programming prowess.</p>
+      <div class="tool-tags"><span class="tool-tag">#reasoning</span><span class="tool-tag">#coding</span><span class="tool-tag">#open-source</span></div>
+      <div class="card-footer">
+        <a href="https://www.deepseek.com" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for DeepSeek">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="./tool/deepseek/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Callout -->
+    <section class="section" style="padding: 4rem 0;">
+      <div class="container">
+        <div style="background: var(--brand-gradient-subtle); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: 3rem; text-align: center; max-width: 900px; margin: 0 auto;">
+          <h2 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem;">Are You Building an AI Tool?</h2>
+          <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1.5rem; line-height: 1.6;">
+            We maintain an open-source, community-driven database. Submit your AI tool via a GitHub pull request. Zero listing fees, zero paid sponsorship bias.
+          </p>
+          <a href="./contact/" class="btn btn-primary">Submit Your Tool For Review &UpperRightArrow;</a>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1.25rem;">
+            <img src="./static/img/logo.png" alt="AI Tools Directory Logo" class="brand-icon-img" width="40" height="40">
+            <span>AI Tools Directory</span>
+          </div>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary); max-width: 320px; margin-bottom: 1.25rem; line-height: 1.6;">
+            The premier independent, fact-checked directory of verified AI software, open models, and developer assistants.
+          </p>
+          <div style="font-size: 0.8125rem; color: var(--text-muted);">
+            Zero sponsored bias. 100% verified facts.
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Directory Index</h4>
+          <ul class="footer-links">
+            <li><a href="./tools/">Complete Directory</a></li>
+            <li><a href="./collections/">Curated Collections</a></li>
+            <li><a href="./category/coding-development/">Coding & Dev Tools</a></li>
+            <li><a href="./category/chatbots-assistants/">Conversational LLMs</a></li>
+            <li><a href="./category/opensource-models-platforms/">Open-Source AI</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Editorial & Guides</h4>
+          <ul class="footer-links">
+            <li><a href="./blog/">Guides & Tutorials</a></li>
+            <li><a href="./blog/top-ai-coding-assistants-2026/">Top Coding Assistants 2026</a></li>
+            <li><a href="./blog/running-open-source-llms-locally-with-ollama/">Running Local LLMs</a></li>
+            <li><a href="./data/manifest.json">Static API Manifest</a></li>
+            <li><a href="./sitemap.xml">XML Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Transparency</h4>
+          <ul class="footer-links">
+            <li><a href="./about/">About the Directory</a></li>
+            <li><a href="./contact/">Submit a Tool</a></li>
+            <li><a href="./privacy/">Privacy Policy</a></li>
+            <li><a href="./terms/">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AI Tools Directory. Built with zero-cost static architecture.</div>
+        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+          <span>Android App: <code>in.ni18.aitoolsdirectory</code></span>
+          <span>Hosted on GitHub Pages</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.__SITE_BASE_URL__ = ".";
+  </script>
+  <script src="./static/js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('./sw.js').catch(function() {});
+      });
+    }
+  </script>
+</body>
+</html>

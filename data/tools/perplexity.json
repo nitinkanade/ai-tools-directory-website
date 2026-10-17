@@ -1,0 +1,84 @@
+{
+  "id": "perplexity",
+  "name": "Perplexity",
+  "slug": "perplexity",
+  "shortDescription": "AI-powered conversational search engine delivering real-time answers backed by transparent, clickable citations.",
+  "description": "Perplexity AI is an answer engine designed to replace traditional search queries with synthesized, conversational responses grounded in real-time web citations. It lets users focus queries across academic papers, YouTube, Reddit, or computational domains, offering transparent source verification for every claim.",
+  "categories": [
+    "chatbots-assistants",
+    "research-knowledge",
+    "productivity-automation"
+  ],
+  "subcategories": [
+    "research-search",
+    "paper-discovery"
+  ],
+  "tags": [
+    "search",
+    "citations",
+    "research",
+    "assistant",
+    "web-search"
+  ],
+  "websiteUrl": "https://www.perplexity.ai",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free unlimited Quick searches; Pro tier ($20/mo) includes 300+ daily Pro queries with model switching (Claude, GPT-4o, Sonar).",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "android",
+    "ios",
+    "macos",
+    "windows",
+    "browser-extension"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Direct inline citations for every factual claim",
+    "Pro Search with interactive follow-up clarification questions",
+    "Focus modes: Academic, Writing, Computational, YouTube, Reddit",
+    "Perplexity Pages for sharing structured research dossiers"
+  ],
+  "useCases": [
+    "Fact-checking news and current events",
+    "Academic paper discovery and literature summaries",
+    "Product comparison and purchasing research"
+  ],
+  "alternatives": [
+    "chatgpt",
+    "elicit",
+    "consensus"
+  ],
+  "relatedTools": [
+    "elicit",
+    "chatgpt"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "English",
+    "Spanish",
+    "German",
+    "French",
+    "Japanese"
+  ],
+  "accountRequired": false,
+  "limitations": [
+    "Occasional paywalled articles cannot be indexed directly",
+    "Pro search rate limits apply on peak usage"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://www.perplexity.ai"
+  ],
+  "createdAt": "2022-08-01",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Perplexity AI — Conversational Search Engine with Real-Time Citations",
+    "description": "Learn about Perplexity AI search, Pro research features, pricing, and mobile apps."
+  }
+}

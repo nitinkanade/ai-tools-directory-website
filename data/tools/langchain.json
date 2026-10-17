@@ -1,0 +1,80 @@
+{
+  "id": "langchain",
+  "name": "LangChain",
+  "slug": "langchain",
+  "shortDescription": "Leading open-source framework for building context-aware reasoning applications and autonomous agent pipelines.",
+  "description": "LangChain is a widely adopted open-source orchestration framework designed to help software engineers build applications with large language models. It provides modular abstractions for prompt templates, document loaders, vector store embeddings, memory retention, tool-calling interfaces, and complex LangGraph state machines.",
+  "categories": [
+    "agents-workflows",
+    "coding-development",
+    "opensource-models-platforms"
+  ],
+  "subcategories": [
+    "agent-frameworks",
+    "developer-sdks"
+  ],
+  "tags": [
+    "open-source",
+    "agents",
+    "framework",
+    "python",
+    "typescript",
+    "sdk"
+  ],
+  "websiteUrl": "https://www.langchain.com",
+  "pricing": {
+    "model": "open-source",
+    "details": "Core framework is 100% free and open-source under MIT license; LangSmith observability platform offers generous free tier and paid enterprise plans.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "linux",
+    "macos",
+    "windows",
+    "api"
+  ],
+  "isOpenSource": true,
+  "sourceCodeUrl": "https://github.com/langchain-ai/langchain",
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Comprehensive Python and TypeScript SDK implementations",
+    "Hundreds of pre-built integrations for LLMs, vector databases, and tools",
+    "LangGraph for cyclical agent workflows, human-in-the-loop, and persistence",
+    "Ecosystem observability with LangSmith tracing and evaluation"
+  ],
+  "useCases": [
+    "Building enterprise Retrieval-Augmented Generation (RAG) knowledge systems",
+    "Orchestrating multi-agent systems with tool invocation and shared memory",
+    "Deploying production AI microservices with end-to-end tracing"
+  ],
+  "alternatives": [
+    "crewai",
+    "dify"
+  ],
+  "relatedTools": [
+    "crewai",
+    "ollama",
+    "hugging-face"
+  ],
+  "languageSupport": [
+    "Python",
+    "TypeScript",
+    "JavaScript"
+  ],
+  "accountRequired": false,
+  "limitations": [
+    "Rapid API evolution in early versions required codebase migrations",
+    "Can introduce unnecessary abstraction layers for simple single-prompt tasks"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://github.com/langchain-ai/langchain"
+  ],
+  "createdAt": "2022-10-25",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "LangChain — Open-Source Framework for LLM & Agent Applications",
+    "description": "Build agentic AI applications with LangChain and LangGraph. Architecture, docs, and code."
+  }
+}

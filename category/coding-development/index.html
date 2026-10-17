@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding &amp; Software Development AI Tools | AI Tools Directory</title>
+  <meta name="description" content="AI code generators, IDE extensions, autonomous software engineering agents, and debugging assistants.">
+  <link rel="canonical" href="https://nitinkanade.github.io/ai-tools-directory-website/category/coding-development/">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nitinkanade.github.io/ai-tools-directory-website/category/coding-development/">
+  <meta property="og:title" content="Coding &amp; Software Development AI Tools | AI Tools Directory">
+  <meta property="og:description" content="AI code generators, IDE extensions, autonomous software engineering agents, and debugging assistants.">
+  <meta property="og:site_name" content="AI Tools Directory">
+  <meta property="og:image" content="https://nitinkanade.github.io/ai-tools-directory-website/static/img/playstore-icon.png">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://nitinkanade.github.io/ai-tools-directory-website/category/coding-development/">
+  <meta name="twitter:title" content="Coding &amp; Software Development AI Tools | AI Tools Directory">
+  <meta name="twitter:description" content="AI code generators, IDE extensions, autonomous software engineering agents, and debugging assistants.">
+  <meta name="twitter:image" content="https://nitinkanade.github.io/ai-tools-directory-website/static/img/playstore-icon.png">
+
+  <!-- Favicons & Brand Icons -->
+  <link rel="icon" type="image/x-icon" href="../../static/img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../static/img/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../static/img/apple-touch-icon.png">
+
+  <!-- Fonts & Styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/css/styles.css">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="manifest" href="../../manifest.webmanifest">
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Coding & Software Development — AI Tools", "description": "AI code generators, IDE extensions, autonomous software engineering agents, and debugging assistants.", "url": "https://nitinkanade.github.io/ai-tools-directory-website/category/coding-development/"}</script>
+
+  <script>
+    // Zero-flicker theme initialization
+    (function() {
+      const saved = localStorage.getItem('ai_tools_dir_theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Global Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../../" class="brand-logo" aria-label="AI Tools Directory Homepage">
+        <img src="../../static/img/logo.png" alt="AI Tools Directory Logo" class="brand-icon-img" width="38" height="38">
+        <span class="brand-title">AI Tools Directory</span>
+        <span class="brand-badge">v1.0 Verified</span>
+      </a>
+
+      <nav aria-label="Main navigation" class="desktop-nav">
+        <ul class="nav-links">
+          <li><a href="../../" class="nav-link ">Home</a></li>
+          <li><a href="../../tools/" class="nav-link ">Directory</a></li>
+          <li><a href="../../collections/" class="nav-link ">Collections</a></li>
+          <li><a href="../../blog/" class="nav-link ">Guides & Blog</a></li>
+          <li><a href="../../about/" class="nav-link ">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Universal Spotlight Trigger -->
+        <button id="quick-search-trigger" class="quick-search-trigger" onclick="openSpotlight()" aria-label="Quick Search" title="Search all tools (Ctrl+K)">
+          <svg class="search-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-trigger-text">Search...</span>
+          <span class="kbd-shortcut">Ctrl+K</span>
+        </button>
+
+        <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <svg class="theme-moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button id="mobile-hamburger-btn" class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-backdrop" onclick="toggleMobileMenu()"></div>
+    <div class="mobile-drawer-content">
+      <div class="mobile-search-banner">
+        <button class="mobile-search-btn" onclick="toggleMobileMenu(); openSpotlight();">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search 40+ AI tools...</span>
+          <span class="kbd-shortcut">Ctrl+K</span>
+        </button>
+      </div>
+
+      <ul class="mobile-nav-links">
+        <li>
+          <a href="../../" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#127968;</span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="../../tools/" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#9889;</span>
+            <span>All AI Tools</span>
+            <span class="mobile-count-pill">40+</span>
+          </a>
+        </li>
+        <li>
+          <a href="../../collections/" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#10024;</span>
+            <span>Curated Collections</span>
+          </a>
+        </li>
+        <li>
+          <a href="../../blog/" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#128218;</span>
+            <span>Guides & Tutorials</span>
+          </a>
+        </li>
+        <li>
+          <a href="../../about/" class="mobile-nav-link " onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#8505;&#65039;</span>
+            <span>About & Methodology</span>
+          </a>
+        </li>
+        <li>
+          <a href="../../contact/" class="mobile-nav-link" onclick="toggleMobileMenu()">
+            <span class="mobile-nav-icon">&#10133;</span>
+            <span>Submit a Tool</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="mobile-drawer-categories">
+        <div class="mobile-drawer-cat-title">Popular Categories</div>
+        <div class="mobile-drawer-cat-pills">
+          <a href="../../category/coding-development/" class="cat-pill" onclick="toggleMobileMenu()">Coding & IDEs</a>
+          <a href="../../category/chatbots-assistants/" class="cat-pill" onclick="toggleMobileMenu()">Conversational LLMs</a>
+          <a href="../../category/image-generation/" class="cat-pill" onclick="toggleMobileMenu()">Image & Creative</a>
+          <a href="../../category/opensource-models-platforms/" class="cat-pill" onclick="toggleMobileMenu()">Open-Source AI</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Universal Spotlight Search Modal -->
+  <div id="spotlight-modal" class="spotlight-modal" style="display: none;" role="dialog" aria-modal="true" aria-label="Search AI Tools">
+    <div class="spotlight-backdrop" onclick="closeSpotlight()"></div>
+    <div class="spotlight-panel">
+      <div class="spotlight-input-wrap">
+        <svg class="spotlight-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="spotlight-input" class="spotlight-input" placeholder="Type a tool name, coding, reasoning, pricing, or tag..." autocomplete="off">
+        <button id="spotlight-clear-btn" class="spotlight-clear-btn" aria-label="Clear Search" onclick="clearSpotlightInput()">&times;</button>
+        <button class="spotlight-close-btn" onclick="closeSpotlight()" aria-label="Close search">Esc</button>
+      </div>
+
+      <div id="spotlight-suggestions" class="spotlight-quick-tags">
+        <span class="quick-tags-label">Quick:</span>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('coding')">Coding</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('chat')">Chatbots</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('image')">Image</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('open-source')">Open Source</button>
+        <button class="spotlight-tag" onclick="setSpotlightQuery('free')">Free Tier</button>
+      </div>
+
+      <div id="spotlight-results" class="spotlight-results">
+        <!-- Rendered dynamically by JS -->
+      </div>
+
+      <div class="spotlight-footer">
+        <div class="spotlight-footer-shortcuts">
+          <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> Navigate</span>
+          <span><kbd>&crarr;</kbd> Select</span>
+          <span><kbd>Esc</kbd> Close</span>
+        </div>
+        <a href="../../tools/" class="spotlight-view-all">All Tools &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Page Content -->
+  <main id="main-content">
+    
+        <div class="container" style="padding: 3.5rem 1.5rem 5rem;">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="../../">Home</a> &rsaquo;
+            <a href="../../tools/">Categories</a> &rsaquo;
+            <span>Coding &amp; Software Development</span>
+          </nav>
+
+          <div style="margin-bottom: 3rem; max-width: 860px;">
+            <h1 class="section-title" style="font-size: 2.5rem; margin-bottom: 0.85rem;">Coding &amp; Software Development</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.6;">
+              Tools and IDE plugins designed to assist software developers with code autocomplete, automated testing, refactoring, code review, documentation generation, and terminal command assistance.
+            </p>
+            
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.25rem;">
+              <span class="filter-chip">AI Code Editors &amp; Extensions</span><span class="filter-chip">CLI &amp; Autonomous Agents</span><span class="filter-chip">Debugging &amp; Testing</span>
+            </div>
+          </div>
+
+          <div style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.75rem; font-weight: 700;">
+            13 verified AI tools in this category
+          </div>
+
+          <div class="grid-tools">
+            
+    <div class="tool-card tool-card-item" 
+         data-id="bolt-new"
+         data-name="bolt.new"
+         data-slug="bolt-new"
+         data-desc="in-browser ai web development agent powered by webcontainers that builds, runs, and deploys full-stack web applications."
+         data-categories="coding-development,design-ui-ux"
+         data-tags="agent,autocomplete,coding,developer-tools,frontend,open-source,prototyping,react,typescript,ui-ux,web-search"
+         data-pricing="freemium"
+         data-platforms="web"
+         data-oss="true">
+      <button class="card-fav-btn" data-tool-id="bolt-new" onclick="toggleFavorite(event, 'bolt-new')" aria-label="Bookmark Bolt.new" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">B</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/bolt-new/" class="tool-title">Bolt.new</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">In-browser AI web development agent powered by WebContainers that builds, runs, and deploys full-stack web applications.</p>
+      <div class="tool-tags"><span class="tool-tag">#agent</span><span class="tool-tag">#autocomplete</span><span class="tool-tag">#coding</span></div>
+      <div class="card-footer">
+        <a href="https://bolt.new" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Bolt.new">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/bolt-new/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="chatgpt"
+         data-name="chatgpt"
+         data-slug="chatgpt"
+         data-desc="general-purpose conversational ai assistant developed by openai with reasoning, voice, and multimodal capabilities."
+         data-categories="chatbots-assistants,writing-content,coding-development"
+         data-tags="chat,assistant,reasoning,coding,writing,multimodal"
+         data-pricing="freemium"
+         data-platforms="web,android,ios,macos,windows"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="chatgpt" onclick="toggleFavorite(event, 'chatgpt')" aria-label="Bookmark ChatGPT" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">C</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/chatgpt/" class="tool-title">ChatGPT</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web, Android, Ios</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">General-purpose conversational AI assistant developed by OpenAI with reasoning, voice, and multimodal capabilities.</p>
+      <div class="tool-tags"><span class="tool-tag">#chat</span><span class="tool-tag">#assistant</span><span class="tool-tag">#reasoning</span></div>
+      <div class="card-footer">
+        <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for ChatGPT">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/chatgpt/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="claude-code"
+         data-name="claude code"
+         data-slug="claude-code"
+         data-desc="anthropic&#x27;s agentic cli tool that searches repositories, edits code across files, and executes tests directly in the terminal."
+         data-categories="coding-development,agents-workflows"
+         data-tags="cli,terminal,agents,coding,git"
+         data-pricing="paid"
+         data-platforms="macos,linux,windows"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="claude-code" onclick="toggleFavorite(event, 'claude-code')" aria-label="Bookmark Claude Code" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">C</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/claude-code/" class="tool-title">Claude Code</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-paid">paid</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Macos, Linux, Windows</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Anthropic&#x27;s agentic CLI tool that searches repositories, edits code across files, and executes tests directly in the terminal.</p>
+      <div class="tool-tags"><span class="tool-tag">#cli</span><span class="tool-tag">#terminal</span><span class="tool-tag">#agents</span></div>
+      <div class="card-footer">
+        <a href="https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Claude Code">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/claude-code/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="claude"
+         data-name="claude"
+         data-slug="claude"
+         data-desc="anthropic&#x27;s advanced ai assistant built for nuanced reasoning, extensive writing, coding, and large context windows."
+         data-categories="chatbots-assistants,coding-development,writing-content"
+         data-tags="chat,assistant,reasoning,coding,artifacts,long-context"
+         data-pricing="freemium"
+         data-platforms="web,android,ios,macos,windows,api"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="claude" onclick="toggleFavorite(event, 'claude')" aria-label="Bookmark Claude" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">C</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/claude/" class="tool-title">Claude</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web, Android, Ios</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Anthropic&#x27;s advanced AI assistant built for nuanced reasoning, extensive writing, coding, and large context windows.</p>
+      <div class="tool-tags"><span class="tool-tag">#chat</span><span class="tool-tag">#assistant</span><span class="tool-tag">#reasoning</span></div>
+      <div class="card-footer">
+        <a href="https://claude.ai" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Claude">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/claude/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="crewai"
+         data-name="crewai"
+         data-slug="crewai"
+         data-desc="multi-agent orchestration framework enabling autonomous role-playing ai agents to collaborate on complex goals."
+         data-categories="agents-workflows,coding-development"
+         data-tags="agents,multi-agent,automation,python,open-source"
+         data-pricing="freemium"
+         data-platforms="linux,macos,windows,api"
+         data-oss="true">
+      <button class="card-fav-btn" data-tool-id="crewai" onclick="toggleFavorite(event, 'crewai')" aria-label="Bookmark CrewAI" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">C</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/crewai/" class="tool-title">CrewAI</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Linux, Macos, Windows</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Multi-agent orchestration framework enabling autonomous role-playing AI agents to collaborate on complex goals.</p>
+      <div class="tool-tags"><span class="tool-tag">#agents</span><span class="tool-tag">#multi-agent</span><span class="tool-tag">#automation</span></div>
+      <div class="card-footer">
+        <a href="https://www.crewai.com" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for CrewAI">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/crewai/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="cursor"
+         data-name="cursor"
+         data-slug="cursor"
+         data-desc="ai-first code editor fork of vs code engineered for whole-codebase indexing, multi-file edits, and agentic workflows."
+         data-categories="coding-development,agents-workflows"
+         data-tags="coding,ide,agent,autocomplete,vscode"
+         data-pricing="freemium"
+         data-platforms="windows,macos,linux"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="cursor" onclick="toggleFavorite(event, 'cursor')" aria-label="Bookmark Cursor" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">C</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/cursor/" class="tool-title">Cursor</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Windows, Macos, Linux</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">AI-first code editor fork of VS Code engineered for whole-codebase indexing, multi-file edits, and agentic workflows.</p>
+      <div class="tool-tags"><span class="tool-tag">#coding</span><span class="tool-tag">#ide</span><span class="tool-tag">#agent</span></div>
+      <div class="card-footer">
+        <a href="https://www.cursor.com" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Cursor">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/cursor/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="deepseek"
+         data-name="deepseek"
+         data-slug="deepseek"
+         data-desc="high-efficiency open-weights reasoning and coding model with exceptional mathematical and programming prowess."
+         data-categories="chatbots-assistants,coding-development,opensource-models-platforms"
+         data-tags="reasoning,coding,open-source,local-llm,math"
+         data-pricing="freemium"
+         data-platforms="web,android,ios,api"
+         data-oss="true">
+      <button class="card-fav-btn" data-tool-id="deepseek" onclick="toggleFavorite(event, 'deepseek')" aria-label="Bookmark DeepSeek" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">D</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/deepseek/" class="tool-title">DeepSeek</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web, Android, Ios</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">High-efficiency open-weights reasoning and coding model with exceptional mathematical and programming prowess.</p>
+      <div class="tool-tags"><span class="tool-tag">#reasoning</span><span class="tool-tag">#coding</span><span class="tool-tag">#open-source</span></div>
+      <div class="card-footer">
+        <a href="https://www.deepseek.com" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for DeepSeek">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/deepseek/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="github-copilot"
+         data-name="github copilot"
+         data-slug="github-copilot"
+         data-desc="pioneering ai pair programmer providing code completions, cli suggestions, and in-editor chat across major ides."
+         data-categories="coding-development,productivity-automation"
+         data-tags="coding,autocomplete,copilot,ide,developer-tools"
+         data-pricing="paid"
+         data-platforms="web,windows,macos,linux,api"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="github-copilot" onclick="toggleFavorite(event, 'github-copilot')" aria-label="Bookmark GitHub Copilot" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">G</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/github-copilot/" class="tool-title">GitHub Copilot</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-paid">paid</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web, Windows, Macos</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Pioneering AI pair programmer providing code completions, CLI suggestions, and in-editor chat across major IDEs.</p>
+      <div class="tool-tags"><span class="tool-tag">#coding</span><span class="tool-tag">#autocomplete</span><span class="tool-tag">#copilot</span></div>
+      <div class="card-footer">
+        <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for GitHub Copilot">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/github-copilot/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="hugging-face"
+         data-name="hugging face"
+         data-slug="hugging-face"
+         data-desc="the central open-source collaboration hub for ai models, datasets, demo spaces, and developer libraries."
+         data-categories="opensource-models-platforms,coding-development"
+         data-tags="open-source,models,datasets,transformers,machine-learning"
+         data-pricing="freemium"
+         data-platforms="web,linux,macos,windows,api"
+         data-oss="true">
+      <button class="card-fav-btn" data-tool-id="hugging-face" onclick="toggleFavorite(event, 'hugging-face')" aria-label="Bookmark Hugging Face" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">H</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/hugging-face/" class="tool-title">Hugging Face</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web, Linux, Macos</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">The central open-source collaboration hub for AI models, datasets, demo spaces, and developer libraries.</p>
+      <div class="tool-tags"><span class="tool-tag">#open-source</span><span class="tool-tag">#models</span><span class="tool-tag">#datasets</span></div>
+      <div class="card-footer">
+        <a href="https://huggingface.co" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Hugging Face">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/hugging-face/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="langchain"
+         data-name="langchain"
+         data-slug="langchain"
+         data-desc="leading open-source framework for building context-aware reasoning applications and autonomous agent pipelines."
+         data-categories="agents-workflows,coding-development,opensource-models-platforms"
+         data-tags="open-source,agents,framework,python,typescript,sdk"
+         data-pricing="open-source"
+         data-platforms="linux,macos,windows,api"
+         data-oss="true">
+      <button class="card-fav-btn" data-tool-id="langchain" onclick="toggleFavorite(event, 'langchain')" aria-label="Bookmark LangChain" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">L</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/langchain/" class="tool-title">LangChain</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-oss">open-source</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Linux, Macos, Windows</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Leading open-source framework for building context-aware reasoning applications and autonomous agent pipelines.</p>
+      <div class="tool-tags"><span class="tool-tag">#open-source</span><span class="tool-tag">#agents</span><span class="tool-tag">#framework</span></div>
+      <div class="card-footer">
+        <a href="https://www.langchain.com" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for LangChain">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/langchain/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="ollama"
+         data-name="ollama"
+         data-slug="ollama"
+         data-desc="lightweight open-source tool that lets you run large language models locally on macos, linux, and windows."
+         data-categories="opensource-models-platforms,coding-development,chatbots-assistants"
+         data-tags="local-llm,open-source,cli,terminal,privacy,mac,windows,linux"
+         data-pricing="open-source"
+         data-platforms="macos,linux,windows"
+         data-oss="true">
+      <button class="card-fav-btn" data-tool-id="ollama" onclick="toggleFavorite(event, 'ollama')" aria-label="Bookmark Ollama" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">O</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/ollama/" class="tool-title">Ollama</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-oss">open-source</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Macos, Linux, Windows</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Lightweight open-source tool that lets you run large language models locally on macOS, Linux, and Windows.</p>
+      <div class="tool-tags"><span class="tool-tag">#local-llm</span><span class="tool-tag">#open-source</span><span class="tool-tag">#cli</span></div>
+      <div class="card-footer">
+        <a href="https://ollama.com" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for Ollama">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/ollama/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="v0"
+         data-name="v0 by vercel"
+         data-slug="v0"
+         data-desc="generative frontend design and code system that converts text prompts and screenshots into production-ready react ui."
+         data-categories="design-ui-ux,coding-development"
+         data-tags="ui-ux,frontend,react,tailwind,design"
+         data-pricing="freemium"
+         data-platforms="web"
+         data-oss="false">
+      <button class="card-fav-btn" data-tool-id="v0" onclick="toggleFavorite(event, 'v0')" aria-label="Bookmark v0 by Vercel" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">V</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/v0/" class="tool-title">v0 by Vercel</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-freemium">freemium</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Web</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">Generative frontend design and code system that converts text prompts and screenshots into production-ready React UI.</p>
+      <div class="tool-tags"><span class="tool-tag">#ui-ux</span><span class="tool-tag">#frontend</span><span class="tool-tag">#react</span></div>
+      <div class="card-footer">
+        <a href="https://v0.dev" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for v0 by Vercel">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/v0/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+    <div class="tool-card tool-card-item" 
+         data-id="vllm"
+         data-name="vllm"
+         data-slug="vllm"
+         data-desc="high-throughput and memory-efficient llm serving engine powered by pagedattention algorithms."
+         data-categories="opensource-models-platforms,coding-development"
+         data-tags="inference,serving,open-source,python,pagedattention,cuda"
+         data-pricing="open-source"
+         data-platforms="linux"
+         data-oss="true">
+      <button class="card-fav-btn" data-tool-id="vllm" onclick="toggleFavorite(event, 'vllm')" aria-label="Bookmark vLLM" title="Save tool">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </button>
+      <div class="card-header">
+        <div class="tool-monogram" style="background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%); color: #ffffff;">V</div>
+        <div class="tool-header-content">
+          <div class="tool-name-wrap">
+            <a href="../../tool/vllm/" class="tool-title">vLLM</a>
+            <span class="verified-badge" title="Factually Verified by Editors">&#x2714;</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; margin-top: 0.35rem; flex-wrap: wrap;">
+            <span class="badge badge-oss">open-source</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">&bull; Linux</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-short-desc">High-throughput and memory-efficient LLM serving engine powered by PagedAttention algorithms.</p>
+      <div class="tool-tags"><span class="tool-tag">#inference</span><span class="tool-tag">#serving</span><span class="tool-tag">#open-source</span></div>
+      <div class="card-footer">
+        <a href="https://vllm.ai" target="_blank" rel="noopener noreferrer" class="tool-visit-link" title="Visit official site for vLLM">
+          Visit &UpperRightArrow;
+        </a>
+        <a href="../../tool/vllm/" class="view-all-link" style="font-size: 0.8125rem;">Explore Tool &rarr;</a>
+      </div>
+    </div>
+          </div>
+        </div>
+        
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1.25rem;">
+            <img src="../../static/img/logo.png" alt="AI Tools Directory Logo" class="brand-icon-img" width="40" height="40">
+            <span>AI Tools Directory</span>
+          </div>
+          <p style="font-size: 0.9375rem; color: var(--text-secondary); max-width: 320px; margin-bottom: 1.25rem; line-height: 1.6;">
+            The premier independent, fact-checked directory of verified AI software, open models, and developer assistants.
+          </p>
+          <div style="font-size: 0.8125rem; color: var(--text-muted);">
+            Zero sponsored bias. 100% verified facts.
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Directory Index</h4>
+          <ul class="footer-links">
+            <li><a href="../../tools/">Complete Directory</a></li>
+            <li><a href="../../collections/">Curated Collections</a></li>
+            <li><a href="../../category/coding-development/">Coding & Dev Tools</a></li>
+            <li><a href="../../category/chatbots-assistants/">Conversational LLMs</a></li>
+            <li><a href="../../category/opensource-models-platforms/">Open-Source AI</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Editorial & Guides</h4>
+          <ul class="footer-links">
+            <li><a href="../../blog/">Guides & Tutorials</a></li>
+            <li><a href="../../blog/top-ai-coding-assistants-2026/">Top Coding Assistants 2026</a></li>
+            <li><a href="../../blog/running-open-source-llms-locally-with-ollama/">Running Local LLMs</a></li>
+            <li><a href="../../data/manifest.json">Static API Manifest</a></li>
+            <li><a href="../../sitemap.xml">XML Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Transparency</h4>
+          <ul class="footer-links">
+            <li><a href="../../about/">About the Directory</a></li>
+            <li><a href="../../contact/">Submit a Tool</a></li>
+            <li><a href="../../privacy/">Privacy Policy</a></li>
+            <li><a href="../../terms/">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AI Tools Directory. Built with zero-cost static architecture.</div>
+        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+          <span>Android App: <code>in.ni18.aitoolsdirectory</code></span>
+          <span>Hosted on GitHub Pages</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.__SITE_BASE_URL__ = "../..";
+  </script>
+  <script src="../../static/js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('../../sw.js').catch(function() {});
+      });
+    }
+  </script>
+</body>
+</html>

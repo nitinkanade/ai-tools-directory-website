@@ -1,0 +1,77 @@
+{
+  "id": "stable-diffusion-webui",
+  "name": "Stable Diffusion WebUI",
+  "slug": "stable-diffusion-webui",
+  "shortDescription": "Browser interface for open-source Stable Diffusion models with full local control, LoRA, and ControlNet support.",
+  "description": "AUTOMATIC1111's Stable Diffusion WebUI is an open-source browser interface for running Stability AI models locally. It provides complete parameter control over CFG scale, sampling steps, LoRA weights, negative prompts, inpainting, upscalers, and ControlNet guidance without cloud fees or censorship.",
+  "categories": [
+    "image-generation",
+    "opensource-models-platforms"
+  ],
+  "subcategories": [
+    "text-to-image",
+    "photo-editing",
+    "local-runtimes"
+  ],
+  "tags": [
+    "image-generation",
+    "open-source",
+    "local-llm",
+    "diffusion",
+    "art"
+  ],
+  "websiteUrl": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+  "pricing": {
+    "model": "open-source",
+    "details": "100% free and open-source under AGPL-3.0 license. Requires a GPU for local hardware execution.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "isOpenSource": true,
+  "sourceCodeUrl": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Full parameter control over sampling methods, steps, and denoising strength",
+    "LoRA and textual inversion model fine-tuning support",
+    "ControlNet integration for pose, depth, and edge-guided generation",
+    "Completely offline and private execution on consumer GPUs"
+  ],
+  "useCases": [
+    "Offline private image generation without telemetry or subscription fees",
+    "Custom character consistency using fine-tuned LoRAs",
+    "Precision commercial illustration using ControlNet wireframes"
+  ],
+  "alternatives": [
+    "midjourney",
+    "canva-magic-studio"
+  ],
+  "relatedTools": [
+    "midjourney",
+    "hugging-face"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "English",
+    "Chinese"
+  ],
+  "accountRequired": false,
+  "limitations": [
+    "Requires modern dedicated NVIDIA or Apple Silicon GPU with at least 8GB VRAM",
+    "Steeper learning curve for configuration and model management"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://github.com/AUTOMATIC1111/stable-diffusion-webui"
+  ],
+  "createdAt": "2022-09-01",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Stable Diffusion WebUI — Free Open-Source Local Image Generation",
+    "description": "Download and run Stable Diffusion locally with AUTOMATIC1111. Setup guide and features."
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "canva-magic-studio",
+  "name": "Canva Magic Studio",
+  "slug": "canva-magic-studio",
+  "shortDescription": "Accessible AI creative suite for generating social graphics, removing backgrounds, and translating presentations.",
+  "description": "Canva Magic Studio brings generative AI to non-designers and small businesses. It features Magic Design for instant social posts and presentation slides, Magic Switch to convert documents into different formats and languages, Magic Media for image and video synthesis, and one-click object erasers.",
+  "categories": [
+    "design-ui-ux",
+    "image-generation",
+    "presentations-documents"
+  ],
+  "subcategories": [
+    "graphic-design",
+    "photo-editing",
+    "slide-generators"
+  ],
+  "tags": [
+    "design",
+    "social-media",
+    "photo-editing",
+    "presentations",
+    "graphics"
+  ],
+  "websiteUrl": "https://www.canva.com/magic-studio",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free plan with basic Magic tools; Canva Pro ($120/year for 1 person) unlocks full Magic Studio usage and brand kits.",
+    "lastVerifiedAt": "2026-10-15"
+  },
+  "platforms": [
+    "web",
+    "android",
+    "ios",
+    "windows",
+    "macos"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Magic Design for generating customized social posts from a simple prompt",
+    "Magic Switch to convert a whiteboard brainstorming session into a doc or deck",
+    "Magic Eraser and Background Remover for photo cleanup",
+    "Multi-language automated layout translation while preserving typography"
+  ],
+  "useCases": [
+    "Creating daily branded Instagram and LinkedIn graphic posts",
+    "Quickly removing cluttered backgrounds from product e-commerce photos",
+    "Translating marketing brochures for international distributor campaigns"
+  ],
+  "alternatives": [
+    "figma-ai",
+    "midjourney"
+  ],
+  "relatedTools": [
+    "midjourney",
+    "figma-ai"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "100+ languages supported"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Simpler graphic fidelity compared to professional vector illustration suites",
+    "Heavy AI tools require Canva Pro subscription"
+  ],
+  "lastVerifiedAt": "2026-10-15",
+  "sourceReferences": [
+    "https://www.canva.com/magic-studio"
+  ],
+  "createdAt": "2023-10-04",
+  "updatedAt": "2026-10-15",
+  "seo": {
+    "title": "Canva Magic Studio — AI Graphic Design & Image Generation Suite",
+    "description": "Create social media graphics, remove backgrounds, and generate designs with Canva Magic."
+  }
+}
