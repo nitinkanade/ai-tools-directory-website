@@ -1,0 +1,75 @@
+{
+  "id": "lovable",
+  "name": "Lovable",
+  "slug": "lovable",
+  "shortDescription": "GPT Engineer powered full-stack web development agent that creates interactive web applications from prompt descriptions.",
+  "description": "Lovable (formerly GPT Engineer) is an autonomous full-stack web application builder created to turn natural language specifications into deployment-ready full-stack software. It supports frontend React, TypeScript, Tailwind CSS, and Supabase backend integrations, providing live code previews, automated GitHub synchronization, and one-click cloud hosting.",
+  "categories": [
+    "coding-development",
+    "design-ui-ux"
+  ],
+  "subcategories": [
+    "code-assistants",
+    "ui-generation"
+  ],
+  "tags": [
+    "agent",
+    "coding",
+    "developer-tools",
+    "frontend",
+    "prototyping",
+    "react",
+    "typescript",
+    "ui-ux"
+  ],
+  "websiteUrl": "https://lovable.dev",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free tier available with daily message allocations; paid monthly plans offer expanded message limits, private projects, and GitHub repository integration.",
+    "lastVerifiedAt": "2026-10-21"
+  },
+  "platforms": [
+    "web"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Natural language to full-stack web application scaffold and generation",
+    "Integrated live visual sandbox preview with real-time hot reloading",
+    "Automated backend integration supporting Supabase database tables and auth",
+    "Seamless GitHub repository export and bi-directional code syncing"
+  ],
+  "useCases": [
+    "Rapid prototyping of web MVPs, SaaS landing pages, and React web apps",
+    "Converting UI designs and natural language specs into production-ready frontend code"
+  ],
+  "alternatives": [
+    "bolt-new",
+    "v0"
+  ],
+  "relatedTools": [
+    "bolt-new",
+    "cursor",
+    "v0"
+  ],
+  "languageSupport": [
+    "English"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Free plan message quotas are limited for large iterative development workflows",
+    "Complex non-web backend architectures require external API integrations or manual code export"
+  ],
+  "lastVerifiedAt": "2026-10-21",
+  "sourceReferences": [
+    "https://lovable.dev"
+  ],
+  "createdAt": "2026-10-21",
+  "updatedAt": "2026-10-21",
+  "seo": {
+    "title": "Lovable — Autonomous AI Full-Stack Web Application Builder",
+    "description": "Build, iterate, and deploy full-stack web applications from natural language prompts using Lovable. Explore key features, pricing, and capabilities."
+  }
+}

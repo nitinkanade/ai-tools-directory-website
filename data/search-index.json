@@ -1,5 +1,37 @@
 [
   {
+    "id": "agent-qa",
+    "name": "agent-qa",
+    "slug": "agent-qa",
+    "shortDescription": "Natural-language web and mobile QA from vostride, with a memory engine, self-improvement, and evidence from test runs.",
+    "categories": [
+      "coding-development",
+      "agents-workflows"
+    ],
+    "tags": [
+      "agent",
+      "automation",
+      "cli",
+      "debugging",
+      "developer-tools",
+      "evidence",
+      "self-hosted",
+      "workflow"
+    ],
+    "features": [
+      "Natural-language QA for web, Android, and iOS user journeys",
+      "Persistent memory and self-improvement from validated test lessons",
+      "CLI, local web dashboard, and local stdio MCP integration",
+      "Retained test evidence for reviewing results"
+    ],
+    "pricingModel": "free",
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false
+  },
+  {
     "id": "bolt-new",
     "name": "Bolt.new",
     "slug": "bolt-new",
@@ -392,6 +424,38 @@
     "isFeatured": true
   },
   {
+    "id": "devin",
+    "name": "Devin",
+    "slug": "devin",
+    "shortDescription": "Autonomous AI software engineer by Cognition AI that plans, writes, tests, and deploys software in cloud virtual machines.",
+    "categories": [
+      "coding-development"
+    ],
+    "tags": [
+      "agent",
+      "autonomous",
+      "cli",
+      "coding",
+      "developer-tools"
+    ],
+    "features": [
+      "Autonomous end-to-end task execution in isolated VM sandboxes",
+      "Multi-model routing combining SWE-2, Claude, GPT, and Gemini models",
+      "Interactive browser testing with session video recording and playback",
+      "Integrations with GitHub, GitLab, Slack, Linear, and PagerDuty",
+      "Desktop app, CLI, and cloud-hosted web interface support"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web",
+      "macos",
+      "windows",
+      "linux"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false
+  },
+  {
     "id": "dify",
     "name": "Dify.ai",
     "slug": "dify",
@@ -769,6 +833,38 @@
     "isFeatured": true
   },
   {
+    "id": "lovable",
+    "name": "Lovable",
+    "slug": "lovable",
+    "shortDescription": "GPT Engineer powered full-stack web development agent that creates interactive web applications from prompt descriptions.",
+    "categories": [
+      "coding-development",
+      "design-ui-ux"
+    ],
+    "tags": [
+      "agent",
+      "coding",
+      "developer-tools",
+      "frontend",
+      "prototyping",
+      "react",
+      "typescript",
+      "ui-ux"
+    ],
+    "features": [
+      "Natural language to full-stack web application scaffold and generation",
+      "Integrated live visual sandbox preview with real-time hot reloading",
+      "Automated backend integration supporting Supabase database tables and auth",
+      "Seamless GitHub repository export and bi-directional code syncing"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true
+  },
+  {
     "id": "luma-dream-machine",
     "name": "Luma Dream Machine",
     "slug": "luma-dream-machine",
@@ -951,6 +1047,43 @@
     "platforms": [
       "macos",
       "linux",
+      "windows"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true
+  },
+  {
+    "id": "openhands",
+    "name": "OpenHands",
+    "slug": "openhands",
+    "shortDescription": "Open-source AI software engineering agent platform that executes code, runs terminal commands, and edits repositories autonomously.",
+    "categories": [
+      "coding-development",
+      "agents-workflows"
+    ],
+    "tags": [
+      "agent",
+      "agents",
+      "autonomous",
+      "cli",
+      "coding",
+      "developer-tools",
+      "open-source",
+      "python",
+      "terminal",
+      "workflow"
+    ],
+    "features": [
+      "Secure Docker-sandboxed execution environment for isolated code modification and bash execution",
+      "Autonomous software engineering agents capable of reproducing bugs, running unit tests, and creating pull requests",
+      "Web UI and CLI interfaces for interacting with agent workflows and inspecting execution logs",
+      "Multi-LLM integration supporting Anthropic Claude, OpenAI, Ollama local models, and custom endpoints"
+    ],
+    "pricingModel": "open-source",
+    "platforms": [
+      "web",
+      "linux",
+      "macos",
       "windows"
     ],
     "isOpenSource": true,
@@ -1259,6 +1392,38 @@
     ],
     "isOpenSource": true,
     "isFeatured": true
+  },
+  {
+    "id": "windsurf",
+    "name": "Windsurf",
+    "slug": "windsurf",
+    "shortDescription": "AI-first agentic IDE developed by Codeium with deep codebase context, Cascade agent, and multi-file editing capabilities.",
+    "categories": [
+      "coding-development",
+      "agents-workflows"
+    ],
+    "tags": [
+      "coding",
+      "ide",
+      "agent",
+      "autocomplete",
+      "developer-tools",
+      "vscode"
+    ],
+    "features": [
+      "Cascade AI agent for deep multi-file codebase understanding and execution",
+      "AI Flows for seamless transition between autonomous AI edits and human guidance",
+      "Integrated terminal execution for automated command execution and debugging",
+      "Real-time intelligent code completion and context indexing across local repositories"
+    ],
+    "pricingModel": "freemium",
+    "platforms": [
+      "windows",
+      "macos",
+      "linux"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false
   },
   {
     "id": "zapier-central",

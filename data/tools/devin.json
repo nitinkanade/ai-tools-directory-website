@@ -1,0 +1,78 @@
+{
+  "id": "devin",
+  "name": "Devin",
+  "slug": "devin",
+  "shortDescription": "Autonomous AI software engineer by Cognition AI that plans, writes, tests, and deploys software in cloud virtual machines.",
+  "description": "Devin is an autonomous AI software engineering agent developed by Cognition AI. Operating inside isolated cloud virtual machines (Linux, macOS, and Windows), Devin independently navigates codebases, executes terminal commands, runs tests in browsers, debugs runtime errors, and submits GitHub pull requests. It supports multi-model execution (OpenAI, Anthropic Claude, Google Gemini, SWE-2) and offers desktop, CLI, and web interface access.",
+  "categories": [
+    "coding-development"
+  ],
+  "subcategories": [
+    "terminal-agents",
+    "code-assistants"
+  ],
+  "tags": [
+    "agent",
+    "autonomous",
+    "cli",
+    "coding",
+    "developer-tools"
+  ],
+  "websiteUrl": "https://devin.ai",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free tier available; Pro plan starting at $20/month; Max plan at $200/month; Team plan at $80/month plus $40/user/month.",
+    "lastVerifiedAt": "2026-10-17"
+  },
+  "platforms": [
+    "web",
+    "macos",
+    "windows",
+    "linux"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "Autonomous end-to-end task execution in isolated VM sandboxes",
+    "Multi-model routing combining SWE-2, Claude, GPT, and Gemini models",
+    "Interactive browser testing with session video recording and playback",
+    "Integrations with GitHub, GitLab, Slack, Linear, and PagerDuty",
+    "Desktop app, CLI, and cloud-hosted web interface support"
+  ],
+  "useCases": [
+    "Automating routine dependency upgrades and security patch pull requests",
+    "Investigating and resolving production bug alerts from Slack or PagerDuty",
+    "Building and testing full-stack feature prototypes from natural language specs"
+  ],
+  "alternatives": [
+    "claude-code",
+    "openhands",
+    "cursor"
+  ],
+  "relatedTools": [
+    "github-copilot",
+    "v0"
+  ],
+  "languageSupport": [
+    "multilingual",
+    "English"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Usage quotas on higher-tier frontier models require paid subscriptions",
+    "Complex non-standard corporate environments may require dedicated VPC or SAML enterprise setup"
+  ],
+  "lastVerifiedAt": "2026-10-17",
+  "sourceReferences": [
+    "https://devin.ai",
+    "https://devin.ai/pricing"
+  ],
+  "createdAt": "2026-10-17",
+  "updatedAt": "2026-10-17",
+  "seo": {
+    "title": "Devin — Overview, Features & Pricing",
+    "description": "Comprehensive guide to Devin by Cognition AI, the autonomous AI software engineer. Explore pricing, capabilities, and alternatives."
+  }
+}

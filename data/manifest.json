@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "datasetVersion": "2026.10.17-82639123",
-  "generatedAt": "2026-10-17T06:09:05.516187+00:00",
-  "totalTools": 41,
+  "datasetVersion": "2026.11.01-6a402edf",
+  "generatedAt": "2026-11-01T12:23:17.268871+00:00",
+  "totalTools": 46,
   "totalCategories": 20,
   "totalCollections": 6,
   "minAppVersion": "1.0.0",
@@ -19,13 +19,18 @@
     },
     "search-index.json": {
       "path": "/data/search-index.json",
-      "sha256": "deb1e83885221603a799d3805ba08213efb473035142fc48daa06a8df3ade342",
-      "bytes": 36644
+      "sha256": "44cb71656f8af17e9decb2ef5517ba5f623f5eef604b3ea38fb3766142e7894a",
+      "bytes": 41509
     },
     "tags.json": {
       "path": "/data/tags.json",
       "sha256": "8613d905b8339e1bcae84b5cf12ce1359f3f375ee3e2233533fa22cf6dd34f9d",
       "bytes": 1843
+    },
+    "tools/agent-qa.json": {
+      "path": "/data/tools/agent-qa.json",
+      "sha256": "c76687b8edacd5c5f5f1a85e7cf93112b380308cdcc261a50db7174051a07bab",
+      "bytes": 2669
     },
     "tools/bolt-new.json": {
       "path": "/data/tools/bolt-new.json",
@@ -87,6 +92,11 @@
       "sha256": "f7dda1bb01285b5092a0476b112e8283f09b286a3c752cd507a2940f533d65b3",
       "bytes": 2567
     },
+    "tools/devin.json": {
+      "path": "/data/tools/devin.json",
+      "sha256": "35f55bea0772c1c87b4f243d5a62387aad236c141c8f2372c6cf20bfa74e0e43",
+      "bytes": 2770
+    },
     "tools/dify.json": {
       "path": "/data/tools/dify.json",
       "sha256": "380fd56cda138fcb50c388b785fc77409185d82197245da4dee97f107c7fd3e3",
@@ -124,8 +134,8 @@
     },
     "tools/index.json": {
       "path": "/data/tools/index.json",
-      "sha256": "01a36860d186d8e291d520a2dacc4e304097a4152f3bdd05a0f116421e38646b",
-      "bytes": 42264
+      "sha256": "3b26a32a72efeef56ef914de114e8e993d8c5a1c1c6ff191186cd924709de77b",
+      "bytes": 47592
     },
     "tools/intercom-fin.json": {
       "path": "/data/tools/intercom-fin.json",
@@ -151,6 +161,11 @@
       "path": "/data/tools/langchain.json",
       "sha256": "1d08765eebdfc45c82ce216e6c39b6887a37f079f12f29a4238d98a1104e4c4b",
       "bytes": 2693
+    },
+    "tools/lovable.json": {
+      "path": "/data/tools/lovable.json",
+      "sha256": "d3eabec95fdb2a02ea658b3c0dcf92dfb37e08d91f2a1923c42e4b24cde361a6",
+      "bytes": 2610
     },
     "tools/luma-dream-machine.json": {
       "path": "/data/tools/luma-dream-machine.json",
@@ -181,6 +196,11 @@
       "path": "/data/tools/ollama.json",
       "sha256": "2ec0a3cb529d813b3f2637278c3e45e7252c6c90135e3c7fc0518a11edbd16fe",
       "bytes": 2691
+    },
+    "tools/openhands.json": {
+      "path": "/data/tools/openhands.json",
+      "sha256": "6fc0f6b52a67b754a05f83cb61925ef9d1b083c128a4fbae3565ba769d79764f",
+      "bytes": 2993
     },
     "tools/perplexity.json": {
       "path": "/data/tools/perplexity.json",
@@ -232,6 +252,11 @@
       "sha256": "ed6779feef6873fadcb8bff7de32c193259c0bde51f7a6a924b8681993964833",
       "bytes": 2564
     },
+    "tools/windsurf.json": {
+      "path": "/data/tools/windsurf.json",
+      "sha256": "318bd79dfd43d859fbd88f26decc4d6eb056a2e7c00278230d13b4a2f2d2a5c0",
+      "bytes": 2631
+    },
     "tools/zapier-central.json": {
       "path": "/data/tools/zapier-central.json",
       "sha256": "c6a9448ca3954f82a7a52341f93e9a998bff6a8a1b8e9bf3fc7c98b155f470ca",
@@ -239,8 +264,8 @@
     },
     "tools/by-category/agents-workflows.json": {
       "path": "/data/tools/by-category/agents-workflows.json",
-      "sha256": "edfda6c3165095dce744e674753c6ea3964e9fb624ebd0569c48c12520151e7f",
-      "bytes": 212
+      "sha256": "7d0fd11c618b74803a7a9f0c2053c61ca26e3e571560ff04fdd2cf18c40610f8",
+      "bytes": 262
     },
     "tools/by-category/audio-music.json": {
       "path": "/data/tools/by-category/audio-music.json",
@@ -259,8 +284,8 @@
     },
     "tools/by-category/coding-development.json": {
       "path": "/data/tools/by-category/coding-development.json",
-      "sha256": "b451c86e17e99c629719927ae91c1787a5fcd037956b3b269d9ce54aeba2cf51",
-      "bytes": 277
+      "sha256": "9130f3d8baf2e0095f91539fcff831344b66d347963a28aceec311f94f7f685c",
+      "bytes": 354
     },
     "tools/by-category/customer-support.json": {
       "path": "/data/tools/by-category/customer-support.json",
@@ -274,8 +299,8 @@
     },
     "tools/by-category/design-ui-ux.json": {
       "path": "/data/tools/by-category/design-ui-ux.json",
-      "sha256": "9bfae760df27d75a5b9706cfce1d15473beb68f357b2dd722c1d5cd4e9bb8bde",
-      "bytes": 166
+      "sha256": "c43b1dc47a0600d794db28cc82956712e3f2031b20f62b723ea99449e8f88a61",
+      "bytes": 181
     },
     "tools/by-category/education-learning.json": {
       "path": "/data/tools/by-category/education-learning.json",

@@ -1,0 +1,65 @@
+{
+  "id": "agent-qa",
+  "name": "agent-qa",
+  "slug": "agent-qa",
+  "shortDescription": "Natural-language web and mobile QA from vostride, with a memory engine, self-improvement, and evidence from test runs.",
+  "description": "agent-qa is a natural-language QA tool from vostride for testing web, Android, and iOS user journeys. It provides a CLI, a locally served web dashboard, and local stdio MCP integration with coding agents. Its memory engine reuses test knowledge across runs, while self-improvement validates lessons and retires stale knowledge. This is an early release requiring Node.js 24+. The web platform label refers to its dashboard and browser-testing workflow, not a hosted SaaS account.",
+  "categories": [
+    "coding-development",
+    "agents-workflows"
+  ],
+  "subcategories": [
+    "debugging-testing",
+    "terminal-agents"
+  ],
+  "tags": [
+    "agent",
+    "automation",
+    "cli",
+    "debugging",
+    "developer-tools",
+    "evidence",
+    "self-hosted",
+    "workflow"
+  ],
+  "websiteUrl": "https://vostride.com",
+  "pricing": {
+    "model": "free",
+    "details": "Software use is free for purposes permitted by FSL-1.1-ALv2. Competing commercial use is restricted. Model-provider usage and device infrastructure costs are separate.",
+    "lastVerifiedAt": "2026-11-01"
+  },
+  "platforms": [
+    "web"
+  ],
+  "isOpenSource": false,
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "Natural-language QA for web, Android, and iOS user journeys",
+    "Persistent memory and self-improvement from validated test lessons",
+    "CLI, local web dashboard, and local stdio MCP integration",
+    "Retained test evidence for reviewing results"
+  ],
+  "useCases": [
+    "Checking a user journey after an application change",
+    "Investigating a UI regression with recorded test evidence"
+  ],
+  "limitations": [
+    "Early-stage software; expect bugs.",
+    "Requires Node.js 24+ and a configured model provider; mobile testing requires suitable device infrastructure.",
+    "FSL-1.1-ALv2 restricts competing commercial use and does not qualify for this directory’s OSI-approved license flag.",
+    "The public website is not a remote MCP endpoint."
+  ],
+  "lastVerifiedAt": "2026-11-01",
+  "sourceReferences": [
+    "https://vostride.com",
+    "https://vostride.com/docs/agent-qa",
+    "https://github.com/vostride/agent-qa/blob/main/LICENSE.md"
+  ],
+  "createdAt": "2026-11-01",
+  "updatedAt": "2026-11-01",
+  "seo": {
+    "title": "agent-qa — natural-language QA with memory",
+    "description": "Explore agent-qa from vostride: web and mobile QA with memory, self-improvement, test evidence, and CLI/MCP workflows."
+  }
+}

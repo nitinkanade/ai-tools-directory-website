@@ -1,6 +1,7 @@
 {
   "categoryId": "agents-workflows",
   "toolIds": [
+    "agent-qa",
     "claude-code",
     "crewai",
     "cursor",
@@ -9,7 +10,9 @@
     "langchain",
     "make",
     "n8n",
+    "openhands",
+    "windsurf",
     "zapier-central"
   ],
-  "count": 9
+  "count": 12
 }

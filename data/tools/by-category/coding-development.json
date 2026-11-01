@@ -1,6 +1,7 @@
 {
   "categoryId": "coding-development",
   "toolIds": [
+    "agent-qa",
     "bolt-new",
     "chatgpt",
     "claude-code",
@@ -8,12 +9,16 @@
     "crewai",
     "cursor",
     "deepseek",
+    "devin",
     "github-copilot",
     "hugging-face",
     "langchain",
+    "lovable",
     "ollama",
+    "openhands",
     "v0",
-    "vllm"
+    "vllm",
+    "windsurf"
   ],
-  "count": 13
+  "count": 18
 }
