@@ -1,0 +1,76 @@
+{
+  "id": "windsurf",
+  "name": "Windsurf",
+  "slug": "windsurf",
+  "shortDescription": "AI-first agentic IDE developed by Codeium with deep codebase context, Cascade agent, and multi-file editing capabilities.",
+  "description": "Windsurf is an AI-first integrated development environment (IDE) developed by Codeium. Built on top of VS Code, Windsurf introduces AI Flows, enabling synchronized human-AI collaboration and autonomous code manipulation. Its AI agent, Cascade, maintains real-time context of large repositories, executes terminal actions, performs multi-file refactoring, and resolves build and runtime errors.",
+  "categories": [
+    "coding-development",
+    "agents-workflows"
+  ],
+  "subcategories": [
+    "code-assistants",
+    "terminal-agents"
+  ],
+  "tags": [
+    "coding",
+    "ide",
+    "agent",
+    "autocomplete",
+    "developer-tools",
+    "vscode"
+  ],
+  "websiteUrl": "https://codeium.com/windsurf",
+  "pricing": {
+    "model": "freemium",
+    "details": "Free plan includes unlimited fast completions and monthly prompt quotas; Pro tier starts at $10/mo for enhanced Cascade usage.",
+    "lastVerifiedAt": "2026-10-28"
+  },
+  "platforms": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "isOpenSource": false,
+  "sourceCodeUrl": null,
+  "isFeatured": false,
+  "status": "published",
+  "features": [
+    "Cascade AI agent for deep multi-file codebase understanding and execution",
+    "AI Flows for seamless transition between autonomous AI edits and human guidance",
+    "Integrated terminal execution for automated command execution and debugging",
+    "Real-time intelligent code completion and context indexing across local repositories"
+  ],
+  "useCases": [
+    "Refactoring multi-file modules and architectures with full codebase context",
+    "Accelerating feature creation and bug fixes via agentic terminal feedback loops"
+  ],
+  "alternatives": [
+    "cursor",
+    "github-copilot",
+    "claude-code"
+  ],
+  "relatedTools": [
+    "cursor",
+    "v0"
+  ],
+  "languageSupport": [
+    "English",
+    "multilingual"
+  ],
+  "accountRequired": true,
+  "limitations": [
+    "Requires installing a dedicated desktop application rather than an extension",
+    "High-tier Cascade prompt limits are capped under free tiers during peak demand"
+  ],
+  "lastVerifiedAt": "2026-10-28",
+  "sourceReferences": [
+    "https://codeium.com/windsurf"
+  ],
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "seo": {
+    "title": "Windsurf — AI-First Agentic IDE by Codeium",
+    "description": "Discover Windsurf AI IDE features, Cascade agent capabilities, pricing, and comparisons with Cursor."
+  }
+}

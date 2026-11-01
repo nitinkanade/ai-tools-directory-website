@@ -1,0 +1,82 @@
+{
+  "id": "openhands",
+  "name": "OpenHands",
+  "slug": "openhands",
+  "shortDescription": "Open-source AI software engineering agent platform that executes code, runs terminal commands, and edits repositories autonomously.",
+  "description": "OpenHands (formerly OpenDevin) is an open-source AI platform for autonomous software development. Operating inside secure Docker container sandboxes, OpenHands enables AI agents to edit code, execute shell commands, run tests, browse web documentation, and interact with GitHub repositories to perform complex software engineering tasks.",
+  "categories": [
+    "coding-development",
+    "agents-workflows"
+  ],
+  "subcategories": [
+    "terminal-agents",
+    "agent-frameworks"
+  ],
+  "tags": [
+    "agent",
+    "agents",
+    "autonomous",
+    "cli",
+    "coding",
+    "developer-tools",
+    "open-source",
+    "python",
+    "terminal",
+    "workflow"
+  ],
+  "websiteUrl": "https://openhands.dev",
+  "pricing": {
+    "model": "open-source",
+    "details": "Free and open-source software under the MIT license; OpenHands Cloud offers hosted agent infrastructure and enterprise management tier.",
+    "lastVerifiedAt": "2026-10-17"
+  },
+  "platforms": [
+    "web",
+    "linux",
+    "macos",
+    "windows"
+  ],
+  "isOpenSource": true,
+  "sourceCodeUrl": "https://github.com/All-Hands-AI/OpenHands",
+  "isFeatured": true,
+  "status": "published",
+  "features": [
+    "Secure Docker-sandboxed execution environment for isolated code modification and bash execution",
+    "Autonomous software engineering agents capable of reproducing bugs, running unit tests, and creating pull requests",
+    "Web UI and CLI interfaces for interacting with agent workflows and inspecting execution logs",
+    "Multi-LLM integration supporting Anthropic Claude, OpenAI, Ollama local models, and custom endpoints"
+  ],
+  "useCases": [
+    "Automating routine code bug fixes and GitHub issue resolution in open-source and private codebases",
+    "Refactoring legacy codebases and generating unit test suites autonomously",
+    "Benchmarking autonomous AI developer performance on benchmark suites like SWE-bench"
+  ],
+  "alternatives": [
+    "claude-code",
+    "bolt-new",
+    "cursor"
+  ],
+  "relatedTools": [
+    "claude-code",
+    "bolt-new"
+  ],
+  "languageSupport": [
+    "English"
+  ],
+  "accountRequired": false,
+  "limitations": [
+    "Requires Docker installed for local runtime sandboxing and bash execution",
+    "Complex multi-step agent tasks require API keys for high-capability frontier models"
+  ],
+  "lastVerifiedAt": "2026-10-17",
+  "sourceReferences": [
+    "https://openhands.dev",
+    "https://github.com/All-Hands-AI/OpenHands"
+  ],
+  "createdAt": "2026-10-17",
+  "updatedAt": "2026-10-17",
+  "seo": {
+    "title": "OpenHands — Open-Source AI Software Engineering Agent",
+    "description": "Discover OpenHands (formerly OpenDevin), the open-source AI platform for autonomous software engineering, Docker sandbox execution, and repo editing."
+  }
+}

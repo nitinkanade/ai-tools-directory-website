@@ -1,5 +1,44 @@
 [
   {
+    "id": "agent-qa",
+    "name": "agent-qa",
+    "slug": "agent-qa",
+    "shortDescription": "Natural-language web and mobile QA from vostride, with a memory engine, self-improvement, and evidence from test runs.",
+    "categories": [
+      "coding-development",
+      "agents-workflows"
+    ],
+    "subcategories": [
+      "debugging-testing",
+      "terminal-agents"
+    ],
+    "tags": [
+      "agent",
+      "automation",
+      "cli",
+      "debugging",
+      "developer-tools",
+      "evidence",
+      "self-hosted",
+      "workflow"
+    ],
+    "websiteUrl": "https://vostride.com",
+    "pricing": {
+      "model": "free",
+      "details": "Software use is free for purposes permitted by FSL-1.1-ALv2. Competing commercial use is restricted. Model-provider usage and device infrastructure costs are separate.",
+      "lastVerifiedAt": "2026-11-01"
+    },
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-11-01",
+    "createdAt": "2026-11-01",
+    "updatedAt": "2026-11-01"
+  },
+  {
     "id": "bolt-new",
     "name": "Bolt.new",
     "slug": "bolt-new",
@@ -477,6 +516,44 @@
     "updatedAt": "2026-10-15"
   },
   {
+    "id": "devin",
+    "name": "Devin",
+    "slug": "devin",
+    "shortDescription": "Autonomous AI software engineer by Cognition AI that plans, writes, tests, and deploys software in cloud virtual machines.",
+    "categories": [
+      "coding-development"
+    ],
+    "subcategories": [
+      "terminal-agents",
+      "code-assistants"
+    ],
+    "tags": [
+      "agent",
+      "autonomous",
+      "cli",
+      "coding",
+      "developer-tools"
+    ],
+    "websiteUrl": "https://devin.ai",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free tier available; Pro plan starting at $20/month; Max plan at $200/month; Team plan at $80/month plus $40/user/month.",
+      "lastVerifiedAt": "2026-10-17"
+    },
+    "platforms": [
+      "web",
+      "macos",
+      "windows",
+      "linux"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-17",
+    "createdAt": "2026-10-17",
+    "updatedAt": "2026-10-17"
+  },
+  {
     "id": "dify",
     "name": "Dify.ai",
     "slug": "dify",
@@ -938,6 +1015,45 @@
     "updatedAt": "2026-10-15"
   },
   {
+    "id": "lovable",
+    "name": "Lovable",
+    "slug": "lovable",
+    "shortDescription": "GPT Engineer powered full-stack web development agent that creates interactive web applications from prompt descriptions.",
+    "categories": [
+      "coding-development",
+      "design-ui-ux"
+    ],
+    "subcategories": [
+      "code-assistants",
+      "ui-generation"
+    ],
+    "tags": [
+      "agent",
+      "coding",
+      "developer-tools",
+      "frontend",
+      "prototyping",
+      "react",
+      "typescript",
+      "ui-ux"
+    ],
+    "websiteUrl": "https://lovable.dev",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free tier available with daily message allocations; paid monthly plans offer expanded message limits, private projects, and GitHub repository integration.",
+      "lastVerifiedAt": "2026-10-21"
+    },
+    "platforms": [
+      "web"
+    ],
+    "isOpenSource": false,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-21",
+    "createdAt": "2026-10-21",
+    "updatedAt": "2026-10-21"
+  },
+  {
     "id": "luma-dream-machine",
     "name": "Luma Dream Machine",
     "slug": "luma-dream-machine",
@@ -1166,6 +1282,50 @@
     "lastVerifiedAt": "2026-10-15",
     "createdAt": "2023-07-01",
     "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "openhands",
+    "name": "OpenHands",
+    "slug": "openhands",
+    "shortDescription": "Open-source AI software engineering agent platform that executes code, runs terminal commands, and edits repositories autonomously.",
+    "categories": [
+      "coding-development",
+      "agents-workflows"
+    ],
+    "subcategories": [
+      "terminal-agents",
+      "agent-frameworks"
+    ],
+    "tags": [
+      "agent",
+      "agents",
+      "autonomous",
+      "cli",
+      "coding",
+      "developer-tools",
+      "open-source",
+      "python",
+      "terminal",
+      "workflow"
+    ],
+    "websiteUrl": "https://openhands.dev",
+    "pricing": {
+      "model": "open-source",
+      "details": "Free and open-source software under the MIT license; OpenHands Cloud offers hosted agent infrastructure and enterprise management tier.",
+      "lastVerifiedAt": "2026-10-17"
+    },
+    "platforms": [
+      "web",
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "isOpenSource": true,
+    "isFeatured": true,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-17",
+    "createdAt": "2026-10-17",
+    "updatedAt": "2026-10-17"
   },
   {
     "id": "perplexity",
@@ -1540,6 +1700,45 @@
     "lastVerifiedAt": "2026-10-15",
     "createdAt": "2022-09-21",
     "updatedAt": "2026-10-15"
+  },
+  {
+    "id": "windsurf",
+    "name": "Windsurf",
+    "slug": "windsurf",
+    "shortDescription": "AI-first agentic IDE developed by Codeium with deep codebase context, Cascade agent, and multi-file editing capabilities.",
+    "categories": [
+      "coding-development",
+      "agents-workflows"
+    ],
+    "subcategories": [
+      "code-assistants",
+      "terminal-agents"
+    ],
+    "tags": [
+      "coding",
+      "ide",
+      "agent",
+      "autocomplete",
+      "developer-tools",
+      "vscode"
+    ],
+    "websiteUrl": "https://codeium.com/windsurf",
+    "pricing": {
+      "model": "freemium",
+      "details": "Free plan includes unlimited fast completions and monthly prompt quotas; Pro tier starts at $10/mo for enhanced Cascade usage.",
+      "lastVerifiedAt": "2026-10-28"
+    },
+    "platforms": [
+      "windows",
+      "macos",
+      "linux"
+    ],
+    "isOpenSource": false,
+    "isFeatured": false,
+    "status": "published",
+    "lastVerifiedAt": "2026-10-28",
+    "createdAt": "2026-10-28",
+    "updatedAt": "2026-10-28"
   },
   {
     "id": "zapier-central",
